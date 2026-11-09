@@ -2,3 +2,6 @@
 __pycache__/
 .wikipedia_*cache.json
 .cache/
+node_modules/
+dist/
+.env

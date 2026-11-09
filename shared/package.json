@@ -1,0 +1,15 @@
+{
+  "name": "@auction/shared",
+  "private": true,
+  "type": "module",
+  "description": "Types, constants, game data and the pure rules engine shared by server and client",
+  "exports": {
+    ".": "./src/index.ts",
+    "./data": "./src/data.ts",
+    "./data/*": "./data/*"
+  },
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "vitest run"
+  }
+}
