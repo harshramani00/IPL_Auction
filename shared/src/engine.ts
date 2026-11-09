@@ -203,7 +203,8 @@ export function validateBid(s: RoomState, userId: string, teamId: TeamId, amount
   const lot = currentLot(s);
   if (s.phase !== "live" || !lot) return no("Bidding is closed right now");
   if (s.owners[teamId] !== seat) return no("You can only bid for your own teams");
-  if (s.lead && s.owners[s.lead.teamId] === seat) return no("Your team already has the top bid");
+  // A team can't raise its own top bid; a player's other teams may still bid.
+  if (s.lead?.teamId === teamId) return no(`${teamId} already has the top bid`);
   if (amount !== nextAmount(lot, s.lead)) return no("Someone got in first at that price. Bid again");
   const block = teamBlock(s.teams[teamId], lot, amount);
   return block ? no(block) : OK;

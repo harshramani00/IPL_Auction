@@ -121,12 +121,15 @@ describe("bidding", () => {
     expect(s.bidSeq).toBe(2);
   });
 
-  it("you can't raise against your own team", () => {
+  it("a team can't raise its own top bid, but the player's other teams can", () => {
     const s = liveRoom(testData(), (r) => {
       join(r, u1); claim(r, u1.id, "MI"); claim(r, u1.id, "CSK");
     });
     bid(s, u1.id, "MI", 200, T0);
-    expect(bid(s, u1.id, "CSK", 220, T0)).toEqual({ ok: false, reason: "Your team already has the top bid" });
+    expect(bid(s, u1.id, "MI", 220, T0)).toEqual({ ok: false, reason: "MI already has the top bid" });
+    expect(bid(s, u1.id, "CSK", 220, T0 + 100)).toEqual({ ok: true });
+    expect(s.lead).toEqual({ teamId: "CSK", amount: 220, bySeat: 1 });
+    expect(bid(s, u1.id, "MI", 240, T0 + 200)).toEqual({ ok: true });
   });
 
   it("non-players and closed lots are rejected", () => {

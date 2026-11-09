@@ -37,7 +37,7 @@ export function Rules() {
       <li><b>Your seat is yours.</b> Each person joins from their own device. You only get a console for your own seat, and the server checks every bid against the account that sent it, so nobody can bid for another player's team.</li>
       <li><b>Up to 10 players.</b> Anyone with the link can join in the lobby. The 10 franchises are split evenly: 1 player runs up to 10 teams, 2 players 5 each, 3 players 3 each, 4–5 players 2 each, 6–10 players 1 each. Teams nobody claims are bid for by AI. If someone joins after you've claimed, your most recent extra claims go back on the table.</li>
       <li><b>Real auction, your way.</b> The lots are the {gameData.lots.length} players from the December 2025 IPL auction, in the official set order. The lead picks a short or full list, and whether teams start with their real retained squads and purses or a fresh {fmt(gameData.freshPurse)} each.</li>
-      <li><b>One team at a time.</b> You bid as one of your teams and can switch between bids. You can't raise against your own team while it holds the top bid.</li>
+      <li><b>One team per bid.</b> Each bid is placed by one of your teams; pick it in your console or tap its paddle. A team can't raise its own top bid, but your other teams can bid against it.</li>
       <li><b>The hammer is automatic.</b> Every bid restarts an 8-second clock: "going once" at 5 seconds, "going twice" at 2.5, then the bails come off and the player is sold. No opening bid inside 10 seconds means unsold.</li>
       <li><b>Increments.</b> ₹5 L below ₹1 Cr, ₹10 L up to ₹2 Cr, ₹20 L up to ₹5 Cr, then ₹25 L. Squads max out at 25 players with 8 overseas, retained players included.</li>
     </ol>

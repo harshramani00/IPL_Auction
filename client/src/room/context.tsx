@@ -42,7 +42,7 @@ export function bidBlock(s: Snapshot, seat: number | null, team: TeamId | null, 
     return s.phase === "done" ? "The auction is over" : "Waiting for the next player";
   }
   if (!team) return "You have no teams in this game";
-  if (s.lead && s.owners[s.lead.teamId] === seat) return `Your team ${s.lead.teamId} holds the bid`;
+  if (s.lead?.teamId === team) return `${team} holds the bid`;
   return teamBlock(s.teams[team], s.lot, s.nextAmount);
 }
 
