@@ -1,0 +1,24 @@
+{
+  "name": "@auction/server",
+  "private": true,
+  "type": "module",
+  "description": "Authoritative game server: rooms, clock, AI franchises, Socket.IO protocol",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "start": "tsx src/main.ts",
+    "typecheck": "tsc -p .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@auction/shared": "*",
+    "express": "5.3.0",
+    "socket.io": "4.8.4",
+    "tsx": "4.23.15",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.6",
+    "@types/node": "20.19.43",
+    "socket.io-client": "4.8.4"
+  }
+}

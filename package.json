@@ -6,7 +6,8 @@
     "node": ">=20"
   },
   "workspaces": [
-    "shared"
+    "shared",
+    "server"
   ],
   "scripts": {
     "typecheck": "npm run typecheck --workspaces --if-present",
