@@ -8,6 +8,7 @@ import { PlayersPanel } from "../room/PlayersPanel";
 import { ResultsTicker, Rules } from "../room/Results";
 import { Stage } from "../room/Stage";
 import { TeamsPanel } from "../room/TeamsPanel";
+import { useAuctionSounds } from "../room/useAuctionSounds";
 import { useRoom } from "../useRoom";
 import { Link } from "../router";
 
@@ -37,6 +38,7 @@ export function RoomPage({ roomId, sessionKey, onName }: Props) {
   }, [send, toast]);
 
   const mySeat = s && user ? s.seats.find((p) => p?.userId === user.id)?.seat ?? null : null;
+  useAuctionSounds(s, mySeat, serverNow);
   const myTeams = useMemo(() => (s && mySeat ? teamsOf(s, mySeat) : []), [s, mySeat]);
   const active = activeTeam && myTeams.includes(activeTeam) ? activeTeam : myTeams[0] ?? null;
 

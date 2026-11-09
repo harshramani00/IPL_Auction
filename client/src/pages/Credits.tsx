@@ -15,6 +15,7 @@ export function Credits() {
         <p>{credits.stats}</p>
         <p>Auction lists, retentions and purses: Wikipedia and the BCCI's published auction list.</p>
         <p>{credits.logos}</p>
+        <p>Sound effects are generated in your browser, and the auctioneer's voice is your device's speech synthesizer.</p>
       </section>
       <section className="room">
         <h3 className="credits-h">Player photos</h3>

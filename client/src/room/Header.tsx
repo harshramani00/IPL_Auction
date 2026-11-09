@@ -1,5 +1,6 @@
 import { gameData } from "@auction/shared/data";
-import { cloneElement } from "react";
+import { cloneElement, useSyncExternalStore } from "react";
+import { sound } from "../sound";
 import { useRoomCtx } from "./context";
 import { fmt, lotsById } from "../view";
 
@@ -26,8 +27,21 @@ export function Header() {
           </div>
         </div>
       </div>
-      <span className="conn">{status}</span>
+      <div className="bar-r">
+        <SoundToggle />
+        <span className="conn">{status}</span>
+      </div>
     </header>
+  );
+}
+
+function SoundToggle() {
+  const on = useSyncExternalStore((fn) => sound.subscribe(fn), () => sound.enabled);
+  return (
+    <button className="ghost sound-toggle" aria-pressed={on} title="Auctioneer voice and sound effects"
+      onClick={() => sound.setEnabled(!on)}>
+      {on ? "🔊 Sound on" : "🔇 Sound off"}
+    </button>
   );
 }
 

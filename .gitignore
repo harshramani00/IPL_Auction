@@ -7,3 +7,6 @@ dist/
 .env
 test-results/
 playwright-report/
+
+# Your own theme music (copyrighted tracks must not be published)
+static/sounds/theme.mp3

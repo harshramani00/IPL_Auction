@@ -44,3 +44,7 @@ a.gold-btn { text-decoration: none; }
 .credit-list img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; object-position: 50% 15%; flex-shrink: 0; }
 .credit-list span { min-width: 0; overflow-wrap: anywhere; font-size: .86rem; }
 .credit-list small { color: var(--muted); }
+
+.bar-r { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.sound-toggle { padding: 6px 12px; font-size: .8rem; }
+.sound-toggle[aria-pressed="false"] { color: var(--muted); }
