@@ -1,0 +1,370 @@
+lot_no,set_no,set_code,name,country,age,role,category,base_price_cr,status,team,team_code,sold_price_cr
+1,1,BA1,Devon Conway,New Zealand,34,Batter,Capped,2.0,unsold,,,
+2,1,BA1,Jake Fraser-McGurk,Australia,23,Batter,Capped,2.0,unsold,,,
+3,1,BA1,Cameron Green,Australia,26,Batter,Capped,2.0,sold,Kolkata Knight Riders,KKR,25.2
+4,1,BA1,Sarfaraz Khan,India,28,Batter,Capped,0.75,sold,Chennai Super Kings,CSK,0.75
+5,1,BA1,David Miller,South Africa,36,Batter,Capped,2.0,sold,Delhi Capitals,DC,2.0
+6,1,BA1,Prithvi Shaw,India,26,Batter,Capped,0.75,sold,Delhi Capitals,DC,0.75
+7,2,AL1,Gus Atkinson,England,28,All-rounder,Capped,2.0,unsold,,,
+8,2,AL1,Wanindu Hasaranga,Sri Lanka,28,All-rounder,Capped,2.0,sold,Lucknow Super Giants,LSG,2.0
+9,2,AL1,Deepak Hooda,India,30,All-rounder,Capped,0.75,unsold,,,
+10,2,AL1,Venkatesh Iyer,India,31,All-rounder,Capped,2.0,sold,Royal Challengers Bengaluru,RCB,7.0
+11,2,AL1,Liam Livingstone,England,32,All-rounder,Capped,2.0,sold,Sunrisers Hyderabad,SRH,13.0
+12,2,AL1,Wiaan Mulder,South Africa,28,All-rounder,Capped,1.0,unsold,,,
+13,2,AL1,Rachin Ravindra,New Zealand,26,All-rounder,Capped,2.0,sold,Kolkata Knight Riders,KKR,2.0
+14,3,WK1,Finn Allen,New Zealand,26,Wicket-keeper,Capped,2.0,sold,Kolkata Knight Riders,KKR,2.0
+15,3,WK1,Jonny Bairstow,England,36,Wicket-keeper,Capped,1.0,unsold,,,
+16,3,WK1,K.S. Bharat,India,32,Wicket-keeper,Capped,0.75,unsold,,,
+17,3,WK1,Quinton De Kock,South Africa,33,Wicket-keeper,Capped,1.0,sold,Mumbai Indians,MI,1.0
+18,3,WK1,Ben Duckett,England,31,Wicket-keeper,Capped,2.0,sold,Delhi Capitals,DC,2.0
+19,3,WK1,Rahmanullah Gurbaz,Afghanistan,24,Wicket-keeper,Capped,1.5,unsold,,,
+20,3,WK1,Jamie Smith,England,25,Wicket-keeper,Capped,2.0,unsold,,,
+21,4,FA1,Gerald Coetzee,South Africa,25,Fast bowler,Capped,2.0,unsold,,,
+22,4,FA1,Akash Deep,India,29,Fast bowler,Capped,1.0,sold,Kolkata Knight Riders,KKR,1.0
+23,4,FA1,Jacob Duffy,New Zealand,31,Fast bowler,Capped,2.0,sold,Royal Challengers Bengaluru,RCB,2.0
+24,4,FA1,Fazalhaq Farooqi,Afghanistan,25,Fast bowler,Capped,1.0,unsold,,,
+25,4,FA1,Matt Henry,New Zealand,34,Fast bowler,Capped,2.0,sold,Chennai Super Kings,CSK,2.0
+26,4,FA1,Spencer Johnson,Australia,30,Fast bowler,Capped,1.5,unsold,,,
+27,4,FA1,Shivam Mavi,India,27,Fast bowler,Capped,0.75,sold,Sunrisers Hyderabad,SRH,0.75
+28,4,FA1,Anrich Nortje,South Africa,32,Fast bowler,Capped,2.0,sold,Lucknow Super Giants,LSG,2.0
+29,4,FA1,Matheesha Pathirana,Sri Lanka,23,Fast bowler,Capped,2.0,sold,Kolkata Knight Riders,KKR,18.0
+30,5,SP1,Ravi Bishnoi,India,25,Spin bowler,Capped,2.0,sold,Rajasthan Royals,RR,7.2
+31,5,SP1,Rahul Chahar,India,26,Spin bowler,Capped,1.0,sold,Chennai Super Kings,CSK,5.2
+32,5,SP1,Akeal Hosein,West Indies,32,Spin bowler,Capped,2.0,sold,Chennai Super Kings,CSK,2.0
+33,5,SP1,Mujeeb Rahman,Afghanistan,25,Spin bowler,Capped,2.0,unsold,,,
+34,5,SP1,Maheesh Theekshana,Sri Lanka,25,Spin bowler,Capped,2.0,unsold,,,
+35,6,UBA1,Aarya Desai,India,23,Batter,Uncapped,0.3,unsold,,,
+36,6,UBA1,Yash Dhull,India,23,Batter,Uncapped,0.3,unsold,,,
+37,6,UBA1,Abhinav Manohar,India,31,Batter,Uncapped,0.3,unsold,,,
+38,6,UBA1,Anmolpreet Singh,India,28,Batter,Uncapped,0.3,unsold,,,
+39,6,UBA1,Atharva Taide,India,25,Batter,Uncapped,0.3,unsold,,,
+40,6,UBA1,Abhinav Tejrana,India,25,Batter,Uncapped,0.3,unsold,,,
+41,7,UAL1,Auqib Dar,India,29,All-rounder,Uncapped,0.3,sold,Delhi Capitals,DC,8.4
+42,7,UAL1,Rajvardhan Hangargekar,India,23,All-rounder,Uncapped,0.4,unsold,,,
+43,7,UAL1,Tanush Kotian,India,27,All-rounder,Uncapped,0.3,unsold,,,
+44,7,UAL1,Shivang Kumar,India,23,All-rounder,Uncapped,0.3,sold,Sunrisers Hyderabad,SRH,0.3
+45,7,UAL1,Mahipal Lomror,India,26,All-rounder,Uncapped,0.5,unsold,,,
+46,7,UAL1,Kamlesh Nagarkoti,India,26,All-rounder,Uncapped,0.3,unsold,,,
+47,7,UAL1,Vijay Shankar,India,35,All-rounder,Uncapped,0.3,unsold,,,
+48,7,UAL1,Sanvir Singh,India,29,All-rounder,Uncapped,0.3,unsold,,,
+49,7,UAL1,Eden Tom Apple,India,20,All-rounder,Uncapped,0.3,unsold,,,
+50,7,UAL1,Prashant Veer,India,20,All-rounder,Uncapped,0.3,sold,Chennai Super Kings,CSK,14.2
+51,8,UWK1,Ruchit Ahir,India,25,Wicket-keeper,Uncapped,0.3,unsold,,,
+52,8,UWK1,Vansh Bedi,India,23,Wicket-keeper,Uncapped,0.3,unsold,,,
+53,8,UWK1,Mukul Choudhary,India,21,Wicket-keeper,Uncapped,0.3,sold,Lucknow Super Giants,LSG,2.6
+54,8,UWK1,Tushar Raheja,India,25,Wicket-keeper,Uncapped,0.3,unsold,,,
+55,8,UWK1,Kartik Sharma,India,19,Wicket-keeper,Uncapped,0.3,sold,Chennai Super Kings,CSK,14.2
+56,8,UWK1,Tejasvi Singh,India,23,Wicket-keeper,Uncapped,0.3,sold,Kolkata Knight Riders,KKR,3.0
+57,9,UFA1,Raj Limbani,India,21,Fast bowler,Uncapped,0.3,unsold,,,
+58,9,UFA1,Akash Madhwal,India,32,Fast bowler,Uncapped,0.3,unsold,,,
+59,9,UFA1,Sushant Mishra,India,25,Fast bowler,Uncapped,0.3,sold,Rajasthan Royals,RR,0.9
+60,9,UFA1,Ashok Sharma,India,23,Fast bowler,Uncapped,0.3,sold,Gujarat Titans,GT,0.9
+61,9,UFA1,Simarjeet Singh,India,28,Fast bowler,Uncapped,0.3,unsold,,,
+62,9,UFA1,Naman Tiwari,India,20,Fast bowler,Uncapped,0.3,sold,Lucknow Super Giants,LSG,1.0
+63,9,UFA1,Kartik Tyagi,India,25,Fast bowler,Uncapped,0.3,sold,Kolkata Knight Riders,KKR,0.3
+64,10,USP1,Yash Raj Punja,India,20,Spin bowler,Uncapped,0.3,sold,Rajasthan Royals,RR,0.3
+65,10,USP1,Vignesh Puthur,India,25,Spin bowler,Uncapped,0.3,sold,Rajasthan Royals,RR,0.3
+66,10,USP1,Karn Sharma,India,38,Spin bowler,Uncapped,0.5,unsold,,,
+67,10,USP1,Shivam Shukla,India,30,Spin bowler,Uncapped,0.3,unsold,,,
+68,10,USP1,Kumar Kartikeya Singh,India,28,Spin bowler,Uncapped,0.3,unsold,,,
+69,10,USP1,Prashant Solanki,India,26,Spin bowler,Uncapped,0.3,sold,Kolkata Knight Riders,KKR,0.3
+70,10,USP1,Wahidullah Zadran,Afghanistan,18,Spin bowler,Uncapped,0.3,unsold,,,
+71,11,BA2,Mayank Agarawal,India,35,Batter,Capped,0.75,unsold,,,
+72,11,BA2,Sediqullah Atal,Afghanistan,24,Batter,Capped,0.75,unsold,,,
+73,11,BA2,Ackeem Auguste,West Indies,22,Batter,Capped,0.75,unsold,,,
+74,11,BA2,Reeza Hendricks,South Africa,36,Batter,Capped,1.0,unsold,,,
+75,11,BA2,Pathum Nissanka,Sri Lanka,27,Batter,Capped,0.75,sold,Delhi Capitals,DC,4.0
+76,11,BA2,Tim Robinson,New Zealand,23,Batter,Capped,0.75,unsold,,,
+77,11,BA2,Steve Smith,Australia,36,Batter,Capped,2.0,unsold,,,
+78,11,BA2,Rahul Tripathi,India,35,Batter,Capped,0.75,sold,Kolkata Knight Riders,KKR,0.75
+79,12,AL2,Sean Abbott,Australia,34,All-rounder,Capped,2.0,unsold,,,
+80,12,AL2,Michael Bracewell,New Zealand,35,All-rounder,Capped,2.0,unsold,,,
+81,12,AL2,Ben Dwarshuis,Australia,31,All-rounder,Capped,1.0,sold,Punjab Kings,PBKS,4.4
+82,12,AL2,Zak Foulkes,New Zealand,23,All-rounder,Capped,0.75,sold,Chennai Super Kings,CSK,0.75
+83,12,AL2,Jason Holder,West Indies,34,All-rounder,Capped,2.0,sold,Gujarat Titans,GT,7.0
+84,12,AL2,Daryl Mitchell,New Zealand,34,All-rounder,Capped,2.0,unsold,,,
+85,12,AL2,Daniel Sams,Australia,33,All-rounder,Capped,1.0,unsold,,,
+86,12,AL2,Dasun Shanaka,Sri Lanka,34,All-rounder,Capped,0.75,unsold,,,
+87,12,AL2,Matthew Short,Australia,30,All-rounder,Capped,1.5,sold,Chennai Super Kings,CSK,1.5
+88,13,WK2,Tom Banton,England,27,Wicket-keeper,Capped,2.0,sold,Gujarat Titans,GT,2.0
+89,13,WK2,Jordan Cox,England,25,Wicket-keeper,Capped,0.75,sold,Royal Challengers Bengaluru,RCB,0.75
+90,13,WK2,Shai Hope,West Indies,32,Wicket-keeper,Capped,2.0,unsold,,,
+91,13,WK2,Josh Inglis,Australia,31,Wicket-keeper,Capped,2.0,sold,Lucknow Super Giants,LSG,8.6
+92,13,WK2,Benjamin McDermott,Australia,31,Wicket-keeper,Capped,0.75,unsold,,,
+93,13,WK2,Kusal Mendis,Sri Lanka,31,Wicket-keeper,Capped,0.75,unsold,,,
+94,13,WK2,Kusal Perera,Sri Lanka,35,Wicket-keeper,Capped,1.0,unsold,,,
+95,13,WK2,Tim Seifert,New Zealand,31,Wicket-keeper,Capped,1.5,sold,Kolkata Knight Riders,KKR,1.5
+96,14,FA2,Kyle Jamieson,New Zealand,31,Fast bowler,Capped,2.0,sold,Delhi Capitals,DC,2.0
+97,14,FA2,Saqib Mahmood,England,29,Fast bowler,Capped,1.5,unsold,,,
+98,14,FA2,Adam Milne,New Zealand,33,Fast bowler,Capped,2.0,sold,Rajasthan Royals,RR,2.4
+99,14,FA2,Lungisani Ngidi,South Africa,30,Fast bowler,Capped,2.0,sold,Delhi Capitals,DC,2.0
+100,14,FA2,William Orourke,New Zealand,24,Fast bowler,Capped,2.0,unsold,,,
+101,14,FA2,Mustafizur Rahman,Bangladesh,30,Fast bowler,Capped,2.0,sold,Kolkata Knight Riders,KKR,9.2
+102,14,FA2,Chetan Sakariya,India,28,Fast bowler,Capped,0.75,unsold,,,
+103,14,FA2,Kuldeep Sen,India,29,Fast bowler,Capped,0.75,sold,Rajasthan Royals,RR,0.75
+104,14,FA2,Umesh Yadav,India,38,Fast bowler,Capped,1.5,unsold,,,
+105,15,SP2,Qais Ahmad,Afghanistan,25,Spin bowler,Capped,0.75,unsold,,,
+106,15,SP2,Rishad Hossain,Bangladesh,23,Spin bowler,Capped,0.75,unsold,,,
+107,15,SP2,Mohammad Waqar Salamkheil,Afghanistan,24,Spin bowler,Capped,1.0,unsold,,,
+108,15,SP2,Viyaskanth Vijayakanth,Sri Lanka,24,Spin bowler,Capped,0.75,unsold,,,
+109,16,UBA2,Ankit Kumar,India,22,Batter,Uncapped,0.3,unsold,,,
+110,16,UBA2,Rohan Kunnummal,India,27,Batter,Uncapped,0.3,unsold,,,
+111,16,UBA2,Danish Malewar,India,22,Batter,Uncapped,0.3,sold,Mumbai Indians,MI,0.3
+112,16,UBA2,Pukhraj Mann,India,24,Batter,Uncapped,0.3,unsold,,,
+113,16,UBA2,Salman Nizar,India,28,Batter,Uncapped,0.3,unsold,,,
+114,16,UBA2,Aman Rao Perala,India,21,Batter,Uncapped,0.3,sold,Rajasthan Royals,RR,0.3
+115,16,UBA2,Akshat Raghuwanshi,India,22,Batter,Uncapped,0.3,sold,Lucknow Super Giants,LSG,2.2
+116,16,UBA2,Manan Vohra,India,32,Batter,Uncapped,0.3,unsold,,,
+117,17,UAL2,Yuvraj Chaudhary,India,24,All-rounder,Uncapped,0.3,unsold,,,
+118,17,UAL2,Satvik Deswal,India,19,All-rounder,Uncapped,0.3,sold,Royal Challengers Bengaluru,RCB,0.3
+119,17,UAL2,Aman Khan,India,29,All-rounder,Uncapped,0.3,sold,Chennai Super Kings,CSK,0.4
+120,17,UAL2,Darshan Nalkande,India,27,All-rounder,Uncapped,0.3,unsold,,,
+121,17,UAL2,Vicky Ostwal,India,23,All-rounder,Uncapped,0.3,sold,Royal Challengers Bengaluru,RCB,0.3
+122,17,UAL2,Sairaj Patil,India,29,All-rounder,Uncapped,0.3,unsold,,,
+123,17,UAL2,Suyash Prabhudessai,India,28,All-rounder,Uncapped,0.3,unsold,,,
+124,17,UAL2,Mayank Rawat,India,26,All-rounder,Uncapped,0.3,sold,Mumbai Indians,MI,0.3
+125,17,UAL2,Harsh Tyagi,India,26,All-rounder,Uncapped,0.3,unsold,,,
+126,17,UAL2,Mangesh Yadav,India,23,All-rounder,Uncapped,0.3,sold,Royal Challengers Bengaluru,RCB,5.2
+127,18,UWK2,Salil Arora,India,23,Wicket-keeper,Uncapped,0.3,sold,Sunrisers Hyderabad,SRH,1.5
+128,18,UWK2,Ricky Bhui,India,29,Wicket-keeper,Uncapped,0.3,unsold,,,
+129,18,UWK2,Rahul Buddhi,India,28,Wicket-keeper,Uncapped,0.3,unsold,,,
+130,18,UWK2,Saurav Chuahan,India,25,Wicket-keeper,Uncapped,0.3,unsold,,,
+131,18,UWK2,Yashvardhan Dalal,India,20,Wicket-keeper,Uncapped,0.3,unsold,,,
+132,18,UWK2,Abhishek Pathak,India,29,Wicket-keeper,Uncapped,0.3,unsold,,,
+133,18,UWK2,Kunal Rathore,India,23,Wicket-keeper,Uncapped,0.3,unsold,,,
+134,18,UWK2,Ravi Singh,India,24,Wicket-keeper,Uncapped,0.3,sold,Rajasthan Royals,RR,0.95
+135,19,UFA2,K.M Asif,India,32,Fast bowler,Uncapped,0.4,unsold,,,
+136,19,UFA2,Sakib Hussain,India,21,Fast bowler,Uncapped,0.3,sold,Sunrisers Hyderabad,SRH,0.3
+137,19,UFA2,Mohammad Izhar,India,22,Fast bowler,Uncapped,0.3,sold,Mumbai Indians,MI,0.3
+138,19,UFA2,Vidwath Kaverappa,India,27,Fast bowler,Uncapped,0.3,unsold,,,
+139,19,UFA2,Vijay Kumar,India,20,Fast bowler,Uncapped,0.3,unsold,,,
+140,19,UFA2,Vidyadhar Patil,India,25,Fast bowler,Uncapped,0.3,unsold,,,
+141,19,UFA2,PV.Satyanarayana Raju,India,26,Fast bowler,Uncapped,0.3,unsold,,,
+142,19,UFA2,Onkar Tarmale,India,23,Fast bowler,Uncapped,0.3,sold,Sunrisers Hyderabad,SRH,0.3
+143,19,UFA2,Prithviraj Yarra,India,28,Fast bowler,Uncapped,0.3,sold,Gujarat Titans,GT,0.3
+144,20,USP2,Shubham Agrawal,India,32,Spin bowler,Uncapped,0.4,unsold,,,
+145,20,USP2,Murugan Ashwin,India,35,Spin bowler,Uncapped,0.3,unsold,,,
+146,20,USP2,Tejas Baroka,India,30,Spin bowler,Uncapped,0.3,unsold,,,
+147,20,USP2,K.C. Cariappa,India,31,Spin bowler,Uncapped,0.3,unsold,,,
+148,20,USP2,Kartik Chadha,India,22,Spin bowler,Uncapped,0.3,unsold,,,
+149,20,USP2,Pravin Dubey,India,32,Spin bowler,Uncapped,0.3,sold,Punjab Kings,PBKS,0.3
+150,20,USP2,Mohit Rathee,India,27,Spin bowler,Uncapped,0.3,unsold,,,
+151,20,USP2,Himanshu Sharma,India,27,Spin bowler,Uncapped,0.3,unsold,,,
+152,20,USP2,Bailapudi Yeswanth,India,21,Spin bowler,Uncapped,0.3,unsold,,,
+153,21,AL3,Rehan Ahmed,England,21,All-rounder,Capped,0.75,unsold,,,
+154,21,AL3,Cooper Connolly,Australia,22,All-rounder,Capped,2.0,sold,Punjab Kings,PBKS,3.0
+155,21,AL3,Tom Curran,England,31,All-rounder,Capped,2.0,unsold,,,
+156,21,AL3,Bevon-John Jacobs,New Zealand,23,All-rounder,Capped,0.75,unsold,,,
+157,21,AL3,Daniel Lawrence,England,28,All-rounder,Capped,2.0,unsold,,,
+158,21,AL3,George Linde,South Africa,34,All-rounder,Capped,1.0,unsold,,,
+159,21,AL3,Gulbadin Naib,Afghanistan,34,All-rounder,Capped,1.0,unsold,,,
+160,21,AL3,William Sutherland,Australia,26,All-rounder,Capped,1.0,unsold,,,
+161,21,AL3,Beau Webster,Australia,32,All-rounder,Capped,1.25,unsold,,,
+162,22,FA3,Taskin Ahmed,Bangladesh,31,Fast bowler,Capped,0.75,unsold,,,
+163,22,FA3,Richard Gleeson,England,38,Fast bowler,Capped,0.75,unsold,,,
+164,22,FA3,Alzarri Joseph,West Indies,29,Fast bowler,Capped,2.0,unsold,,,
+165,22,FA3,Shamar Joseph,West Indies,26,Fast bowler,Capped,0.75,unsold,,,
+166,22,FA3,Riley Meredith,Australia,29,Fast bowler,Capped,1.5,unsold,,,
+167,22,FA3,Jhye Richardson,Australia,29,Fast bowler,Capped,1.5,unsold,,,
+168,22,FA3,Navdeep Saini,India,33,Fast bowler,Capped,0.75,unsold,,,
+169,22,FA3,Naveen Ul Haq,Afghanistan,26,Fast bowler,Capped,2.0,unsold,,,
+170,22,FA3,Luke Wood,England,30,Fast bowler,Capped,0.75,sold,Gujarat Titans,GT,0.75
+171,23,UBA3,Kunal Chandela,India,31,Batter,Uncapped,0.3,unsold,,,
+172,23,UBA3,Ayush Doseja,India,23,Batter,Uncapped,0.3,unsold,,,
+173,23,UBA3,Qamran Iqbal,India,24,Batter,Uncapped,0.3,unsold,,,
+174,23,UBA3,M.Dheeraj Kumar,India,26,Batter,Uncapped,0.3,unsold,,,
+175,23,UBA3,Bhanu Pania,India,29,Batter,Uncapped,0.3,unsold,,,
+176,23,UBA3,Sahil Parakh,India,18,Batter,Uncapped,0.3,sold,Delhi Capitals,DC,0.3
+177,23,UBA3,Arsh Kabir Ranga,India,21,Batter,Uncapped,0.3,unsold,,,
+178,23,UBA3,Adarsh Singh,India,20,Batter,Uncapped,0.3,unsold,,,
+179,24,UAL3,Manoj Bhandage,India,27,All-rounder,Uncapped,0.3,unsold,,,
+180,24,UAL3,Mayank Dagar,India,29,All-rounder,Uncapped,0.3,unsold,,,
+181,24,UAL3,Raghav Goyal,India,24,All-rounder,Uncapped,0.3,unsold,,,
+182,24,UAL3,Manvanth Kumar,India,22,All-rounder,Uncapped,0.3,unsold,,,
+183,24,UAL3,Abid Mushtaq,India,29,All-rounder,Uncapped,0.3,unsold,,,
+184,24,UAL3,Jalaj Saxena,India,39,All-rounder,Uncapped,0.4,unsold,,,
+185,24,UAL3,Atit Sheth,India,30,All-rounder,Uncapped,0.3,unsold,,,
+186,24,UAL3,Hritik Shokeen,India,25,All-rounder,Uncapped,0.3,unsold,,,
+187,24,UAL3,Jagadeesha Suchith,India,32,All-rounder,Uncapped,0.3,unsold,,,
+188,24,UAL3,Tanay Thyagarajann,India,30,All-rounder,Uncapped,0.3,unsold,,,
+189,25,UWK3,Joe Clarke,England,29,Wicket-keeper,Uncapped,0.5,unsold,,,
+190,25,UWK3,Connor Esterhuizen,South Africa,24,Wicket-keeper,Uncapped,0.3,unsold,,,
+191,25,UWK3,Ajitesh Guruswamy,India,23,Wicket-keeper,Uncapped,0.3,unsold,,,
+192,25,UWK3,Siddharth Joon,India,19,Wicket-keeper,Uncapped,0.3,unsold,,,
+193,25,UWK3,Tom Moores,England,29,Wicket-keeper,Uncapped,0.4,unsold,,,
+194,25,UWK3,Bipin Saurabh,India,26,Wicket-keeper,Uncapped,0.3,unsold,,,
+195,25,UWK3,Vishnu Solanki,India,33,Wicket-keeper,Uncapped,0.3,unsold,,,
+196,25,UWK3,Hardik Tamore,India,28,Wicket-keeper,Uncapped,0.3,unsold,,,
+197,26,UFA3,Sayan Ghosh,India,33,Fast bowler,Uncapped,0.3,unsold,,,
+198,26,UFA3,Money Grewal,India,25,Fast bowler,Uncapped,0.3,unsold,,,
+199,26,UFA3,Arpit Guleria,India,28,Fast bowler,Uncapped,0.3,unsold,,,
+200,26,UFA3,Sunil Kumar,India,28,Fast bowler,Uncapped,0.3,unsold,,,
+201,26,UFA3,Tristan Luus,South Africa,20,Fast bowler,Uncapped,0.3,unsold,,,
+202,26,UFA3,Divesh Sharma,India,24,Fast bowler,Uncapped,0.3,unsold,,,
+203,26,UFA3,Abhilash Shetty,India,27,Fast bowler,Uncapped,0.3,unsold,,,
+204,26,UFA3,Irfan Umair,India,29,Fast bowler,Uncapped,0.3,unsold,,,
+205,26,UFA3,Kuldip Yadav,India,29,Fast bowler,Uncapped,0.3,unsold,,,
+206,27,USP3,Manan Bhardwaj,India,22,Spin bowler,Uncapped,0.3,unsold,,,
+207,27,USP3,Shreyas Chavan,India,22,Spin bowler,Uncapped,0.3,unsold,,,
+208,27,USP3,Parikshit Dhanak,India,23,Spin bowler,Uncapped,0.3,unsold,,,
+209,27,USP3,Chintal Gandhi,India,31,Spin bowler,Uncapped,0.3,unsold,,,
+210,27,USP3,Dharmendrasinh Jadeja,India,35,Spin bowler,Uncapped,0.3,unsold,,,
+211,27,USP3,Amit Kumar,India,23,Spin bowler,Uncapped,0.3,sold,Sunrisers Hyderabad,SRH,0.3
+212,27,USP3,Vishal Nishad,India,21,Spin bowler,Uncapped,0.3,sold,Punjab Kings,PBKS,0.3
+213,27,USP3,Saumy Pandey,India,21,Spin bowler,Uncapped,0.3,unsold,,,
+214,27,USP3,Jhathavedh Subramanyan,India,26,Spin bowler,Uncapped,0.3,unsold,,,
+215,28,AL4,Muhammad Abbas,New Zealand,22,All-rounder,Capped,0.75,unsold,,,
+216,28,AL4,Charith Asalanka,Sri Lanka,28,All-rounder,Capped,1.0,unsold,,,
+217,28,AL4,Roston Chase,West Indies,34,All-rounder,Capped,1.25,unsold,,,
+218,28,AL4,Liam Dawson,England,36,All-rounder,Capped,2.0,unsold,,,
+219,28,AL4,George Garton,England,28,All-rounder,Capped,0.75,unsold,,,
+220,28,AL4,Kyle Mayers,West Indies,33,All-rounder,Capped,1.25,unsold,,,
+221,28,AL4,Dwaine Pretorius,South Africa,37,All-rounder,Capped,1.0,unsold,,,
+222,28,AL4,Nathan Smith,New Zealand,27,All-rounder,Capped,0.75,unsold,,,
+223,28,AL4,Dunith Wellalage,Sri Lanka,23,All-rounder,Capped,0.75,unsold,,,
+224,29,FA4,Jason Behrendorff,Australia,35,Fast bowler,Capped,1.5,unsold,,,
+225,29,FA4,Tanzim Hasan Sakib,Bangladesh,23,Fast bowler,Capped,0.75,unsold,,,
+226,29,FA4,Matthew Potts,England,27,Fast bowler,Capped,0.75,unsold,,,
+227,29,FA4,Nahid Rana,Bangladesh,23,Fast bowler,Capped,0.75,unsold,,,
+228,29,FA4,Olly Stone,England,32,Fast bowler,Capped,1.25,unsold,,,
+229,29,FA4,Joshua Tongue,England,28,Fast bowler,Capped,1.0,unsold,,,
+230,29,FA4,Sandeep Warrier,India,35,Fast bowler,Capped,0.75,unsold,,,
+231,30,UBA4,Sachin Dhas,India,21,Batter,Uncapped,0.3,unsold,,,
+232,30,UBA4,Miles Hammond,England,30,Batter,Uncapped,0.3,unsold,,,
+233,30,UBA4,Ahammed Imran,India,19,Batter,Uncapped,0.3,unsold,,,
+234,30,UBA4,Vishvarajsinh Jadeja,India,27,Batter,Uncapped,0.3,unsold,,,
+235,30,UBA4,Ayaz Khan,India,23,Batter,Uncapped,0.3,unsold,,,
+236,30,UBA4,Daniel Lategan,England,19,Batter,Uncapped,0.3,unsold,,,
+237,30,UBA4,Siddhant Rana,India,25,Batter,Uncapped,0.3,unsold,,,
+238,30,UBA4,Aaron Varghese,India,19,Batter,Uncapped,0.3,unsold,,,
+239,31,UAL4,Atharva Ankolekar,India,25,All-rounder,Uncapped,0.3,sold,Mumbai Indians,MI,0.3
+240,31,UAL4,Abdul Bazith,India,27,All-rounder,Uncapped,0.3,unsold,,,
+241,31,UAL4,Karan Lal,India,25,All-rounder,Uncapped,0.3,unsold,,,
+242,31,UAL4,Shams Mulani,India,29,All-rounder,Uncapped,0.3,unsold,,,
+243,31,UAL4,Ripal Patel,India,30,All-rounder,Uncapped,0.3,unsold,,,
+244,31,UAL4,Prince Rai,India,26,All-rounder,Uncapped,0.3,unsold,,,
+245,31,UAL4,Vivrant Sharma,India,26,All-rounder,Uncapped,0.3,unsold,,,
+246,31,UAL4,Utkarsh Singh,India,27,All-rounder,Uncapped,0.3,unsold,,,
+247,31,UAL4,Ayush Vartak,India,21,All-rounder,Uncapped,0.3,unsold,,,
+248,31,UAL4,Sanjay Yadav,India,30,All-rounder,Uncapped,0.3,unsold,,,
+249,32,UFA4,Sayed Irfan Aftab,India,22,Fast bowler,Uncapped,0.3,unsold,,,
+250,32,UFA4,Esakkimuthu Ayyakutti,India,24,Fast bowler,Uncapped,0.3,unsold,,,
+251,32,UFA4,Praful Hinge,India,24,Fast bowler,Uncapped,0.3,sold,Sunrisers Hyderabad,SRH,0.3
+252,32,UFA4,Pankaj Jaswal,India,30,Fast bowler,Uncapped,0.3,unsold,,,
+253,32,UFA4,Kulwant Khejroliya,India,34,Fast bowler,Uncapped,0.3,unsold,,,
+254,32,UFA4,Ravi Kumar,India,22,Fast bowler,Uncapped,0.3,unsold,,,
+255,32,UFA4,Rajan Kumar,India,29,Fast bowler,Uncapped,0.3,unsold,,,
+256,32,UFA4,Safvan Patel,India,27,Fast bowler,Uncapped,0.3,unsold,,,
+257,32,UFA4,Ishan Porel,India,27,Fast bowler,Uncapped,0.3,unsold,,,
+258,33,USP4,Purav Agarwal,India,22,Spin bowler,Uncapped,0.3,unsold,,,
+259,33,USP4,Jikku Bright,India,29,Spin bowler,Uncapped,0.3,unsold,,,
+260,33,USP4,Yash Dicholkar,India,29,Spin bowler,Uncapped,0.3,unsold,,,
+261,33,USP4,Arab Gul,Afghanistan,20,Spin bowler,Uncapped,0.4,unsold,,,
+262,33,USP4,Rakibul Hasan,Bangladesh,23,Spin bowler,Uncapped,0.3,unsold,,,
+263,33,USP4,Traveen Mathew,Sri Lanka,21,Spin bowler,Uncapped,0.3,unsold,,,
+264,33,USP4,Naman Pushpak,India,19,Spin bowler,Uncapped,0.3,unsold,,,
+265,33,USP4,Izaz Sawariya,India,20,Spin bowler,Uncapped,0.3,unsold,,,
+266,33,USP4,Roshan Wagshare,India,22,Spin bowler,Uncapped,0.3,unsold,,,
+267,34,FA5,Wesley Agar,Australia,29,Fast bowler,Capped,0.75,unsold,,,
+268,34,FA5,Binura Fernando,Sri Lanka,30,Fast bowler,Capped,0.75,unsold,,,
+269,34,FA5,Md Shoriful Islam,Bangladesh,24,Fast bowler,Capped,0.75,unsold,,,
+270,34,FA5,Joshua Little,Ireland,26,Fast bowler,Capped,0.75,unsold,,,
+271,34,FA5,Obed McCoy,West Indies,29,Fast bowler,Capped,0.75,unsold,,,
+272,34,FA5,Billy Stanlake,Australia,31,Fast bowler,Capped,0.75,unsold,,,
+273,35,UAL5,R.S Ambrish,India,18,All-rounder,Uncapped,0.3,unsold,,,
+274,35,UAL5,Nikhil Chaudhary,Australia,29,All-rounder,Uncapped,0.4,unsold,,,
+275,35,UAL5,Krains Fuletra,India,21,All-rounder,Uncapped,0.3,sold,Sunrisers Hyderabad,SRH,0.3
+276,35,UAL5,Macneil Noronha,India,24,All-rounder,Uncapped,0.3,unsold,,,
+277,35,UAL5,R Rajkumar,India,32,All-rounder,Uncapped,0.3,unsold,,,
+278,35,UAL5,Ninad Rathva,India,27,All-rounder,Uncapped,0.3,unsold,,,
+279,35,UAL5,Sunny Sandhu,India,22,All-rounder,Uncapped,0.3,unsold,,,
+280,35,UAL5,Shivalik Sharma,India,27,All-rounder,Uncapped,0.3,unsold,,,
+281,35,UAL5,Siddharth Yadav,India,22,All-rounder,Uncapped,0.3,unsold,,,
+282,35,UAL5,R.Sonu Yadav,India,26,All-rounder,Uncapped,0.3,unsold,,,
+283,36,UFA5,Waseem Khanday,India,26,Fast bowler,Uncapped,0.3,unsold,,,
+284,36,UFA5,Atif Mushtaq,India,23,Fast bowler,Uncapped,0.3,unsold,,,
+285,36,UFA5,Atal Rai,India,26,Fast bowler,Uncapped,0.3,unsold,,,
+286,36,UFA5,C.Rakshann Readdi,India,25,Fast bowler,Uncapped,0.3,unsold,,,
+287,36,UFA5,Manish Reddy,India,27,Fast bowler,Uncapped,0.3,unsold,,,
+288,36,UFA5,Nishanth Saranu,India,21,Fast bowler,Uncapped,0.3,unsold,,,
+289,36,UFA5,Deependra Singh,India,20,Fast bowler,Uncapped,0.3,unsold,,,
+290,36,UFA5,Rajat Verma,India,28,Fast bowler,Uncapped,0.3,unsold,,,
+291,36,UFA5,Rohit Yadav,India,26,Fast bowler,Uncapped,0.3,unsold,,,
+292,37,UAL6,Emanjot Chahal,India,21,All-rounder,Uncapped,0.3,unsold,,,
+293,37,UAL6,Shubhang Hegde,India,25,All-rounder,Uncapped,0.3,unsold,,,
+294,37,UAL6,Bal Krishna,India,27,All-rounder,Uncapped,0.3,unsold,,,
+295,37,UAL6,Vihaan Malhotra,India,19,All-rounder,Uncapped,0.3,sold,Royal Challengers Bengaluru,RCB,0.3
+296,37,UAL6,Khilan Patel,India,19,All-rounder,Uncapped,0.3,unsold,,,
+297,37,UAL6,Delano Potgieter,South Africa,29,All-rounder,Uncapped,0.3,unsold,,,
+298,37,UAL6,Hardik Raj,India,20,All-rounder,Uncapped,0.3,unsold,,,
+299,37,UAL6,Sarthak Ranjan,India,29,All-rounder,Uncapped,0.3,sold,Kolkata Knight Riders,KKR,0.3
+300,37,UAL6,Parth Rekhade,India,26,All-rounder,Uncapped,0.3,unsold,,,
+301,37,UAL6,Tiaan Van Vuuren,South Africa,24,All-rounder,Uncapped,0.3,unsold,,,
+302,38,UFA6,Shreevatsha Acharya,India,24,Fast bowler,Uncapped,0.3,unsold,,,
+303,38,UFA6,Sadek Hussain,India,24,Fast bowler,Uncapped,0.3,unsold,,,
+304,38,UFA6,Shubham Kapse,India,31,Fast bowler,Uncapped,0.3,unsold,,,
+305,38,UFA6,Aaqib Khan,India,22,Fast bowler,Uncapped,0.3,unsold,,,
+306,38,UFA6,Sabir Khan,India,25,Fast bowler,Uncapped,0.3,unsold,,,
+307,38,UFA6,Bayanda Majola,South Africa,19,Fast bowler,Uncapped,0.3,unsold,,,
+308,38,UFA6,Srihari Nair,India,23,Fast bowler,Uncapped,0.3,unsold,,,
+309,38,UFA6,Brijesh Sharma,India,27,Fast bowler,Uncapped,0.3,sold,Rajasthan Royals,RR,0.3
+310,38,UFA6,Aman Shekhawat,India,25,Fast bowler,Uncapped,0.3,unsold,,,
+311,39,UAL7,Himanshu Bisht,India,29,All-rounder,Uncapped,0.3,unsold,,,
+312,39,UAL7,Shreyan Chakraborty,India,29,All-rounder,Uncapped,0.3,unsold,,,
+313,39,UAL7,Kanishk Chouhan,India,19,All-rounder,Uncapped,0.3,sold,Royal Challengers Bengaluru,RCB,0.3
+314,39,UAL7,Mayank Gusain,India,24,All-rounder,Uncapped,0.3,unsold,,,
+315,39,UAL7,Akash Pugazhanthi,India,22,All-rounder,Uncapped,0.3,unsold,,,
+316,39,UAL7,Abhimanyusingh Rajput,India,27,All-rounder,Uncapped,0.3,unsold,,,
+317,39,UAL7,Shubham Rana,India,19,All-rounder,Uncapped,0.3,unsold,,,
+318,39,UAL7,Arpit Rana,India,22,All-rounder,Uncapped,0.3,unsold,,,
+319,39,UAL7,Maramreddy Reddy,India,23,All-rounder,Uncapped,0.3,unsold,,,
+320,39,UAL7,Sagar Solanki,India,25,All-rounder,Uncapped,0.3,unsold,,,
+321,40,UAL8,Aryaman Singh Dhaliwal,India,23,All-rounder,Uncapped,0.3,unsold,,,
+322,40,UAL8,Daksh Kamra,India,23,All-rounder,Uncapped,0.3,sold,Kolkata Knight Riders,KKR,0.3
+323,40,UAL8,Vishal Mandwal,India,29,All-rounder,Uncapped,0.3,unsold,,,
+324,40,UAL8,Arfaz Mohammad,India,24,All-rounder,Uncapped,0.3,unsold,,,
+325,40,UAL8,Hemang Patel,India,27,All-rounder,Uncapped,0.3,unsold,,,
+326,40,UAL8,Mridul Surroch,India,22,All-rounder,Uncapped,0.3,unsold,,,
+327,40,UAL8,Anuj Thakral,India,23,All-rounder,Uncapped,0.3,unsold,,,
+328,40,UAL8,Parth Vats,India,22,All-rounder,Uncapped,0.3,unsold,,,
+329,40,UAL8,Lalit Yadav,India,29,All-rounder,Uncapped,0.3,unsold,,,
+330,40,UAL8,Nitin Sai Yadav,India,21,All-rounder,Uncapped,0.3,unsold,,,
+331,41,UAL9,Krish Bhagat,India,21,All-rounder,Uncapped,0.3,unsold,,,
+332,41,UAL9,Prerit Dutta,India,27,All-rounder,Uncapped,0.3,unsold,,,
+333,41,UAL9,Sammar Gajjar,India,22,All-rounder,Uncapped,0.3,unsold,,,
+334,41,UAL9,Nasir Lone,India,28,All-rounder,Uncapped,0.3,unsold,,,
+335,41,UAL9,Ishan Mulchandani,India,26,All-rounder,Uncapped,0.3,unsold,,,
+336,41,UAL9,Akhil Scaria,India,27,All-rounder,Uncapped,0.3,unsold,,,
+337,41,UAL9,Muhammed Sharafuddeen,India,31,All-rounder,Uncapped,0.3,unsold,,,
+338,41,UAL9,K.Ajay Singh,India,32,All-rounder,Uncapped,0.3,unsold,,,
+339,41,UAL9,Ritik Tada,India,23,All-rounder,Uncapped,0.3,unsold,,,
+340,41,UAL9,Luckyrajsinh Vaghela,India,23,All-rounder,Uncapped,0.3,unsold,,,
+341,42,UAL10,Mohamed Ali,India,21,All-rounder,Uncapped,0.3,unsold,,,
+342,42,UAL10,Madhav Bajaj,India,25,All-rounder,Uncapped,0.3,unsold,,,
+343,42,UAL10,Akshu Bajwa,India,20,All-rounder,Uncapped,0.3,unsold,,,
+344,42,UAL10,Varun Raj Singh Bisht,India,22,All-rounder,Uncapped,0.3,unsold,,,
+345,42,UAL10,Rishabh Chauhan,India,26,All-rounder,Uncapped,0.3,unsold,,,
+346,42,UAL10,Jack Edwards,Australia,25,All-rounder,Uncapped,0.5,sold,Sunrisers Hyderabad,SRH,3.0
+347,42,UAL10,Dian Forrester,South Africa,25,All-rounder,Uncapped,0.3,unsold,,,
+348,42,UAL10,Dhurmil Matkar,India,29,All-rounder,Uncapped,0.3,unsold,,,
+349,42,UAL10,Shiva Singh,India,26,All-rounder,Uncapped,0.3,unsold,,,
+350,42,UAL10,Parikshit Valsangkar,India,31,All-rounder,Uncapped,0.3,unsold,,,
+351,42,UAL10,Manisankar Murasingh,India,33,All-rounder,Uncapped,0.3,unsold,,,
+352,42,UAL10,Virandeep Singh,Malaysia,27,All-rounder,Uncapped,0.3,unsold,,,
+353,42,UAL10,Chama Milind,India,31,All-rounder,Uncapped,0.3,unsold,,,
+354,25,UWK3,K.L. Shrijith,India,29,Wicket-keeper,Uncapped,0.3,unsold,,,
+355,28,AL4,Eathan Bosch,South Africa,27,All-rounder,Capped,0.75,unsold,,,
+356,28,AL4,Chris Green,Australia,32,All-rounder,Capped,0.75,unsold,,,
+357,30,UBA4,Swastik Chikara,India,20,Batter,Uncapped,0.3,unsold,,,
+358,30,UBA4,Rahul Raj Namala,India,25,Batter,Uncapped,0.3,unsold,,,
+359,30,UBA4,Virat Singh,India,28,Batter,Uncapped,0.3,unsold,,,
+360,38,UFA6,Tripuresh Singh,India,23,Fast bowler,Uncapped,0.3,unsold,,,
+361,13,WK3,Kyle Verreynne,South Africa,28,Wicket-keeper,Capped,0.3,unsold,,,
+362,29,FA4,Blessing Muzarabani,Zimbabwe,29,Fast bowler,Capped,1.5,unsold,,,
+363,29,FA4,Ben Sears,New Zealand,27,Fast bowler,Capped,1.5,unsold,,,
+364,38,UFA6,Rajesh Mohanty,India,25,Fast bowler,Uncapped,0.3,unsold,,,
+365,30,UBA4,Swastik Samal,India,25,Batter,Uncapped,0.3,unsold,,,
+366,42,UAL10,Saransh Jain,India,32,All-rounder,Uncapped,0.3,unsold,,,
+367,38,UBA4,Sooraj Sangaraju,India,32,Batter,Uncapped,0.3,unsold,,,
+368,38,UBA4,Tanmay Agarwal,India,30,Batter,Uncapped,0.3,unsold,,,
+369,38,UBA4,Abhimanyu Easwaran,India,30,Batter,Uncapped,0.3,unsold,,,
