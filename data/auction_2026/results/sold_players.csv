@@ -1,78 +1,78 @@
-set,lot_no,name,country,role,category,ipl_matches,base_price_cr,sold_price_cr,team,team_code,previous_team
-Set 1,3,Cameron Green,Australia,Batter,Capped,29,2.0,25.2,Kolkata Knight Riders,KKR,
-Set 1,4,Sarfaraz Khan,India,Batter,Capped,50,0.75,0.75,Chennai Super Kings,CSK,
-Set 1,5,David Miller,South Africa,Batter,Capped,141,2.0,2.0,Delhi Capitals,DC,Lucknow Super Giants
-Set 1,6,Prithvi Shaw,India,Batter,Capped,79,0.75,0.75,Delhi Capitals,DC,
-Set 2,8,Wanindu Hasaranga,Sri Lanka,All-rounder,Capped,37,2.0,2.0,Lucknow Super Giants,LSG,Rajasthan Royals
-Set 2,10,Venkatesh Iyer,India,All-rounder,Capped,62,2.0,7.0,Royal Challengers Bengaluru,RCB,Kolkata Knight Riders
-Set 2,11,Liam Livingstone,England,All-rounder,Capped,49,2.0,13.0,Sunrisers Hyderabad,SRH,Royal Challengers Bengaluru
-Set 2,13,Rachin Ravindra,New Zealand,All-rounder,Capped,18,2.0,2.0,Kolkata Knight Riders,KKR,Chennai Super Kings
-Set 3,14,Finn Allen,New Zealand,Wicket-keeper,Capped,0,2.0,2.0,Kolkata Knight Riders,KKR,
-Set 3,17,Quinton de Kock,South Africa,Wicket-keeper,Capped,115,1.0,1.0,Mumbai Indians,MI,Kolkata Knight Riders
-Set 3,18,Ben Duckett,England,Wicket-keeper,Capped,,2.0,2.0,Delhi Capitals,DC,
-Set 4,22,Akash Deep,India,Fast bowler,Capped,14,1.0,1.0,Kolkata Knight Riders,KKR,Lucknow Super Giants
-Set 4,23,Jacob Duffy,New Zealand,Fast bowler,Capped,,2.0,2.0,Royal Challengers Bengaluru,RCB,
-Set 4,25,Matt Henry,New Zealand,Fast bowler,Capped,6,2.0,2.0,Chennai Super Kings,CSK,
-Set 4,27,Shivam Mavi,India,Fast bowler,Capped,32,0.75,0.75,Sunrisers Hyderabad,SRH,
-Set 4,28,Anrich Nortje,South Africa,Fast bowler,Capped,48,2.0,2.0,Lucknow Super Giants,LSG,Kolkata Knight Riders
-Set 4,29,Matheesha Pathirana,Sri Lanka,Fast bowler,Capped,32,2.0,18.0,Kolkata Knight Riders,KKR,Chennai Super Kings
-Set 5,30,Ravi Bishnoi,India,Spin bowler,Capped,77,2.0,7.2,Rajasthan Royals,RR,Lucknow Super Giants
-Set 5,31,Rahul Chahar,India,Spin bowler,Capped,80,1.0,5.2,Chennai Super Kings,CSK,Sunrisers Hyderabad
-Set 5,32,Akeal Hosein,West Indies,Spin bowler,Capped,1,2.0,2.0,Chennai Super Kings,CSK,
-Set 7,41,Auqib Nabi,India,All-rounder,Uncapped,0,0.3,8.4,Delhi Capitals,DC,
-Set 7,44,Shivang Kumar,India,All-rounder,Uncapped,0,0.3,0.3,Sunrisers Hyderabad,SRH,
-Set 7,50,Prashant Veer,India,All-rounder,Uncapped,0,0.3,14.2,Chennai Super Kings,CSK,
-Set 8,53,Mukul Choudhary,India,Wicket-keeper,Uncapped,,0.3,2.6,Lucknow Super Giants,LSG,
-Set 8,55,Kartik Sharma,India,Wicket-keeper,Uncapped,,0.3,14.2,Chennai Super Kings,CSK,
-Set 8,56,Tejasvi Singh,India,Wicket-keeper,Uncapped,,0.3,3.0,Kolkata Knight Riders,KKR,
-Set 9,59,Sushant Mishra,India,Fast bowler,Uncapped,,0.3,0.9,Rajasthan Royals,RR,
-Set 9,60,Ashok Sharma,India,Fast bowler,Uncapped,,0.3,0.9,Gujarat Titans,GT,Rajasthan Royals
-Set 9,62,Naman Tiwari,India,Fast bowler,Uncapped,,0.3,1.0,Lucknow Super Giants,LSG,
-Set 9,63,Kartik Tyagi,India,Fast bowler,Uncapped,20,0.3,0.3,Kolkata Knight Riders,KKR,
-Set 10,64,Yash Raj Punja,India,Spin bowler,Uncapped,,0.3,0.3,Rajasthan Royals,RR,
-Set 10,65,Vignesh Puthur,India,Spin bowler,Uncapped,5,0.3,0.3,Rajasthan Royals,RR,Mumbai Indians
-Set 10,69,Prashant Solanki,India,Spin bowler,Uncapped,2,0.3,0.3,Kolkata Knight Riders,KKR,
-Accelerated round,75,Pathum Nissanka,Sri Lanka,Batter,Capped,,0.75,4.0,Delhi Capitals,DC,
-Accelerated round,78,Rahul Tripathi,India,Batter,Capped,100,0.75,0.75,Kolkata Knight Riders,KKR,Chennai Super Kings
-Accelerated round,81,Ben Dwarshuis,Australia,All-rounder,Capped,,1.0,4.4,Punjab Kings,PBKS,
-Accelerated round,82,Zak Foulkes,New Zealand,All-rounder,Capped,,0.75,0.75,Chennai Super Kings,CSK,
-Accelerated round,83,Jason Holder,West Indies,All-rounder,Capped,46,2.0,7.0,Gujarat Titans,GT,
-Accelerated round,87,Matthew Short,Australia,All-rounder,Capped,6,1.5,1.5,Chennai Super Kings,CSK,
-Accelerated round,88,Tom Banton,England,Wicket-keeper,Capped,2,2.0,2.0,Gujarat Titans,GT,
-Accelerated round,89,Jordan Cox,England,Wicket-keeper,Capped,,0.75,0.75,Royal Challengers Bengaluru,RCB,
-Accelerated round,91,Josh Inglis,Australia,Wicket-keeper,Capped,11,2.0,8.6,Lucknow Super Giants,LSG,Punjab Kings
-Accelerated round,95,Tim Seifert,New Zealand,Wicket-keeper,Capped,3,1.5,1.5,Kolkata Knight Riders,KKR,Royal Challengers Bengaluru
-Accelerated round,96,Kyle Jamieson,New Zealand,Bowler,Capped,13,2.0,2.0,Delhi Capitals,DC,Punjab Kings
-Accelerated round,98,Adam Milne,New Zealand,Bowler,Capped,10,2.0,2.4,Rajasthan Royals,RR,
-Accelerated round,99,Lungi Ngidi,South Africa,Bowler,Capped,16,2.0,2.0,Delhi Capitals,DC,Royal Challengers Bengaluru
-Accelerated round,101,Mustafizur Rahman,Bangladesh,Bowler,Capped,60,2.0,9.2,Kolkata Knight Riders,KKR,Delhi Capitals
-Accelerated round,103,Kuldeep Sen,India,Bowler,Capped,12,0.75,0.75,Rajasthan Royals,RR,Punjab Kings
-Accelerated round,111,Danish Malewar,India,Batter,Uncapped,,0.3,0.3,Mumbai Indians,MI,
-Accelerated round,114,Aman Rao,India,Batter,Uncapped,,0.3,0.3,Rajasthan Royals,RR,
-Accelerated round,115,Akshat Raghuwanshi,India,Batter,Uncapped,,0.3,2.2,Lucknow Super Giants,LSG,
-Accelerated round,118,Satvik Deswal,India,All-rounder,Uncapped,,0.3,0.3,Royal Challengers Bengaluru,RCB,
-Accelerated round,119,Aman Khan,India,All-rounder,Uncapped,12,0.3,0.4,Chennai Super Kings,CSK,
-Accelerated round,121,Vicky Ostwal,India,All-rounder,Uncapped,,0.3,0.3,Royal Challengers Bengaluru,RCB,
-Accelerated round,124,Mayank Rawat,India,All-rounder,Uncapped,,0.3,0.3,Mumbai Indians,MI,
-Accelerated round,126,Mangesh Yadav,India,All-rounder,Uncapped,,0.3,5.2,Royal Challengers Bengaluru,RCB,
-Accelerated round,127,Salil Arora,India,Wicket-keeper,Uncapped,,0.3,1.5,Sunrisers Hyderabad,SRH,
-Accelerated round,134,Ravi Singh,India,Wicket-keeper,Uncapped,,0.3,0.95,Rajasthan Royals,RR,
-Accelerated round,136,Sakib Hussain,India,Bowler,Uncapped,,0.3,0.3,Sunrisers Hyderabad,SRH,
-Accelerated round,137,Mohammad Izhar,India,Bowler,Uncapped,,0.3,0.3,Mumbai Indians,MI,
-Accelerated round,142,Onkar Tarmale,India,Bowler,Uncapped,,0.3,0.3,Sunrisers Hyderabad,SRH,
-Accelerated round,143,Prithvi Raj,India,Bowler,Uncapped,2,0.3,0.3,Gujarat Titans,GT,
-Accelerated round,149,Praveen Dubey,India,Bowler,Uncapped,5,0.3,0.3,Punjab Kings,PBKS,Punjab Kings
-Accelerated round,154,Cooper Connolly,Australia,All-rounder,Capped,,2.0,3.0,Punjab Kings,PBKS,
-Accelerated round,170,Luke Wood,England,Bowler,Capped,2,0.75,0.75,Gujarat Titans,GT,
-Accelerated round,176,Sahil Parekh,India,Batter,Uncapped,,0.3,0.3,Delhi Capitals,DC,
-Accelerated round,211,Amit Kumar,India,Bowler,Uncapped,,0.3,0.3,Sunrisers Hyderabad,SRH,
-Accelerated round,212,Vishal Nishad,India,All-rounder,Uncapped,,0.3,0.3,Punjab Kings,PBKS,
-Accelerated round,239,Atharva Ankolekar,India,All-rounder,Uncapped,,0.3,0.3,Mumbai Indians,MI,
-Accelerated round,251,Praful Hinge,India,Bowler,Uncapped,,0.3,0.3,Sunrisers Hyderabad,SRH,
-Accelerated round,275,Krains Fuletra,India,All-rounder,Uncapped,,0.3,0.3,Sunrisers Hyderabad,SRH,
-Accelerated round,295,Vihaan Malhotra,India,All-rounder,Uncapped,,0.3,0.3,Royal Challengers Bengaluru,RCB,
-Accelerated round,299,Sarthak Ranjan,India,All-rounder,Uncapped,,0.3,0.3,Kolkata Knight Riders,KKR,
-Accelerated round,309,Brijesh Sharma,India,Bowler,Uncapped,,0.3,0.3,Rajasthan Royals,RR,
-Accelerated round,313,Kanishk Chouhan,India,All-rounder,Uncapped,,0.3,0.3,Royal Challengers Bengaluru,RCB,
-Accelerated round,322,Daksh Kamra,India,All-rounder,Uncapped,,0.3,0.3,Kolkata Knight Riders,KKR,
-Accelerated round,346,Jack Edwards,Australia,All-rounder,Uncapped,,0.5,3.0,Sunrisers Hyderabad,SRH,
+set,lot_no,name,country,role,category,ipl_matches,base_price_cr,sold_price_cr,team,team_code,previous_team,image
+Set 1,3,Cameron Green,Australia,Batter,Capped,29,2.0,25.2,Kolkata Knight Riders,KKR,,static/players/cameron-green.jpg
+Set 1,4,Sarfaraz Khan,India,Batter,Capped,50,0.75,0.75,Chennai Super Kings,CSK,,
+Set 1,5,David Miller,South Africa,Batter,Capped,141,2.0,2.0,Delhi Capitals,DC,Lucknow Super Giants,static/players/david-miller.png
+Set 1,6,Prithvi Shaw,India,Batter,Capped,79,0.75,0.75,Delhi Capitals,DC,,static/players/prithvi-shaw.png
+Set 2,8,Wanindu Hasaranga,Sri Lanka,All-rounder,Capped,37,2.0,2.0,Lucknow Super Giants,LSG,Rajasthan Royals,static/players/wanindu-hasaranga.jpg
+Set 2,10,Venkatesh Iyer,India,All-rounder,Capped,62,2.0,7.0,Royal Challengers Bengaluru,RCB,Kolkata Knight Riders,static/players/venkatesh-iyer.png
+Set 2,11,Liam Livingstone,England,All-rounder,Capped,49,2.0,13.0,Sunrisers Hyderabad,SRH,Royal Challengers Bengaluru,
+Set 2,13,Rachin Ravindra,New Zealand,All-rounder,Capped,18,2.0,2.0,Kolkata Knight Riders,KKR,Chennai Super Kings,static/players/rachin-ravindra.jpg
+Set 3,14,Finn Allen,New Zealand,Wicket-keeper,Capped,0,2.0,2.0,Kolkata Knight Riders,KKR,,
+Set 3,17,Quinton de Kock,South Africa,Wicket-keeper,Capped,115,1.0,1.0,Mumbai Indians,MI,Kolkata Knight Riders,
+Set 3,18,Ben Duckett,England,Wicket-keeper,Capped,,2.0,2.0,Delhi Capitals,DC,,static/players/ben-duckett.jpg
+Set 4,22,Akash Deep,India,Fast bowler,Capped,14,1.0,1.0,Kolkata Knight Riders,KKR,Lucknow Super Giants,static/players/akash-deep.jpg
+Set 4,23,Jacob Duffy,New Zealand,Fast bowler,Capped,,2.0,2.0,Royal Challengers Bengaluru,RCB,,static/players/jacob-duffy.jpg
+Set 4,25,Matt Henry,New Zealand,Fast bowler,Capped,6,2.0,2.0,Chennai Super Kings,CSK,,static/players/matt-henry.jpg
+Set 4,27,Shivam Mavi,India,Fast bowler,Capped,32,0.75,0.75,Sunrisers Hyderabad,SRH,,
+Set 4,28,Anrich Nortje,South Africa,Fast bowler,Capped,48,2.0,2.0,Lucknow Super Giants,LSG,Kolkata Knight Riders,
+Set 4,29,Matheesha Pathirana,Sri Lanka,Fast bowler,Capped,32,2.0,18.0,Kolkata Knight Riders,KKR,Chennai Super Kings,
+Set 5,30,Ravi Bishnoi,India,Spin bowler,Capped,77,2.0,7.2,Rajasthan Royals,RR,Lucknow Super Giants,
+Set 5,31,Rahul Chahar,India,Spin bowler,Capped,80,1.0,5.2,Chennai Super Kings,CSK,Sunrisers Hyderabad,
+Set 5,32,Akeal Hosein,West Indies,Spin bowler,Capped,1,2.0,2.0,Chennai Super Kings,CSK,,
+Set 7,41,Auqib Nabi,India,All-rounder,Uncapped,0,0.3,8.4,Delhi Capitals,DC,,
+Set 7,44,Shivang Kumar,India,All-rounder,Uncapped,0,0.3,0.3,Sunrisers Hyderabad,SRH,,
+Set 7,50,Prashant Veer,India,All-rounder,Uncapped,0,0.3,14.2,Chennai Super Kings,CSK,,
+Set 8,53,Mukul Choudhary,India,Wicket-keeper,Uncapped,,0.3,2.6,Lucknow Super Giants,LSG,,
+Set 8,55,Kartik Sharma,India,Wicket-keeper,Uncapped,,0.3,14.2,Chennai Super Kings,CSK,,
+Set 8,56,Tejasvi Singh,India,Wicket-keeper,Uncapped,,0.3,3.0,Kolkata Knight Riders,KKR,,
+Set 9,59,Sushant Mishra,India,Fast bowler,Uncapped,,0.3,0.9,Rajasthan Royals,RR,,
+Set 9,60,Ashok Sharma,India,Fast bowler,Uncapped,,0.3,0.9,Gujarat Titans,GT,Rajasthan Royals,static/players/ashok-sharma.jpg
+Set 9,62,Naman Tiwari,India,Fast bowler,Uncapped,,0.3,1.0,Lucknow Super Giants,LSG,,
+Set 9,63,Kartik Tyagi,India,Fast bowler,Uncapped,20,0.3,0.3,Kolkata Knight Riders,KKR,,
+Set 10,64,Yash Raj Punja,India,Spin bowler,Uncapped,,0.3,0.3,Rajasthan Royals,RR,,
+Set 10,65,Vignesh Puthur,India,Spin bowler,Uncapped,5,0.3,0.3,Rajasthan Royals,RR,Mumbai Indians,
+Set 10,69,Prashant Solanki,India,Spin bowler,Uncapped,2,0.3,0.3,Kolkata Knight Riders,KKR,,
+Accelerated round,75,Pathum Nissanka,Sri Lanka,Batter,Capped,,0.75,4.0,Delhi Capitals,DC,,
+Accelerated round,78,Rahul Tripathi,India,Batter,Capped,100,0.75,0.75,Kolkata Knight Riders,KKR,Chennai Super Kings,
+Accelerated round,81,Ben Dwarshuis,Australia,All-rounder,Capped,,1.0,4.4,Punjab Kings,PBKS,,
+Accelerated round,82,Zak Foulkes,New Zealand,All-rounder,Capped,,0.75,0.75,Chennai Super Kings,CSK,,
+Accelerated round,83,Jason Holder,West Indies,All-rounder,Capped,46,2.0,7.0,Gujarat Titans,GT,,static/players/jason-holder.jpg
+Accelerated round,87,Matthew Short,Australia,All-rounder,Capped,6,1.5,1.5,Chennai Super Kings,CSK,,
+Accelerated round,88,Tom Banton,England,Wicket-keeper,Capped,2,2.0,2.0,Gujarat Titans,GT,,
+Accelerated round,89,Jordan Cox,England,Wicket-keeper,Capped,,0.75,0.75,Royal Challengers Bengaluru,RCB,,
+Accelerated round,91,Josh Inglis,Australia,Wicket-keeper,Capped,11,2.0,8.6,Lucknow Super Giants,LSG,Punjab Kings,static/players/josh-inglis.png
+Accelerated round,95,Tim Seifert,New Zealand,Wicket-keeper,Capped,3,1.5,1.5,Kolkata Knight Riders,KKR,Royal Challengers Bengaluru,
+Accelerated round,96,Kyle Jamieson,New Zealand,Bowler,Capped,13,2.0,2.0,Delhi Capitals,DC,Punjab Kings,static/players/kyle-jamieson.jpg
+Accelerated round,98,Adam Milne,New Zealand,Bowler,Capped,10,2.0,2.4,Rajasthan Royals,RR,,
+Accelerated round,99,Lungi Ngidi,South Africa,Bowler,Capped,16,2.0,2.0,Delhi Capitals,DC,Royal Challengers Bengaluru,
+Accelerated round,101,Mustafizur Rahman,Bangladesh,Bowler,Capped,60,2.0,9.2,Kolkata Knight Riders,KKR,Delhi Capitals,static/players/mustafizur-rahman.jpg
+Accelerated round,103,Kuldeep Sen,India,Bowler,Capped,12,0.75,0.75,Rajasthan Royals,RR,Punjab Kings,
+Accelerated round,111,Danish Malewar,India,Batter,Uncapped,,0.3,0.3,Mumbai Indians,MI,,
+Accelerated round,114,Aman Rao,India,Batter,Uncapped,,0.3,0.3,Rajasthan Royals,RR,,
+Accelerated round,115,Akshat Raghuwanshi,India,Batter,Uncapped,,0.3,2.2,Lucknow Super Giants,LSG,,
+Accelerated round,118,Satvik Deswal,India,All-rounder,Uncapped,,0.3,0.3,Royal Challengers Bengaluru,RCB,,
+Accelerated round,119,Aman Khan,India,All-rounder,Uncapped,12,0.3,0.4,Chennai Super Kings,CSK,,
+Accelerated round,121,Vicky Ostwal,India,All-rounder,Uncapped,,0.3,0.3,Royal Challengers Bengaluru,RCB,,
+Accelerated round,124,Mayank Rawat,India,All-rounder,Uncapped,,0.3,0.3,Mumbai Indians,MI,,
+Accelerated round,126,Mangesh Yadav,India,All-rounder,Uncapped,,0.3,5.2,Royal Challengers Bengaluru,RCB,,
+Accelerated round,127,Salil Arora,India,Wicket-keeper,Uncapped,,0.3,1.5,Sunrisers Hyderabad,SRH,,
+Accelerated round,134,Ravi Singh,India,Wicket-keeper,Uncapped,,0.3,0.95,Rajasthan Royals,RR,,
+Accelerated round,136,Sakib Hussain,India,Bowler,Uncapped,,0.3,0.3,Sunrisers Hyderabad,SRH,,
+Accelerated round,137,Mohammad Izhar,India,Bowler,Uncapped,,0.3,0.3,Mumbai Indians,MI,,
+Accelerated round,142,Onkar Tarmale,India,Bowler,Uncapped,,0.3,0.3,Sunrisers Hyderabad,SRH,,
+Accelerated round,143,Prithvi Raj,India,Bowler,Uncapped,2,0.3,0.3,Gujarat Titans,GT,,
+Accelerated round,149,Praveen Dubey,India,Bowler,Uncapped,5,0.3,0.3,Punjab Kings,PBKS,Punjab Kings,
+Accelerated round,154,Cooper Connolly,Australia,All-rounder,Capped,,2.0,3.0,Punjab Kings,PBKS,,static/players/cooper-connolly.jpg
+Accelerated round,170,Luke Wood,England,Bowler,Capped,2,0.75,0.75,Gujarat Titans,GT,,static/players/luke-wood.jpg
+Accelerated round,176,Sahil Parekh,India,Batter,Uncapped,,0.3,0.3,Delhi Capitals,DC,,
+Accelerated round,211,Amit Kumar,India,Bowler,Uncapped,,0.3,0.3,Sunrisers Hyderabad,SRH,,
+Accelerated round,212,Vishal Nishad,India,All-rounder,Uncapped,,0.3,0.3,Punjab Kings,PBKS,,
+Accelerated round,239,Atharva Ankolekar,India,All-rounder,Uncapped,,0.3,0.3,Mumbai Indians,MI,,
+Accelerated round,251,Praful Hinge,India,Bowler,Uncapped,,0.3,0.3,Sunrisers Hyderabad,SRH,,
+Accelerated round,275,Krains Fuletra,India,All-rounder,Uncapped,,0.3,0.3,Sunrisers Hyderabad,SRH,,
+Accelerated round,295,Vihaan Malhotra,India,All-rounder,Uncapped,,0.3,0.3,Royal Challengers Bengaluru,RCB,,
+Accelerated round,299,Sarthak Ranjan,India,All-rounder,Uncapped,,0.3,0.3,Kolkata Knight Riders,KKR,,
+Accelerated round,309,Brijesh Sharma,India,Bowler,Uncapped,,0.3,0.3,Rajasthan Royals,RR,,
+Accelerated round,313,Kanishk Chouhan,India,All-rounder,Uncapped,,0.3,0.3,Royal Challengers Bengaluru,RCB,,
+Accelerated round,322,Daksh Kamra,India,All-rounder,Uncapped,,0.3,0.3,Kolkata Knight Riders,KKR,,
+Accelerated round,346,Jack Edwards,Australia,All-rounder,Uncapped,,0.5,3.0,Sunrisers Hyderabad,SRH,,static/players/jack-edwards.jpg

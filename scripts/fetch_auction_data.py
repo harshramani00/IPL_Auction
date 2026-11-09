@@ -41,7 +41,8 @@ from pathlib import Path
 from fetch_team_logos import TEAMS
 
 API = "https://en.wikipedia.org/w/api.php"
-USER_AGENT = "IPL-Auction-DataFetcher/1.0 (personal project)"
+# Wikimedia asks for contact info in the User-Agent and throttles harder without it.
+USER_AGENT = "IPL-Auction-DataFetcher/1.0 (https://github.com/harshramani00/IPL_Auction)"
 PAGE = "List of {season} Indian Premier League personnel changes"
 
 CODE_BY_NAME = {name: code for code, (name, _) in TEAMS.items()}
