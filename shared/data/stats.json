@@ -1,0 +1,9817 @@
+{
+ "season": "IPL 2025",
+ "statsAsOf": "2025-12-16",
+ "source": "Cricsheet (cricsheet.org)",
+ "players": [
+  {
+   "n": "Devon Conway",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 6,
+    "runs": 156,
+    "sr": 131.09,
+    "avg": 26.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 29,
+    "runs": 1080,
+    "sr": 139.72,
+    "avg": 43.2,
+    "wk": 0,
+    "econ": null,
+    "hs": "92*",
+    "bb": null
+   },
+   "t20": {
+    "m": 178,
+    "runs": 5716,
+    "sr": 131.98,
+    "avg": 41.42,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jake Fraser-McGurk",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 6,
+    "runs": 55,
+    "sr": 105.77,
+    "avg": 9.17,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 15,
+    "runs": 385,
+    "sr": 199.48,
+    "avg": 25.67,
+    "wk": 0,
+    "econ": null,
+    "hs": "84",
+    "bb": null
+   },
+   "t20": {
+    "m": 88,
+    "runs": 1703,
+    "sr": 150.57,
+    "avg": 20.27,
+    "wk": 0,
+    "econ": 10.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Cameron Green",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 29,
+    "runs": 707,
+    "sr": 153.7,
+    "avg": 41.59,
+    "wk": 16,
+    "econ": 9.08,
+    "hs": "100*",
+    "bb": "2/12"
+   },
+   "t20": {
+    "m": 62,
+    "runs": 1331,
+    "sr": 151.08,
+    "avg": 34.13,
+    "wk": 28,
+    "econ": 9.1,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sarfaraz Khan",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 50,
+    "runs": 585,
+    "sr": 130.58,
+    "avg": 22.5,
+    "wk": 0,
+    "econ": 18.0,
+    "hs": "67",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 75,
+    "runs": 865,
+    "sr": 127.02,
+    "avg": 22.76,
+    "wk": 0,
+    "econ": 6.75,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "David Miller",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 11,
+    "runs": 153,
+    "sr": 127.5,
+    "avg": 30.6,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 141,
+    "runs": 3077,
+    "sr": 138.6,
+    "avg": 35.78,
+    "wk": 0,
+    "econ": null,
+    "hs": "101*",
+    "bb": null
+   },
+   "t20": {
+    "m": 465,
+    "runs": 9934,
+    "sr": 138.2,
+    "avg": 35.1,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Prithvi Shaw",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 79,
+    "runs": 1892,
+    "sr": 147.47,
+    "avg": 23.95,
+    "wk": 0,
+    "econ": null,
+    "hs": "99",
+    "bb": null
+   },
+   "t20": {
+    "m": 105,
+    "runs": 2610,
+    "sr": 151.22,
+    "avg": 24.86,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Gus Atkinson",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 60,
+    "runs": 109,
+    "sr": 96.46,
+    "avg": 9.08,
+    "wk": 71,
+    "econ": 8.68,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Wanindu Hasaranga",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 11,
+    "runs": 9,
+    "sr": 60.0,
+    "avg": 1.8,
+    "wk": 11,
+    "econ": 9.05
+   },
+   "ipl": {
+    "m": 37,
+    "runs": 81,
+    "sr": 92.05,
+    "avg": 5.4,
+    "wk": 46,
+    "econ": 8.41,
+    "hs": "18",
+    "bb": "5/18"
+   },
+   "t20": {
+    "m": 204,
+    "runs": 1883,
+    "sr": 141.26,
+    "avg": 15.56,
+    "wk": 304,
+    "econ": 7.1,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Deepak Hooda",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 7,
+    "runs": 31,
+    "sr": 75.61,
+    "avg": 6.2,
+    "wk": 0,
+    "econ": 15.0
+   },
+   "ipl": {
+    "m": 125,
+    "runs": 1496,
+    "sr": 127.65,
+    "avg": 17.6,
+    "wk": 10,
+    "econ": 8.64,
+    "hs": "64",
+    "bb": "2/16"
+   },
+   "t20": {
+    "m": 181,
+    "runs": 2722,
+    "sr": 132.72,
+    "avg": 21.27,
+    "wk": 23,
+    "econ": 7.67,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Venkatesh Iyer",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 11,
+    "runs": 142,
+    "sr": 139.22,
+    "avg": 20.29,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 61,
+    "runs": 1468,
+    "sr": 137.32,
+    "avg": 29.96,
+    "wk": 3,
+    "econ": 10.59,
+    "hs": "104",
+    "bb": "2/29"
+   },
+   "t20": {
+    "m": 106,
+    "runs": 2502,
+    "sr": 138.54,
+    "avg": 33.36,
+    "wk": 30,
+    "econ": 7.6,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Liam Livingstone",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 10,
+    "runs": 112,
+    "sr": 133.33,
+    "avg": 16.0,
+    "wk": 2,
+    "econ": 8.44
+   },
+   "ipl": {
+    "m": 49,
+    "runs": 1051,
+    "sr": 158.76,
+    "avg": 26.27,
+    "wk": 13,
+    "econ": 9.02,
+    "hs": "94",
+    "bb": "3/27"
+   },
+   "t20": {
+    "m": 287,
+    "runs": 6380,
+    "sr": 143.92,
+    "avg": 27.15,
+    "wk": 123,
+    "econ": 8.45,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Wiaan Mulder",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 1,
+    "runs": 9,
+    "sr": 81.82,
+    "avg": 9.0,
+    "wk": 0,
+    "econ": 16.0
+   },
+   "ipl": {
+    "m": 1,
+    "runs": 9,
+    "sr": 81.82,
+    "avg": 9.0,
+    "wk": 0,
+    "econ": 16.0,
+    "hs": "9",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 105,
+    "runs": 1760,
+    "sr": 133.13,
+    "avg": 26.27,
+    "wk": 49,
+    "econ": 8.91,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rachin Ravindra",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 8,
+    "runs": 191,
+    "sr": 128.19,
+    "avg": 27.29,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 18,
+    "runs": 413,
+    "sr": 143.9,
+    "avg": 24.29,
+    "wk": 0,
+    "econ": 3.5,
+    "hs": "65*",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 111,
+    "runs": 1831,
+    "sr": 137.67,
+    "avg": 20.12,
+    "wk": 62,
+    "econ": 7.28,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Finn Allen",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 147,
+    "runs": 4076,
+    "sr": 178.15,
+    "avg": 29.32,
+    "wk": 0,
+    "econ": 8.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jonny Bairstow",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 2,
+    "runs": 85,
+    "sr": 184.78,
+    "avg": 42.5,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 52,
+    "runs": 1674,
+    "sr": 146.07,
+    "avg": 34.88,
+    "wk": 0,
+    "econ": null,
+    "hs": "114",
+    "bb": null
+   },
+   "t20": {
+    "m": 184,
+    "runs": 4894,
+    "sr": 142.14,
+    "avg": 33.75,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "K.S. Bharat",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 10,
+    "runs": 199,
+    "sr": 122.09,
+    "avg": 28.43,
+    "wk": 0,
+    "econ": null,
+    "hs": "78*",
+    "bb": null
+   },
+   "t20": {
+    "m": 46,
+    "runs": 723,
+    "sr": 112.27,
+    "avg": 19.54,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Quinton De Kock",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 8,
+    "runs": 152,
+    "sr": 129.91,
+    "avg": 21.71,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 115,
+    "runs": 3309,
+    "sr": 134.02,
+    "avg": 30.64,
+    "wk": 0,
+    "econ": null,
+    "hs": "140*",
+    "bb": null
+   },
+   "t20": {
+    "m": 374,
+    "runs": 10693,
+    "sr": 138.51,
+    "avg": 31.36,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ben Duckett",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 172,
+    "runs": 4343,
+    "sr": 140.1,
+    "avg": 30.37,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rahmanullah Gurbaz",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 5,
+    "runs": 74,
+    "sr": 139.62,
+    "avg": 18.5,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 18,
+    "runs": 363,
+    "sr": 134.94,
+    "avg": 21.35,
+    "wk": 0,
+    "econ": null,
+    "hs": "81",
+    "bb": null
+   },
+   "t20": {
+    "m": 130,
+    "runs": 2905,
+    "sr": 148.97,
+    "avg": 23.06,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jamie Smith",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 78,
+    "runs": 1256,
+    "sr": 138.48,
+    "avg": 24.63,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Gerald Coetzee",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 4,
+    "runs": 17,
+    "sr": 154.55,
+    "avg": 8.5,
+    "wk": 2,
+    "econ": 10.92
+   },
+   "ipl": {
+    "m": 14,
+    "runs": 31,
+    "sr": 93.94,
+    "avg": 5.17,
+    "wk": 15,
+    "econ": 10.37,
+    "hs": "12",
+    "bb": "4/34"
+   },
+   "t20": {
+    "m": 71,
+    "runs": 348,
+    "sr": 112.62,
+    "avg": 7.91,
+    "wk": 94,
+    "econ": 9.06,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Akash Deep",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 6,
+    "runs": 6,
+    "sr": 300.0,
+    "avg": 6.0,
+    "wk": 3,
+    "econ": 12.05
+   },
+   "ipl": {
+    "m": 14,
+    "runs": 25,
+    "sr": 178.57,
+    "avg": 8.33,
+    "wk": 10,
+    "econ": 11.83,
+    "hs": "17",
+    "bb": "3/45"
+   },
+   "t20": {
+    "m": 35,
+    "runs": 74,
+    "sr": 145.1,
+    "avg": 10.57,
+    "wk": 35,
+    "econ": 8.57,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jacob Duffy",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 109,
+    "runs": 155,
+    "sr": 117.42,
+    "avg": 7.05,
+    "wk": 127,
+    "econ": 8.08,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Fazalhaq Farooqi",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 5,
+    "runs": 2,
+    "sr": 100.0,
+    "avg": null,
+    "wk": 0,
+    "econ": 12.35
+   },
+   "ipl": {
+    "m": 12,
+    "runs": 5,
+    "sr": 33.33,
+    "avg": null,
+    "wk": 6,
+    "econ": 10.32,
+    "hs": "2*",
+    "bb": "2/32"
+   },
+   "t20": {
+    "m": 73,
+    "runs": 27,
+    "sr": 67.5,
+    "avg": 5.4,
+    "wk": 94,
+    "econ": 8.11,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Matt Henry",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 6,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 2,
+    "econ": 10.65,
+    "hs": null,
+    "bb": "1/28"
+   },
+   "t20": {
+    "m": 121,
+    "runs": 378,
+    "sr": 147.08,
+    "avg": 11.81,
+    "wk": 154,
+    "econ": 8.46,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Spencer Johnson",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 4,
+    "runs": 2,
+    "sr": 50.0,
+    "avg": null,
+    "wk": 1,
+    "econ": 11.74
+   },
+   "ipl": {
+    "m": 9,
+    "runs": 8,
+    "sr": 72.73,
+    "avg": null,
+    "wk": 5,
+    "econ": 10.39,
+    "hs": "5*",
+    "bb": "2/25"
+   },
+   "t20": {
+    "m": 62,
+    "runs": 93,
+    "sr": 124.0,
+    "avg": 9.3,
+    "wk": 80,
+    "econ": 8.01,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shivam Mavi",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 32,
+    "runs": 51,
+    "sr": 91.07,
+    "avg": 5.67,
+    "wk": 30,
+    "econ": 8.71,
+    "hs": "20",
+    "bb": "4/21"
+   },
+   "t20": {
+    "m": 46,
+    "runs": 85,
+    "sr": 94.44,
+    "avg": 6.07,
+    "wk": 45,
+    "econ": 8.72,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Anrich Nortje",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 11.86
+   },
+   "ipl": {
+    "m": 48,
+    "runs": 49,
+    "sr": 100.0,
+    "avg": 8.17,
+    "wk": 61,
+    "econ": 9.07,
+    "hs": "23*",
+    "bb": "3/33"
+   },
+   "t20": {
+    "m": 138,
+    "runs": 193,
+    "sr": 101.05,
+    "avg": 8.39,
+    "wk": 167,
+    "econ": 7.95,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Matheesha Pathirana",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 12,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 13,
+    "econ": 10.14
+   },
+   "ipl": {
+    "m": 32,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 47,
+    "econ": 8.68,
+    "hs": null,
+    "bb": "4/28"
+   },
+   "t20": {
+    "m": 91,
+    "runs": 24,
+    "sr": 52.17,
+    "avg": 3.0,
+    "wk": 123,
+    "econ": 8.69,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ravi Bishnoi",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 11,
+    "runs": 13,
+    "sr": 81.25,
+    "avg": 6.5,
+    "wk": 9,
+    "econ": 10.84
+   },
+   "ipl": {
+    "m": 77,
+    "runs": 45,
+    "sr": 68.18,
+    "avg": 4.5,
+    "wk": 72,
+    "econ": 8.22,
+    "hs": "13",
+    "bb": "3/24"
+   },
+   "t20": {
+    "m": 134,
+    "runs": 131,
+    "sr": 91.61,
+    "avg": 5.7,
+    "wk": 159,
+    "econ": 7.57,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rahul Chahar",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 9.0
+   },
+   "ipl": {
+    "m": 79,
+    "runs": 129,
+    "sr": 104.03,
+    "avg": 8.06,
+    "wk": 75,
+    "econ": 7.72,
+    "hs": "25*",
+    "bb": "4/27"
+   },
+   "t20": {
+    "m": 104,
+    "runs": 166,
+    "sr": 97.65,
+    "avg": 7.55,
+    "wk": 108,
+    "econ": 7.5,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Akeal Hosein",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 16,
+    "sr": 160.0,
+    "avg": null,
+    "wk": 1,
+    "econ": 10.0,
+    "hs": "16*",
+    "bb": "1/40"
+   },
+   "t20": {
+    "m": 247,
+    "runs": 1156,
+    "sr": 110.94,
+    "avg": 15.62,
+    "wk": 231,
+    "econ": 7.06,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mujeeb Rahman",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 14.0
+   },
+   "ipl": {
+    "m": 20,
+    "runs": 12,
+    "sr": 80.0,
+    "avg": 4.0,
+    "wk": 20,
+    "econ": 8.34,
+    "hs": "10*",
+    "bb": "3/27"
+   },
+   "t20": {
+    "m": 184,
+    "runs": 263,
+    "sr": 103.14,
+    "avg": 7.97,
+    "wk": 186,
+    "econ": 6.84,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Maheesh Theekshana",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 11,
+    "runs": 10,
+    "sr": 37.04,
+    "avg": 5.0,
+    "wk": 11,
+    "econ": 9.76
+   },
+   "ipl": {
+    "m": 38,
+    "runs": 17,
+    "sr": 50.0,
+    "avg": 5.67,
+    "wk": 36,
+    "econ": 8.27,
+    "hs": "7*",
+    "bb": "4/33"
+   },
+   "t20": {
+    "m": 176,
+    "runs": 225,
+    "sr": 67.57,
+    "avg": 6.08,
+    "wk": 182,
+    "econ": 7.23,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Yash Dhull",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 4,
+    "runs": 16,
+    "sr": 69.57,
+    "avg": 5.33,
+    "wk": 0,
+    "econ": null,
+    "hs": "13",
+    "bb": null
+   },
+   "t20": {
+    "m": 14,
+    "runs": 300,
+    "sr": 103.09,
+    "avg": 30.0,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Abhinav Manohar",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 8,
+    "runs": 61,
+    "sr": 100.0,
+    "avg": 12.2,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 27,
+    "runs": 292,
+    "sr": 124.26,
+    "avg": 15.37,
+    "wk": 0,
+    "econ": null,
+    "hs": "43",
+    "bb": null
+   },
+   "t20": {
+    "m": 35,
+    "runs": 574,
+    "sr": 136.67,
+    "avg": 24.96,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Anmolpreet Singh",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 9,
+    "runs": 139,
+    "sr": 120.87,
+    "avg": 15.44,
+    "wk": 0,
+    "econ": null,
+    "hs": "36",
+    "bb": null
+   },
+   "t20": {
+    "m": 50,
+    "runs": 1093,
+    "sr": 137.83,
+    "avg": 28.03,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Atharva Taide",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 1,
+    "runs": 13,
+    "sr": 144.44,
+    "avg": 13.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 10,
+    "runs": 260,
+    "sr": 146.89,
+    "avg": 26.0,
+    "wk": 0,
+    "econ": 24.0,
+    "hs": "66",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 35,
+    "runs": 891,
+    "sr": 130.65,
+    "avg": 27.84,
+    "wk": 10,
+    "econ": 5.48,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rajvardhan Hangargekar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 3,
+    "econ": 10.0,
+    "hs": null,
+    "bb": "3/36"
+   },
+   "t20": {
+    "m": 4,
+    "runs": 6,
+    "sr": 85.71,
+    "avg": 6.0,
+    "wk": 3,
+    "econ": 9.38,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tanush Kotian",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 24,
+    "sr": 77.42,
+    "avg": 24.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "24",
+    "bb": null
+   },
+   "t20": {
+    "m": 17,
+    "runs": 75,
+    "sr": 107.14,
+    "avg": 25.0,
+    "wk": 18,
+    "econ": 6.15,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mahipal Lomror",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 40,
+    "runs": 527,
+    "sr": 141.29,
+    "avg": 18.17,
+    "wk": 1,
+    "econ": 8.47,
+    "hs": "54*",
+    "bb": "1/22"
+   },
+   "t20": {
+    "m": 71,
+    "runs": 1341,
+    "sr": 129.19,
+    "avg": 25.3,
+    "wk": 4,
+    "econ": 7.48,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kamlesh Nagarkoti",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 12,
+    "runs": 22,
+    "sr": 66.67,
+    "avg": 5.5,
+    "wk": 5,
+    "econ": 9.5,
+    "hs": "8*",
+    "bb": "2/13"
+   },
+   "t20": {
+    "m": 18,
+    "runs": 68,
+    "sr": 76.4,
+    "avg": 11.33,
+    "wk": 13,
+    "econ": 8.87,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vijay Shankar",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 6,
+    "runs": 118,
+    "sr": 129.67,
+    "avg": 39.33,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 78,
+    "runs": 1233,
+    "sr": 129.79,
+    "avg": 26.23,
+    "wk": 9,
+    "econ": 8.67,
+    "hs": "69*",
+    "bb": "2/19"
+   },
+   "t20": {
+    "m": 118,
+    "runs": 1959,
+    "sr": 129.74,
+    "avg": 27.59,
+    "wk": 20,
+    "econ": 8.34,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sanvir Singh",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 6,
+    "runs": 25,
+    "sr": 119.05,
+    "avg": 12.5,
+    "wk": 0,
+    "econ": null,
+    "hs": "8*",
+    "bb": null
+   },
+   "t20": {
+    "m": 23,
+    "runs": 251,
+    "sr": 184.56,
+    "avg": 41.83,
+    "wk": 4,
+    "econ": 9.77,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Prashant Veer",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 3,
+    "econ": 2.33,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ruchit Ahir",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 1,
+    "runs": 10,
+    "sr": 111.11,
+    "avg": 10.0,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Akash Madhwal",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 4,
+    "runs": 4,
+    "sr": 44.44,
+    "avg": null,
+    "wk": 4,
+    "econ": 11.07
+   },
+   "ipl": {
+    "m": 17,
+    "runs": 8,
+    "sr": 57.14,
+    "avg": null,
+    "wk": 23,
+    "econ": 10.06,
+    "hs": "4*",
+    "bb": "5/5"
+   },
+   "t20": {
+    "m": 35,
+    "runs": 14,
+    "sr": 50.0,
+    "avg": 14.0,
+    "wk": 42,
+    "econ": 8.8,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Simarjeet Singh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 4,
+    "runs": 3,
+    "sr": 42.86,
+    "avg": 1.5,
+    "wk": 2,
+    "econ": 14.1
+   },
+   "ipl": {
+    "m": 14,
+    "runs": 10,
+    "sr": 66.67,
+    "avg": 3.33,
+    "wk": 11,
+    "econ": 10.0,
+    "hs": "3*",
+    "bb": "3/26"
+   },
+   "t20": {
+    "m": 31,
+    "runs": 12,
+    "sr": 60.0,
+    "avg": 3.0,
+    "wk": 33,
+    "econ": 8.63,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kartik Tyagi",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 20,
+    "runs": 13,
+    "sr": 81.25,
+    "avg": 3.25,
+    "wk": 15,
+    "econ": 10.14,
+    "hs": "7",
+    "bb": "2/29"
+   },
+   "t20": {
+    "m": 27,
+    "runs": 13,
+    "sr": 81.25,
+    "avg": 3.25,
+    "wk": 18,
+    "econ": 9.76,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vignesh Puthur",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 5,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 6,
+    "econ": 9.08
+   },
+   "ipl": {
+    "m": 5,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 6,
+    "econ": 9.08,
+    "hs": null,
+    "bb": "3/32"
+   },
+   "t20": {
+    "m": 5,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 6,
+    "econ": 9.08,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Karn Sharma",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 6,
+    "runs": 1,
+    "sr": 100.0,
+    "avg": null,
+    "wk": 7,
+    "econ": 8.53
+   },
+   "ipl": {
+    "m": 90,
+    "runs": 352,
+    "sr": 119.32,
+    "avg": 13.54,
+    "wk": 83,
+    "econ": 8.38,
+    "hs": "39*",
+    "bb": "4/16"
+   },
+   "t20": {
+    "m": 130,
+    "runs": 882,
+    "sr": 130.28,
+    "avg": 16.64,
+    "wk": 117,
+    "econ": 7.95,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shivam Shukla",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 3,
+    "runs": 1,
+    "sr": 33.33,
+    "avg": 1.0,
+    "wk": 2,
+    "econ": 6.7,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kumar Kartikeya Singh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 4,
+    "runs": 3,
+    "sr": 60.0,
+    "avg": 1.5,
+    "wk": 2,
+    "econ": 9.75
+   },
+   "ipl": {
+    "m": 16,
+    "runs": 12,
+    "sr": 70.59,
+    "avg": 3.0,
+    "wk": 12,
+    "econ": 8.66,
+    "hs": "6",
+    "bb": "2/22"
+   },
+   "t20": {
+    "m": 32,
+    "runs": 18,
+    "sr": 72.0,
+    "avg": 3.6,
+    "wk": 30,
+    "econ": 7.4,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Prashant Solanki",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 2,
+    "econ": 6.33,
+    "hs": null,
+    "bb": "2/20"
+   },
+   "t20": {
+    "m": 4,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 4,
+    "econ": 8.23,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Wahidullah Zadran",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 2,
+    "econ": 8.43,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sediqullah Atal",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 1,
+    "runs": 22,
+    "sr": 137.5,
+    "avg": 22.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 1,
+    "runs": 22,
+    "sr": 137.5,
+    "avg": 22.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "22",
+    "bb": null
+   },
+   "t20": {
+    "m": 7,
+    "runs": 163,
+    "sr": 134.71,
+    "avg": 23.29,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ackeem Auguste",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 34,
+    "runs": 549,
+    "sr": 134.89,
+    "avg": 21.96,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Reeza Hendricks",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 228,
+    "runs": 6612,
+    "sr": 126.21,
+    "avg": 33.39,
+    "wk": 4,
+    "econ": 6.64,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Pathum Nissanka",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 113,
+    "runs": 3314,
+    "sr": 130.27,
+    "avg": 30.69,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tim Robinson",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 57,
+    "runs": 1384,
+    "sr": 140.51,
+    "avg": 28.83,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Steve Smith",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 103,
+    "runs": 2485,
+    "sr": 128.09,
+    "avg": 34.51,
+    "wk": 0,
+    "econ": 15.0,
+    "hs": "101",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 220,
+    "runs": 5298,
+    "sr": 132.38,
+    "avg": 33.96,
+    "wk": 26,
+    "econ": 8.06,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rahul Tripathi",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 5,
+    "runs": 55,
+    "sr": 96.49,
+    "avg": 11.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 100,
+    "runs": 2291,
+    "sr": 137.85,
+    "avg": 26.33,
+    "wk": 0,
+    "econ": 12.0,
+    "hs": "93",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 136,
+    "runs": 3109,
+    "sr": 135.23,
+    "avg": 26.57,
+    "wk": 4,
+    "econ": 7.89,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sean Abbott",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 3,
+    "runs": 22,
+    "sr": 122.22,
+    "avg": 7.33,
+    "wk": 1,
+    "econ": 11.56,
+    "hs": "14",
+    "bb": "1/47"
+   },
+   "t20": {
+    "m": 174,
+    "runs": 896,
+    "sr": 122.4,
+    "avg": 12.62,
+    "wk": 234,
+    "econ": 8.67,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Michael Bracewell",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 5,
+    "runs": 58,
+    "sr": 123.4,
+    "avg": 29.0,
+    "wk": 6,
+    "econ": 8.64,
+    "hs": "26",
+    "bb": "2/13"
+   },
+   "t20": {
+    "m": 144,
+    "runs": 2409,
+    "sr": 137.97,
+    "avg": 26.77,
+    "wk": 90,
+    "econ": 8.2,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ben Dwarshuis",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 171,
+    "runs": 1085,
+    "sr": 140.73,
+    "avg": 19.73,
+    "wk": 216,
+    "econ": 8.36,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Zak Foulkes",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 63,
+    "runs": 252,
+    "sr": 125.37,
+    "avg": 13.26,
+    "wk": 73,
+    "econ": 7.95,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jason Holder",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 46,
+    "runs": 259,
+    "sr": 122.75,
+    "avg": 12.33,
+    "wk": 53,
+    "econ": 8.81,
+    "hs": "47*",
+    "bb": "4/52"
+   },
+   "t20": {
+    "m": 294,
+    "runs": 3001,
+    "sr": 137.22,
+    "avg": 19.24,
+    "wk": 319,
+    "econ": 8.41,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Daryl Mitchell",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 15,
+    "runs": 351,
+    "sr": 131.46,
+    "avg": 27.0,
+    "wk": 1,
+    "econ": 12.12,
+    "hs": "63",
+    "bb": "1/18"
+   },
+   "t20": {
+    "m": 192,
+    "runs": 4500,
+    "sr": 140.06,
+    "avg": 31.69,
+    "wk": 72,
+    "econ": 9.39,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Daniel Sams",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 16,
+    "runs": 44,
+    "sr": 100.0,
+    "avg": 4.89,
+    "wk": 14,
+    "econ": 8.72,
+    "hs": "15",
+    "bb": "4/30"
+   },
+   "t20": {
+    "m": 194,
+    "runs": 2047,
+    "sr": 148.76,
+    "avg": 16.38,
+    "wk": 236,
+    "econ": 8.8,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Dasun Shanaka",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 3,
+    "runs": 26,
+    "sr": 100.0,
+    "avg": 13.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "17",
+    "bb": null
+   },
+   "t20": {
+    "m": 210,
+    "runs": 3223,
+    "sr": 132.85,
+    "avg": 22.54,
+    "wk": 79,
+    "econ": 8.93,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Matthew Short",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 6,
+    "runs": 117,
+    "sr": 127.17,
+    "avg": 19.5,
+    "wk": 0,
+    "econ": 6.25,
+    "hs": "36",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 131,
+    "runs": 3367,
+    "sr": 146.45,
+    "avg": 28.78,
+    "wk": 51,
+    "econ": 7.72,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tom Banton",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 2,
+    "runs": 18,
+    "sr": 90.0,
+    "avg": 9.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "10",
+    "bb": null
+   },
+   "t20": {
+    "m": 164,
+    "runs": 4156,
+    "sr": 144.11,
+    "avg": 28.27,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jordan Cox",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 134,
+    "runs": 2804,
+    "sr": 138.2,
+    "avg": 27.76,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shai Hope",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 9,
+    "runs": 183,
+    "sr": 150.0,
+    "avg": 22.88,
+    "wk": 0,
+    "econ": null,
+    "hs": "41",
+    "bb": null
+   },
+   "t20": {
+    "m": 186,
+    "runs": 4910,
+    "sr": 130.48,
+    "avg": 30.31,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Josh Inglis",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 12,
+    "runs": 278,
+    "sr": 162.57,
+    "avg": 30.89,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 12,
+    "runs": 278,
+    "sr": 162.57,
+    "avg": 30.89,
+    "wk": 0,
+    "econ": null,
+    "hs": "73",
+    "bb": null
+   },
+   "t20": {
+    "m": 154,
+    "runs": 3677,
+    "sr": 151.07,
+    "avg": 30.39,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Benjamin McDermott",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 191,
+    "runs": 4665,
+    "sr": 135.69,
+    "avg": 29.9,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kusal Mendis",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 1,
+    "runs": 20,
+    "sr": 200.0,
+    "avg": 20.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 1,
+    "runs": 20,
+    "sr": 200.0,
+    "avg": 20.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "20",
+    "bb": null
+   },
+   "t20": {
+    "m": 152,
+    "runs": 3904,
+    "sr": 134.57,
+    "avg": 27.89,
+    "wk": 0,
+    "econ": 0.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kusal Perera",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 2,
+    "runs": 14,
+    "sr": 107.69,
+    "avg": 7.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "14",
+    "bb": null
+   },
+   "t20": {
+    "m": 153,
+    "runs": 3912,
+    "sr": 138.33,
+    "avg": 27.74,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tim Seifert",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 3,
+    "runs": 26,
+    "sr": 113.04,
+    "avg": 8.67,
+    "wk": 0,
+    "econ": null,
+    "hs": "21",
+    "bb": null
+   },
+   "t20": {
+    "m": 256,
+    "runs": 6438,
+    "sr": 136.02,
+    "avg": 30.08,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kyle Jamieson",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 4,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": null,
+    "wk": 5,
+    "econ": 9.8
+   },
+   "ipl": {
+    "m": 13,
+    "runs": 65,
+    "sr": 108.33,
+    "avg": 16.25,
+    "wk": 14,
+    "econ": 9.67,
+    "hs": "16*",
+    "bb": "3/41"
+   },
+   "t20": {
+    "m": 82,
+    "runs": 426,
+    "sr": 126.04,
+    "avg": 19.36,
+    "wk": 94,
+    "econ": 8.26,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Saqib Mahmood",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 72,
+    "runs": 66,
+    "sr": 71.74,
+    "avg": 6.6,
+    "wk": 100,
+    "econ": 8.83,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Adam Milne",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 10,
+    "runs": 23,
+    "sr": 79.31,
+    "avg": 5.75,
+    "wk": 7,
+    "econ": 9.48,
+    "hs": "15",
+    "bb": "2/21"
+   },
+   "t20": {
+    "m": 145,
+    "runs": 347,
+    "sr": 114.52,
+    "avg": 10.21,
+    "wk": 167,
+    "econ": 8.05,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Lungisani Ngidi",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 2,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": null,
+    "wk": 4,
+    "econ": 10.12
+   },
+   "ipl": {
+    "m": 16,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": null,
+    "wk": 29,
+    "econ": 8.53,
+    "hs": "0*",
+    "bb": "4/10"
+   },
+   "t20": {
+    "m": 130,
+    "runs": 87,
+    "sr": 80.56,
+    "avg": 8.7,
+    "wk": 175,
+    "econ": 8.52,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "William Orourke",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 3,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 6,
+    "econ": 12.77
+   },
+   "ipl": {
+    "m": 3,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 6,
+    "econ": 12.77,
+    "hs": null,
+    "bb": "3/27"
+   },
+   "t20": {
+    "m": 53,
+    "runs": 49,
+    "sr": 98.0,
+    "avg": 16.33,
+    "wk": 60,
+    "econ": 8.36,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mustafizur Rahman",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 3,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 4,
+    "econ": 7.91
+   },
+   "ipl": {
+    "m": 60,
+    "runs": 13,
+    "sr": 54.17,
+    "avg": 6.5,
+    "wk": 65,
+    "econ": 8.13,
+    "hs": "8*",
+    "bb": "4/29"
+   },
+   "t20": {
+    "m": 271,
+    "runs": 184,
+    "sr": 68.4,
+    "avg": 6.34,
+    "wk": 337,
+    "econ": 7.5,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Chetan Sakariya",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 13.0
+   },
+   "ipl": {
+    "m": 20,
+    "runs": 20,
+    "sr": 64.52,
+    "avg": 3.33,
+    "wk": 20,
+    "econ": 8.62,
+    "hs": "7",
+    "bb": "3/31"
+   },
+   "t20": {
+    "m": 45,
+    "runs": 25,
+    "sr": 62.5,
+    "avg": 4.17,
+    "wk": 61,
+    "econ": 7.75,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kuldeep Sen",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 12,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": null,
+    "wk": 14,
+    "econ": 9.63,
+    "hs": "0*",
+    "bb": "4/20"
+   },
+   "t20": {
+    "m": 33,
+    "runs": 1,
+    "sr": 8.33,
+    "avg": 0.5,
+    "wk": 29,
+    "econ": 8.91,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Umesh Yadav",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 148,
+    "runs": 208,
+    "sr": 103.48,
+    "avg": 9.9,
+    "wk": 144,
+    "econ": 8.49,
+    "hs": "24*",
+    "bb": "4/23"
+   },
+   "t20": {
+    "m": 169,
+    "runs": 286,
+    "sr": 115.32,
+    "avg": 11.92,
+    "wk": 164,
+    "econ": 8.44,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Qais Ahmad",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 110,
+    "runs": 424,
+    "sr": 125.44,
+    "avg": 11.16,
+    "wk": 121,
+    "econ": 7.63,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rishad Hossain",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 73,
+    "runs": 289,
+    "sr": 134.42,
+    "avg": 9.63,
+    "wk": 87,
+    "econ": 8.36,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mohammad Waqar Salamkheil",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 72,
+    "runs": 21,
+    "sr": 51.22,
+    "avg": 10.5,
+    "wk": 91,
+    "econ": 8.17,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ankit Kumar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 4,
+    "runs": 109,
+    "sr": 126.74,
+    "avg": 27.25,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rohan Kunnummal",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 13,
+    "runs": 361,
+    "sr": 112.11,
+    "avg": 32.82,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Salman Nizar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 13,
+    "runs": 188,
+    "sr": 141.35,
+    "avg": 37.6,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Akshat Raghuwanshi",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 3,
+    "runs": 24,
+    "sr": 104.35,
+    "avg": 12.0,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Manan Vohra",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 56,
+    "runs": 1083,
+    "sr": 130.64,
+    "avg": 22.1,
+    "wk": 0,
+    "econ": null,
+    "hs": "95",
+    "bb": null
+   },
+   "t20": {
+    "m": 86,
+    "runs": 2093,
+    "sr": 130.73,
+    "avg": 27.91,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Yuvraj Chaudhary",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 6.5,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Aman Khan",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 12,
+    "runs": 115,
+    "sr": 110.58,
+    "avg": 12.78,
+    "wk": 0,
+    "econ": 13.0,
+    "hs": "51",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 22,
+    "runs": 195,
+    "sr": 127.45,
+    "avg": 13.0,
+    "wk": 4,
+    "econ": 8.12,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Darshan Nalkande",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 6,
+    "runs": 12,
+    "sr": 100.0,
+    "avg": 6.0,
+    "wk": 6,
+    "econ": 10.57,
+    "hs": "12",
+    "bb": "2/21"
+   },
+   "t20": {
+    "m": 32,
+    "runs": 88,
+    "sr": 86.27,
+    "avg": 7.33,
+    "wk": 51,
+    "econ": 8.1,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sairaj Patil",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 3,
+    "runs": 31,
+    "sr": 110.71,
+    "avg": 31.0,
+    "wk": 0,
+    "econ": 11.67,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Suyash Prabhudessai",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 11,
+    "runs": 126,
+    "sr": 118.87,
+    "avg": 12.6,
+    "wk": 0,
+    "econ": null,
+    "hs": "34",
+    "bb": null
+   },
+   "t20": {
+    "m": 37,
+    "runs": 592,
+    "sr": 138.0,
+    "avg": 22.77,
+    "wk": 2,
+    "econ": 7.59,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mayank Rawat",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 2,
+    "runs": 24,
+    "sr": 114.29,
+    "avg": 24.0,
+    "wk": 0,
+    "econ": 9.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Harsh Tyagi",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 31,
+    "runs": 276,
+    "sr": 133.33,
+    "avg": 30.67,
+    "wk": 18,
+    "econ": 7.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ricky Bhui",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 4,
+    "runs": 10,
+    "sr": 38.46,
+    "avg": 2.5,
+    "wk": 0,
+    "econ": null,
+    "hs": "7",
+    "bb": null
+   },
+   "t20": {
+    "m": 34,
+    "runs": 936,
+    "sr": 149.52,
+    "avg": 37.44,
+    "wk": 0,
+    "econ": 6.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rahul Buddhi",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 15,
+    "runs": 229,
+    "sr": 123.78,
+    "avg": 22.9,
+    "wk": 0,
+    "econ": 12.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kunal Rathore",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "0",
+    "bb": null
+   },
+   "t20": {
+    "m": 3,
+    "runs": 40,
+    "sr": 137.93,
+    "avg": 20.0,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "K.M Asif",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 7,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 7,
+    "econ": 10.42,
+    "hs": "0",
+    "bb": "2/42"
+   },
+   "t20": {
+    "m": 25,
+    "runs": 1,
+    "sr": 20.0,
+    "avg": 1.0,
+    "wk": 25,
+    "econ": 8.77,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sakib Hussain",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 4,
+    "econ": 11.75,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vidwath Kaverappa",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 2,
+    "econ": 9.0,
+    "hs": null,
+    "bb": "2/36"
+   },
+   "t20": {
+    "m": 5,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 7,
+    "econ": 7.03,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vidyadhar Patil",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 6,
+    "runs": 1,
+    "sr": 100.0,
+    "avg": null,
+    "wk": 5,
+    "econ": 7.95,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Prithviraj Yarra",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 2,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": null,
+    "wk": 1,
+    "econ": 11.4,
+    "hs": "0*",
+    "bb": "1/29"
+   },
+   "t20": {
+    "m": 4,
+    "runs": 3,
+    "sr": 150.0,
+    "avg": null,
+    "wk": 6,
+    "econ": 11.53,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Murugan Ashwin",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 44,
+    "runs": 35,
+    "sr": 70.0,
+    "avg": 3.89,
+    "wk": 35,
+    "econ": 8.01,
+    "hs": "9",
+    "bb": "3/21"
+   },
+   "t20": {
+    "m": 82,
+    "runs": 77,
+    "sr": 71.3,
+    "avg": 5.5,
+    "wk": 79,
+    "econ": 7.42,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tejas Baroka",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 9.43,
+    "hs": null,
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 3,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 12.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "K.C. Cariappa",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 11,
+    "runs": 24,
+    "sr": 114.29,
+    "avg": 8.0,
+    "wk": 8,
+    "econ": 9.67,
+    "hs": "12*",
+    "bb": "2/16"
+   },
+   "t20": {
+    "m": 37,
+    "runs": 67,
+    "sr": 126.42,
+    "avg": 8.38,
+    "wk": 38,
+    "econ": 6.67,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Pravin Dubey",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 10.0
+   },
+   "ipl": {
+    "m": 5,
+    "runs": 23,
+    "sr": 69.7,
+    "avg": 23.0,
+    "wk": 2,
+    "econ": 8.54,
+    "hs": "16",
+    "bb": "1/19"
+   },
+   "t20": {
+    "m": 22,
+    "runs": 123,
+    "sr": 96.85,
+    "avg": 12.3,
+    "wk": 19,
+    "econ": 7.32,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Himanshu Sharma",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 11.4,
+    "hs": null,
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 11.4,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rehan Ahmed",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 66,
+    "runs": 770,
+    "sr": 123.6,
+    "avg": 17.5,
+    "wk": 65,
+    "econ": 8.34,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Cooper Connolly",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 36,
+    "runs": 705,
+    "sr": 136.36,
+    "avg": 33.57,
+    "wk": 13,
+    "econ": 7.73,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tom Curran",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 13,
+    "runs": 127,
+    "sr": 118.69,
+    "avg": 25.4,
+    "wk": 13,
+    "econ": 10.84,
+    "hs": "54*",
+    "bb": "3/29"
+   },
+   "t20": {
+    "m": 220,
+    "runs": 2121,
+    "sr": 139.45,
+    "avg": 20.2,
+    "wk": 222,
+    "econ": 8.81,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Bevon-John Jacobs",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 28,
+    "runs": 522,
+    "sr": 138.46,
+    "avg": 29.0,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Daniel Lawrence",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 138,
+    "runs": 3145,
+    "sr": 142.95,
+    "avg": 27.35,
+    "wk": 52,
+    "econ": 7.77,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "George Linde",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 171,
+    "runs": 1900,
+    "sr": 136.1,
+    "avg": 20.65,
+    "wk": 145,
+    "econ": 7.65,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Gulbadin Naib",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 2,
+    "runs": 19,
+    "sr": 126.67,
+    "avg": 19.0,
+    "wk": 0,
+    "econ": 12.0,
+    "hs": "19",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 26,
+    "runs": 551,
+    "sr": 138.79,
+    "avg": 27.55,
+    "wk": 17,
+    "econ": 8.33,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "William Sutherland",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 75,
+    "runs": 841,
+    "sr": 137.42,
+    "avg": 18.28,
+    "wk": 49,
+    "econ": 9.08,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Beau Webster",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 96,
+    "runs": 1814,
+    "sr": 119.19,
+    "avg": 27.48,
+    "wk": 25,
+    "econ": 7.49,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Taskin Ahmed",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 172,
+    "runs": 435,
+    "sr": 104.57,
+    "avg": 8.88,
+    "wk": 224,
+    "econ": 7.88,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Richard Gleeson",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 11.14
+   },
+   "ipl": {
+    "m": 3,
+    "runs": 2,
+    "sr": 100.0,
+    "avg": null,
+    "wk": 2,
+    "econ": 9.71,
+    "hs": "2*",
+    "bb": "1/30"
+   },
+   "t20": {
+    "m": 115,
+    "runs": 54,
+    "sr": 72.0,
+    "avg": 4.15,
+    "wk": 135,
+    "econ": 7.78,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Alzarri Joseph",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 22,
+    "runs": 27,
+    "sr": 84.38,
+    "avg": 27.0,
+    "wk": 21,
+    "econ": 9.55,
+    "hs": "15*",
+    "bb": "6/12"
+   },
+   "t20": {
+    "m": 164,
+    "runs": 484,
+    "sr": 106.84,
+    "avg": 13.08,
+    "wk": 199,
+    "econ": 8.78,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shamar Joseph",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 11.75,
+    "hs": null,
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 28,
+    "runs": 36,
+    "sr": 128.57,
+    "avg": 36.0,
+    "wk": 29,
+    "econ": 9.12,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Riley Meredith",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 18,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": null,
+    "wk": 19,
+    "econ": 9.46,
+    "hs": "0*",
+    "bb": "2/24"
+   },
+   "t20": {
+    "m": 132,
+    "runs": 41,
+    "sr": 97.62,
+    "avg": 4.1,
+    "wk": 177,
+    "econ": 8.43,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jhye Richardson",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 4,
+    "runs": 17,
+    "sr": 65.38,
+    "avg": 5.67,
+    "wk": 3,
+    "econ": 10.47,
+    "hs": "15",
+    "bb": "2/41"
+   },
+   "t20": {
+    "m": 96,
+    "runs": 344,
+    "sr": 112.05,
+    "avg": 14.33,
+    "wk": 124,
+    "econ": 7.98,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Navdeep Saini",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 32,
+    "runs": 33,
+    "sr": 89.19,
+    "avg": 8.25,
+    "wk": 23,
+    "econ": 8.88,
+    "hs": "12*",
+    "bb": "3/40"
+   },
+   "t20": {
+    "m": 69,
+    "runs": 56,
+    "sr": 83.58,
+    "avg": 9.33,
+    "wk": 55,
+    "econ": 7.8,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Naveen Ul Haq",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 18,
+    "runs": 18,
+    "sr": 72.0,
+    "avg": 18.0,
+    "wk": 25,
+    "econ": 9.16,
+    "hs": "13",
+    "bb": "4/38"
+   },
+   "t20": {
+    "m": 155,
+    "runs": 297,
+    "sr": 105.69,
+    "avg": 10.24,
+    "wk": 188,
+    "econ": 8.68,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Luke Wood",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 2,
+    "runs": 9,
+    "sr": 300.0,
+    "avg": null,
+    "wk": 1,
+    "econ": 15.5,
+    "hs": "9*",
+    "bb": "1/68"
+   },
+   "t20": {
+    "m": 170,
+    "runs": 422,
+    "sr": 119.89,
+    "avg": 9.59,
+    "wk": 190,
+    "econ": 8.31,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kunal Chandela",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 13,
+    "runs": 238,
+    "sr": 110.19,
+    "avg": 21.64,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Qamran Iqbal",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 8,
+    "runs": 201,
+    "sr": 107.49,
+    "avg": 25.12,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Bhanu Pania",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 23,
+    "runs": 216,
+    "sr": 110.77,
+    "avg": 16.62,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Manoj Bhandage",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 1,
+    "runs": 1,
+    "sr": 25.0,
+    "avg": 1.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 1,
+    "runs": 1,
+    "sr": 25.0,
+    "avg": 1.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "1",
+    "bb": null
+   },
+   "t20": {
+    "m": 12,
+    "runs": 92,
+    "sr": 133.33,
+    "avg": 18.4,
+    "wk": 7,
+    "econ": 9.33,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mayank Dagar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 8,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 2,
+    "econ": 8.89,
+    "hs": "0",
+    "bb": "1/23"
+   },
+   "t20": {
+    "m": 38,
+    "runs": 53,
+    "sr": 72.6,
+    "avg": 5.3,
+    "wk": 33,
+    "econ": 6.23,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Raghav Goyal",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 8.25,
+    "hs": null,
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 8.25,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Abid Mushtaq",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 14,
+    "runs": 29,
+    "sr": 90.62,
+    "avg": 7.25,
+    "wk": 11,
+    "econ": 5.96,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jalaj Saxena",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 9.0,
+    "hs": null,
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 24,
+    "runs": 165,
+    "sr": 79.33,
+    "avg": 18.33,
+    "wk": 23,
+    "econ": 6.28,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Atit Sheth",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 44,
+    "runs": 215,
+    "sr": 127.98,
+    "avg": 26.88,
+    "wk": 59,
+    "econ": 7.74,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jagadeesha Suchith",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 22,
+    "runs": 70,
+    "sr": 114.75,
+    "avg": 17.5,
+    "wk": 19,
+    "econ": 8.6,
+    "hs": "34*",
+    "bb": "2/12"
+   },
+   "t20": {
+    "m": 59,
+    "runs": 274,
+    "sr": 128.04,
+    "avg": 19.57,
+    "wk": 48,
+    "econ": 7.64,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Joe Clarke",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 203,
+    "runs": 5199,
+    "sr": 147.57,
+    "avg": 27.65,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Connor Esterhuizen",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 23,
+    "runs": 405,
+    "sr": 119.82,
+    "avg": 25.31,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tom Moores",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 158,
+    "runs": 2880,
+    "sr": 135.47,
+    "avg": 25.95,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vishnu Solanki",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 46,
+    "runs": 834,
+    "sr": 118.63,
+    "avg": 27.8,
+    "wk": 0,
+    "econ": 9.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Hardik Tamore",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 8,
+    "runs": 24,
+    "sr": 82.76,
+    "avg": 12.0,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sayan Ghosh",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 25,
+    "runs": 17,
+    "sr": 113.33,
+    "avg": 8.5,
+    "wk": 32,
+    "econ": 7.44,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tristan Luus",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 5,
+    "runs": 11,
+    "sr": 100.0,
+    "avg": 5.5,
+    "wk": 6,
+    "econ": 9.17,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kuldip Yadav",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 3,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": null,
+    "wk": 2,
+    "econ": 9.33,
+    "hs": "0*",
+    "bb": "1/18"
+   },
+   "t20": {
+    "m": 3,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": null,
+    "wk": 2,
+    "econ": 9.33,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Dharmendrasinh Jadeja",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 41,
+    "runs": 106,
+    "sr": 130.86,
+    "avg": 10.6,
+    "wk": 26,
+    "econ": 7.06,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Muhammad Abbas",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 19,
+    "runs": 391,
+    "sr": 135.29,
+    "avg": 26.07,
+    "wk": 2,
+    "econ": 9.05,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Charith Asalanka",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 117,
+    "runs": 2266,
+    "sr": 128.75,
+    "avg": 22.66,
+    "wk": 11,
+    "econ": 7.78,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Roston Chase",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 125,
+    "runs": 2206,
+    "sr": 126.2,
+    "avg": 27.57,
+    "wk": 94,
+    "econ": 7.08,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Liam Dawson",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 230,
+    "runs": 2300,
+    "sr": 122.08,
+    "avg": 18.85,
+    "wk": 201,
+    "econ": 7.37,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "George Garton",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 5,
+    "runs": 2,
+    "sr": 50.0,
+    "avg": 2.0,
+    "wk": 3,
+    "econ": 9.0,
+    "hs": "2*",
+    "bb": "1/27"
+   },
+   "t20": {
+    "m": 99,
+    "runs": 732,
+    "sr": 136.57,
+    "avg": 15.91,
+    "wk": 81,
+    "econ": 9.01,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kyle Mayers",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 13,
+    "runs": 379,
+    "sr": 144.11,
+    "avg": 29.15,
+    "wk": 0,
+    "econ": 8.43,
+    "hs": "73",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 189,
+    "runs": 3848,
+    "sr": 134.36,
+    "avg": 22.64,
+    "wk": 65,
+    "econ": 8.09,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Dwaine Pretorius",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 7,
+    "runs": 44,
+    "sr": 157.14,
+    "avg": 11.0,
+    "wk": 6,
+    "econ": 9.52,
+    "hs": "22",
+    "bb": "2/30"
+   },
+   "t20": {
+    "m": 213,
+    "runs": 2196,
+    "sr": 137.25,
+    "avg": 18.93,
+    "wk": 191,
+    "econ": 8.57,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nathan Smith",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 70,
+    "runs": 548,
+    "sr": 128.94,
+    "avg": 15.22,
+    "wk": 74,
+    "econ": 8.31,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Dunith Wellalage",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 53,
+    "runs": 508,
+    "sr": 108.55,
+    "avg": 21.17,
+    "wk": 50,
+    "econ": 6.58,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jason Behrendorff",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 17,
+    "runs": 6,
+    "sr": 66.67,
+    "avg": null,
+    "wk": 19,
+    "econ": 9.05,
+    "hs": "3*",
+    "bb": "3/23"
+   },
+   "t20": {
+    "m": 162,
+    "runs": 162,
+    "sr": 103.85,
+    "avg": 12.46,
+    "wk": 197,
+    "econ": 7.54,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tanzim Hasan Sakib",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 61,
+    "runs": 279,
+    "sr": 105.28,
+    "avg": 12.68,
+    "wk": 77,
+    "econ": 8.59,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Matthew Potts",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 54,
+    "runs": 163,
+    "sr": 125.38,
+    "avg": 13.58,
+    "wk": 70,
+    "econ": 8.38,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nahid Rana",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 18,
+    "runs": 4,
+    "sr": 17.39,
+    "avg": 1.33,
+    "wk": 16,
+    "econ": 8.77,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Olly Stone",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 100,
+    "runs": 162,
+    "sr": 91.01,
+    "avg": 7.71,
+    "wk": 103,
+    "econ": 8.97,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Joshua Tongue",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 10,
+    "runs": 4,
+    "sr": 100.0,
+    "avg": 4.0,
+    "wk": 8,
+    "econ": 9.38,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sandeep Warrier",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 10,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 8,
+    "econ": 9.04,
+    "hs": null,
+    "bb": "3/15"
+   },
+   "t20": {
+    "m": 48,
+    "runs": 1,
+    "sr": 33.33,
+    "avg": 0.5,
+    "wk": 43,
+    "econ": 7.49,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Miles Hammond",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 106,
+    "runs": 2252,
+    "sr": 133.02,
+    "avg": 22.3,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vishvarajsinh Jadeja",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 21,
+    "runs": 315,
+    "sr": 118.42,
+    "avg": 21.0,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Atharva Ankolekar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 11,
+    "runs": 78,
+    "sr": 139.29,
+    "avg": 39.0,
+    "wk": 9,
+    "econ": 5.71,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Karan Lal",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 7,
+    "runs": 80,
+    "sr": 105.26,
+    "avg": 13.33,
+    "wk": 4,
+    "econ": 4.9,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shams Mulani",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 2,
+    "runs": 1,
+    "sr": 100.0,
+    "avg": null,
+    "wk": 0,
+    "econ": 11.4,
+    "hs": "1*",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 34,
+    "runs": 112,
+    "sr": 124.44,
+    "avg": 12.44,
+    "wk": 35,
+    "econ": 6.67,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ripal Patel",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 9,
+    "runs": 80,
+    "sr": 109.59,
+    "avg": 16.0,
+    "wk": 0,
+    "econ": 7.33,
+    "hs": "23",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 30,
+    "runs": 375,
+    "sr": 138.38,
+    "avg": 20.83,
+    "wk": 0,
+    "econ": 9.17,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vivrant Sharma",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 3,
+    "runs": 69,
+    "sr": 146.81,
+    "avg": 69.0,
+    "wk": 0,
+    "econ": 12.33,
+    "hs": "69",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 7,
+    "runs": 125,
+    "sr": 120.19,
+    "avg": 25.0,
+    "wk": 0,
+    "econ": 12.33,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Utkarsh Singh",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 18,
+    "runs": 174,
+    "sr": 123.4,
+    "avg": 21.75,
+    "wk": 20,
+    "econ": 6.27,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sanjay Yadav",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 0,
+    "econ": 11.5,
+    "hs": "0",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 28,
+    "runs": 483,
+    "sr": 122.59,
+    "avg": 24.15,
+    "wk": 17,
+    "econ": 6.92,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Pankaj Jaswal",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 30,
+    "runs": 191,
+    "sr": 173.64,
+    "avg": 13.64,
+    "wk": 41,
+    "econ": 7.72,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kulwant Khejroliya",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 9.67
+   },
+   "ipl": {
+    "m": 8,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 6,
+    "econ": 10.62,
+    "hs": null,
+    "bb": "2/33"
+   },
+   "t20": {
+    "m": 17,
+    "runs": 19,
+    "sr": 190.0,
+    "avg": null,
+    "wk": 18,
+    "econ": 8.36,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ishan Porel",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 9.75,
+    "hs": null,
+    "bb": "1/39"
+   },
+   "t20": {
+    "m": 22,
+    "runs": 2,
+    "sr": 40.0,
+    "avg": null,
+    "wk": 27,
+    "econ": 6.67,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rakibul Hasan",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 25,
+    "runs": 83,
+    "sr": 136.07,
+    "avg": 11.86,
+    "wk": 18,
+    "econ": 7.6,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Traveen Mathew",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 6,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 3,
+    "econ": 7.41,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Wesley Agar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 76,
+    "runs": 108,
+    "sr": 108.0,
+    "avg": 6.75,
+    "wk": 93,
+    "econ": 9.12,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Binura Fernando",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 61,
+    "runs": 83,
+    "sr": 93.26,
+    "avg": 13.83,
+    "wk": 71,
+    "econ": 7.47,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Joshua Little",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 11,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 11,
+    "econ": 8.92,
+    "hs": null,
+    "bb": "4/45"
+   },
+   "t20": {
+    "m": 112,
+    "runs": 209,
+    "sr": 92.89,
+    "avg": 17.42,
+    "wk": 121,
+    "econ": 7.86,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Obed McCoy",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 8,
+    "runs": 8,
+    "sr": 160.0,
+    "avg": 8.0,
+    "wk": 11,
+    "econ": 9.32,
+    "hs": "8",
+    "bb": "3/23"
+   },
+   "t20": {
+    "m": 149,
+    "runs": 182,
+    "sr": 98.38,
+    "avg": 7.58,
+    "wk": 178,
+    "econ": 8.91,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Billy Stanlake",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 6,
+    "runs": 5,
+    "sr": 250.0,
+    "avg": null,
+    "wk": 7,
+    "econ": 8.33,
+    "hs": "5*",
+    "bb": "2/21"
+   },
+   "t20": {
+    "m": 84,
+    "runs": 34,
+    "sr": 59.65,
+    "avg": 8.5,
+    "wk": 87,
+    "econ": 8.08,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nikhil Chaudhary",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 26,
+    "runs": 434,
+    "sr": 136.05,
+    "avg": 22.84,
+    "wk": 11,
+    "econ": 7.85,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ninad Rathva",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 31,
+    "runs": 276,
+    "sr": 122.67,
+    "avg": 17.25,
+    "wk": 27,
+    "econ": 6.76,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shivalik Sharma",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 6,
+    "runs": 119,
+    "sr": 135.23,
+    "avg": 29.75,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shubhang Hegde",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 3,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 1,
+    "econ": 7.9,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Delano Potgieter",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 56,
+    "runs": 615,
+    "sr": 120.59,
+    "avg": 25.62,
+    "wk": 24,
+    "econ": 8.83,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sarthak Ranjan",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 4,
+    "runs": 61,
+    "sr": 129.79,
+    "avg": 15.25,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Parth Rekhade",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 1,
+    "runs": 1,
+    "sr": 50.0,
+    "avg": 1.0,
+    "wk": 0,
+    "econ": 8.67,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tiaan Van Vuuren",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 13,
+    "runs": 84,
+    "sr": 116.67,
+    "avg": 14.0,
+    "wk": 2,
+    "econ": 9.5,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Himanshu Bisht",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 16,
+    "runs": 54,
+    "sr": 98.18,
+    "avg": 9.0,
+    "wk": 11,
+    "econ": 7.36,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Abhimanyusingh Rajput",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 12,
+    "runs": 171,
+    "sr": 122.14,
+    "avg": 24.43,
+    "wk": 6,
+    "econ": 9.13,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Hemang Patel",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 12,
+    "runs": 71,
+    "sr": 85.54,
+    "avg": 11.83,
+    "wk": 10,
+    "econ": 7.21,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Lalit Yadav",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 27,
+    "runs": 305,
+    "sr": 105.17,
+    "avg": 19.06,
+    "wk": 10,
+    "econ": 8.85,
+    "hs": "48*",
+    "bb": "2/11"
+   },
+   "t20": {
+    "m": 67,
+    "runs": 834,
+    "sr": 131.34,
+    "avg": 25.27,
+    "wk": 35,
+    "econ": 7.41,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sammar Gajjar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 1,
+    "runs": 11,
+    "sr": 84.62,
+    "avg": 11.0,
+    "wk": 0,
+    "econ": 16.8,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nasir Lone",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 3,
+    "runs": 3,
+    "sr": 75.0,
+    "avg": 3.0,
+    "wk": 2,
+    "econ": 6.8,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jack Edwards",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 63,
+    "runs": 761,
+    "sr": 119.28,
+    "avg": 16.54,
+    "wk": 34,
+    "econ": 8.38,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Dian Forrester",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 4,
+    "runs": 87,
+    "sr": 124.29,
+    "avg": 29.0,
+    "wk": 2,
+    "econ": 7.5,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shiva Singh",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 15,
+    "runs": 26,
+    "sr": 144.44,
+    "avg": 13.0,
+    "wk": 7,
+    "econ": 6.72,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Parikshit Valsangkar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 8,
+    "runs": 24,
+    "sr": 100.0,
+    "avg": 12.0,
+    "wk": 3,
+    "econ": 8.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Manisankar Murasingh",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 37,
+    "runs": 535,
+    "sr": 143.43,
+    "avg": 22.29,
+    "wk": 27,
+    "econ": 7.32,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Virandeep Singh",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 110,
+    "runs": 2934,
+    "sr": 124.32,
+    "avg": 35.78,
+    "wk": 101,
+    "econ": 5.74,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Chama Milind",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 32,
+    "runs": 175,
+    "sr": 135.66,
+    "avg": 14.58,
+    "wk": 40,
+    "econ": 7.84,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Eathan Bosch",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 58,
+    "runs": 303,
+    "sr": 108.21,
+    "avg": 13.17,
+    "wk": 57,
+    "econ": 7.7,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Chris Green",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 8.47,
+    "hs": null,
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 252,
+    "runs": 1884,
+    "sr": 135.73,
+    "avg": 16.97,
+    "wk": 228,
+    "econ": 7.07,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Virat Singh",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 3,
+    "runs": 15,
+    "sr": 57.69,
+    "avg": 7.5,
+    "wk": 0,
+    "econ": null,
+    "hs": "11",
+    "bb": null
+   },
+   "t20": {
+    "m": 39,
+    "runs": 1251,
+    "sr": 128.44,
+    "avg": 41.7,
+    "wk": 1,
+    "econ": 8.7,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tripuresh Singh",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 3,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 4,
+    "econ": 8.14,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kyle Verreynne",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 56,
+    "runs": 1055,
+    "sr": 131.06,
+    "avg": 25.73,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Blessing Muzarabani",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 112,
+    "runs": 58,
+    "sr": 63.74,
+    "avg": 3.41,
+    "wk": 122,
+    "econ": 7.12,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ben Sears",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 56,
+    "runs": 89,
+    "sr": 117.11,
+    "avg": 9.89,
+    "wk": 67,
+    "econ": 8.32,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rajesh Mohanty",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 12,
+    "runs": 69,
+    "sr": 100.0,
+    "avg": 9.86,
+    "wk": 8,
+    "econ": 7.38,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Swastik Samal",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 2,
+    "runs": 8,
+    "sr": 80.0,
+    "avg": 4.0,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Saransh Jain",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 10,
+    "runs": 23,
+    "sr": 71.88,
+    "avg": 7.67,
+    "wk": 7,
+    "econ": 7.17,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tanmay Agarwal",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 36,
+    "runs": 925,
+    "sr": 123.83,
+    "avg": 26.43,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Abhimanyu Easwaran",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 21,
+    "runs": 569,
+    "sr": 129.61,
+    "avg": 40.64,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ruturaj Gaikwad",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 5,
+    "runs": 122,
+    "sr": 150.62,
+    "avg": 24.4,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 71,
+    "runs": 2502,
+    "sr": 137.47,
+    "avg": 40.35,
+    "wk": 0,
+    "econ": null,
+    "hs": "108*",
+    "bb": null
+   },
+   "t20": {
+    "m": 127,
+    "runs": 4267,
+    "sr": 138.67,
+    "avg": 39.15,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sanju Samson",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 9,
+    "runs": 285,
+    "sr": 140.39,
+    "avg": 35.62,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 176,
+    "runs": 4704,
+    "sr": 139.05,
+    "avg": 30.95,
+    "wk": 0,
+    "econ": null,
+    "hs": "119",
+    "bb": null
+   },
+   "t20": {
+    "m": 257,
+    "runs": 6645,
+    "sr": 139.57,
+    "avg": 30.91,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shivam Dube",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 14,
+    "runs": 357,
+    "sr": 132.22,
+    "avg": 32.45,
+    "wk": 0,
+    "econ": 16.5
+   },
+   "ipl": {
+    "m": 79,
+    "runs": 1859,
+    "sr": 143.66,
+    "avg": 30.48,
+    "wk": 5,
+    "econ": 10.31,
+    "hs": "95*",
+    "bb": "2/15"
+   },
+   "t20": {
+    "m": 160,
+    "runs": 2928,
+    "sr": 140.36,
+    "avg": 28.15,
+    "wk": 54,
+    "econ": 8.84,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Noor Ahmad",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 14,
+    "runs": 7,
+    "sr": 41.18,
+    "avg": 1.75,
+    "wk": 24,
+    "econ": 8.16
+   },
+   "ipl": {
+    "m": 37,
+    "runs": 20,
+    "sr": 57.14,
+    "avg": 2.5,
+    "wk": 48,
+    "econ": 8.08,
+    "hs": "7*",
+    "bb": "4/18"
+   },
+   "t20": {
+    "m": 129,
+    "runs": 171,
+    "sr": 101.18,
+    "avg": 7.43,
+    "wk": 163,
+    "econ": 7.35,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Khaleel Ahmed",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 14,
+    "runs": 1,
+    "sr": 50.0,
+    "avg": null,
+    "wk": 15,
+    "econ": 9.58
+   },
+   "ipl": {
+    "m": 71,
+    "runs": 2,
+    "sr": 22.22,
+    "avg": 0.4,
+    "wk": 89,
+    "econ": 8.98,
+    "hs": "1*",
+    "bb": "3/21"
+   },
+   "t20": {
+    "m": 113,
+    "runs": 7,
+    "sr": 26.92,
+    "avg": 1.0,
+    "wk": 139,
+    "econ": 8.57,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "MS Dhoni",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 14,
+    "runs": 196,
+    "sr": 135.17,
+    "avg": 24.5,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 277,
+    "runs": 5439,
+    "sr": 137.45,
+    "avg": 38.3,
+    "wk": 0,
+    "econ": null,
+    "hs": "84*",
+    "bb": null
+   },
+   "t20": {
+    "m": 372,
+    "runs": 7023,
+    "sr": 134.44,
+    "avg": 37.96,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Anshul Kamboj",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 8,
+    "runs": 14,
+    "sr": 116.67,
+    "avg": 7.0,
+    "wk": 8,
+    "econ": 8.0
+   },
+   "ipl": {
+    "m": 11,
+    "runs": 16,
+    "sr": 114.29,
+    "avg": 8.0,
+    "wk": 10,
+    "econ": 9.08,
+    "hs": "5*",
+    "bb": "3/13"
+   },
+   "t20": {
+    "m": 15,
+    "runs": 25,
+    "sr": 96.15,
+    "avg": 12.5,
+    "wk": 16,
+    "econ": 8.64,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Dewald Brevis",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 6,
+    "runs": 225,
+    "sr": 180.0,
+    "avg": 37.5,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 16,
+    "runs": 455,
+    "sr": 153.2,
+    "avg": 28.44,
+    "wk": 1,
+    "econ": 16.0,
+    "hs": "57",
+    "bb": "1/8"
+   },
+   "t20": {
+    "m": 110,
+    "runs": 2639,
+    "sr": 152.81,
+    "avg": 28.68,
+    "wk": 16,
+    "econ": 7.67,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nathan Ellis",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 9.5
+   },
+   "ipl": {
+    "m": 17,
+    "runs": 19,
+    "sr": 76.0,
+    "avg": 4.75,
+    "wk": 19,
+    "econ": 8.67,
+    "hs": "12",
+    "bb": "4/30"
+   },
+   "t20": {
+    "m": 149,
+    "runs": 457,
+    "sr": 114.25,
+    "avg": 11.43,
+    "wk": 193,
+    "econ": 7.99,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jamie Overton",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 3,
+    "runs": 15,
+    "sr": 214.29,
+    "avg": null,
+    "wk": 0,
+    "econ": 13.83
+   },
+   "ipl": {
+    "m": 3,
+    "runs": 15,
+    "sr": 214.29,
+    "avg": null,
+    "wk": 0,
+    "econ": 13.83,
+    "hs": "11*",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 147,
+    "runs": 1294,
+    "sr": 158.19,
+    "avg": 19.31,
+    "wk": 109,
+    "econ": 9.29,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mukesh Choudhary",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 11.83
+   },
+   "ipl": {
+    "m": 16,
+    "runs": 6,
+    "sr": 100.0,
+    "avg": 6.0,
+    "wk": 17,
+    "econ": 9.94,
+    "hs": "4",
+    "bb": "4/46"
+   },
+   "t20": {
+    "m": 27,
+    "runs": 23,
+    "sr": 121.05,
+    "avg": 11.5,
+    "wk": 33,
+    "econ": 9.29,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shreyas Gopal",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 52,
+    "runs": 180,
+    "sr": 106.51,
+    "avg": 12.86,
+    "wk": 52,
+    "econ": 8.17,
+    "hs": "24",
+    "bb": "4/16"
+   },
+   "t20": {
+    "m": 79,
+    "runs": 245,
+    "sr": 109.87,
+    "avg": 11.14,
+    "wk": 90,
+    "econ": 7.63,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ayush Mhatre",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 7,
+    "runs": 240,
+    "sr": 188.98,
+    "avg": 34.29,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 7,
+    "runs": 240,
+    "sr": 188.98,
+    "avg": 34.29,
+    "wk": 0,
+    "econ": null,
+    "hs": "94",
+    "bb": null
+   },
+   "t20": {
+    "m": 7,
+    "runs": 240,
+    "sr": 188.98,
+    "avg": 34.29,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Urvil Patel",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 3,
+    "runs": 68,
+    "sr": 212.5,
+    "avg": 22.67,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 3,
+    "runs": 68,
+    "sr": 212.5,
+    "avg": 22.67,
+    "wk": 0,
+    "econ": null,
+    "hs": "37",
+    "bb": null
+   },
+   "t20": {
+    "m": 34,
+    "runs": 679,
+    "sr": 156.81,
+    "avg": 20.58,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Axar Patel",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 13,
+    "runs": 263,
+    "sr": 157.49,
+    "avg": 26.3,
+    "wk": 5,
+    "econ": 8.69
+   },
+   "ipl": {
+    "m": 163,
+    "runs": 1916,
+    "sr": 133.99,
+    "avg": 22.02,
+    "wk": 128,
+    "econ": 7.37,
+    "hs": "66",
+    "bb": "4/21"
+   },
+   "t20": {
+    "m": 267,
+    "runs": 3069,
+    "sr": 133.09,
+    "avg": 22.9,
+    "wk": 223,
+    "econ": 7.21,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "KL Rahul",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 14,
+    "runs": 539,
+    "sr": 149.72,
+    "avg": 53.9,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 146,
+    "runs": 5222,
+    "sr": 136.03,
+    "avg": 46.21,
+    "wk": 0,
+    "econ": null,
+    "hs": "132*",
+    "bb": null
+   },
+   "t20": {
+    "m": 223,
+    "runs": 7669,
+    "sr": 137.46,
+    "avg": 43.33,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kuldeep Yadav",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 15,
+    "runs": 18,
+    "sr": 112.5,
+    "avg": 6.0,
+    "wk": 15,
+    "econ": 7.36
+   },
+   "ipl": {
+    "m": 99,
+    "runs": 201,
+    "sr": 86.64,
+    "avg": 13.4,
+    "wk": 102,
+    "econ": 8.08,
+    "hs": "35*",
+    "bb": "4/14"
+   },
+   "t20": {
+    "m": 165,
+    "runs": 272,
+    "sr": 84.47,
+    "avg": 12.95,
+    "wk": 209,
+    "econ": 7.57,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mitchell Starc",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 12,
+    "runs": 6,
+    "sr": 60.0,
+    "avg": 3.0,
+    "wk": 14,
+    "econ": 10.24
+   },
+   "ipl": {
+    "m": 52,
+    "runs": 111,
+    "sr": 93.28,
+    "avg": 10.09,
+    "wk": 65,
+    "econ": 8.65,
+    "hs": "29",
+    "bb": "5/35"
+   },
+   "t20": {
+    "m": 127,
+    "runs": 222,
+    "sr": 95.28,
+    "avg": 10.09,
+    "wk": 164,
+    "econ": 8.11,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "T. Natarajan",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 3,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 12.72
+   },
+   "ipl": {
+    "m": 64,
+    "runs": 3,
+    "sr": 60.0,
+    "avg": null,
+    "wk": 68,
+    "econ": 8.91,
+    "hs": "3*",
+    "bb": "4/19"
+   },
+   "t20": {
+    "m": 85,
+    "runs": 3,
+    "sr": 60.0,
+    "avg": null,
+    "wk": 91,
+    "econ": 8.62,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tristan Stubbs",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 15,
+    "runs": 300,
+    "sr": 150.75,
+    "avg": 50.0,
+    "wk": 0,
+    "econ": 20.0
+   },
+   "ipl": {
+    "m": 33,
+    "runs": 705,
+    "sr": 163.19,
+    "avg": 41.47,
+    "wk": 4,
+    "econ": 11.5,
+    "hs": "71*",
+    "bb": "2/11"
+   },
+   "t20": {
+    "m": 126,
+    "runs": 2712,
+    "sr": 145.18,
+    "avg": 33.07,
+    "wk": 5,
+    "econ": 11.42,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mukesh Kumar",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 12,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 12,
+    "econ": 10.33
+   },
+   "ipl": {
+    "m": 32,
+    "runs": 10,
+    "sr": 55.56,
+    "avg": 10.0,
+    "wk": 36,
+    "econ": 10.4,
+    "hs": "6*",
+    "bb": "4/33"
+   },
+   "t20": {
+    "m": 63,
+    "runs": 19,
+    "sr": 61.29,
+    "avg": 6.33,
+    "wk": 73,
+    "econ": 9.18,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nitish Rana",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 11,
+    "runs": 217,
+    "sr": 161.94,
+    "avg": 21.7,
+    "wk": 0,
+    "econ": 9.0
+   },
+   "ipl": {
+    "m": 118,
+    "runs": 2853,
+    "sr": 136.77,
+    "avg": 27.97,
+    "wk": 10,
+    "econ": 8.44,
+    "hs": "87",
+    "bb": "2/11"
+   },
+   "t20": {
+    "m": 171,
+    "runs": 4244,
+    "sr": 138.24,
+    "avg": 29.68,
+    "wk": 33,
+    "econ": 7.04,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Abhishek Porel",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 14,
+    "runs": 301,
+    "sr": 146.83,
+    "avg": 25.08,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 32,
+    "runs": 661,
+    "sr": 149.89,
+    "avg": 25.42,
+    "wk": 0,
+    "econ": null,
+    "hs": "65",
+    "bb": null
+   },
+   "t20": {
+    "m": 35,
+    "runs": 714,
+    "sr": 149.06,
+    "avg": 24.62,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ashutosh Sharma",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 13,
+    "runs": 204,
+    "sr": 160.63,
+    "avg": 29.14,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 24,
+    "runs": 393,
+    "sr": 163.75,
+    "avg": 28.07,
+    "wk": 0,
+    "econ": null,
+    "hs": "66*",
+    "bb": null
+   },
+   "t20": {
+    "m": 33,
+    "runs": 621,
+    "sr": 165.6,
+    "avg": 28.23,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sameer Rizvi",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 6,
+    "runs": 121,
+    "sr": 153.16,
+    "avg": 40.33,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 14,
+    "runs": 172,
+    "sr": 140.98,
+    "avg": 24.57,
+    "wk": 0,
+    "econ": null,
+    "hs": "58*",
+    "bb": null
+   },
+   "t20": {
+    "m": 21,
+    "runs": 385,
+    "sr": 137.99,
+    "avg": 32.08,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Dushmantha Chameera",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 7,
+    "runs": 10,
+    "sr": 71.43,
+    "avg": null,
+    "wk": 4,
+    "econ": 11.65
+   },
+   "ipl": {
+    "m": 20,
+    "runs": 53,
+    "sr": 126.19,
+    "avg": 13.25,
+    "wk": 13,
+    "econ": 9.84,
+    "hs": "17",
+    "bb": "2/17"
+   },
+   "t20": {
+    "m": 136,
+    "runs": 210,
+    "sr": 92.11,
+    "avg": 7.0,
+    "wk": 150,
+    "econ": 8.37,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Karun Nair",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 8,
+    "runs": 198,
+    "sr": 172.17,
+    "avg": 24.75,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 84,
+    "runs": 1694,
+    "sr": 131.73,
+    "avg": 23.86,
+    "wk": 0,
+    "econ": null,
+    "hs": "89",
+    "bb": null
+   },
+   "t20": {
+    "m": 134,
+    "runs": 2888,
+    "sr": 136.81,
+    "avg": 26.5,
+    "wk": 2,
+    "econ": 5.38,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Madhav Tiwari",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 2,
+    "runs": 3,
+    "sr": 75.0,
+    "avg": 3.0,
+    "wk": 0,
+    "econ": 14.0
+   },
+   "ipl": {
+    "m": 2,
+    "runs": 3,
+    "sr": 75.0,
+    "avg": 3.0,
+    "wk": 0,
+    "econ": 14.0,
+    "hs": "3",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 2,
+    "runs": 3,
+    "sr": 75.0,
+    "avg": 3.0,
+    "wk": 0,
+    "econ": 14.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ajay Mandal",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 27,
+    "runs": 217,
+    "sr": 115.43,
+    "avg": 15.5,
+    "wk": 26,
+    "econ": 7.06,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vipraj Nigam",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 14,
+    "runs": 142,
+    "sr": 179.75,
+    "avg": 20.29,
+    "wk": 11,
+    "econ": 9.13
+   },
+   "ipl": {
+    "m": 14,
+    "runs": 142,
+    "sr": 179.75,
+    "avg": 20.29,
+    "wk": 11,
+    "econ": 9.13,
+    "hs": "39",
+    "bb": "2/18"
+   },
+   "t20": {
+    "m": 15,
+    "runs": 149,
+    "sr": 173.26,
+    "avg": 18.62,
+    "wk": 11,
+    "econ": 9.22,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rashid Khan",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 15,
+    "runs": 40,
+    "sr": 142.86,
+    "avg": 8.0,
+    "wk": 9,
+    "econ": 9.35
+   },
+   "ipl": {
+    "m": 136,
+    "runs": 585,
+    "sr": 160.27,
+    "avg": 13.93,
+    "wk": 158,
+    "econ": 7.09,
+    "hs": "79*",
+    "bb": "4/24"
+   },
+   "t20": {
+    "m": 347,
+    "runs": 1738,
+    "sr": 148.67,
+    "avg": 13.37,
+    "wk": 435,
+    "econ": 6.71,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shubman Gill",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 15,
+    "runs": 650,
+    "sr": 155.88,
+    "avg": 50.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 118,
+    "runs": 3866,
+    "sr": 138.72,
+    "avg": 39.45,
+    "wk": 0,
+    "econ": null,
+    "hs": "129",
+    "bb": null
+   },
+   "t20": {
+    "m": 171,
+    "runs": 5347,
+    "sr": 138.63,
+    "avg": 37.39,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jos Buttler",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 14,
+    "runs": 538,
+    "sr": 163.03,
+    "avg": 59.78,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 121,
+    "runs": 4120,
+    "sr": 149.38,
+    "avg": 40.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "124",
+    "bb": null
+   },
+   "t20": {
+    "m": 373,
+    "runs": 11377,
+    "sr": 147.45,
+    "avg": 36.94,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mohammed Siraj",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 15,
+    "runs": 3,
+    "sr": 75.0,
+    "avg": null,
+    "wk": 16,
+    "econ": 9.25
+   },
+   "ipl": {
+    "m": 108,
+    "runs": 112,
+    "sr": 91.06,
+    "avg": 11.2,
+    "wk": 109,
+    "econ": 8.74,
+    "hs": "14*",
+    "bb": "4/17"
+   },
+   "t20": {
+    "m": 148,
+    "runs": 142,
+    "sr": 85.54,
+    "avg": 8.35,
+    "wk": 161,
+    "econ": 8.44,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kagiso Rabada",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 4,
+    "runs": 9,
+    "sr": 112.5,
+    "avg": 9.0,
+    "wk": 2,
+    "econ": 11.57
+   },
+   "ipl": {
+    "m": 84,
+    "runs": 215,
+    "sr": 106.97,
+    "avg": 11.94,
+    "wk": 119,
+    "econ": 8.62,
+    "hs": "44",
+    "bb": "4/21"
+   },
+   "t20": {
+    "m": 222,
+    "runs": 501,
+    "sr": 108.68,
+    "avg": 10.66,
+    "wk": 276,
+    "econ": 8.15,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Prasidh Krishna",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 15,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 25,
+    "econ": 8.27
+   },
+   "ipl": {
+    "m": 66,
+    "runs": 9,
+    "sr": 37.5,
+    "avg": 3.0,
+    "wk": 74,
+    "econ": 8.77,
+    "hs": "4*",
+    "bb": "4/30"
+   },
+   "t20": {
+    "m": 92,
+    "runs": 10,
+    "sr": 34.48,
+    "avg": 2.5,
+    "wk": 101,
+    "econ": 8.62,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sai Sudharsan",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 15,
+    "runs": 759,
+    "sr": 156.17,
+    "avg": 54.21,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 40,
+    "runs": 1793,
+    "sr": 145.89,
+    "avg": 49.81,
+    "wk": 0,
+    "econ": null,
+    "hs": "108*",
+    "bb": null
+   },
+   "t20": {
+    "m": 50,
+    "runs": 2011,
+    "sr": 141.62,
+    "avg": 47.88,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rahul Tewatia",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 15,
+    "runs": 99,
+    "sr": 167.8,
+    "avg": 12.38,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 108,
+    "runs": 1112,
+    "sr": 137.11,
+    "avg": 23.17,
+    "wk": 32,
+    "econ": 7.91,
+    "hs": "53",
+    "bb": "3/18"
+   },
+   "t20": {
+    "m": 143,
+    "runs": 1704,
+    "sr": 144.28,
+    "avg": 26.62,
+    "wk": 49,
+    "econ": 7.7,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shahrukh Khan",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 15,
+    "runs": 179,
+    "sr": 179.0,
+    "avg": 29.83,
+    "wk": 1,
+    "econ": 13.0
+   },
+   "ipl": {
+    "m": 55,
+    "runs": 732,
+    "sr": 149.08,
+    "avg": 21.53,
+    "wk": 1,
+    "econ": 9.33,
+    "hs": "58",
+    "bb": "1/13"
+   },
+   "t20": {
+    "m": 87,
+    "runs": 1111,
+    "sr": 148.53,
+    "avg": 22.67,
+    "wk": 1,
+    "econ": 9.8,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Washington Sundar",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 6,
+    "runs": 133,
+    "sr": 166.25,
+    "avg": 26.6,
+    "wk": 2,
+    "econ": 10.25
+   },
+   "ipl": {
+    "m": 66,
+    "runs": 511,
+    "sr": 126.17,
+    "avg": 15.48,
+    "wk": 39,
+    "econ": 7.7,
+    "hs": "49",
+    "bb": "3/16"
+   },
+   "t20": {
+    "m": 145,
+    "runs": 1341,
+    "sr": 123.82,
+    "avg": 19.43,
+    "wk": 108,
+    "econ": 7.06,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sai Kishore",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 15,
+    "runs": 5,
+    "sr": 50.0,
+    "avg": 1.67,
+    "wk": 19,
+    "econ": 9.25
+   },
+   "ipl": {
+    "m": 25,
+    "runs": 18,
+    "sr": 112.5,
+    "avg": 4.5,
+    "wk": 32,
+    "econ": 8.86,
+    "hs": "13",
+    "bb": "4/33"
+   },
+   "t20": {
+    "m": 66,
+    "runs": 44,
+    "sr": 95.65,
+    "avg": 4.4,
+    "wk": 80,
+    "econ": 6.53,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Glenn Phillips",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 8,
+    "runs": 65,
+    "sr": 118.18,
+    "avg": 9.29,
+    "wk": 2,
+    "econ": 8.0,
+    "hs": "25",
+    "bb": "1/10"
+   },
+   "t20": {
+    "m": 235,
+    "runs": 6024,
+    "sr": 140.32,
+    "avg": 31.54,
+    "wk": 27,
+    "econ": 8.38,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Arshad Khan",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 9,
+    "runs": 23,
+    "sr": 121.05,
+    "avg": 11.5,
+    "wk": 6,
+    "econ": 10.33
+   },
+   "ipl": {
+    "m": 19,
+    "runs": 124,
+    "sr": 140.91,
+    "avg": 20.67,
+    "wk": 12,
+    "econ": 11.49,
+    "hs": "58*",
+    "bb": "3/39"
+   },
+   "t20": {
+    "m": 21,
+    "runs": 140,
+    "sr": 128.44,
+    "avg": 17.5,
+    "wk": 12,
+    "econ": 11.34,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Gurnoor Brar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 14.0,
+    "hs": null,
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": 14.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ishant Sharma",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 7,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 4,
+    "econ": 11.18
+   },
+   "ipl": {
+    "m": 117,
+    "runs": 57,
+    "sr": 82.61,
+    "avg": 9.5,
+    "wk": 96,
+    "econ": 8.38,
+    "hs": "10*",
+    "bb": "5/12"
+   },
+   "t20": {
+    "m": 149,
+    "runs": 65,
+    "sr": 82.28,
+    "avg": 9.29,
+    "wk": 124,
+    "econ": 8.21,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jayant Yadav",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 20,
+    "runs": 40,
+    "sr": 111.11,
+    "avg": 10.0,
+    "wk": 8,
+    "econ": 6.85,
+    "hs": "23",
+    "bb": "1/8"
+   },
+   "t20": {
+    "m": 54,
+    "runs": 94,
+    "sr": 108.05,
+    "avg": 8.55,
+    "wk": 32,
+    "econ": 6.69,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kumar Kushagra",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 4,
+    "runs": 3,
+    "sr": 42.86,
+    "avg": 1.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "2",
+    "bb": null
+   },
+   "t20": {
+    "m": 5,
+    "runs": 3,
+    "sr": 37.5,
+    "avg": 0.75,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Anuj Rawat",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 24,
+    "runs": 318,
+    "sr": 119.1,
+    "avg": 19.88,
+    "wk": 0,
+    "econ": null,
+    "hs": "66",
+    "bb": null
+   },
+   "t20": {
+    "m": 54,
+    "runs": 903,
+    "sr": 123.7,
+    "avg": 25.8,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Manav Suthar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 1,
+    "runs": 1,
+    "sr": 50.0,
+    "avg": 1.0,
+    "wk": 0,
+    "econ": 13.0,
+    "hs": "1",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 2,
+    "runs": 1,
+    "sr": 50.0,
+    "avg": 1.0,
+    "wk": 0,
+    "econ": 9.6,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nishant Sindhu",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 4,
+    "runs": 108,
+    "sr": 127.06,
+    "avg": 36.0,
+    "wk": 2,
+    "econ": 5.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rinku Singh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 13,
+    "runs": 206,
+    "sr": 153.73,
+    "avg": 29.43,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 58,
+    "runs": 1099,
+    "sr": 145.18,
+    "avg": 30.53,
+    "wk": 0,
+    "econ": null,
+    "hs": "67*",
+    "bb": null
+   },
+   "t20": {
+    "m": 127,
+    "runs": 2465,
+    "sr": 153.11,
+    "avg": 34.24,
+    "wk": 4,
+    "econ": 6.33,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sunil Narine",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 12,
+    "runs": 246,
+    "sr": 170.83,
+    "avg": 22.36,
+    "wk": 12,
+    "econ": 7.8
+   },
+   "ipl": {
+    "m": 188,
+    "runs": 1780,
+    "sr": 166.51,
+    "avg": 17.62,
+    "wk": 192,
+    "econ": 6.8,
+    "hs": "109",
+    "bb": "5/19"
+   },
+   "t20": {
+    "m": 523,
+    "runs": 4616,
+    "sr": 149.68,
+    "avg": 15.59,
+    "wk": 527,
+    "econ": 6.27,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Varun Chakravarthy",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 13,
+    "runs": 1,
+    "sr": 100.0,
+    "avg": null,
+    "wk": 17,
+    "econ": 7.66
+   },
+   "ipl": {
+    "m": 83,
+    "runs": 26,
+    "sr": 55.32,
+    "avg": 6.5,
+    "wk": 100,
+    "econ": 7.58,
+    "hs": "10*",
+    "bb": "5/20"
+   },
+   "t20": {
+    "m": 118,
+    "runs": 29,
+    "sr": 45.31,
+    "avg": 3.62,
+    "wk": 156,
+    "econ": 7.34,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Harshit Rana",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 13,
+    "runs": 57,
+    "sr": 107.55,
+    "avg": 14.25,
+    "wk": 15,
+    "econ": 10.18
+   },
+   "ipl": {
+    "m": 33,
+    "runs": 59,
+    "sr": 105.36,
+    "avg": 9.83,
+    "wk": 40,
+    "econ": 9.51,
+    "hs": "34",
+    "bb": "3/24"
+   },
+   "t20": {
+    "m": 42,
+    "runs": 107,
+    "sr": 110.31,
+    "avg": 15.29,
+    "wk": 49,
+    "econ": 9.53,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ramandeep Singh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 11,
+    "runs": 47,
+    "sr": 134.29,
+    "avg": 9.4,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 30,
+    "runs": 217,
+    "sr": 158.39,
+    "avg": 19.73,
+    "wk": 6,
+    "econ": 9.45,
+    "hs": "35",
+    "bb": "3/20"
+   },
+   "t20": {
+    "m": 56,
+    "runs": 401,
+    "sr": 156.03,
+    "avg": 18.23,
+    "wk": 14,
+    "econ": 9.17,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Angkrish Raghuvanshi",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 12,
+    "runs": 300,
+    "sr": 139.53,
+    "avg": 33.33,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 22,
+    "runs": 463,
+    "sr": 144.69,
+    "avg": 28.94,
+    "wk": 0,
+    "econ": null,
+    "hs": "54",
+    "bb": null
+   },
+   "t20": {
+    "m": 25,
+    "runs": 537,
+    "sr": 137.34,
+    "avg": 29.83,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vaibhav Arora",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 12,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 17,
+    "econ": 10.12
+   },
+   "ipl": {
+    "m": 32,
+    "runs": 9,
+    "sr": 37.5,
+    "avg": 2.25,
+    "wk": 36,
+    "econ": 9.55,
+    "hs": "2*",
+    "bb": "3/27"
+   },
+   "t20": {
+    "m": 47,
+    "runs": 11,
+    "sr": 42.31,
+    "avg": 2.75,
+    "wk": 55,
+    "econ": 8.67,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ajinkya Rahane",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 13,
+    "runs": 390,
+    "sr": 147.73,
+    "avg": 35.45,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 198,
+    "runs": 5032,
+    "sr": 125.02,
+    "avg": 30.5,
+    "wk": 1,
+    "econ": 5.0,
+    "hs": "105*",
+    "bb": "1/5"
+   },
+   "t20": {
+    "m": 238,
+    "runs": 6089,
+    "sr": 125.68,
+    "avg": 30.45,
+    "wk": 1,
+    "econ": 5.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rovman Powell",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 2,
+    "runs": 5,
+    "sr": 100.0,
+    "avg": 5.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 28,
+    "runs": 365,
+    "sr": 146.59,
+    "avg": 18.25,
+    "wk": 1,
+    "econ": 11.67,
+    "hs": "67*",
+    "bb": "1/18"
+   },
+   "t20": {
+    "m": 306,
+    "runs": 5789,
+    "sr": 142.76,
+    "avg": 26.19,
+    "wk": 30,
+    "econ": 10.96,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Manish Pandey",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 3,
+    "runs": 92,
+    "sr": 141.54,
+    "avg": 46.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 174,
+    "runs": 3942,
+    "sr": 121.52,
+    "avg": 29.42,
+    "wk": 0,
+    "econ": null,
+    "hs": "114*",
+    "bb": null
+   },
+   "t20": {
+    "m": 251,
+    "runs": 5643,
+    "sr": 124.35,
+    "avg": 32.06,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Umran Malik",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 26,
+    "runs": 23,
+    "sr": 143.75,
+    "avg": 11.5,
+    "wk": 29,
+    "econ": 9.4,
+    "hs": "19*",
+    "bb": "5/25"
+   },
+   "t20": {
+    "m": 41,
+    "runs": 28,
+    "sr": 155.56,
+    "avg": 14.0,
+    "wk": 53,
+    "econ": 8.98,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Anukul Roy",
+   "season": "IPL 2025",
+   "last": {
+    "team": "KKR",
+    "m": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 1,
+    "econ": 6.75
+   },
+   "ipl": {
+    "m": 11,
+    "runs": 26,
+    "sr": 104.0,
+    "avg": 6.5,
+    "wk": 6,
+    "econ": 8.18,
+    "hs": "13*",
+    "bb": "2/19"
+   },
+   "t20": {
+    "m": 34,
+    "runs": 267,
+    "sr": 160.84,
+    "avg": 22.25,
+    "wk": 19,
+    "econ": 7.24,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rishabh Pant",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 14,
+    "runs": 269,
+    "sr": 133.17,
+    "avg": 24.45,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 125,
+    "runs": 3553,
+    "sr": 147.61,
+    "avg": 34.16,
+    "wk": 0,
+    "econ": null,
+    "hs": "128*",
+    "bb": null
+   },
+   "t20": {
+    "m": 205,
+    "runs": 5138,
+    "sr": 143.88,
+    "avg": 31.72,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nicholas Pooran",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 14,
+    "runs": 524,
+    "sr": 196.25,
+    "avg": 43.67,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 90,
+    "runs": 2293,
+    "sr": 168.98,
+    "avg": 34.22,
+    "wk": 0,
+    "econ": null,
+    "hs": "87*",
+    "bb": null
+   },
+   "t20": {
+    "m": 427,
+    "runs": 10409,
+    "sr": 148.79,
+    "avg": 31.16,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mayank Yadav",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 2,
+    "econ": 12.5
+   },
+   "ipl": {
+    "m": 6,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 9,
+    "econ": 9.17,
+    "hs": null,
+    "bb": "3/14"
+   },
+   "t20": {
+    "m": 13,
+    "runs": 1,
+    "sr": 100.0,
+    "avg": null,
+    "wk": 16,
+    "econ": 8.16,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mohammed Shami",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 9,
+    "runs": 10,
+    "sr": 100.0,
+    "avg": 10.0,
+    "wk": 6,
+    "econ": 11.23
+   },
+   "ipl": {
+    "m": 119,
+    "runs": 84,
+    "sr": 94.38,
+    "avg": 6.0,
+    "wk": 133,
+    "econ": 8.63,
+    "hs": "21",
+    "bb": "4/11"
+   },
+   "t20": {
+    "m": 147,
+    "runs": 127,
+    "sr": 104.96,
+    "avg": 7.06,
+    "wk": 165,
+    "econ": 8.67,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Avesh Khan",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 13,
+    "runs": 21,
+    "sr": 175.0,
+    "avg": 21.0,
+    "wk": 13,
+    "econ": 10.29
+   },
+   "ipl": {
+    "m": 75,
+    "runs": 62,
+    "sr": 167.57,
+    "avg": 20.67,
+    "wk": 87,
+    "econ": 9.12,
+    "hs": "19*",
+    "bb": "4/24"
+   },
+   "t20": {
+    "m": 127,
+    "runs": 109,
+    "sr": 131.33,
+    "avg": 9.91,
+    "wk": 151,
+    "econ": 8.7,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Abdul Samad",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 13,
+    "runs": 164,
+    "sr": 176.34,
+    "avg": 20.5,
+    "wk": 0,
+    "econ": 18.0
+   },
+   "ipl": {
+    "m": 63,
+    "runs": 741,
+    "sr": 151.84,
+    "avg": 19.5,
+    "wk": 2,
+    "econ": 12.75,
+    "hs": "45",
+    "bb": "1/9"
+   },
+   "t20": {
+    "m": 81,
+    "runs": 1169,
+    "sr": 146.86,
+    "avg": 24.35,
+    "wk": 3,
+    "econ": 10.14,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ayush Badoni",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 14,
+    "runs": 329,
+    "sr": 148.2,
+    "avg": 32.9,
+    "wk": 2,
+    "econ": 7.8
+   },
+   "ipl": {
+    "m": 56,
+    "runs": 963,
+    "sr": 138.56,
+    "avg": 26.75,
+    "wk": 4,
+    "econ": 8.4,
+    "hs": "74",
+    "bb": "2/4"
+   },
+   "t20": {
+    "m": 71,
+    "runs": 1230,
+    "sr": 135.02,
+    "avg": 30.0,
+    "wk": 6,
+    "econ": 9.43,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mohsin Khan",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 24,
+    "runs": 25,
+    "sr": 104.17,
+    "avg": 8.33,
+    "wk": 27,
+    "econ": 8.51,
+    "hs": "13*",
+    "bb": "4/16"
+   },
+   "t20": {
+    "m": 51,
+    "runs": 95,
+    "sr": 126.67,
+    "avg": 10.56,
+    "wk": 65,
+    "econ": 7.63,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mitchell Marsh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 13,
+    "runs": 627,
+    "sr": 163.71,
+    "avg": 48.23,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 55,
+    "runs": 1292,
+    "sr": 142.92,
+    "avg": 27.49,
+    "wk": 37,
+    "econ": 8.52,
+    "hs": "117",
+    "bb": "4/25"
+   },
+   "t20": {
+    "m": 204,
+    "runs": 5145,
+    "sr": 139.05,
+    "avg": 32.56,
+    "wk": 79,
+    "econ": 8.52,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shahbaz Ahmed",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 3,
+    "runs": 9,
+    "sr": 112.5,
+    "avg": 9.0,
+    "wk": 1,
+    "econ": 12.0
+   },
+   "ipl": {
+    "m": 58,
+    "runs": 545,
+    "sr": 121.65,
+    "avg": 18.79,
+    "wk": 22,
+    "econ": 9.58,
+    "hs": "59*",
+    "bb": "3/7"
+   },
+   "t20": {
+    "m": 88,
+    "runs": 839,
+    "sr": 122.84,
+    "avg": 19.98,
+    "wk": 50,
+    "econ": 8.06,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Aiden Markram",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 13,
+    "runs": 445,
+    "sr": 148.83,
+    "avg": 34.23,
+    "wk": 4,
+    "econ": 9.27
+   },
+   "ipl": {
+    "m": 57,
+    "runs": 1440,
+    "sr": 135.08,
+    "avg": 31.3,
+    "wk": 6,
+    "econ": 8.79,
+    "hs": "68*",
+    "bb": "2/30"
+   },
+   "t20": {
+    "m": 183,
+    "runs": 4546,
+    "sr": 135.34,
+    "avg": 30.93,
+    "wk": 43,
+    "econ": 7.81,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Manimaran Siddharth",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 2,
+    "econ": 9.57
+   },
+   "ipl": {
+    "m": 5,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 3,
+    "econ": 8.62,
+    "hs": null,
+    "bb": "2/39"
+   },
+   "t20": {
+    "m": 10,
+    "runs": 1,
+    "sr": 50.0,
+    "avg": null,
+    "wk": 18,
+    "econ": 6.62,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Matthew Breetzke",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 1,
+    "runs": 14,
+    "sr": 116.67,
+    "avg": 14.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 1,
+    "runs": 14,
+    "sr": 116.67,
+    "avg": 14.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "14",
+    "bb": null
+   },
+   "t20": {
+    "m": 96,
+    "runs": 2388,
+    "sr": 135.22,
+    "avg": 28.09,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Akash Singh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 3,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 4,
+    "econ": 8.87
+   },
+   "ipl": {
+    "m": 10,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 9,
+    "econ": 9.54,
+    "hs": null,
+    "bb": "2/30"
+   },
+   "t20": {
+    "m": 17,
+    "runs": 25,
+    "sr": 89.29,
+    "avg": 8.33,
+    "wk": 13,
+    "econ": 8.88,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Arjun Tendulkar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 5,
+    "runs": 13,
+    "sr": 144.44,
+    "avg": 13.0,
+    "wk": 3,
+    "econ": 9.37,
+    "hs": "13",
+    "bb": "1/9"
+   },
+   "t20": {
+    "m": 12,
+    "runs": 33,
+    "sr": 86.84,
+    "avg": 6.6,
+    "wk": 13,
+    "econ": 8.31,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Arshin Kulkarni",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 2,
+    "runs": 9,
+    "sr": 112.5,
+    "avg": 4.5,
+    "wk": 0,
+    "econ": null,
+    "hs": "9",
+    "bb": null
+   },
+   "t20": {
+    "m": 2,
+    "runs": 9,
+    "sr": 112.5,
+    "avg": 4.5,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Himmat Singh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 3,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 3,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 0,
+    "econ": null,
+    "hs": null,
+    "bb": null
+   },
+   "t20": {
+    "m": 40,
+    "runs": 599,
+    "sr": 126.91,
+    "avg": 27.23,
+    "wk": 1,
+    "econ": 0.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Digvesh Rathi",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 13,
+    "runs": 1,
+    "sr": 33.33,
+    "avg": 1.0,
+    "wk": 14,
+    "econ": 8.25
+   },
+   "ipl": {
+    "m": 13,
+    "runs": 1,
+    "sr": 33.33,
+    "avg": 1.0,
+    "wk": 14,
+    "econ": 8.25,
+    "hs": "1",
+    "bb": "2/30"
+   },
+   "t20": {
+    "m": 13,
+    "runs": 1,
+    "sr": 33.33,
+    "avg": 1.0,
+    "wk": 14,
+    "econ": 8.25,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Prince Yadav",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 6,
+    "runs": 5,
+    "sr": 50.0,
+    "avg": null,
+    "wk": 3,
+    "econ": 9.85
+   },
+   "ipl": {
+    "m": 6,
+    "runs": 5,
+    "sr": 50.0,
+    "avg": null,
+    "wk": 3,
+    "econ": 9.85,
+    "hs": "4*",
+    "bb": "1/29"
+   },
+   "t20": {
+    "m": 8,
+    "runs": 5,
+    "sr": 50.0,
+    "avg": null,
+    "wk": 6,
+    "econ": 9.75,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jasprit Bumrah",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 12,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": null,
+    "wk": 18,
+    "econ": 6.68
+   },
+   "ipl": {
+    "m": 145,
+    "runs": 68,
+    "sr": 86.08,
+    "avg": 9.71,
+    "wk": 183,
+    "econ": 7.25,
+    "hs": "16*",
+    "bb": "5/10"
+   },
+   "t20": {
+    "m": 233,
+    "runs": 78,
+    "sr": 80.41,
+    "avg": 6.5,
+    "wk": 294,
+    "econ": 6.97,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Hardik Pandya",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 15,
+    "runs": 224,
+    "sr": 163.5,
+    "avg": 24.89,
+    "wk": 14,
+    "econ": 9.77
+   },
+   "ipl": {
+    "m": 152,
+    "runs": 2749,
+    "sr": 146.93,
+    "avg": 28.34,
+    "wk": 78,
+    "econ": 9.18,
+    "hs": "91",
+    "bb": "5/36"
+   },
+   "t20": {
+    "m": 284,
+    "runs": 5008,
+    "sr": 143.04,
+    "avg": 28.95,
+    "wk": 192,
+    "econ": 8.54,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Suryakumar Yadav",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 16,
+    "runs": 717,
+    "sr": 167.92,
+    "avg": 65.18,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 166,
+    "runs": 4311,
+    "sr": 148.66,
+    "avg": 35.05,
+    "wk": 0,
+    "econ": 8.0,
+    "hs": "103*",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 304,
+    "runs": 8159,
+    "sr": 154.03,
+    "avg": 36.1,
+    "wk": 2,
+    "econ": 6.5,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rohit Sharma",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 15,
+    "runs": 418,
+    "sr": 149.29,
+    "avg": 29.86,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 272,
+    "runs": 7046,
+    "sr": 132.1,
+    "avg": 29.73,
+    "wk": 15,
+    "econ": 8.02,
+    "hs": "109*",
+    "bb": "4/6"
+   },
+   "t20": {
+    "m": 425,
+    "runs": 11073,
+    "sr": 134.97,
+    "avg": 30.34,
+    "wk": 16,
+    "econ": 8.32,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Trent Boult",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 16,
+    "runs": 2,
+    "sr": 66.67,
+    "avg": 2.0,
+    "wk": 22,
+    "econ": 8.97
+   },
+   "ipl": {
+    "m": 119,
+    "runs": 85,
+    "sr": 104.94,
+    "avg": 9.44,
+    "wk": 143,
+    "econ": 8.38,
+    "hs": "17*",
+    "bb": "4/18"
+   },
+   "t20": {
+    "m": 254,
+    "runs": 298,
+    "sr": 118.25,
+    "avg": 11.92,
+    "wk": 321,
+    "econ": 8.06,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Deepak Chahar",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 14,
+    "runs": 37,
+    "sr": 148.0,
+    "avg": 37.0,
+    "wk": 11,
+    "econ": 9.17
+   },
+   "ipl": {
+    "m": 95,
+    "runs": 117,
+    "sr": 139.29,
+    "avg": 14.62,
+    "wk": 88,
+    "econ": 8.14,
+    "hs": "39",
+    "bb": "4/13"
+   },
+   "t20": {
+    "m": 138,
+    "runs": 296,
+    "sr": 130.4,
+    "avg": 16.44,
+    "wk": 153,
+    "econ": 7.88,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tilak Varma",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 16,
+    "runs": 343,
+    "sr": 138.31,
+    "avg": 31.18,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 54,
+    "runs": 1499,
+    "sr": 144.41,
+    "avg": 37.48,
+    "wk": 0,
+    "econ": 7.64,
+    "hs": "84*",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 109,
+    "runs": 3103,
+    "sr": 143.99,
+    "avg": 40.3,
+    "wk": 5,
+    "econ": 7.09,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Will Jacks",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 13,
+    "runs": 233,
+    "sr": 135.47,
+    "avg": 23.3,
+    "wk": 6,
+    "econ": 8.57
+   },
+   "ipl": {
+    "m": 21,
+    "runs": 463,
+    "sr": 152.81,
+    "avg": 27.24,
+    "wk": 8,
+    "econ": 9.57,
+    "hs": "100*",
+    "bb": "2/14"
+   },
+   "t20": {
+    "m": 196,
+    "runs": 4997,
+    "sr": 154.51,
+    "avg": 29.22,
+    "wk": 65,
+    "econ": 7.54,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Naman Dhir",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 16,
+    "runs": 252,
+    "sr": 182.61,
+    "avg": 31.5,
+    "wk": 0,
+    "econ": 5.25
+   },
+   "ipl": {
+    "m": 23,
+    "runs": 392,
+    "sr": 180.65,
+    "avg": 28.0,
+    "wk": 0,
+    "econ": 8.77,
+    "hs": "62*",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 27,
+    "runs": 431,
+    "sr": 175.92,
+    "avg": 23.94,
+    "wk": 0,
+    "econ": 8.77,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Allah Ghazanfar",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 24,
+    "runs": 57,
+    "sr": 114.0,
+    "avg": 8.14,
+    "wk": 25,
+    "econ": 7.19,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sherfane Rutherford",
+   "season": "IPL 2025",
+   "last": {
+    "team": "GT",
+    "m": 13,
+    "runs": 291,
+    "sr": 157.3,
+    "avg": 32.33,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 23,
+    "runs": 397,
+    "sr": 137.37,
+    "avg": 24.81,
+    "wk": 1,
+    "econ": 8.63,
+    "hs": "46",
+    "bb": "1/6"
+   },
+   "t20": {
+    "m": 227,
+    "runs": 3834,
+    "sr": 139.06,
+    "avg": 23.52,
+    "wk": 13,
+    "econ": 9.69,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shardul Thakur",
+   "season": "IPL 2025",
+   "last": {
+    "team": "LSG",
+    "m": 10,
+    "runs": 18,
+    "sr": 150.0,
+    "avg": 6.0,
+    "wk": 13,
+    "econ": 11.03
+   },
+   "ipl": {
+    "m": 105,
+    "runs": 325,
+    "sr": 139.48,
+    "avg": 11.61,
+    "wk": 107,
+    "econ": 9.4,
+    "hs": "68",
+    "bb": "4/34"
+   },
+   "t20": {
+    "m": 160,
+    "runs": 438,
+    "sr": 131.93,
+    "avg": 11.53,
+    "wk": 175,
+    "econ": 9.07,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mitchell Santner",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 13,
+    "runs": 40,
+    "sr": 121.21,
+    "avg": 20.0,
+    "wk": 10,
+    "econ": 7.92
+   },
+   "ipl": {
+    "m": 31,
+    "runs": 110,
+    "sr": 105.77,
+    "avg": 13.75,
+    "wk": 25,
+    "econ": 7.31,
+    "hs": "22",
+    "bb": "3/11"
+   },
+   "t20": {
+    "m": 228,
+    "runs": 2370,
+    "sr": 131.74,
+    "avg": 22.15,
+    "wk": 238,
+    "econ": 7.13,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ryan Rickelton",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 14,
+    "runs": 388,
+    "sr": 150.97,
+    "avg": 29.85,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 14,
+    "runs": 388,
+    "sr": 150.97,
+    "avg": 29.85,
+    "wk": 0,
+    "econ": null,
+    "hs": "62*",
+    "bb": null
+   },
+   "t20": {
+    "m": 104,
+    "runs": 2857,
+    "sr": 144.29,
+    "avg": 30.07,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Corbin Bosch",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 3,
+    "runs": 47,
+    "sr": 146.88,
+    "avg": 23.5,
+    "wk": 1,
+    "econ": 7.86
+   },
+   "ipl": {
+    "m": 3,
+    "runs": 47,
+    "sr": 146.88,
+    "avg": 23.5,
+    "wk": 1,
+    "econ": 7.86,
+    "hs": "27",
+    "bb": "1/26"
+   },
+   "t20": {
+    "m": 74,
+    "runs": 658,
+    "sr": 113.25,
+    "avg": 17.32,
+    "wk": 60,
+    "econ": 8.61,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Robin Minz",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 2,
+    "runs": 6,
+    "sr": 40.0,
+    "avg": 3.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 2,
+    "runs": 6,
+    "sr": 40.0,
+    "avg": 3.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "3",
+    "bb": null
+   },
+   "t20": {
+    "m": 2,
+    "runs": 6,
+    "sr": 40.0,
+    "avg": 3.0,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Raj Angad Bawa",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 3,
+    "runs": 8,
+    "sr": 200.0,
+    "avg": null,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 5,
+    "runs": 19,
+    "sr": 105.56,
+    "avg": 9.5,
+    "wk": 0,
+    "econ": null,
+    "hs": "11",
+    "bb": null
+   },
+   "t20": {
+    "m": 6,
+    "runs": 51,
+    "sr": 134.21,
+    "avg": 17.0,
+    "wk": 2,
+    "econ": 6.75,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ashwani Kumar",
+   "season": "IPL 2025",
+   "last": {
+    "team": "MI",
+    "m": 7,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 11,
+    "econ": 11.32
+   },
+   "ipl": {
+    "m": 7,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 11,
+    "econ": 11.32,
+    "hs": null,
+    "bb": "4/24"
+   },
+   "t20": {
+    "m": 9,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 12,
+    "econ": 11.06,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Raghu Sharma",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 3,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 3,
+    "econ": 8.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mayank Markande",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 37,
+    "runs": 48,
+    "sr": 114.29,
+    "avg": 16.0,
+    "wk": 37,
+    "econ": 8.91,
+    "hs": "18*",
+    "bb": "4/15"
+   },
+   "t20": {
+    "m": 73,
+    "runs": 103,
+    "sr": 117.05,
+    "avg": 20.6,
+    "wk": 72,
+    "econ": 8.15,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shreyas Iyer",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 18,
+    "runs": 604,
+    "sr": 175.07,
+    "avg": 50.33,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 133,
+    "runs": 3731,
+    "sr": 133.35,
+    "avg": 34.23,
+    "wk": 0,
+    "econ": 7.0,
+    "hs": "97*",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 217,
+    "runs": 6048,
+    "sr": 136.52,
+    "avg": 34.56,
+    "wk": 1,
+    "econ": 9.92,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Arshdeep Singh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 18,
+    "runs": 2,
+    "sr": 33.33,
+    "avg": 2.0,
+    "wk": 21,
+    "econ": 8.88
+   },
+   "ipl": {
+    "m": 83,
+    "runs": 31,
+    "sr": 67.39,
+    "avg": 5.17,
+    "wk": 97,
+    "econ": 9.0,
+    "hs": "10*",
+    "bb": "5/32"
+   },
+   "t20": {
+    "m": 166,
+    "runs": 115,
+    "sr": 95.83,
+    "avg": 6.39,
+    "wk": 218,
+    "econ": 8.58,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Yuzvendra Chahal",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 15,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 16,
+    "econ": 9.56
+   },
+   "ipl": {
+    "m": 175,
+    "runs": 37,
+    "sr": 43.02,
+    "avg": 5.29,
+    "wk": 221,
+    "econ": 7.96,
+    "hs": "8*",
+    "bb": "5/40"
+   },
+   "t20": {
+    "m": 282,
+    "runs": 48,
+    "sr": 42.11,
+    "avg": 4.0,
+    "wk": 337,
+    "econ": 7.96,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Marcus Stoinis",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 14,
+    "runs": 160,
+    "sr": 186.05,
+    "avg": 26.67,
+    "wk": 1,
+    "econ": 12.35
+   },
+   "ipl": {
+    "m": 110,
+    "runs": 2026,
+    "sr": 144.71,
+    "avg": 28.14,
+    "wk": 44,
+    "econ": 9.79,
+    "hs": "124*",
+    "bb": "4/15"
+   },
+   "t20": {
+    "m": 338,
+    "runs": 6786,
+    "sr": 137.59,
+    "avg": 29.25,
+    "wk": 171,
+    "econ": 9.04,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Marco Jansen",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 15,
+    "runs": 75,
+    "sr": 119.05,
+    "avg": 18.75,
+    "wk": 16,
+    "econ": 9.2
+   },
+   "ipl": {
+    "m": 36,
+    "runs": 141,
+    "sr": 109.3,
+    "avg": 12.82,
+    "wk": 36,
+    "econ": 9.41,
+    "hs": "34*",
+    "bb": "3/17"
+   },
+   "t20": {
+    "m": 119,
+    "runs": 997,
+    "sr": 136.02,
+    "avg": 20.35,
+    "wk": 132,
+    "econ": 8.38,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shashank Singh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 18,
+    "runs": 350,
+    "sr": 153.51,
+    "avg": 50.0,
+    "wk": 0,
+    "econ": 13.5
+   },
+   "ipl": {
+    "m": 42,
+    "runs": 773,
+    "sr": 157.76,
+    "avg": 40.68,
+    "wk": 1,
+    "econ": 10.4,
+    "hs": "68*",
+    "bb": "1/5"
+   },
+   "t20": {
+    "m": 69,
+    "runs": 1139,
+    "sr": 144.73,
+    "avg": 28.48,
+    "wk": 12,
+    "econ": 8.4,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nehal Wadhera",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 17,
+    "runs": 369,
+    "sr": 145.85,
+    "avg": 30.75,
+    "wk": 0,
+    "econ": 10.8
+   },
+   "ipl": {
+    "m": 37,
+    "runs": 719,
+    "sr": 142.94,
+    "avg": 26.63,
+    "wk": 0,
+    "econ": 7.76,
+    "hs": "70",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 41,
+    "runs": 847,
+    "sr": 145.53,
+    "avg": 29.21,
+    "wk": 0,
+    "econ": 7.76,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Prabhsimran Singh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 18,
+    "runs": 599,
+    "sr": 161.89,
+    "avg": 35.24,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 52,
+    "runs": 1355,
+    "sr": 152.76,
+    "avg": 26.57,
+    "wk": 0,
+    "econ": null,
+    "hs": "103",
+    "bb": null
+   },
+   "t20": {
+    "m": 88,
+    "runs": 2357,
+    "sr": 147.59,
+    "avg": 30.22,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Priyansh Arya",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 18,
+    "runs": 545,
+    "sr": 182.27,
+    "avg": 30.28,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 18,
+    "runs": 545,
+    "sr": 182.27,
+    "avg": 30.28,
+    "wk": 0,
+    "econ": null,
+    "hs": "103",
+    "bb": null
+   },
+   "t20": {
+    "m": 26,
+    "runs": 811,
+    "sr": 170.74,
+    "avg": 31.19,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Mitchell Owen",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "0",
+    "bb": null
+   },
+   "t20": {
+    "m": 60,
+    "runs": 1123,
+    "sr": 181.72,
+    "avg": 24.41,
+    "wk": 26,
+    "econ": 9.63,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Azmatullah Omarzai",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 10,
+    "runs": 57,
+    "sr": 139.02,
+    "avg": 14.25,
+    "wk": 8,
+    "econ": 10.33
+   },
+   "ipl": {
+    "m": 17,
+    "runs": 99,
+    "sr": 133.78,
+    "avg": 12.38,
+    "wk": 12,
+    "econ": 9.69,
+    "hs": "21*",
+    "bb": "2/27"
+   },
+   "t20": {
+    "m": 62,
+    "runs": 641,
+    "sr": 151.54,
+    "avg": 20.68,
+    "wk": 63,
+    "econ": 9.04,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Lockie Ferguson",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 4,
+    "runs": 4,
+    "sr": 400.0,
+    "avg": null,
+    "wk": 5,
+    "econ": 9.18
+   },
+   "ipl": {
+    "m": 49,
+    "runs": 72,
+    "sr": 153.19,
+    "avg": 24.0,
+    "wk": 51,
+    "econ": 8.97,
+    "hs": "24*",
+    "bb": "4/28"
+   },
+   "t20": {
+    "m": 162,
+    "runs": 244,
+    "sr": 116.19,
+    "avg": 10.61,
+    "wk": 210,
+    "econ": 7.62,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vijaykumar Vyshak",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 5,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 4,
+    "econ": 10.65
+   },
+   "ipl": {
+    "m": 16,
+    "runs": 14,
+    "sr": 116.67,
+    "avg": 7.0,
+    "wk": 17,
+    "econ": 10.38,
+    "hs": "13*",
+    "bb": "3/20"
+   },
+   "t20": {
+    "m": 26,
+    "runs": 25,
+    "sr": 100.0,
+    "avg": 5.0,
+    "wk": 28,
+    "econ": 9.69,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Yash Thakur",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 12.15
+   },
+   "ipl": {
+    "m": 21,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 25,
+    "econ": 10.43,
+    "hs": null,
+    "bb": "5/30"
+   },
+   "t20": {
+    "m": 52,
+    "runs": 23,
+    "sr": 63.89,
+    "avg": 11.5,
+    "wk": 73,
+    "econ": 8.21,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Harpreet Brar",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 8,
+    "runs": 11,
+    "sr": 84.62,
+    "avg": 11.0,
+    "wk": 10,
+    "econ": 8.64
+   },
+   "ipl": {
+    "m": 49,
+    "runs": 244,
+    "sr": 120.2,
+    "avg": 20.33,
+    "wk": 35,
+    "econ": 8.03,
+    "hs": "29",
+    "bb": "4/30"
+   },
+   "t20": {
+    "m": 81,
+    "runs": 335,
+    "sr": 118.37,
+    "avg": 16.75,
+    "wk": 71,
+    "econ": 7.43,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vishnu Vinod",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 6,
+    "runs": 56,
+    "sr": 98.25,
+    "avg": 9.33,
+    "wk": 0,
+    "econ": null,
+    "hs": "30",
+    "bb": null
+   },
+   "t20": {
+    "m": 36,
+    "runs": 824,
+    "sr": 139.9,
+    "avg": 31.69,
+    "wk": 0,
+    "econ": 7.58,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Xavier Bartlett",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 4,
+    "runs": 11,
+    "sr": 73.33,
+    "avg": 11.0,
+    "wk": 2,
+    "econ": 9.6
+   },
+   "ipl": {
+    "m": 4,
+    "runs": 11,
+    "sr": 73.33,
+    "avg": 11.0,
+    "wk": 2,
+    "econ": 9.6,
+    "hs": "11",
+    "bb": "1/26"
+   },
+   "t20": {
+    "m": 89,
+    "runs": 416,
+    "sr": 121.28,
+    "avg": 15.41,
+    "wk": 109,
+    "econ": 8.43,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Musheer Khan",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 1,
+    "econ": 13.5
+   },
+   "ipl": {
+    "m": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 1,
+    "econ": 13.5,
+    "hs": "0",
+    "bb": "1/27"
+   },
+   "t20": {
+    "m": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": 0.0,
+    "wk": 1,
+    "econ": 13.5,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Suryansh Shedge",
+   "season": "IPL 2025",
+   "last": {
+    "team": "PBKS",
+    "m": 5,
+    "runs": 7,
+    "sr": 63.64,
+    "avg": 2.33,
+    "wk": 0,
+    "econ": 13.33
+   },
+   "ipl": {
+    "m": 5,
+    "runs": 7,
+    "sr": 63.64,
+    "avg": 2.33,
+    "wk": 0,
+    "econ": 13.33,
+    "hs": "4",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 8,
+    "runs": 85,
+    "sr": 217.95,
+    "avg": 28.33,
+    "wk": 5,
+    "econ": 10.82,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Yashasvi Jaiswal",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 14,
+    "runs": 559,
+    "sr": 159.71,
+    "avg": 43.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 66,
+    "runs": 2166,
+    "sr": 152.86,
+    "avg": 34.38,
+    "wk": 0,
+    "econ": 36.0,
+    "hs": "124",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 103,
+    "runs": 3166,
+    "sr": 151.7,
+    "avg": 32.98,
+    "wk": 0,
+    "econ": 12.95,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Riyan Parag",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 14,
+    "runs": 393,
+    "sr": 166.53,
+    "avg": 32.75,
+    "wk": 3,
+    "econ": 8.5
+   },
+   "ipl": {
+    "m": 83,
+    "runs": 1566,
+    "sr": 141.85,
+    "avg": 26.1,
+    "wk": 7,
+    "econ": 9.7,
+    "hs": "95",
+    "bb": "1/7"
+   },
+   "t20": {
+    "m": 120,
+    "runs": 2546,
+    "sr": 142.63,
+    "avg": 29.6,
+    "wk": 34,
+    "econ": 7.62,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ravindra Jadeja",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 14,
+    "runs": 301,
+    "sr": 135.59,
+    "avg": 33.44,
+    "wk": 10,
+    "econ": 8.56
+   },
+   "ipl": {
+    "m": 253,
+    "runs": 3260,
+    "sr": 130.3,
+    "avg": 27.86,
+    "wk": 170,
+    "econ": 7.67,
+    "hs": "77*",
+    "bb": "5/16"
+   },
+   "t20": {
+    "m": 324,
+    "runs": 3768,
+    "sr": 129.84,
+    "avg": 26.91,
+    "wk": 221,
+    "econ": 7.56,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Dhruv Jurel",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 14,
+    "runs": 333,
+    "sr": 156.34,
+    "avg": 37.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 41,
+    "runs": 680,
+    "sr": 153.85,
+    "avg": 28.33,
+    "wk": 0,
+    "econ": null,
+    "hs": "70",
+    "bb": null
+   },
+   "t20": {
+    "m": 52,
+    "runs": 761,
+    "sr": 144.13,
+    "avg": 25.37,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jofra Archer",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 12,
+    "runs": 63,
+    "sr": 126.0,
+    "avg": 10.5,
+    "wk": 11,
+    "econ": 9.47
+   },
+   "ipl": {
+    "m": 52,
+    "runs": 262,
+    "sr": 147.19,
+    "avg": 13.79,
+    "wk": 59,
+    "econ": 7.89,
+    "hs": "30",
+    "bb": "3/15"
+   },
+   "t20": {
+    "m": 168,
+    "runs": 686,
+    "sr": 141.15,
+    "avg": 14.91,
+    "wk": 208,
+    "econ": 7.89,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shimron Hetmyer",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 14,
+    "runs": 239,
+    "sr": 145.73,
+    "avg": 21.73,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 86,
+    "runs": 1482,
+    "sr": 151.84,
+    "avg": 29.06,
+    "wk": 0,
+    "econ": null,
+    "hs": "75",
+    "bb": null
+   },
+   "t20": {
+    "m": 300,
+    "runs": 6059,
+    "sr": 144.57,
+    "avg": 27.79,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tushar Deshpande",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 10,
+    "runs": 7,
+    "sr": 87.5,
+    "avg": 7.0,
+    "wk": 9,
+    "econ": 10.62
+   },
+   "ipl": {
+    "m": 46,
+    "runs": 28,
+    "sr": 127.27,
+    "avg": 14.0,
+    "wk": 51,
+    "econ": 9.84,
+    "hs": "20*",
+    "bb": "4/27"
+   },
+   "t20": {
+    "m": 78,
+    "runs": 41,
+    "sr": 110.81,
+    "avg": 8.2,
+    "wk": 104,
+    "econ": 8.97,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sandeep Sharma",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 10,
+    "runs": 6,
+    "sr": 120.0,
+    "avg": null,
+    "wk": 9,
+    "econ": 9.89
+   },
+   "ipl": {
+    "m": 136,
+    "runs": 60,
+    "sr": 80.0,
+    "avg": 10.0,
+    "wk": 146,
+    "econ": 8.03,
+    "hs": "9",
+    "bb": "5/18"
+   },
+   "t20": {
+    "m": 164,
+    "runs": 81,
+    "sr": 79.41,
+    "avg": 11.57,
+    "wk": 171,
+    "econ": 7.92,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nandre Burger",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 5,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 7,
+    "econ": 8.53,
+    "hs": null,
+    "bb": "2/29"
+   },
+   "t20": {
+    "m": 60,
+    "runs": 66,
+    "sr": 53.23,
+    "avg": 6.0,
+    "wk": 62,
+    "econ": 8.04,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Sam Curran",
+   "season": "IPL 2025",
+   "last": {
+    "team": "CSK",
+    "m": 5,
+    "runs": 114,
+    "sr": 135.71,
+    "avg": 22.8,
+    "wk": 1,
+    "econ": 11.08
+   },
+   "ipl": {
+    "m": 64,
+    "runs": 997,
+    "sr": 136.39,
+    "avg": 24.93,
+    "wk": 59,
+    "econ": 9.74,
+    "hs": "88",
+    "bb": "4/11"
+   },
+   "t20": {
+    "m": 269,
+    "runs": 4333,
+    "sr": 135.53,
+    "avg": 25.05,
+    "wk": 243,
+    "econ": 8.88,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kwena Maphaka",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 2,
+    "runs": 8,
+    "sr": 400.0,
+    "avg": null,
+    "wk": 1,
+    "econ": 10.8
+   },
+   "ipl": {
+    "m": 4,
+    "runs": 8,
+    "sr": 400.0,
+    "avg": null,
+    "wk": 2,
+    "econ": 13.0,
+    "hs": "8*",
+    "bb": "1/23"
+   },
+   "t20": {
+    "m": 33,
+    "runs": 52,
+    "sr": 91.23,
+    "avg": 26.0,
+    "wk": 38,
+    "econ": 9.01,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Vaibhav Sooryavanshi",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 7,
+    "runs": 252,
+    "sr": 206.56,
+    "avg": 36.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 7,
+    "runs": 252,
+    "sr": 206.56,
+    "avg": 36.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "101",
+    "bb": null
+   },
+   "t20": {
+    "m": 7,
+    "runs": 252,
+    "sr": 206.56,
+    "avg": 36.0,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Donovan Ferreira",
+   "season": "IPL 2025",
+   "last": {
+    "team": "DC",
+    "m": 1,
+    "runs": 1,
+    "sr": 33.33,
+    "avg": 1.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 3,
+    "runs": 9,
+    "sr": 64.29,
+    "avg": 3.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "7",
+    "bb": null
+   },
+   "t20": {
+    "m": 98,
+    "runs": 1810,
+    "sr": 163.8,
+    "avg": 27.42,
+    "wk": 16,
+    "econ": 7.68,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Shubham Dubey",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 9,
+    "runs": 106,
+    "sr": 160.61,
+    "avg": 26.5,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 13,
+    "runs": 139,
+    "sr": 163.53,
+    "avg": 23.17,
+    "wk": 0,
+    "econ": null,
+    "hs": "34*",
+    "bb": null
+   },
+   "t20": {
+    "m": 24,
+    "runs": 363,
+    "sr": 142.35,
+    "avg": 25.93,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Yudhvir Singh",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RR",
+    "m": 4,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 4,
+    "econ": 11.91
+   },
+   "ipl": {
+    "m": 9,
+    "runs": 22,
+    "sr": 137.5,
+    "avg": 5.5,
+    "wk": 8,
+    "econ": 11.0,
+    "hs": "14",
+    "bb": "3/47"
+   },
+   "t20": {
+    "m": 19,
+    "runs": 60,
+    "sr": 166.67,
+    "avg": 6.67,
+    "wk": 18,
+    "econ": 9.14,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Lhuan-dre Pretorius",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 36,
+    "runs": 876,
+    "sr": 151.82,
+    "avg": 25.03,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Virat Kohli",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 15,
+    "runs": 657,
+    "sr": 144.71,
+    "avg": 54.75,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 266,
+    "runs": 8661,
+    "sr": 132.86,
+    "avg": 39.55,
+    "wk": 4,
+    "econ": 8.8,
+    "hs": "113*",
+    "bb": "2/25"
+   },
+   "t20": {
+    "m": 384,
+    "runs": 12624,
+    "sr": 133.81,
+    "avg": 41.94,
+    "wk": 8,
+    "econ": 8.52,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Josh Hazlewood",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 12,
+    "runs": 0,
+    "sr": 0.0,
+    "avg": null,
+    "wk": 22,
+    "econ": 8.77
+   },
+   "ipl": {
+    "m": 39,
+    "runs": 19,
+    "sr": 65.52,
+    "avg": null,
+    "wk": 57,
+    "econ": 8.28,
+    "hs": "7*",
+    "bb": "4/25"
+   },
+   "t20": {
+    "m": 115,
+    "runs": 60,
+    "sr": 92.31,
+    "avg": 15.0,
+    "wk": 159,
+    "econ": 7.7,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Phil Salt",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 13,
+    "runs": 403,
+    "sr": 175.98,
+    "avg": 33.58,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 34,
+    "runs": 1056,
+    "sr": 175.71,
+    "avg": 34.06,
+    "wk": 0,
+    "econ": null,
+    "hs": "89*",
+    "bb": null
+   },
+   "t20": {
+    "m": 268,
+    "runs": 6759,
+    "sr": 155.92,
+    "avg": 28.28,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rajat Patidar",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 15,
+    "runs": 312,
+    "sr": 143.78,
+    "avg": 24.0,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 42,
+    "runs": 1111,
+    "sr": 154.31,
+    "avg": 30.86,
+    "wk": 0,
+    "econ": null,
+    "hs": "112*",
+    "bb": null
+   },
+   "t20": {
+    "m": 76,
+    "runs": 2243,
+    "sr": 153.42,
+    "avg": 34.51,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jitesh Sharma",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 15,
+    "runs": 261,
+    "sr": 176.35,
+    "avg": 37.29,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 55,
+    "runs": 991,
+    "sr": 157.05,
+    "avg": 25.41,
+    "wk": 0,
+    "econ": null,
+    "hs": "85*",
+    "bb": null
+   },
+   "t20": {
+    "m": 111,
+    "runs": 2101,
+    "sr": 151.59,
+    "avg": 26.59,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Bhuvneshwar Kumar",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 14,
+    "runs": 14,
+    "sr": 56.0,
+    "avg": 4.67,
+    "wk": 17,
+    "econ": 9.29
+   },
+   "ipl": {
+    "m": 190,
+    "runs": 320,
+    "sr": 91.17,
+    "avg": 8.42,
+    "wk": 198,
+    "econ": 7.69,
+    "hs": "27",
+    "bb": "5/19"
+   },
+   "t20": {
+    "m": 286,
+    "runs": 432,
+    "sr": 90.38,
+    "avg": 9.19,
+    "wk": 300,
+    "econ": 7.44,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Rasikh Salam",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 2,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 11.67
+   },
+   "ipl": {
+    "m": 13,
+    "runs": 40,
+    "sr": 100.0,
+    "avg": 8.0,
+    "wk": 10,
+    "econ": 10.62,
+    "hs": "10",
+    "bb": "3/34"
+   },
+   "t20": {
+    "m": 22,
+    "runs": 51,
+    "sr": 83.61,
+    "avg": 6.38,
+    "wk": 19,
+    "econ": 9.3,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Krunal Pandya",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 15,
+    "runs": 109,
+    "sr": 126.74,
+    "avg": 18.17,
+    "wk": 17,
+    "econ": 8.24
+   },
+   "ipl": {
+    "m": 142,
+    "runs": 1756,
+    "sr": 132.43,
+    "avg": 22.23,
+    "wk": 93,
+    "econ": 7.47,
+    "hs": "86",
+    "bb": "4/45"
+   },
+   "t20": {
+    "m": 191,
+    "runs": 2478,
+    "sr": 130.22,
+    "avg": 23.16,
+    "wk": 132,
+    "econ": 7.45,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Yash Dayal",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 15,
+    "runs": 4,
+    "sr": 50.0,
+    "avg": 2.0,
+    "wk": 13,
+    "econ": 9.59
+   },
+   "ipl": {
+    "m": 43,
+    "runs": 4,
+    "sr": 44.44,
+    "avg": 1.33,
+    "wk": 41,
+    "econ": 9.58,
+    "hs": "3",
+    "bb": "3/20"
+   },
+   "t20": {
+    "m": 62,
+    "runs": 10,
+    "sr": 47.62,
+    "avg": 2.5,
+    "wk": 57,
+    "econ": 8.89,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Tim David",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 12,
+    "runs": 187,
+    "sr": 185.15,
+    "avg": 62.33,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 50,
+    "runs": 846,
+    "sr": 173.36,
+    "avg": 32.54,
+    "wk": 0,
+    "econ": null,
+    "hs": "50*",
+    "bb": null
+   },
+   "t20": {
+    "m": 298,
+    "runs": 6049,
+    "sr": 163.05,
+    "avg": 32.01,
+    "wk": 17,
+    "econ": 8.83,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Suyash Sharma",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 14,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 8,
+    "econ": 8.84
+   },
+   "ipl": {
+    "m": 27,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 18,
+    "econ": 8.75,
+    "hs": null,
+    "bb": "3/17"
+   },
+   "t20": {
+    "m": 33,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 32,
+    "econ": 8.32,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jacob Bethell",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 2,
+    "runs": 67,
+    "sr": 171.79,
+    "avg": 33.5,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 2,
+    "runs": 67,
+    "sr": 171.79,
+    "avg": 33.5,
+    "wk": 0,
+    "econ": null,
+    "hs": "55",
+    "bb": null
+   },
+   "t20": {
+    "m": 66,
+    "runs": 1240,
+    "sr": 143.85,
+    "avg": 24.8,
+    "wk": 15,
+    "econ": 8.38,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Devdutt Padikkal",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 10,
+    "runs": 247,
+    "sr": 150.61,
+    "avg": 27.44,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 74,
+    "runs": 1806,
+    "sr": 126.29,
+    "avg": 25.44,
+    "wk": 0,
+    "econ": null,
+    "hs": "101*",
+    "bb": null
+   },
+   "t20": {
+    "m": 100,
+    "runs": 2624,
+    "sr": 129.84,
+    "avg": 27.91,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nuwan Thushara",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 1,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 1,
+    "econ": 6.5
+   },
+   "ipl": {
+    "m": 8,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 9,
+    "econ": 9.43,
+    "hs": null,
+    "bb": "3/28"
+   },
+   "t20": {
+    "m": 85,
+    "runs": 23,
+    "sr": 46.94,
+    "avg": 3.83,
+    "wk": 102,
+    "econ": 8.55,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Romario Shepherd",
+   "season": "IPL 2025",
+   "last": {
+    "team": "RCB",
+    "m": 8,
+    "runs": 70,
+    "sr": 291.67,
+    "avg": 35.0,
+    "wk": 6,
+    "econ": 10.79
+   },
+   "ipl": {
+    "m": 18,
+    "runs": 185,
+    "sr": 212.64,
+    "avg": 26.43,
+    "wk": 10,
+    "econ": 11.66,
+    "hs": "53*",
+    "bb": "2/14"
+   },
+   "t20": {
+    "m": 210,
+    "runs": 2300,
+    "sr": 156.78,
+    "avg": 23.47,
+    "wk": 198,
+    "econ": 9.19,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Swapnil Singh",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": {
+    "m": 14,
+    "runs": 51,
+    "sr": 113.33,
+    "avg": 10.2,
+    "wk": 7,
+    "econ": 8.93,
+    "hs": "15*",
+    "bb": "2/28"
+   },
+   "t20": {
+    "m": 51,
+    "runs": 585,
+    "sr": 122.64,
+    "avg": 22.5,
+    "wk": 39,
+    "econ": 7.24,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Heinrich Klaasen",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 14,
+    "runs": 487,
+    "sr": 172.7,
+    "avg": 44.27,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 49,
+    "runs": 1480,
+    "sr": 169.72,
+    "avg": 40.0,
+    "wk": 0,
+    "econ": null,
+    "hs": "105*",
+    "bb": null
+   },
+   "t20": {
+    "m": 221,
+    "runs": 5154,
+    "sr": 153.3,
+    "avg": 31.24,
+    "wk": 1,
+    "econ": 9.71,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Pat Cummins",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 14,
+    "runs": 97,
+    "sr": 167.24,
+    "avg": 24.25,
+    "wk": 16,
+    "econ": 9.06
+   },
+   "ipl": {
+    "m": 72,
+    "runs": 612,
+    "sr": 152.24,
+    "avg": 20.4,
+    "wk": 79,
+    "econ": 8.81,
+    "hs": "66*",
+    "bb": "4/34"
+   },
+   "t20": {
+    "m": 148,
+    "runs": 961,
+    "sr": 142.58,
+    "avg": 18.48,
+    "wk": 162,
+    "econ": 8.35,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Travis Head",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 13,
+    "runs": 374,
+    "sr": 162.61,
+    "avg": 31.17,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 38,
+    "runs": 1146,
+    "sr": 170.03,
+    "avg": 34.73,
+    "wk": 2,
+    "econ": 11.69,
+    "hs": "102",
+    "bb": "2/30"
+   },
+   "t20": {
+    "m": 167,
+    "runs": 4414,
+    "sr": 149.07,
+    "avg": 30.65,
+    "wk": 22,
+    "econ": 8.69,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Abhishek Sharma",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 14,
+    "runs": 439,
+    "sr": 193.39,
+    "avg": 33.77,
+    "wk": 0,
+    "econ": 10.18
+   },
+   "ipl": {
+    "m": 77,
+    "runs": 1816,
+    "sr": 163.02,
+    "avg": 27.1,
+    "wk": 11,
+    "econ": 8.95,
+    "hs": "141",
+    "bb": "2/4"
+   },
+   "t20": {
+    "m": 145,
+    "runs": 3775,
+    "sr": 165.57,
+    "avg": 29.72,
+    "wk": 35,
+    "econ": 7.89,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Ishan Kishan",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 14,
+    "runs": 354,
+    "sr": 152.59,
+    "avg": 35.4,
+    "wk": 0,
+    "econ": 24.0
+   },
+   "ipl": {
+    "m": 119,
+    "runs": 2998,
+    "sr": 137.65,
+    "avg": 29.11,
+    "wk": 0,
+    "econ": 24.0,
+    "hs": "106*",
+    "bb": "0/0"
+   },
+   "t20": {
+    "m": 174,
+    "runs": 4547,
+    "sr": 135.89,
+    "avg": 29.34,
+    "wk": 0,
+    "econ": 24.0,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Harshal Patel",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 13,
+    "runs": 21,
+    "sr": 80.77,
+    "avg": 10.5,
+    "wk": 16,
+    "econ": 9.81
+   },
+   "ipl": {
+    "m": 118,
+    "runs": 270,
+    "sr": 117.9,
+    "avg": 9.31,
+    "wk": 151,
+    "econ": 8.86,
+    "hs": "36*",
+    "bb": "5/27"
+   },
+   "t20": {
+    "m": 169,
+    "runs": 1019,
+    "sr": 142.92,
+    "avg": 16.7,
+    "wk": 212,
+    "econ": 8.78,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Nitish Kumar Reddy",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 13,
+    "runs": 182,
+    "sr": 118.95,
+    "avg": 22.75,
+    "wk": 2,
+    "econ": 9.4
+   },
+   "ipl": {
+    "m": 28,
+    "runs": 485,
+    "sr": 132.88,
+    "avg": 28.53,
+    "wk": 5,
+    "econ": 10.96,
+    "hs": "76*",
+    "bb": "2/17"
+   },
+   "t20": {
+    "m": 36,
+    "runs": 667,
+    "sr": 130.53,
+    "avg": 29.0,
+    "wk": 8,
+    "econ": 10.46,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Eshan Malinga",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 7,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 13,
+    "econ": 8.93
+   },
+   "ipl": {
+    "m": 7,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 13,
+    "econ": 8.93,
+    "hs": null,
+    "bb": "3/31"
+   },
+   "t20": {
+    "m": 20,
+    "runs": 24,
+    "sr": 77.42,
+    "avg": 6.0,
+    "wk": 32,
+    "econ": 8.57,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Brydon Carse",
+   "season": "IPL 2025",
+   "last": null,
+   "ipl": null,
+   "t20": {
+    "m": 73,
+    "runs": 708,
+    "sr": 141.6,
+    "avg": 17.7,
+    "wk": 52,
+    "econ": 8.98,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Jaydev Unadkat",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 7,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 11,
+    "econ": 7.34
+   },
+   "ipl": {
+    "m": 112,
+    "runs": 197,
+    "sr": 118.67,
+    "avg": 12.31,
+    "wk": 110,
+    "econ": 8.88,
+    "hs": "26",
+    "bb": "5/25"
+   },
+   "t20": {
+    "m": 163,
+    "runs": 479,
+    "sr": 138.44,
+    "avg": 18.42,
+    "wk": 189,
+    "econ": 8.22,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Kamindu Mendis",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 5,
+    "runs": 92,
+    "sr": 133.33,
+    "avg": 30.67,
+    "wk": 2,
+    "econ": 8.57
+   },
+   "ipl": {
+    "m": 5,
+    "runs": 92,
+    "sr": 133.33,
+    "avg": 30.67,
+    "wk": 2,
+    "econ": 8.57,
+    "hs": "32*",
+    "bb": "1/4"
+   },
+   "t20": {
+    "m": 79,
+    "runs": 1333,
+    "sr": 121.96,
+    "avg": 21.5,
+    "wk": 16,
+    "econ": 8.7,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Zeeshan Ansari",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 10,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 6,
+    "econ": 9.84
+   },
+   "ipl": {
+    "m": 10,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 6,
+    "econ": 9.84,
+    "hs": null,
+    "bb": "3/42"
+   },
+   "t20": {
+    "m": 11,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 6,
+    "econ": 9.65,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Aniket Verma",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 14,
+    "runs": 236,
+    "sr": 166.2,
+    "avg": 26.22,
+    "wk": 0,
+    "econ": null
+   },
+   "ipl": {
+    "m": 14,
+    "runs": 236,
+    "sr": 166.2,
+    "avg": 26.22,
+    "wk": 0,
+    "econ": null,
+    "hs": "74",
+    "bb": null
+   },
+   "t20": {
+    "m": 14,
+    "runs": 236,
+    "sr": 166.2,
+    "avg": 26.22,
+    "wk": 0,
+    "econ": null,
+    "asof": "2025-12-16"
+   }
+  },
+  {
+   "n": "Harsh Dubey",
+   "season": "IPL 2025",
+   "last": {
+    "team": "SRH",
+    "m": 3,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 5,
+    "econ": 9.8
+   },
+   "ipl": {
+    "m": 3,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 5,
+    "econ": 9.8,
+    "hs": null,
+    "bb": "3/34"
+   },
+   "t20": {
+    "m": 7,
+    "runs": 0,
+    "sr": null,
+    "avg": null,
+    "wk": 7,
+    "econ": 8.05,
+    "asof": "2025-12-16"
+   }
+  }
+ ]
+}

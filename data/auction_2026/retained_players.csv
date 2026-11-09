@@ -1,174 +1,174 @@
-team,team_code,name,nationality,salary_cr,image
-Chennai Super Kings,CSK,Ruturaj Gaikwad,India,18.0,static/players/ruturaj-gaikwad.jpg
-Chennai Super Kings,CSK,Sanju Samson,India,18.0,static/players/sanju-samson.jpg
-Chennai Super Kings,CSK,Shivam Dube,India,12.0,static/players/shivam-dube.jpg
-Chennai Super Kings,CSK,Noor Ahmad,Afghanistan,10.0,
-Chennai Super Kings,CSK,Khaleel Ahmed,India,4.8,static/players/khaleel-ahmed.jpg
-Chennai Super Kings,CSK,MS Dhoni,India,4.0,static/players/ms-dhoni.jpg
-Chennai Super Kings,CSK,Anshul Kamboj,India,3.4,
-Chennai Super Kings,CSK,Dewald Brevis,South Africa,2.2,
-Chennai Super Kings,CSK,Gurjapneet Singh,India,2.2,
-Chennai Super Kings,CSK,Nathan Ellis,Australia,2.0,
-Chennai Super Kings,CSK,Jamie Overton,England,1.5,static/players/jamie-overton.jpg
-Chennai Super Kings,CSK,Mukesh Choudhary,India,0.3,
-Chennai Super Kings,CSK,Ramakrishna Ghosh,India,0.3,
-Chennai Super Kings,CSK,Shreyas Gopal,India,0.3,static/players/shreyas-gopal.png
-Chennai Super Kings,CSK,Ayush Mhatre,India,0.3,
-Chennai Super Kings,CSK,Urvil Patel,India,0.3,
-Delhi Capitals,DC,Axar Patel,India,16.5,static/players/axar-patel.jpg
-Delhi Capitals,DC,KL Rahul,India,14.0,static/players/kl-rahul.jpg
-Delhi Capitals,DC,Kuldeep Yadav,India,13.25,static/players/kuldeep-yadav.jpg
-Delhi Capitals,DC,Mitchell Starc,Australia,11.75,static/players/mitchell-starc.jpg
-Delhi Capitals,DC,T. Natarajan,India,10.75,static/players/t-natarajan.jpg
-Delhi Capitals,DC,Tristan Stubbs,South Africa,10.0,
-Delhi Capitals,DC,Mukesh Kumar,India,8.0,static/players/mukesh-kumar.jpg
-Delhi Capitals,DC,Nitish Rana,India,4.2,
-Delhi Capitals,DC,Abhishek Porel,India,4.0,
-Delhi Capitals,DC,Ashutosh Sharma,India,3.8,
-Delhi Capitals,DC,Sameer Rizvi,India,0.95,static/players/sameer-rizvi.jpg
-Delhi Capitals,DC,Dushmantha Chameera,Sri Lanka,0.75,
-Delhi Capitals,DC,Karun Nair,India,0.5,static/players/karun-nair.jpg
-Delhi Capitals,DC,Madhav Tiwari,India,0.4,
-Delhi Capitals,DC,Ajay Mandal,India,0.3,
-Delhi Capitals,DC,Tripurana Vijay,India,0.3,
-Delhi Capitals,DC,Vipraj Nigam,India,0.3,
-Gujarat Titans,GT,Rashid Khan,Afghanistan,18.0,static/players/rashid-khan.jpg
-Gujarat Titans,GT,Shubman Gill,India,16.5,static/players/shubman-gill.jpg
-Gujarat Titans,GT,Jos Buttler,England,15.75,static/players/jos-buttler.jpg
-Gujarat Titans,GT,Mohammed Siraj,India,12.25,static/players/mohammed-siraj.jpg
-Gujarat Titans,GT,Kagiso Rabada,South Africa,10.75,static/players/kagiso-rabada.jpg
-Gujarat Titans,GT,Prasidh Krishna,India,9.5,
-Gujarat Titans,GT,Sai Sudharsan,India,8.5,
-Gujarat Titans,GT,Rahul Tewatia,India,4.0,
-Gujarat Titans,GT,Shahrukh Khan,India,4.0,static/players/shahrukh-khan.jpg
-Gujarat Titans,GT,Washington Sundar,India,3.2,static/players/washington-sundar.jpg
-Gujarat Titans,GT,Sai Kishore,India,2.0,static/players/sai-kishore.jpg
-Gujarat Titans,GT,Glenn Phillips,New Zealand,2.0,
-Gujarat Titans,GT,Arshad Khan,India,1.3,
-Gujarat Titans,GT,Gurnoor Brar,India,1.3,
-Gujarat Titans,GT,Ishant Sharma,India,0.75,static/players/ishant-sharma.jpg
-Gujarat Titans,GT,Jayant Yadav,India,0.75,
-Gujarat Titans,GT,Kumar Kushagra,India,0.65,
-Gujarat Titans,GT,Anuj Rawat,India,0.3,
-Gujarat Titans,GT,Manav Suthar,India,0.3,
-Gujarat Titans,GT,Nishant Sindhu,India,0.3,
-Kolkata Knight Riders,KKR,Rinku Singh,India,13.0,
-Kolkata Knight Riders,KKR,Sunil Narine,West Indies,12.0,static/players/sunil-narine.jpg
-Kolkata Knight Riders,KKR,Varun Chakravarthy,India,12.0,
-Kolkata Knight Riders,KKR,Harshit Rana,India,4.0,
-Kolkata Knight Riders,KKR,Ramandeep Singh,India,4.0,
-Kolkata Knight Riders,KKR,Angkrish Raghuvanshi,India,3.0,
-Kolkata Knight Riders,KKR,Vaibhav Arora,India,1.8,
-Kolkata Knight Riders,KKR,Ajinkya Rahane,India,1.5,static/players/ajinkya-rahane.jpg
-Kolkata Knight Riders,KKR,Rovman Powell,West Indies,1.5,
-Kolkata Knight Riders,KKR,Manish Pandey,India,0.75,static/players/manish-pandey.jpg
-Kolkata Knight Riders,KKR,Umran Malik,India,0.75,static/players/umran-malik.jpg
-Kolkata Knight Riders,KKR,Anukul Roy,India,0.4,
-Lucknow Super Giants,LSG,Rishabh Pant,India,27.0,static/players/rishabh-pant.jpg
-Lucknow Super Giants,LSG,Nicholas Pooran,West Indies,21.0,
-Lucknow Super Giants,LSG,Mayank Yadav,India,11.0,
-Lucknow Super Giants,LSG,Mohammed Shami,India,10.0,static/players/mohammed-shami.jpg
-Lucknow Super Giants,LSG,Avesh Khan,India,9.75,
-Lucknow Super Giants,LSG,Abdul Samad,India,4.2,static/players/abdul-samad.png
-Lucknow Super Giants,LSG,Ayush Badoni,India,4.0,
-Lucknow Super Giants,LSG,Mohsin Khan,India,4.0,
-Lucknow Super Giants,LSG,Mitchell Marsh,Australia,3.4,static/players/mitchell-marsh.jpg
-Lucknow Super Giants,LSG,Shahbaz Ahmed,India,2.4,
-Lucknow Super Giants,LSG,Aiden Markram,South Africa,2.0,static/players/aiden-markram.png
-Lucknow Super Giants,LSG,Manimaran Siddharth,India,0.75,
-Lucknow Super Giants,LSG,Matthew Breetzke,South Africa,0.75,
-Lucknow Super Giants,LSG,Akash Singh,India,0.3,
-Lucknow Super Giants,LSG,Arjun Tendulkar,India,0.3,static/players/arjun-tendulkar.jpg
-Lucknow Super Giants,LSG,Arshin Kulkarni,India,0.3,
-Lucknow Super Giants,LSG,Himmat Singh,India,0.3,
-Lucknow Super Giants,LSG,Digvesh Rathi,India,0.3,
-Lucknow Super Giants,LSG,Prince Yadav,India,0.3,
-Mumbai Indians,MI,Jasprit Bumrah,India,18.0,static/players/jasprit-bumrah.jpg
-Mumbai Indians,MI,Hardik Pandya,India,16.35,static/players/hardik-pandya.jpg
-Mumbai Indians,MI,Suryakumar Yadav,India,16.35,static/players/suryakumar-yadav.jpg
-Mumbai Indians,MI,Rohit Sharma,India,16.3,static/players/rohit-sharma.jpg
-Mumbai Indians,MI,Trent Boult,New Zealand,12.5,static/players/trent-boult.jpg
-Mumbai Indians,MI,Deepak Chahar,India,9.25,static/players/deepak-chahar.jpg
-Mumbai Indians,MI,Tilak Varma,India,8.0,static/players/tilak-varma.png
-Mumbai Indians,MI,Will Jacks,England,5.25,static/players/will-jacks.jpg
-Mumbai Indians,MI,Naman Dhir,India,5.25,
-Mumbai Indians,MI,Allah Ghazanfar,Afghanistan,4.8,
-Mumbai Indians,MI,Sherfane Rutherford,West Indies,2.6,
-Mumbai Indians,MI,Shardul Thakur,India,2.0,
-Mumbai Indians,MI,Mitchell Santner,New Zealand,2.0,
-Mumbai Indians,MI,Ryan Rickelton,South Africa,1.0,static/players/ryan-rickelton.jpg
-Mumbai Indians,MI,Corbin Bosch,South Africa,0.75,
-Mumbai Indians,MI,Robin Minz,India,0.65,
-Mumbai Indians,MI,Raj Angad Bawa,India,0.3,
-Mumbai Indians,MI,Ashwani Kumar,India,0.3,
-Mumbai Indians,MI,Raghu Sharma,India,0.3,
-Mumbai Indians,MI,Mayank Markande,India,0.3,
-Punjab Kings,PBKS,Shreyas Iyer,India,26.75,
-Punjab Kings,PBKS,Arshdeep Singh,India,18.0,static/players/arshdeep-singh.jpg
-Punjab Kings,PBKS,Yuzvendra Chahal,India,18.0,static/players/yuzvendra-chahal.jpg
-Punjab Kings,PBKS,Marcus Stoinis,Australia,11.0,static/players/marcus-stoinis.jpg
-Punjab Kings,PBKS,Marco Jansen,South Africa,7.0,static/players/marco-jansen.jpg
-Punjab Kings,PBKS,Shashank Singh,India,5.5,
-Punjab Kings,PBKS,Nehal Wadhera,India,4.2,
-Punjab Kings,PBKS,Prabhsimran Singh,India,4.0,
-Punjab Kings,PBKS,Priyansh Arya,India,3.8,
-Punjab Kings,PBKS,Mitchell Owen,Australia,3.0,
-Punjab Kings,PBKS,Azmatullah Omarzai,Afghanistan,2.4,
-Punjab Kings,PBKS,Lockie Ferguson,New Zealand,2.0,static/players/lockie-ferguson.jpg
-Punjab Kings,PBKS,Vijaykumar Vyshak,India,1.8,
-Punjab Kings,PBKS,Yash Thakur,India,1.6,
-Punjab Kings,PBKS,Harpreet Brar,India,1.5,
-Punjab Kings,PBKS,Vishnu Vinod,India,0.95,
-Punjab Kings,PBKS,Xavier Bartlett,Australia,0.8,
-Punjab Kings,PBKS,Pyla Avinash,India,0.3,
-Punjab Kings,PBKS,Harnoor Pannu,India,0.3,
-Punjab Kings,PBKS,Musheer Khan,India,0.3,
-Punjab Kings,PBKS,Suryansh Shedge,India,0.3,static/players/suryansh-shedge.jpg
-Rajasthan Royals,RR,Yashasvi Jaiswal,India,18.0,static/players/yashasvi-jaiswal.jpg
-Rajasthan Royals,RR,Riyan Parag,India,14.0,
-Rajasthan Royals,RR,Ravindra Jadeja,India,14.0,static/players/ravindra-jadeja.jpg
-Rajasthan Royals,RR,Dhruv Jurel,India,14.0,
-Rajasthan Royals,RR,Jofra Archer,England,12.5,static/players/jofra-archer.jpg
-Rajasthan Royals,RR,Shimron Hetmyer,West Indies,11.0,static/players/shimron-hetmyer.jpg
-Rajasthan Royals,RR,Tushar Deshpande,India,6.5,static/players/tushar-deshpande.jpg
-Rajasthan Royals,RR,Sandeep Sharma,India,4.0,
-Rajasthan Royals,RR,Nandre Burger,South Africa,3.5,
-Rajasthan Royals,RR,Sam Curran,England,2.4,static/players/sam-curran.jpg
-Rajasthan Royals,RR,Kwena Maphaka,South Africa,1.5,
-Rajasthan Royals,RR,Vaibhav Sooryavanshi,India,1.1,static/players/vaibhav-sooryavanshi.jpg
-Rajasthan Royals,RR,Donovan Ferreira,South Africa,1.0,
-Rajasthan Royals,RR,Shubham Dubey,India,0.8,
-Rajasthan Royals,RR,Yudhvir Singh,India,0.35,
-Rajasthan Royals,RR,Lhuan-dre Pretorius,South Africa,0.3,
-Royal Challengers Bengaluru,RCB,Virat Kohli,India,21.0,static/players/virat-kohli.jpg
-Royal Challengers Bengaluru,RCB,Josh Hazlewood,Australia,12.5,static/players/josh-hazlewood.jpg
-Royal Challengers Bengaluru,RCB,Phil Salt,England,11.5,static/players/phil-salt.jpg
-Royal Challengers Bengaluru,RCB,Rajat Patidar,India,11.0,
-Royal Challengers Bengaluru,RCB,Jitesh Sharma,India,11.0,
-Royal Challengers Bengaluru,RCB,Bhuvneshwar Kumar,India,10.75,static/players/bhuvneshwar-kumar.jpg
-Royal Challengers Bengaluru,RCB,Rasikh Salam,India,6.0,static/players/rasikh-salam.jpg
-Royal Challengers Bengaluru,RCB,Krunal Pandya,India,5.75,static/players/krunal-pandya.jpg
-Royal Challengers Bengaluru,RCB,Yash Dayal,India,5.0,
-Royal Challengers Bengaluru,RCB,Tim David,Australia,3.0,
-Royal Challengers Bengaluru,RCB,Suyash Sharma,India,2.6,static/players/suyash-sharma.png
-Royal Challengers Bengaluru,RCB,Jacob Bethell,England,2.6,
-Royal Challengers Bengaluru,RCB,Devdutt Padikkal,India,2.0,
-Royal Challengers Bengaluru,RCB,Nuwan Thushara,Sri Lanka,1.6,
-Royal Challengers Bengaluru,RCB,Romario Shepherd,West Indies,1.5,
-Royal Challengers Bengaluru,RCB,Swapnil Singh,India,0.5,
-Royal Challengers Bengaluru,RCB,Abhinandan Singh,India,0.3,
-Sunrisers Hyderabad,SRH,Heinrich Klaasen,South Africa,23.0,
-Sunrisers Hyderabad,SRH,Pat Cummins,Australia,18.0,static/players/pat-cummins.jpg
-Sunrisers Hyderabad,SRH,Travis Head,Australia,14.0,static/players/travis-head.jpg
-Sunrisers Hyderabad,SRH,Abhishek Sharma,India,14.0,
-Sunrisers Hyderabad,SRH,Ishan Kishan,India,11.25,static/players/ishan-kishan.jpg
-Sunrisers Hyderabad,SRH,Harshal Patel,India,8.0,
-Sunrisers Hyderabad,SRH,Nitish Kumar Reddy,India,6.0,static/players/nitish-kumar-reddy.jpg
-Sunrisers Hyderabad,SRH,Eshan Malinga,Sri Lanka,1.2,
-Sunrisers Hyderabad,SRH,Brydon Carse,England,1.0,static/players/brydon-carse.jpg
-Sunrisers Hyderabad,SRH,Jaydev Unadkat,India,1.0,static/players/jaydev-unadkat.jpg
-Sunrisers Hyderabad,SRH,Kamindu Mendis,Sri Lanka,0.75,
-Sunrisers Hyderabad,SRH,Zeeshan Ansari,India,0.4,
-Sunrisers Hyderabad,SRH,Smaran Ravichandran,India,0.3,
-Sunrisers Hyderabad,SRH,Aniket Verma,India,0.3,
-Sunrisers Hyderabad,SRH,Harsh Dubey,India,0.3,
+team,team_code,name,nationality,salary_cr,image,role,role_source
+Chennai Super Kings,CSK,Ruturaj Gaikwad,India,18.0,static/players/ruturaj-gaikwad.jpg,Batter,wikipedia
+Chennai Super Kings,CSK,Sanju Samson,India,18.0,static/players/sanju-samson.jpg,Wicket-keeper,wikipedia
+Chennai Super Kings,CSK,Shivam Dube,India,12.0,static/players/shivam-dube.jpg,All-rounder,wikipedia
+Chennai Super Kings,CSK,Noor Ahmad,Afghanistan,10.0,,Spin bowler,wikipedia
+Chennai Super Kings,CSK,Khaleel Ahmed,India,4.8,static/players/khaleel-ahmed.jpg,Fast bowler,wikipedia
+Chennai Super Kings,CSK,MS Dhoni,India,4.0,static/players/ms-dhoni.jpg,Wicket-keeper,wikipedia
+Chennai Super Kings,CSK,Anshul Kamboj,India,3.4,,All-rounder,wikipedia
+Chennai Super Kings,CSK,Dewald Brevis,South Africa,2.2,,Batter,wikipedia
+Chennai Super Kings,CSK,Gurjapneet Singh,India,2.2,,Fast bowler,wikipedia
+Chennai Super Kings,CSK,Nathan Ellis,Australia,2.0,,Fast bowler,wikipedia
+Chennai Super Kings,CSK,Jamie Overton,England,1.5,static/players/jamie-overton.jpg,All-rounder,wikipedia
+Chennai Super Kings,CSK,Mukesh Choudhary,India,0.3,,Fast bowler,wikipedia
+Chennai Super Kings,CSK,Ramakrishna Ghosh,India,0.3,,All-rounder,wikipedia
+Chennai Super Kings,CSK,Shreyas Gopal,India,0.3,static/players/shreyas-gopal.png,All-rounder,wikipedia
+Chennai Super Kings,CSK,Ayush Mhatre,India,0.3,,Batter,wikipedia
+Chennai Super Kings,CSK,Urvil Patel,India,0.3,,Wicket-keeper,stats
+Delhi Capitals,DC,Axar Patel,India,16.5,static/players/axar-patel.jpg,All-rounder,wikipedia
+Delhi Capitals,DC,KL Rahul,India,14.0,static/players/kl-rahul.jpg,Wicket-keeper,wikipedia
+Delhi Capitals,DC,Kuldeep Yadav,India,13.25,static/players/kuldeep-yadav.jpg,Spin bowler,wikipedia
+Delhi Capitals,DC,Mitchell Starc,Australia,11.75,static/players/mitchell-starc.jpg,Fast bowler,wikipedia
+Delhi Capitals,DC,T. Natarajan,India,10.75,static/players/t-natarajan.jpg,Fast bowler,wikipedia
+Delhi Capitals,DC,Tristan Stubbs,South Africa,10.0,,Batter,wikipedia
+Delhi Capitals,DC,Mukesh Kumar,India,8.0,static/players/mukesh-kumar.jpg,Fast bowler,wikipedia
+Delhi Capitals,DC,Nitish Rana,India,4.2,,All-rounder,wikipedia
+Delhi Capitals,DC,Abhishek Porel,India,4.0,,Wicket-keeper,wikipedia
+Delhi Capitals,DC,Ashutosh Sharma,India,3.8,,Batter,wikipedia
+Delhi Capitals,DC,Sameer Rizvi,India,0.95,static/players/sameer-rizvi.jpg,All-rounder,2025 auction
+Delhi Capitals,DC,Dushmantha Chameera,Sri Lanka,0.75,,All-rounder,wikipedia
+Delhi Capitals,DC,Karun Nair,India,0.5,static/players/karun-nair.jpg,Batter,wikipedia
+Delhi Capitals,DC,Madhav Tiwari,India,0.4,,All-rounder,2025 auction
+Delhi Capitals,DC,Ajay Mandal,India,0.3,,All-rounder,2025 auction
+Delhi Capitals,DC,Tripurana Vijay,India,0.3,,All-rounder,2025 auction
+Delhi Capitals,DC,Vipraj Nigam,India,0.3,,Spin bowler,wikipedia
+Gujarat Titans,GT,Rashid Khan,Afghanistan,18.0,static/players/rashid-khan.jpg,All-rounder,wikipedia
+Gujarat Titans,GT,Shubman Gill,India,16.5,static/players/shubman-gill.jpg,Batter,wikipedia
+Gujarat Titans,GT,Jos Buttler,England,15.75,static/players/jos-buttler.jpg,Wicket-keeper,wikipedia
+Gujarat Titans,GT,Mohammed Siraj,India,12.25,static/players/mohammed-siraj.jpg,Fast bowler,wikipedia
+Gujarat Titans,GT,Kagiso Rabada,South Africa,10.75,static/players/kagiso-rabada.jpg,Fast bowler,wikipedia
+Gujarat Titans,GT,Prasidh Krishna,India,9.5,,Fast bowler,wikipedia
+Gujarat Titans,GT,Sai Sudharsan,India,8.5,,Batter,wikipedia
+Gujarat Titans,GT,Rahul Tewatia,India,4.0,,All-rounder,wikipedia
+Gujarat Titans,GT,Shahrukh Khan,India,4.0,static/players/shahrukh-khan.jpg,Batter,wikipedia
+Gujarat Titans,GT,Washington Sundar,India,3.2,static/players/washington-sundar.jpg,All-rounder,wikipedia
+Gujarat Titans,GT,Sai Kishore,India,2.0,static/players/sai-kishore.jpg,All-rounder,wikipedia
+Gujarat Titans,GT,Glenn Phillips,New Zealand,2.0,,All-rounder,wikipedia
+Gujarat Titans,GT,Arshad Khan,India,1.3,,All-rounder,wikipedia
+Gujarat Titans,GT,Gurnoor Brar,India,1.3,,Fast bowler,wikipedia
+Gujarat Titans,GT,Ishant Sharma,India,0.75,static/players/ishant-sharma.jpg,Fast bowler,wikipedia
+Gujarat Titans,GT,Jayant Yadav,India,0.75,,Spin bowler,wikipedia
+Gujarat Titans,GT,Kumar Kushagra,India,0.65,,Wicket-keeper,2025 auction
+Gujarat Titans,GT,Anuj Rawat,India,0.3,,Wicket-keeper,2025 auction
+Gujarat Titans,GT,Manav Suthar,India,0.3,,All-rounder,wikipedia
+Gujarat Titans,GT,Nishant Sindhu,India,0.3,,All-rounder,wikipedia
+Kolkata Knight Riders,KKR,Rinku Singh,India,13.0,,Batter,wikipedia
+Kolkata Knight Riders,KKR,Sunil Narine,West Indies,12.0,static/players/sunil-narine.jpg,All-rounder,wikipedia
+Kolkata Knight Riders,KKR,Varun Chakravarthy,India,12.0,,Spin bowler,wikipedia
+Kolkata Knight Riders,KKR,Harshit Rana,India,4.0,,Fast bowler,wikipedia
+Kolkata Knight Riders,KKR,Ramandeep Singh,India,4.0,,Batter,wikipedia
+Kolkata Knight Riders,KKR,Angkrish Raghuvanshi,India,3.0,,Batter,wikipedia
+Kolkata Knight Riders,KKR,Vaibhav Arora,India,1.8,,Fast bowler,wikipedia
+Kolkata Knight Riders,KKR,Ajinkya Rahane,India,1.5,static/players/ajinkya-rahane.jpg,Batter,wikipedia
+Kolkata Knight Riders,KKR,Rovman Powell,West Indies,1.5,,Batter,wikipedia
+Kolkata Knight Riders,KKR,Manish Pandey,India,0.75,static/players/manish-pandey.jpg,Batter,wikipedia
+Kolkata Knight Riders,KKR,Umran Malik,India,0.75,static/players/umran-malik.jpg,Fast bowler,wikipedia
+Kolkata Knight Riders,KKR,Anukul Roy,India,0.4,,All-rounder,wikipedia
+Lucknow Super Giants,LSG,Rishabh Pant,India,27.0,static/players/rishabh-pant.jpg,Wicket-keeper,wikipedia
+Lucknow Super Giants,LSG,Nicholas Pooran,West Indies,21.0,,Wicket-keeper,wikipedia
+Lucknow Super Giants,LSG,Mayank Yadav,India,11.0,,Fast bowler,wikipedia
+Lucknow Super Giants,LSG,Mohammed Shami,India,10.0,static/players/mohammed-shami.jpg,Fast bowler,wikipedia
+Lucknow Super Giants,LSG,Avesh Khan,India,9.75,,Fast bowler,wikipedia
+Lucknow Super Giants,LSG,Abdul Samad,India,4.2,static/players/abdul-samad.png,Batter,wikipedia
+Lucknow Super Giants,LSG,Ayush Badoni,India,4.0,,Batter,wikipedia
+Lucknow Super Giants,LSG,Mohsin Khan,India,4.0,,Fast bowler,wikipedia
+Lucknow Super Giants,LSG,Mitchell Marsh,Australia,3.4,static/players/mitchell-marsh.jpg,Batter,wikipedia
+Lucknow Super Giants,LSG,Shahbaz Ahmed,India,2.4,,All-rounder,wikipedia
+Lucknow Super Giants,LSG,Aiden Markram,South Africa,2.0,static/players/aiden-markram.png,Batter,wikipedia
+Lucknow Super Giants,LSG,Manimaran Siddharth,India,0.75,,Spin bowler,wikipedia
+Lucknow Super Giants,LSG,Matthew Breetzke,South Africa,0.75,,Batter,wikipedia
+Lucknow Super Giants,LSG,Akash Singh,India,0.3,,Fast bowler,wikipedia
+Lucknow Super Giants,LSG,Arjun Tendulkar,India,0.3,static/players/arjun-tendulkar.jpg,Fast bowler,wikipedia
+Lucknow Super Giants,LSG,Arshin Kulkarni,India,0.3,,All-rounder,2025 auction
+Lucknow Super Giants,LSG,Himmat Singh,India,0.3,,Batter,wikipedia
+Lucknow Super Giants,LSG,Digvesh Rathi,India,0.3,,Spin bowler,wikipedia
+Lucknow Super Giants,LSG,Prince Yadav,India,0.3,,Fast bowler,wikipedia
+Mumbai Indians,MI,Jasprit Bumrah,India,18.0,static/players/jasprit-bumrah.jpg,Fast bowler,wikipedia
+Mumbai Indians,MI,Hardik Pandya,India,16.35,static/players/hardik-pandya.jpg,All-rounder,wikipedia
+Mumbai Indians,MI,Suryakumar Yadav,India,16.35,static/players/suryakumar-yadav.jpg,Batter,wikipedia
+Mumbai Indians,MI,Rohit Sharma,India,16.3,static/players/rohit-sharma.jpg,Batter,wikipedia
+Mumbai Indians,MI,Trent Boult,New Zealand,12.5,static/players/trent-boult.jpg,Fast bowler,wikipedia
+Mumbai Indians,MI,Deepak Chahar,India,9.25,static/players/deepak-chahar.jpg,Fast bowler,wikipedia
+Mumbai Indians,MI,Tilak Varma,India,8.0,static/players/tilak-varma.png,All-rounder,wikipedia
+Mumbai Indians,MI,Will Jacks,England,5.25,static/players/will-jacks.jpg,All-rounder,wikipedia
+Mumbai Indians,MI,Naman Dhir,India,5.25,,All-rounder,wikipedia
+Mumbai Indians,MI,Allah Ghazanfar,Afghanistan,4.8,,Spin bowler,wikipedia
+Mumbai Indians,MI,Sherfane Rutherford,West Indies,2.6,,Batter,wikipedia
+Mumbai Indians,MI,Shardul Thakur,India,2.0,,Fast bowler,wikipedia
+Mumbai Indians,MI,Mitchell Santner,New Zealand,2.0,,All-rounder,wikipedia
+Mumbai Indians,MI,Ryan Rickelton,South Africa,1.0,static/players/ryan-rickelton.jpg,Wicket-keeper,wikipedia
+Mumbai Indians,MI,Corbin Bosch,South Africa,0.75,,All-rounder,wikipedia
+Mumbai Indians,MI,Robin Minz,India,0.65,,Wicket-keeper,wikipedia
+Mumbai Indians,MI,Raj Angad Bawa,India,0.3,,All-rounder,2025 auction
+Mumbai Indians,MI,Ashwani Kumar,India,0.3,,Fast bowler,wikipedia
+Mumbai Indians,MI,Raghu Sharma,India,0.3,,Spin bowler,wikipedia
+Mumbai Indians,MI,Mayank Markande,India,0.3,,Spin bowler,wikipedia
+Punjab Kings,PBKS,Shreyas Iyer,India,26.75,,Batter,wikipedia
+Punjab Kings,PBKS,Arshdeep Singh,India,18.0,static/players/arshdeep-singh.jpg,Fast bowler,wikipedia
+Punjab Kings,PBKS,Yuzvendra Chahal,India,18.0,static/players/yuzvendra-chahal.jpg,Spin bowler,wikipedia
+Punjab Kings,PBKS,Marcus Stoinis,Australia,11.0,static/players/marcus-stoinis.jpg,All-rounder,wikipedia
+Punjab Kings,PBKS,Marco Jansen,South Africa,7.0,static/players/marco-jansen.jpg,All-rounder,wikipedia
+Punjab Kings,PBKS,Shashank Singh,India,5.5,,All-rounder,wikipedia
+Punjab Kings,PBKS,Nehal Wadhera,India,4.2,,Batter,wikipedia
+Punjab Kings,PBKS,Prabhsimran Singh,India,4.0,,Wicket-keeper,wikipedia
+Punjab Kings,PBKS,Priyansh Arya,India,3.8,,Batter,wikipedia
+Punjab Kings,PBKS,Mitchell Owen,Australia,3.0,,All-rounder,wikipedia
+Punjab Kings,PBKS,Azmatullah Omarzai,Afghanistan,2.4,,All-rounder,wikipedia
+Punjab Kings,PBKS,Lockie Ferguson,New Zealand,2.0,static/players/lockie-ferguson.jpg,Fast bowler,wikipedia
+Punjab Kings,PBKS,Vijaykumar Vyshak,India,1.8,,Fast bowler,wikipedia
+Punjab Kings,PBKS,Yash Thakur,India,1.6,,Fast bowler,wikipedia
+Punjab Kings,PBKS,Harpreet Brar,India,1.5,,Spin bowler,wikipedia
+Punjab Kings,PBKS,Vishnu Vinod,India,0.95,,Wicket-keeper,wikipedia
+Punjab Kings,PBKS,Xavier Bartlett,Australia,0.8,,Fast bowler,wikipedia
+Punjab Kings,PBKS,Pyla Avinash,India,0.3,,Batter,2025 auction
+Punjab Kings,PBKS,Harnoor Pannu,India,0.3,,,
+Punjab Kings,PBKS,Musheer Khan,India,0.3,,All-rounder,wikipedia
+Punjab Kings,PBKS,Suryansh Shedge,India,0.3,static/players/suryansh-shedge.jpg,All-rounder,wikipedia
+Rajasthan Royals,RR,Yashasvi Jaiswal,India,18.0,static/players/yashasvi-jaiswal.jpg,Batter,wikipedia
+Rajasthan Royals,RR,Riyan Parag,India,14.0,,All-rounder,wikipedia
+Rajasthan Royals,RR,Ravindra Jadeja,India,14.0,static/players/ravindra-jadeja.jpg,All-rounder,wikipedia
+Rajasthan Royals,RR,Dhruv Jurel,India,14.0,,Wicket-keeper,wikipedia
+Rajasthan Royals,RR,Jofra Archer,England,12.5,static/players/jofra-archer.jpg,Fast bowler,wikipedia
+Rajasthan Royals,RR,Shimron Hetmyer,West Indies,11.0,static/players/shimron-hetmyer.jpg,Batter,wikipedia
+Rajasthan Royals,RR,Tushar Deshpande,India,6.5,static/players/tushar-deshpande.jpg,Fast bowler,wikipedia
+Rajasthan Royals,RR,Sandeep Sharma,India,4.0,,Fast bowler,wikipedia
+Rajasthan Royals,RR,Nandre Burger,South Africa,3.5,,Fast bowler,wikipedia
+Rajasthan Royals,RR,Sam Curran,England,2.4,static/players/sam-curran.jpg,All-rounder,wikipedia
+Rajasthan Royals,RR,Kwena Maphaka,South Africa,1.5,,Fast bowler,wikipedia
+Rajasthan Royals,RR,Vaibhav Sooryavanshi,India,1.1,static/players/vaibhav-sooryavanshi.jpg,Batter,wikipedia
+Rajasthan Royals,RR,Donovan Ferreira,South Africa,1.0,,All-rounder,wikipedia
+Rajasthan Royals,RR,Shubham Dubey,India,0.8,,Batter,wikipedia
+Rajasthan Royals,RR,Yudhvir Singh,India,0.35,,Fast bowler,wikipedia
+Rajasthan Royals,RR,Lhuan-dre Pretorius,South Africa,0.3,,Batter,stats
+Royal Challengers Bengaluru,RCB,Virat Kohli,India,21.0,static/players/virat-kohli.jpg,Batter,wikipedia
+Royal Challengers Bengaluru,RCB,Josh Hazlewood,Australia,12.5,static/players/josh-hazlewood.jpg,Fast bowler,wikipedia
+Royal Challengers Bengaluru,RCB,Phil Salt,England,11.5,static/players/phil-salt.jpg,Wicket-keeper,wikipedia
+Royal Challengers Bengaluru,RCB,Rajat Patidar,India,11.0,,Batter,wikipedia
+Royal Challengers Bengaluru,RCB,Jitesh Sharma,India,11.0,,Wicket-keeper,wikipedia
+Royal Challengers Bengaluru,RCB,Bhuvneshwar Kumar,India,10.75,static/players/bhuvneshwar-kumar.jpg,Fast bowler,wikipedia
+Royal Challengers Bengaluru,RCB,Rasikh Salam,India,6.0,static/players/rasikh-salam.jpg,Fast bowler,wikipedia
+Royal Challengers Bengaluru,RCB,Krunal Pandya,India,5.75,static/players/krunal-pandya.jpg,All-rounder,wikipedia
+Royal Challengers Bengaluru,RCB,Yash Dayal,India,5.0,,Fast bowler,wikipedia
+Royal Challengers Bengaluru,RCB,Tim David,Australia,3.0,,Batter,wikipedia
+Royal Challengers Bengaluru,RCB,Suyash Sharma,India,2.6,static/players/suyash-sharma.png,Spin bowler,wikipedia
+Royal Challengers Bengaluru,RCB,Jacob Bethell,England,2.6,,All-rounder,wikipedia
+Royal Challengers Bengaluru,RCB,Devdutt Padikkal,India,2.0,,Batter,wikipedia
+Royal Challengers Bengaluru,RCB,Nuwan Thushara,Sri Lanka,1.6,,Fast bowler,wikipedia
+Royal Challengers Bengaluru,RCB,Romario Shepherd,West Indies,1.5,,All-rounder,wikipedia
+Royal Challengers Bengaluru,RCB,Swapnil Singh,India,0.5,,Spin bowler,wikipedia
+Royal Challengers Bengaluru,RCB,Abhinandan Singh,India,0.3,,Bowler,2025 auction
+Sunrisers Hyderabad,SRH,Heinrich Klaasen,South Africa,23.0,,Wicket-keeper,wikipedia
+Sunrisers Hyderabad,SRH,Pat Cummins,Australia,18.0,static/players/pat-cummins.jpg,Fast bowler,wikipedia
+Sunrisers Hyderabad,SRH,Travis Head,Australia,14.0,static/players/travis-head.jpg,Batter,wikipedia
+Sunrisers Hyderabad,SRH,Abhishek Sharma,India,14.0,,All-rounder,wikipedia
+Sunrisers Hyderabad,SRH,Ishan Kishan,India,11.25,static/players/ishan-kishan.jpg,Wicket-keeper,wikipedia
+Sunrisers Hyderabad,SRH,Harshal Patel,India,8.0,,All-rounder,wikipedia
+Sunrisers Hyderabad,SRH,Nitish Kumar Reddy,India,6.0,static/players/nitish-kumar-reddy.jpg,All-rounder,wikipedia
+Sunrisers Hyderabad,SRH,Eshan Malinga,Sri Lanka,1.2,,Fast bowler,wikipedia
+Sunrisers Hyderabad,SRH,Brydon Carse,England,1.0,static/players/brydon-carse.jpg,Fast bowler,wikipedia
+Sunrisers Hyderabad,SRH,Jaydev Unadkat,India,1.0,static/players/jaydev-unadkat.jpg,Fast bowler,wikipedia
+Sunrisers Hyderabad,SRH,Kamindu Mendis,Sri Lanka,0.75,,All-rounder,wikipedia
+Sunrisers Hyderabad,SRH,Zeeshan Ansari,India,0.4,,Bowler,2025 auction
+Sunrisers Hyderabad,SRH,Smaran Ravichandran,India,0.3,,,
+Sunrisers Hyderabad,SRH,Aniket Verma,India,0.3,,Batter,wikipedia
+Sunrisers Hyderabad,SRH,Harsh Dubey,India,0.3,,All-rounder,wikipedia

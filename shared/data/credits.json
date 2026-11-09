@@ -1,0 +1,951 @@
+{
+ "stats": "Player statistics are computed from ball-by-ball data published by Cricsheet (https://cricsheet.org) under the Open Data Commons Attribution License.",
+ "logos": "Team and IPL logos are trademarks of their owners, shown for this non-commercial fan game.",
+ "photos": [
+  {
+   "name": "Jake Fraser-McGurk",
+   "photo": "/players/jake-fraser-mcgurk.jpg",
+   "artist": "DustyNail",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Jake_Fraser-McGurk"
+  },
+  {
+   "name": "Cameron Green",
+   "photo": "/players/cameron-green.jpg",
+   "artist": "WikiWanderer261",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Cameron_Green"
+  },
+  {
+   "name": "David Miller",
+   "photo": "/players/david-miller.png",
+   "artist": "Michael Sherman",
+   "license": "CC BY 4.0",
+   "source": "https://en.wikipedia.org/wiki/David_Miller_%28South_African_cricketer%29"
+  },
+  {
+   "name": "Prithvi Shaw",
+   "photo": "/players/prithvi-shaw.png",
+   "artist": "CRICKETNEXT",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Prithvi_Shaw"
+  },
+  {
+   "name": "Wanindu Hasaranga",
+   "photo": "/players/wanindu-hasaranga.jpg",
+   "artist": "04 ATM 04",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Wanindu_Hasaranga"
+  },
+  {
+   "name": "Venkatesh Iyer",
+   "photo": "/players/venkatesh-iyer.png",
+   "artist": "Kolkata Knight Riders",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Venkatesh_Iyer"
+  },
+  {
+   "name": "Rachin Ravindra",
+   "photo": "/players/rachin-ravindra.jpg",
+   "artist": "JaumeBG",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Rachin_Ravindra"
+  },
+  {
+   "name": "Jonny Bairstow",
+   "photo": "/players/jonny-bairstow.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Jonny_Bairstow"
+  },
+  {
+   "name": "Quinton De Kock",
+   "photo": "/players/quinton-de-kock.jpg",
+   "artist": "NAPARAZZI",
+   "license": "CC BY-SA 2.0",
+   "source": "https://en.wikipedia.org/wiki/Quinton_de_Kock"
+  },
+  {
+   "name": "Ben Duckett",
+   "photo": "/players/ben-duckett.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Ben_Duckett"
+  },
+  {
+   "name": "Jamie Smith",
+   "photo": "/players/jamie-smith.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Jamie_Smith_%28cricketer%29"
+  },
+  {
+   "name": "Gerald Coetzee",
+   "photo": "/players/gerald-coetzee.jpg",
+   "artist": "EGilham",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Gerald_Coetzee"
+  },
+  {
+   "name": "Akash Deep",
+   "photo": "/players/akash-deep.jpg",
+   "artist": "Devrath Magahiya",
+   "license": "CC0",
+   "source": "https://en.wikipedia.org/wiki/Akash_Deep"
+  },
+  {
+   "name": "Jacob Duffy",
+   "photo": "/players/jacob-duffy.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Jacob_Duffy"
+  },
+  {
+   "name": "Fazalhaq Farooqi",
+   "photo": "/players/fazalhaq-farooqi.jpg",
+   "artist": "Afghanistan Cricket Board Official",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Fazalhaq_Farooqi"
+  },
+  {
+   "name": "Matt Henry",
+   "photo": "/players/matt-henry.jpg",
+   "artist": "Blue Square Thing",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Matt_Henry_%28cricketer%29"
+  },
+  {
+   "name": "Anmolpreet Singh",
+   "photo": "/players/anmolpreet-singh.jpg",
+   "artist": "Dee03",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Anmolpreet_Singh"
+  },
+  {
+   "name": "Vijay Shankar",
+   "photo": "/players/vijay-shankar.jpg",
+   "artist": "Dee03",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Vijay_Shankar"
+  },
+  {
+   "name": "Sanvir Singh",
+   "photo": "/players/sanvir-singh.jpg",
+   "artist": "Dee03",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Sanvir_Singh"
+  },
+  {
+   "name": "Ashok Sharma",
+   "photo": "/players/ashok-sharma.jpg",
+   "artist": "Charles from Sandton, South Africa",
+   "license": "CC BY-SA 2.0",
+   "source": "https://en.wikipedia.org/wiki/Ashok_Sharma_%28cricketer%29"
+  },
+  {
+   "name": "Karn Sharma",
+   "photo": "/players/karn-sharma.jpg",
+   "artist": "NAPARAZZI",
+   "license": "CC BY-SA 2.0",
+   "source": "https://en.wikipedia.org/wiki/Karn_Sharma"
+  },
+  {
+   "name": "Reeza Hendricks",
+   "photo": "/players/reeza-hendricks.jpg",
+   "artist": "NAPARAZZI",
+   "license": "CC BY-SA 2.0",
+   "source": "https://en.wikipedia.org/wiki/Reeza_Hendricks"
+  },
+  {
+   "name": "Steve Smith",
+   "photo": "/players/steve-smith.jpg",
+   "artist": "NAPARAZZI",
+   "license": "CC BY-SA 2.0",
+   "source": "https://en.wikipedia.org/wiki/Steve_Smith_%28cricketer%29"
+  },
+  {
+   "name": "Sean Abbott",
+   "photo": "/players/sean-abbott.jpg",
+   "artist": "Joeyjackets",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Sean_Abbott"
+  },
+  {
+   "name": "Jason Holder",
+   "photo": "/players/jason-holder.jpg",
+   "artist": "CRICKETNEXT",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Jason_Holder"
+  },
+  {
+   "name": "Daniel Sams",
+   "photo": "/players/daniel-sams.jpg",
+   "artist": "Neb",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Daniel_Sams"
+  },
+  {
+   "name": "Shai Hope",
+   "photo": "/players/shai-hope.jpg",
+   "artist": "CRICKETNEXT",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Shai_Hope"
+  },
+  {
+   "name": "Josh Inglis",
+   "photo": "/players/josh-inglis.png",
+   "artist": "Prime Video AU & NZ",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Josh_Inglis"
+  },
+  {
+   "name": "Kyle Jamieson",
+   "photo": "/players/kyle-jamieson.jpg",
+   "artist": "Photographer - David Hollander",
+   "license": "CC BY 3.0 nz",
+   "source": "https://en.wikipedia.org/wiki/Kyle_Jamieson"
+  },
+  {
+   "name": "Saqib Mahmood",
+   "photo": "/players/saqib-mahmood.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Saqib_Mahmood"
+  },
+  {
+   "name": "Lungisani Ngidi",
+   "photo": "/players/lungisani-ngidi.jpg",
+   "artist": "Storm machine",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Lungi_Ngidi"
+  },
+  {
+   "name": "Mustafizur Rahman",
+   "photo": "/players/mustafizur-rahman.jpg",
+   "artist": "Nurunnaby Chowdhury (Hasive)",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Mustafizur_Rahman"
+  },
+  {
+   "name": "Umesh Yadav",
+   "photo": "/players/umesh-yadav.jpg",
+   "artist": "Dee03",
+   "license": "CC BY-SA 3.0",
+   "source": "https://en.wikipedia.org/wiki/Umesh_Yadav"
+  },
+  {
+   "name": "Rishad Hossain",
+   "photo": "/players/rishad-hossain.jpg",
+   "artist": "Press Information Department",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Rishad_Hossain"
+  },
+  {
+   "name": "Manan Vohra",
+   "photo": "/players/manan-vohra.jpg",
+   "artist": "Magic Book of Record",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Manan_Vohra"
+  },
+  {
+   "name": "Suyash Prabhudessai",
+   "photo": "/players/suyash-prabhudessai.jpg",
+   "artist": "Saaksha TV",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Suyash_Prabhudessai"
+  },
+  {
+   "name": "Murugan Ashwin",
+   "photo": "/players/murugan-ashwin.jpg",
+   "artist": "Dee03",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Murugan_Ashwin"
+  },
+  {
+   "name": "K.C. Cariappa",
+   "photo": "/players/k-c-cariappa.jpg",
+   "artist": "Kolkata Knight Riders - Official",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/K._C._Cariappa_%28cricketer%29"
+  },
+  {
+   "name": "Rehan Ahmed",
+   "photo": "/players/rehan-ahmed.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Rehan_Ahmed"
+  },
+  {
+   "name": "Cooper Connolly",
+   "photo": "/players/cooper-connolly.jpg",
+   "artist": "EGilham",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Cooper_Connolly"
+  },
+  {
+   "name": "Tom Curran",
+   "photo": "/players/tom-curran.jpg",
+   "artist": "Ytfc23",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Tom_Curran_%28cricketer%29"
+  },
+  {
+   "name": "Bevon-John Jacobs",
+   "photo": "/players/bevon-john-jacobs.jpg",
+   "artist": "JaumeBG",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Bevon_Jacobs"
+  },
+  {
+   "name": "Daniel Lawrence",
+   "photo": "/players/daniel-lawrence.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Dan_Lawrence"
+  },
+  {
+   "name": "Gulbadin Naib",
+   "photo": "/players/gulbadin-naib.jpg",
+   "artist": "CRICKETNEXT",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Gulbadin_Naib"
+  },
+  {
+   "name": "Beau Webster",
+   "photo": "/players/beau-webster.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Beau_Webster"
+  },
+  {
+   "name": "Taskin Ahmed",
+   "photo": "/players/taskin-ahmed.jpg",
+   "artist": "Press Information Department",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Taskin_Ahmed"
+  },
+  {
+   "name": "Richard Gleeson",
+   "photo": "/players/richard-gleeson.jpg",
+   "artist": "Charltonkyle",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Richard_Gleeson"
+  },
+  {
+   "name": "Jhye Richardson",
+   "photo": "/players/jhye-richardson.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Jhye_Richardson"
+  },
+  {
+   "name": "Luke Wood",
+   "photo": "/players/luke-wood.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Luke_Wood_%28cricketer%29"
+  },
+  {
+   "name": "Tom Moores",
+   "photo": "/players/tom-moores.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Tom_Moores"
+  },
+  {
+   "name": "Muhammad Abbas",
+   "photo": "/players/muhammad-abbas.jpg",
+   "artist": "JaumeBG",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Muhammad_Abbas_%28New_Zealand_cricketer%29"
+  },
+  {
+   "name": "Roston Chase",
+   "photo": "/players/roston-chase.jpg",
+   "artist": "Calistemon",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Roston_Chase"
+  },
+  {
+   "name": "Kyle Mayers",
+   "photo": "/players/kyle-mayers.jpg",
+   "artist": "Calistemon",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Kyle_Mayers"
+  },
+  {
+   "name": "Jason Behrendorff",
+   "photo": "/players/jason-behrendorff.jpg",
+   "artist": "CRICKETNEXT",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Jason_Behrendorff"
+  },
+  {
+   "name": "Tanzim Hasan Sakib",
+   "photo": "/players/tanzim-hasan-sakib.jpg",
+   "artist": "Cricket Today",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Tanzim_Hasan_Sakib"
+  },
+  {
+   "name": "Matthew Potts",
+   "photo": "/players/matthew-potts.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Matthew_Potts"
+  },
+  {
+   "name": "Nahid Rana",
+   "photo": "/players/nahid-rana.jpg",
+   "artist": "Press Information Department",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Nahid_Rana"
+  },
+  {
+   "name": "Olly Stone",
+   "photo": "/players/olly-stone.jpg",
+   "artist": "Charltonkyle",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Olly_Stone"
+  },
+  {
+   "name": "Miles Hammond",
+   "photo": "/players/miles-hammond.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Miles_Hammond"
+  },
+  {
+   "name": "Wesley Agar",
+   "photo": "/players/wesley-agar.jpg",
+   "artist": "DustyNail",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Wes_Agar"
+  },
+  {
+   "name": "Billy Stanlake",
+   "photo": "/players/billy-stanlake.jpg",
+   "artist": "www.davidmolloyphotography.com from Sydney, Australia",
+   "license": "CC BY 2.0",
+   "source": "https://en.wikipedia.org/wiki/Billy_Stanlake"
+  },
+  {
+   "name": "Jack Edwards",
+   "photo": "/players/jack-edwards.jpg",
+   "artist": "DustyNail",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Jack_Edwards_%28cricketer%2C_born_2000%29"
+  },
+  {
+   "name": "Manisankar Murasingh",
+   "photo": "/players/manisankar-murasingh.jpg",
+   "artist": "Baruchterre86",
+   "license": "CC0",
+   "source": "https://en.wikipedia.org/wiki/Manisankar_Murasingh"
+  },
+  {
+   "name": "Chris Green",
+   "photo": "/players/chris-green.jpg",
+   "artist": "Servite et contribuere",
+   "license": "CC0",
+   "source": "https://en.wikipedia.org/wiki/Chris_Green_%28cricketer%29"
+  },
+  {
+   "name": "Kyle Verreynne",
+   "photo": "/players/kyle-verreynne.jpg",
+   "artist": "Wynberg Media",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Kyle_Verreynne"
+  },
+  {
+   "name": "Ben Sears",
+   "photo": "/players/ben-sears.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Ben_Sears"
+  },
+  {
+   "name": "Ruturaj Gaikwad",
+   "photo": "/players/ruturaj-gaikwad.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Ruturaj_Gaikwad"
+  },
+  {
+   "name": "Sanju Samson",
+   "photo": "/players/sanju-samson.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Sanju_Samson"
+  },
+  {
+   "name": "Shivam Dube",
+   "photo": "/players/shivam-dube.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Shivam_Dube"
+  },
+  {
+   "name": "Khaleel Ahmed",
+   "photo": "/players/khaleel-ahmed.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Khaleel_Ahmed"
+  },
+  {
+   "name": "MS Dhoni",
+   "photo": "/players/ms-dhoni.jpg",
+   "artist": "RIGI",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/MS_Dhoni"
+  },
+  {
+   "name": "Jamie Overton",
+   "photo": "/players/jamie-overton.jpg",
+   "artist": "Harrias",
+   "license": "CC BY-SA 3.0",
+   "source": "https://en.wikipedia.org/wiki/Jamie_Overton"
+  },
+  {
+   "name": "Shreyas Gopal",
+   "photo": "/players/shreyas-gopal.png",
+   "artist": "CRICKETNEXT",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Shreyas_Gopal"
+  },
+  {
+   "name": "Axar Patel",
+   "photo": "/players/axar-patel.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Axar_Patel"
+  },
+  {
+   "name": "KL Rahul",
+   "photo": "/players/kl-rahul.jpg",
+   "artist": "Bollywood Hungama",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/KL_Rahul"
+  },
+  {
+   "name": "Kuldeep Yadav",
+   "photo": "/players/kuldeep-yadav.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Kuldeep_Yadav"
+  },
+  {
+   "name": "Mitchell Starc",
+   "photo": "/players/mitchell-starc.jpg",
+   "artist": "EGilham",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Mitchell_Starc"
+  },
+  {
+   "name": "T. Natarajan",
+   "photo": "/players/t-natarajan.jpg",
+   "artist": "Dee03",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/T._Natarajan"
+  },
+  {
+   "name": "Mukesh Kumar",
+   "photo": "/players/mukesh-kumar.jpg",
+   "artist": "Devrath Magahiya",
+   "license": "CC0",
+   "source": "https://en.wikipedia.org/wiki/Mukesh_Kumar_%28cricketer%29"
+  },
+  {
+   "name": "Sameer Rizvi",
+   "photo": "/players/sameer-rizvi.jpg",
+   "artist": "Akshayparmar.gu",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Sameer_Rizvi"
+  },
+  {
+   "name": "Karun Nair",
+   "photo": "/players/karun-nair.jpg",
+   "artist": "User:Vishu@2008",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Karun_Nair"
+  },
+  {
+   "name": "Rashid Khan",
+   "photo": "/players/rashid-khan.jpg",
+   "artist": "Afghanistan Cricket Board",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Rashid_Khan"
+  },
+  {
+   "name": "Shubman Gill",
+   "photo": "/players/shubman-gill.jpg",
+   "artist": "Bollywood Hungama",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Shubman_Gill"
+  },
+  {
+   "name": "Jos Buttler",
+   "photo": "/players/jos-buttler.jpg",
+   "artist": "Number 10",
+   "license": "CC BY 2.0",
+   "source": "https://en.wikipedia.org/wiki/Jos_Buttler"
+  },
+  {
+   "name": "Mohammed Siraj",
+   "photo": "/players/mohammed-siraj.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Mohammed_Siraj"
+  },
+  {
+   "name": "Kagiso Rabada",
+   "photo": "/players/kagiso-rabada.jpg",
+   "artist": "EGilham",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Kagiso_Rabada"
+  },
+  {
+   "name": "Shahrukh Khan",
+   "photo": "/players/shahrukh-khan.jpg",
+   "artist": "Dee03",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Shahrukh_Khan_%28cricketer%29"
+  },
+  {
+   "name": "Washington Sundar",
+   "photo": "/players/washington-sundar.jpg",
+   "artist": "Dee03",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Washington_Sundar"
+  },
+  {
+   "name": "Sai Kishore",
+   "photo": "/players/sai-kishore.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Sai_Kishore"
+  },
+  {
+   "name": "Ishant Sharma",
+   "photo": "/players/ishant-sharma.jpg",
+   "artist": "Dee03",
+   "license": "CC BY-SA 3.0",
+   "source": "https://en.wikipedia.org/wiki/Ishant_Sharma"
+  },
+  {
+   "name": "Sunil Narine",
+   "photo": "/players/sunil-narine.jpg",
+   "artist": "Kolkata Knight Riders - Official",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Sunil_Narine"
+  },
+  {
+   "name": "Ajinkya Rahane",
+   "photo": "/players/ajinkya-rahane.jpg",
+   "artist": "Bollywood Hungama",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Ajinkya_Rahane"
+  },
+  {
+   "name": "Manish Pandey",
+   "photo": "/players/manish-pandey.jpg",
+   "artist": "Kolkata Knight Riders - Official",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Manish_Pandey"
+  },
+  {
+   "name": "Umran Malik",
+   "photo": "/players/umran-malik.jpg",
+   "artist": "Gorav Sharma",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Umran_Malik"
+  },
+  {
+   "name": "Rishabh Pant",
+   "photo": "/players/rishabh-pant.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Rishabh_Pant"
+  },
+  {
+   "name": "Mohammed Shami",
+   "photo": "/players/mohammed-shami.jpg",
+   "artist": "President's Secretariat",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Mohammed_Shami"
+  },
+  {
+   "name": "Abdul Samad",
+   "photo": "/players/abdul-samad.png",
+   "artist": "SunrisersIPL",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Abdul_Samad_%28Indian_cricketer%29"
+  },
+  {
+   "name": "Mitchell Marsh",
+   "photo": "/players/mitchell-marsh.jpg",
+   "artist": "www.davidmolloyphotography.com",
+   "license": "CC BY 2.0",
+   "source": "https://en.wikipedia.org/wiki/Mitchell_Marsh"
+  },
+  {
+   "name": "Aiden Markram",
+   "photo": "/players/aiden-markram.png",
+   "artist": "Michael Sherman",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Aiden_Markram"
+  },
+  {
+   "name": "Arjun Tendulkar",
+   "photo": "/players/arjun-tendulkar.jpg",
+   "artist": "Bollywood Hungama",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Arjun_Tendulkar"
+  },
+  {
+   "name": "Jasprit Bumrah",
+   "photo": "/players/jasprit-bumrah.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Jasprit_Bumrah"
+  },
+  {
+   "name": "Hardik Pandya",
+   "photo": "/players/hardik-pandya.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Hardik_Pandya"
+  },
+  {
+   "name": "Suryakumar Yadav",
+   "photo": "/players/suryakumar-yadav.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Suryakumar_Yadav"
+  },
+  {
+   "name": "Rohit Sharma",
+   "photo": "/players/rohit-sharma.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Rohit_Sharma"
+  },
+  {
+   "name": "Trent Boult",
+   "photo": "/players/trent-boult.jpg",
+   "artist": "www.davidmolloyphotography.com from Sydney, Australia",
+   "license": "CC BY 2.0",
+   "source": "https://en.wikipedia.org/wiki/Trent_Boult"
+  },
+  {
+   "name": "Deepak Chahar",
+   "photo": "/players/deepak-chahar.jpg",
+   "artist": "G. D. GOENKA SCHOOL, AGRA",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Deepak_Chahar"
+  },
+  {
+   "name": "Tilak Varma",
+   "photo": "/players/tilak-varma.png",
+   "artist": "Buchi Babu Sana",
+   "license": "CC BY 4.0",
+   "source": "https://en.wikipedia.org/wiki/Tilak_Varma"
+  },
+  {
+   "name": "Will Jacks",
+   "photo": "/players/will-jacks.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Will_Jacks"
+  },
+  {
+   "name": "Ryan Rickelton",
+   "photo": "/players/ryan-rickelton.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Ryan_Rickelton"
+  },
+  {
+   "name": "Arshdeep Singh",
+   "photo": "/players/arshdeep-singh.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Arshdeep_Singh"
+  },
+  {
+   "name": "Yuzvendra Chahal",
+   "photo": "/players/yuzvendra-chahal.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Yuzvendra_Chahal"
+  },
+  {
+   "name": "Marcus Stoinis",
+   "photo": "/players/marcus-stoinis.jpg",
+   "artist": "www.davidmolloyphotography.com from Sydney, Australia",
+   "license": "CC BY 2.0",
+   "source": "https://en.wikipedia.org/wiki/Marcus_Stoinis"
+  },
+  {
+   "name": "Marco Jansen",
+   "photo": "/players/marco-jansen.jpg",
+   "artist": "EGilham",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Marco_Jansen"
+  },
+  {
+   "name": "Lockie Ferguson",
+   "photo": "/players/lockie-ferguson.jpg",
+   "artist": "CRICKETNEXT",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Lockie_Ferguson"
+  },
+  {
+   "name": "Suryansh Shedge",
+   "photo": "/players/suryansh-shedge.jpg",
+   "artist": "Unknown authorUnknown author",
+   "license": "CC BY 4.0",
+   "source": "https://en.wikipedia.org/wiki/Suryansh_Shedge"
+  },
+  {
+   "name": "Yashasvi Jaiswal",
+   "photo": "/players/yashasvi-jaiswal.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Yashasvi_Jaiswal"
+  },
+  {
+   "name": "Ravindra Jadeja",
+   "photo": "/players/ravindra-jadeja.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Ravindra_Jadeja"
+  },
+  {
+   "name": "Jofra Archer",
+   "photo": "/players/jofra-archer.jpg",
+   "artist": "BBC News اردو",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Jofra_Archer"
+  },
+  {
+   "name": "Shimron Hetmyer",
+   "photo": "/players/shimron-hetmyer.jpg",
+   "artist": "CRICKETNEXT",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Shimron_Hetmyer"
+  },
+  {
+   "name": "Tushar Deshpande",
+   "photo": "/players/tushar-deshpande.jpg",
+   "artist": "Dee03",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Tushar_Deshpande"
+  },
+  {
+   "name": "Sam Curran",
+   "photo": "/players/sam-curran.jpg",
+   "artist": "Number 10",
+   "license": "CC BY 2.0",
+   "source": "https://en.wikipedia.org/wiki/Sam_Curran"
+  },
+  {
+   "name": "Vaibhav Sooryavanshi",
+   "photo": "/players/vaibhav-sooryavanshi.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Vaibhav_Sooryavanshi"
+  },
+  {
+   "name": "Virat Kohli",
+   "photo": "/players/virat-kohli.jpg",
+   "artist": "Prime Minister's Office",
+   "license": "GODL-India",
+   "source": "https://en.wikipedia.org/wiki/Virat_Kohli"
+  },
+  {
+   "name": "Josh Hazlewood",
+   "photo": "/players/josh-hazlewood.jpg",
+   "artist": "EGilham",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Josh_Hazlewood"
+  },
+  {
+   "name": "Phil Salt",
+   "photo": "/players/phil-salt.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Phil_Salt"
+  },
+  {
+   "name": "Bhuvneshwar Kumar",
+   "photo": "/players/bhuvneshwar-kumar.jpg",
+   "artist": "Akshayparmar.gu",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Bhuvneshwar_Kumar"
+  },
+  {
+   "name": "Rasikh Salam",
+   "photo": "/players/rasikh-salam.jpg",
+   "artist": "Wani Moomin",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Rasikh_Salam"
+  },
+  {
+   "name": "Krunal Pandya",
+   "photo": "/players/krunal-pandya.jpg",
+   "artist": "Bollywood Hungama",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Krunal_Pandya"
+  },
+  {
+   "name": "Suyash Sharma",
+   "photo": "/players/suyash-sharma.png",
+   "artist": "Kolkata Knight Riders",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Suyash_Sharma"
+  },
+  {
+   "name": "Pat Cummins",
+   "photo": "/players/pat-cummins.jpg",
+   "artist": "EGilham",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Pat_Cummins"
+  },
+  {
+   "name": "Travis Head",
+   "photo": "/players/travis-head.jpg",
+   "artist": "Calistemon",
+   "license": "CC BY-SA 4.0",
+   "source": "https://en.wikipedia.org/wiki/Travis_Head"
+  },
+  {
+   "name": "Ishan Kishan",
+   "photo": "/players/ishan-kishan.jpg",
+   "artist": "Tata Ipl 2022",
+   "license": "CC BY 3.0",
+   "source": "https://en.wikipedia.org/wiki/Ishan_Kishan"
+  },
+  {
+   "name": "Nitish Kumar Reddy",
+   "photo": "/players/nitish-kumar-reddy.jpg",
+   "artist": "WikiWanderer261",
+   "license": "CC0",
+   "source": "https://en.wikipedia.org/wiki/Nitish_Kumar_Reddy"
+  },
+  {
+   "name": "Brydon Carse",
+   "photo": "/players/brydon-carse.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Brydon_Carse"
+  },
+  {
+   "name": "Jaydev Unadkat",
+   "photo": "/players/jaydev-unadkat.jpg",
+   "artist": "Dave Morton",
+   "license": "Public domain",
+   "source": "https://en.wikipedia.org/wiki/Jaydev_Unadkat"
+  }
+ ]
+}

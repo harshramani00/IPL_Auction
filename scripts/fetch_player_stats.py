@@ -32,10 +32,10 @@ import time
 import urllib.parse
 import urllib.request
 import zipfile
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
-from fetch_auction_data import USER_AGENT
+from fetch_auction_data import CODE_BY_NAME, USER_AGENT
 
 WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php"
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
@@ -156,7 +156,7 @@ def name_candidates(name, country, uncapped, people_names, history):
 # --------------------------------------------------------------------- stats
 
 def new_totals():
-    return defaultdict(int, best=(0, 0), hs=(0, False))
+    return defaultdict(int, best=(0, 0), hs=(0, False), teams=Counter())
 
 
 def scopes_for(info, last_season):
@@ -219,10 +219,11 @@ def add_match(match, scopes, wanted, totals):
                         elif kind == "stumped":
                             field[f["name"]]["st"] += 1
 
-    played = {pid_of.get(p) for team in info["players"].values() for p in team}
+    team_of = {pid_of.get(p): team for team, squad in info["players"].items() for p in squad}
     for scope in scopes:
-        for pid in played & wanted:
+        for pid in team_of.keys() & wanted:
             totals[pid][scope]["matches"] += 1
+            totals[pid][scope]["teams"][team_of[pid]] += 1
         for name, b in bat.items():
             pid = pid_of.get(name)
             if pid not in wanted:
@@ -412,6 +413,11 @@ def main():
         for scope, prefix in prefixes.items():
             stats = summarise(totals[p["cricsheet_id"]][scope]) if p["cricsheet_id"] else {}
             row.update({prefix + c: stats.get(c, "") for c in STAT_COLUMNS})
+            if scope == "ipl_last":
+                # Team code he played most of the season for (e.g. "KKR").
+                teams = totals[p["cricsheet_id"]][scope]["teams"] if p["cricsheet_id"] else None
+                team = teams.most_common(1)[0][0] if teams else ""
+                row[prefix + "team"] = CODE_BY_NAME.get(team, team)
         rows.append(row)
 
     out = data_dir / "player_stats.csv"

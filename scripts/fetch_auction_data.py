@@ -168,7 +168,8 @@ def to_crore(text):
 
 
 def lakh_to_crore(text):
-    return round(float(text.replace(",", "")) / 100, 2) if text.strip() else None
+    m = re.search(r"\d[\d,.]*", text)  # cells can also read "—N/A"
+    return round(float(m.group().replace(",", "")) / 100, 2) if m else None
 
 
 def blank_na(text):

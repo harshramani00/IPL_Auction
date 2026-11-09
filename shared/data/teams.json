@@ -1,0 +1,1509 @@
+{
+ "freshPurse": 12000,
+ "teams": [
+  {
+   "id": "CSK",
+   "name": "Chennai Super Kings",
+   "city": "Chennai",
+   "color": "#f7c81e",
+   "ring": "#1450a3",
+   "ink": "#1b1400",
+   "logo": "/logos/CSK.svg",
+   "purse": 4340,
+   "retained": [
+    {
+     "name": "Ruturaj Gaikwad",
+     "price": 1800,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/ruturaj-gaikwad.jpg"
+    },
+    {
+     "name": "Sanju Samson",
+     "price": 1800,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": "/players/sanju-samson.jpg"
+    },
+    {
+     "name": "Shivam Dube",
+     "price": 1200,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/shivam-dube.jpg"
+    },
+    {
+     "name": "Noor Ahmad",
+     "price": 1000,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Khaleel Ahmed",
+     "price": 480,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/khaleel-ahmed.jpg"
+    },
+    {
+     "name": "MS Dhoni",
+     "price": 400,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": "/players/ms-dhoni.jpg"
+    },
+    {
+     "name": "Anshul Kamboj",
+     "price": 340,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Dewald Brevis",
+     "price": 220,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Gurjapneet Singh",
+     "price": 220,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Nathan Ellis",
+     "price": 200,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Jamie Overton",
+     "price": 150,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": "/players/jamie-overton.jpg"
+    },
+    {
+     "name": "Mukesh Choudhary",
+     "price": 30,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Ramakrishna Ghosh",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Shreyas Gopal",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/shreyas-gopal.png"
+    },
+    {
+     "name": "Ayush Mhatre",
+     "price": 30,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Urvil Patel",
+     "price": 30,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": null
+    }
+   ]
+  },
+  {
+   "id": "DC",
+   "name": "Delhi Capitals",
+   "city": "Delhi",
+   "color": "#17479e",
+   "ring": "#e4252c",
+   "ink": "#ffffff",
+   "logo": "/logos/DC.svg",
+   "purse": 2180,
+   "retained": [
+    {
+     "name": "Axar Patel",
+     "price": 1650,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/axar-patel.jpg"
+    },
+    {
+     "name": "KL Rahul",
+     "price": 1400,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": "/players/kl-rahul.jpg"
+    },
+    {
+     "name": "Kuldeep Yadav",
+     "price": 1325,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/kuldeep-yadav.jpg"
+    },
+    {
+     "name": "Mitchell Starc",
+     "price": 1175,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": "/players/mitchell-starc.jpg"
+    },
+    {
+     "name": "T. Natarajan",
+     "price": 1075,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/t-natarajan.jpg"
+    },
+    {
+     "name": "Tristan Stubbs",
+     "price": 1000,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Mukesh Kumar",
+     "price": 800,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/mukesh-kumar.jpg"
+    },
+    {
+     "name": "Nitish Rana",
+     "price": 420,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Abhishek Porel",
+     "price": 400,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Ashutosh Sharma",
+     "price": 380,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Sameer Rizvi",
+     "price": 95,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/sameer-rizvi.jpg"
+    },
+    {
+     "name": "Dushmantha Chameera",
+     "price": 75,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Karun Nair",
+     "price": 50,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/karun-nair.jpg"
+    },
+    {
+     "name": "Madhav Tiwari",
+     "price": 40,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Ajay Mandal",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Tripurana Vijay",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Vipraj Nigam",
+     "price": 30,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    }
+   ]
+  },
+  {
+   "id": "GT",
+   "name": "Gujarat Titans",
+   "city": "Gujarat",
+   "color": "#1c2c4a",
+   "ring": "#c8a95b",
+   "ink": "#ffffff",
+   "logo": "/logos/GT.svg",
+   "purse": 1290,
+   "retained": [
+    {
+     "name": "Rashid Khan",
+     "price": 1800,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": "/players/rashid-khan.jpg"
+    },
+    {
+     "name": "Shubman Gill",
+     "price": 1650,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/shubman-gill.jpg"
+    },
+    {
+     "name": "Jos Buttler",
+     "price": 1575,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": true,
+     "photo": "/players/jos-buttler.jpg"
+    },
+    {
+     "name": "Mohammed Siraj",
+     "price": 1225,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/mohammed-siraj.jpg"
+    },
+    {
+     "name": "Kagiso Rabada",
+     "price": 1075,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": "/players/kagiso-rabada.jpg"
+    },
+    {
+     "name": "Prasidh Krishna",
+     "price": 950,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Sai Sudharsan",
+     "price": 850,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Rahul Tewatia",
+     "price": 400,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Shahrukh Khan",
+     "price": 400,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/shahrukh-khan.jpg"
+    },
+    {
+     "name": "Washington Sundar",
+     "price": 320,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/washington-sundar.jpg"
+    },
+    {
+     "name": "Sai Kishore",
+     "price": 200,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/sai-kishore.jpg"
+    },
+    {
+     "name": "Glenn Phillips",
+     "price": 200,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Arshad Khan",
+     "price": 130,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Gurnoor Brar",
+     "price": 130,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Ishant Sharma",
+     "price": 75,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/ishant-sharma.jpg"
+    },
+    {
+     "name": "Jayant Yadav",
+     "price": 75,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Kumar Kushagra",
+     "price": 65,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Anuj Rawat",
+     "price": 30,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Manav Suthar",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Nishant Sindhu",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    }
+   ]
+  },
+  {
+   "id": "KKR",
+   "name": "Kolkata Knight Riders",
+   "city": "Kolkata",
+   "color": "#3a225d",
+   "ring": "#d4af37",
+   "ink": "#ffffff",
+   "logo": "/logos/KKR.svg",
+   "purse": 6430,
+   "retained": [
+    {
+     "name": "Rinku Singh",
+     "price": 1300,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Sunil Narine",
+     "price": 1200,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": "/players/sunil-narine.jpg"
+    },
+    {
+     "name": "Varun Chakravarthy",
+     "price": 1200,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Harshit Rana",
+     "price": 400,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Ramandeep Singh",
+     "price": 400,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Angkrish Raghuvanshi",
+     "price": 300,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Vaibhav Arora",
+     "price": 180,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Ajinkya Rahane",
+     "price": 150,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/ajinkya-rahane.jpg"
+    },
+    {
+     "name": "Rovman Powell",
+     "price": 150,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Manish Pandey",
+     "price": 75,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/manish-pandey.jpg"
+    },
+    {
+     "name": "Umran Malik",
+     "price": 75,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/umran-malik.jpg"
+    },
+    {
+     "name": "Anukul Roy",
+     "price": 40,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    }
+   ]
+  },
+  {
+   "id": "LSG",
+   "name": "Lucknow Super Giants",
+   "city": "Lucknow",
+   "color": "#1f6fbf",
+   "ring": "#f47b20",
+   "ink": "#ffffff",
+   "logo": "/logos/LSG.svg",
+   "purse": 2295,
+   "retained": [
+    {
+     "name": "Rishabh Pant",
+     "price": 2700,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": "/players/rishabh-pant.jpg"
+    },
+    {
+     "name": "Nicholas Pooran",
+     "price": 2100,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Mayank Yadav",
+     "price": 1100,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Mohammed Shami",
+     "price": 1000,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/mohammed-shami.jpg"
+    },
+    {
+     "name": "Avesh Khan",
+     "price": 975,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Abdul Samad",
+     "price": 420,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/abdul-samad.png"
+    },
+    {
+     "name": "Ayush Badoni",
+     "price": 400,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Mohsin Khan",
+     "price": 400,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Mitchell Marsh",
+     "price": 340,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": "/players/mitchell-marsh.jpg"
+    },
+    {
+     "name": "Shahbaz Ahmed",
+     "price": 240,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Aiden Markram",
+     "price": 200,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": "/players/aiden-markram.png"
+    },
+    {
+     "name": "Manimaran Siddharth",
+     "price": 75,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Matthew Breetzke",
+     "price": 75,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Akash Singh",
+     "price": 30,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Arjun Tendulkar",
+     "price": 30,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/arjun-tendulkar.jpg"
+    },
+    {
+     "name": "Arshin Kulkarni",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Himmat Singh",
+     "price": 30,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Digvesh Rathi",
+     "price": 30,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Prince Yadav",
+     "price": 30,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    }
+   ]
+  },
+  {
+   "id": "MI",
+   "name": "Mumbai Indians",
+   "city": "Mumbai",
+   "color": "#0b4ea2",
+   "ring": "#d9b648",
+   "ink": "#ffffff",
+   "logo": "/logos/MI.svg",
+   "purse": 275,
+   "retained": [
+    {
+     "name": "Jasprit Bumrah",
+     "price": 1800,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/jasprit-bumrah.jpg"
+    },
+    {
+     "name": "Hardik Pandya",
+     "price": 1635,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/hardik-pandya.jpg"
+    },
+    {
+     "name": "Suryakumar Yadav",
+     "price": 1635,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/suryakumar-yadav.jpg"
+    },
+    {
+     "name": "Rohit Sharma",
+     "price": 1630,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/rohit-sharma.jpg"
+    },
+    {
+     "name": "Trent Boult",
+     "price": 1250,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": "/players/trent-boult.jpg"
+    },
+    {
+     "name": "Deepak Chahar",
+     "price": 925,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/deepak-chahar.jpg"
+    },
+    {
+     "name": "Tilak Varma",
+     "price": 800,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/tilak-varma.png"
+    },
+    {
+     "name": "Will Jacks",
+     "price": 525,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": "/players/will-jacks.jpg"
+    },
+    {
+     "name": "Naman Dhir",
+     "price": 525,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Allah Ghazanfar",
+     "price": 480,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Sherfane Rutherford",
+     "price": 260,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Shardul Thakur",
+     "price": 200,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Mitchell Santner",
+     "price": 200,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Ryan Rickelton",
+     "price": 100,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": true,
+     "photo": "/players/ryan-rickelton.jpg"
+    },
+    {
+     "name": "Corbin Bosch",
+     "price": 75,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Robin Minz",
+     "price": 65,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Raj Angad Bawa",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Ashwani Kumar",
+     "price": 30,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Raghu Sharma",
+     "price": 30,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Mayank Markande",
+     "price": 30,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    }
+   ]
+  },
+  {
+   "id": "PBKS",
+   "name": "Punjab Kings",
+   "city": "Punjab",
+   "color": "#d71920",
+   "ring": "#c0c2c4",
+   "ink": "#ffffff",
+   "logo": "/logos/PBKS.svg",
+   "purse": 1150,
+   "retained": [
+    {
+     "name": "Shreyas Iyer",
+     "price": 2675,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Arshdeep Singh",
+     "price": 1800,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/arshdeep-singh.jpg"
+    },
+    {
+     "name": "Yuzvendra Chahal",
+     "price": 1800,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/yuzvendra-chahal.jpg"
+    },
+    {
+     "name": "Marcus Stoinis",
+     "price": 1100,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": "/players/marcus-stoinis.jpg"
+    },
+    {
+     "name": "Marco Jansen",
+     "price": 700,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": "/players/marco-jansen.jpg"
+    },
+    {
+     "name": "Shashank Singh",
+     "price": 550,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Nehal Wadhera",
+     "price": 420,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Prabhsimran Singh",
+     "price": 400,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Priyansh Arya",
+     "price": 380,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Mitchell Owen",
+     "price": 300,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Azmatullah Omarzai",
+     "price": 240,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Lockie Ferguson",
+     "price": 200,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": "/players/lockie-ferguson.jpg"
+    },
+    {
+     "name": "Vijaykumar Vyshak",
+     "price": 180,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Yash Thakur",
+     "price": 160,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Harpreet Brar",
+     "price": 150,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Vishnu Vinod",
+     "price": 95,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Xavier Bartlett",
+     "price": 80,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Pyla Avinash",
+     "price": 30,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Harnoor Pannu",
+     "price": 30,
+     "role": null,
+     "cat": null,
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Musheer Khan",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Suryansh Shedge",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/suryansh-shedge.jpg"
+    }
+   ]
+  },
+  {
+   "id": "RR",
+   "name": "Rajasthan Royals",
+   "city": "Rajasthan",
+   "color": "#e2297f",
+   "ring": "#254aa5",
+   "ink": "#ffffff",
+   "logo": "/logos/RR.svg",
+   "purse": 1605,
+   "retained": [
+    {
+     "name": "Yashasvi Jaiswal",
+     "price": 1800,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/yashasvi-jaiswal.jpg"
+    },
+    {
+     "name": "Riyan Parag",
+     "price": 1400,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Ravindra Jadeja",
+     "price": 1400,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/ravindra-jadeja.jpg"
+    },
+    {
+     "name": "Dhruv Jurel",
+     "price": 1400,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Jofra Archer",
+     "price": 1250,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": "/players/jofra-archer.jpg"
+    },
+    {
+     "name": "Shimron Hetmyer",
+     "price": 1100,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": "/players/shimron-hetmyer.jpg"
+    },
+    {
+     "name": "Tushar Deshpande",
+     "price": 650,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/tushar-deshpande.jpg"
+    },
+    {
+     "name": "Sandeep Sharma",
+     "price": 400,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Nandre Burger",
+     "price": 350,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Sam Curran",
+     "price": 240,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": "/players/sam-curran.jpg"
+    },
+    {
+     "name": "Kwena Maphaka",
+     "price": 150,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Vaibhav Sooryavanshi",
+     "price": 110,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/vaibhav-sooryavanshi.jpg"
+    },
+    {
+     "name": "Donovan Ferreira",
+     "price": 100,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Shubham Dubey",
+     "price": 80,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Yudhvir Singh",
+     "price": 35,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Lhuan-dre Pretorius",
+     "price": 30,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": null
+    }
+   ]
+  },
+  {
+   "id": "RCB",
+   "name": "Royal Challengers Bengaluru",
+   "city": "Bengaluru",
+   "color": "#c8102e",
+   "ring": "#111111",
+   "ink": "#ffffff",
+   "logo": "/logos/RCB.svg",
+   "purse": 1640,
+   "retained": [
+    {
+     "name": "Virat Kohli",
+     "price": 2100,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": "/players/virat-kohli.jpg"
+    },
+    {
+     "name": "Josh Hazlewood",
+     "price": 1250,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": "/players/josh-hazlewood.jpg"
+    },
+    {
+     "name": "Phil Salt",
+     "price": 1150,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": true,
+     "photo": "/players/phil-salt.jpg"
+    },
+    {
+     "name": "Rajat Patidar",
+     "price": 1100,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Jitesh Sharma",
+     "price": 1100,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Bhuvneshwar Kumar",
+     "price": 1075,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/bhuvneshwar-kumar.jpg"
+    },
+    {
+     "name": "Rasikh Salam",
+     "price": 600,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/rasikh-salam.jpg"
+    },
+    {
+     "name": "Krunal Pandya",
+     "price": 575,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/krunal-pandya.jpg"
+    },
+    {
+     "name": "Yash Dayal",
+     "price": 500,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Tim David",
+     "price": 300,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Suyash Sharma",
+     "price": 260,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/suyash-sharma.png"
+    },
+    {
+     "name": "Jacob Bethell",
+     "price": 260,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Devdutt Padikkal",
+     "price": 200,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Nuwan Thushara",
+     "price": 160,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Romario Shepherd",
+     "price": 150,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Swapnil Singh",
+     "price": 50,
+     "role": "Spin bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Abhinandan Singh",
+     "price": 30,
+     "role": "Bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    }
+   ]
+  },
+  {
+   "id": "SRH",
+   "name": "Sunrisers Hyderabad",
+   "city": "Hyderabad",
+   "color": "#f26522",
+   "ring": "#111111",
+   "ink": "#ffffff",
+   "logo": "/logos/SRH.svg",
+   "purse": 2550,
+   "retained": [
+    {
+     "name": "Heinrich Klaasen",
+     "price": 2300,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Pat Cummins",
+     "price": 1800,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": "/players/pat-cummins.jpg"
+    },
+    {
+     "name": "Travis Head",
+     "price": 1400,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": true,
+     "photo": "/players/travis-head.jpg"
+    },
+    {
+     "name": "Abhishek Sharma",
+     "price": 1400,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Ishan Kishan",
+     "price": 1125,
+     "role": "Wicket-keeper",
+     "cat": "WK",
+     "overseas": false,
+     "photo": "/players/ishan-kishan.jpg"
+    },
+    {
+     "name": "Harshal Patel",
+     "price": 800,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Nitish Kumar Reddy",
+     "price": 600,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": "/players/nitish-kumar-reddy.jpg"
+    },
+    {
+     "name": "Eshan Malinga",
+     "price": 120,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Brydon Carse",
+     "price": 100,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": true,
+     "photo": "/players/brydon-carse.jpg"
+    },
+    {
+     "name": "Jaydev Unadkat",
+     "price": 100,
+     "role": "Fast bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": "/players/jaydev-unadkat.jpg"
+    },
+    {
+     "name": "Kamindu Mendis",
+     "price": 75,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": true,
+     "photo": null
+    },
+    {
+     "name": "Zeeshan Ansari",
+     "price": 40,
+     "role": "Bowler",
+     "cat": "BOWL",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Smaran Ravichandran",
+     "price": 30,
+     "role": null,
+     "cat": null,
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Aniket Verma",
+     "price": 30,
+     "role": "Batter",
+     "cat": "BAT",
+     "overseas": false,
+     "photo": null
+    },
+    {
+     "name": "Harsh Dubey",
+     "price": 30,
+     "role": "All-rounder",
+     "cat": "AR",
+     "overseas": false,
+     "photo": null
+    }
+   ]
+  }
+ ]
+}
