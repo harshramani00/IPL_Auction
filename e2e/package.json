@@ -1,0 +1,16 @@
+{
+  "name": "@auction/e2e",
+  "private": true,
+  "type": "module",
+  "description": "End-to-end tests: several browsers playing one room against the built app",
+  "scripts": {
+    "test": "playwright test",
+    "typecheck": "tsc -p ."
+  },
+  "devDependencies": {
+    "@auction/shared": "*",
+    "@playwright/test": "1.64.1",
+    "@types/node": "20.19.43",
+    "socket.io-client": "4.8.4"
+  }
+}
