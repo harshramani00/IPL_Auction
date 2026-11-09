@@ -16,14 +16,18 @@ export interface Config {
   clientOrigin: string | null;
 }
 
-export function loadConfig(env = process.env): Config {
+/**
+ * `dev`: running next to the Vite dev server, which may itself be given PORT,
+ * so only SERVER_PORT applies. In production, hosting platforms set PORT.
+ */
+export function loadConfig(env = process.env, dev = process.argv.includes("--dev")): Config {
   let cookieSecret = env.COOKIE_SECRET ?? "";
   if (!cookieSecret) {
     cookieSecret = randomBytes(32).toString("hex");
     console.warn("COOKIE_SECRET is not set: using a random one, so sessions reset when the server restarts.");
   }
   return {
-    port: Number(env.PORT ?? 3001),
+    port: Number((dev ? env.SERVER_PORT : env.PORT ?? env.SERVER_PORT) ?? 3001),
     cookieSecret,
     aiEnabled: env.AI_ENABLED !== "false",
     clientOrigin: env.CLIENT_ORIGIN || null,

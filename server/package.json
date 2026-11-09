@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Authoritative game server: rooms, clock, AI franchises, Socket.IO protocol",
   "scripts": {
-    "dev": "tsx watch src/main.ts",
+    "dev": "tsx watch src/main.ts --dev",
     "start": "tsx src/main.ts",
     "typecheck": "tsc -p .",
     "test": "vitest run"
