@@ -7,16 +7,19 @@ Sources:
   * Wikipedia's "List of 2026 Indian Premier League personnel changes", for
     retained players with salaries and the result of every sale
 
-Writes five CSVs:
+Pre-auction state, ready to run an auction from (everyone starts unsold):
 
-  auction_pool.csv      pre-auction: all 369 players in lot order, with set,
-                        role, capped/uncapped, age, base price, and the result
-                        (sold/unsold, team, price)
-  retained_players.csv  pre-auction: players each team kept, with salary
-  teams.csv             pre-auction purse and open slots per team, then the
-                        auction spend and what was left
-  sold_players.csv      the 77 players bought, with previous team
-  squads.csv            retained + bought, one row per player (final squads)
+  auction_pool.csv      all 369 players in lot order, with set, role,
+                        capped/uncapped, age and base price; status is
+                        "unsold" and team/sold price are empty
+  retained_players.csv  players each team kept, with salary
+  teams.csv             purse and open (overseas) slots per team
+
+What actually happened, kept apart in results/:
+
+  results/sold_players.csv  the 77 players bought, with previous team
+  results/squads.csv        retained + bought, one row per player
+  results/team_results.csv  players bought, auction spend and purse left
 
 Prices are in crore (1 crore = 100 lakh). Uses only the standard library.
 
@@ -247,29 +250,10 @@ def fetch_pool(season):
                 "role": SET_ROLES.get(code.lstrip("U")[:2], ""),
                 "category": "Uncapped" if code.startswith("U") else "Capped",
                 "base_price_cr": lakh_to_crore(cell["Base Price (Rs Lakh)"]),
+                # Filled in as the auction is run.
+                "status": "unsold", "team": "", "team_code": "", "sold_price_cr": "",
             })
     return pool
-
-
-def name_key(name):
-    return re.sub(r"[^a-z]", "", name.lower())
-
-
-def add_results(pool, sold):
-    """Attach sold/unsold, team and price to each pool row (joined on lot number)."""
-    by_lot = {s["lot_no"]: s for s in sold}
-    for p in pool:
-        s = by_lot.pop(p["lot_no"], None)
-        if s and name_key(s["name"]) != name_key(p["name"]):
-            # Usually the same player spelled differently (Lungisani vs Lungi Ngidi).
-            print(f"Note: lot {p['lot_no']} is {p['name']} in the list, "
-                  f"{s['name']} on Wikipedia", file=sys.stderr)
-        p.update({"status": "sold" if s else "unsold",
-                  "team": s["team"] if s else "", "team_code": s["team_code"] if s else "",
-                  "sold_price_cr": s["sold_price_cr"] if s else ""})
-    for s in by_lot.values():
-        print(f"Warning: sold player {s['name']} (lot {s['lot_no']}) not in the auction list",
-              file=sys.stderr)
 
 
 def write_csv(path, rows):
@@ -293,7 +277,6 @@ def main():
     if not sold:
         raise SystemExit(f"No sold-player tables found for {args.season} yet.")
     pool = fetch_pool(args.season)
-    add_results(pool, sold)
 
     squads = (
         [{"name": r["name"], "nationality": r["nationality"], "team": r["team"],
@@ -306,7 +289,7 @@ def main():
     squads.sort(key=lambda r: (r["team"], r["status"] != "retained", -(r["price_cr"] or 0)))
 
     official = OFFICIAL_PURSE_BEFORE_AUCTION.get(args.season, {})
-    teams = []
+    teams, team_results = [], []
     for code, (name, _) in TEAMS.items():
         kept = [r for r in retained if r["team_code"] == code]
         bought = [s for s in sold if s["team_code"] == code]
@@ -323,22 +306,28 @@ def main():
             "purse_before_auction_cr": before if before is not None else "",
             "slots_open": SQUAD_MAX - len(kept),
             "overseas_slots_open": OVERSEAS_MAX - overseas,
+        })
+        team_results.append({
+            "team": name, "team_code": code,
+            "purse_before_auction_cr": before if before is not None else "",
             "bought": len(bought),
             "squad_size": len(kept) + len(bought),
             "auction_spend_cr": bought_cr,
             "purse_remaining_cr": round(before - bought_cr, 2) if before is not None else "",
         })
 
-    out_dir.mkdir(parents=True, exist_ok=True)
+    results_dir = out_dir / "results"
+    results_dir.mkdir(parents=True, exist_ok=True)
     if pool:
         write_csv(out_dir / "auction_pool.csv", pool)
     else:
         print(f"No auction list source known for {args.season}; skipping auction_pool.csv",
               file=sys.stderr)
-    write_csv(out_dir / "sold_players.csv", sold)
     write_csv(out_dir / "retained_players.csv", retained)
-    write_csv(out_dir / "squads.csv", squads)
     write_csv(out_dir / "teams.csv", teams)
+    write_csv(results_dir / "sold_players.csv", sold)
+    write_csv(results_dir / "squads.csv", squads)
+    write_csv(results_dir / "team_results.csv", team_results)
 
     unmatched = {r["team"] for r in retained + sold if not r["team_code"]}
     print(f"{len(pool)} in auction pool, {len(sold)} sold, {len(retained)} retained, "
