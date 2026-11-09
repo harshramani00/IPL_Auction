@@ -1,0 +1,72 @@
+[
+  {
+    "code": "CSK",
+    "name": "Chennai Super Kings",
+    "source": "https://en.wikipedia.org/wiki/File:Chennai_Super_Kings_Logo.svg",
+    "original": "CSK.svg",
+    "png": "CSK.png"
+  },
+  {
+    "code": "DC",
+    "name": "Delhi Capitals",
+    "source": "https://en.wikipedia.org/wiki/File:Delhi_Capitals.svg",
+    "original": "DC.svg",
+    "png": "DC.png"
+  },
+  {
+    "code": "GT",
+    "name": "Gujarat Titans",
+    "source": "https://en.wikipedia.org/wiki/File:Gujarat_Titans_Logo.svg",
+    "original": "GT.svg",
+    "png": "GT.png"
+  },
+  {
+    "code": "KKR",
+    "name": "Kolkata Knight Riders",
+    "source": "https://en.wikipedia.org/wiki/File:Kolkata_Knight_Riders_Logo.svg",
+    "original": "KKR.svg",
+    "png": "KKR.png"
+  },
+  {
+    "code": "LSG",
+    "name": "Lucknow Super Giants",
+    "source": "https://en.wikipedia.org/wiki/File:Lucknow_Super_Giants_Logo.svg",
+    "original": "LSG.svg",
+    "png": "LSG.png"
+  },
+  {
+    "code": "MI",
+    "name": "Mumbai Indians",
+    "source": "https://en.wikipedia.org/wiki/File:Mumbai_Indians_Logo.svg",
+    "original": "MI.svg",
+    "png": "MI.png"
+  },
+  {
+    "code": "PBKS",
+    "name": "Punjab Kings",
+    "source": "https://en.wikipedia.org/wiki/File:Punjab_Kings_Logo.svg",
+    "original": "PBKS.svg",
+    "png": "PBKS.png"
+  },
+  {
+    "code": "RR",
+    "name": "Rajasthan Royals",
+    "source": "https://en.wikipedia.org/wiki/File:This_is_the_logo_for_Rajasthan_Royals,_a_cricket_team_playing_in_the_Indian_Premier_League_(IPL).svg",
+    "original": "RR.svg",
+    "png": "RR.png"
+  },
+  {
+    "code": "RCB",
+    "name": "Royal Challengers Bengaluru",
+    "source": "https://en.wikipedia.org/wiki/File:Royal_Challengers_Bengaluru_Logo.svg",
+    "original": "RCB.svg",
+    "png": "RCB.png"
+  },
+  {
+    "code": "SRH",
+    "name": "Sunrisers Hyderabad",
+    "source": "https://en.wikipedia.org/wiki/File:Sunrisers_Hyderabad_Logo.svg",
+    "original": "SRH.svg",
+    "png": "SRH.png"
+  }
+]
