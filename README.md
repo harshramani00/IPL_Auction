@@ -57,6 +57,90 @@ Copy `.env.example` to `.env`. None of it is needed for local play.
 | `AI_ENABLED` | `true` | `false` turns the AI franchises off (the end-to-end tests do) |
 | `CLIENT_ORIGIN` | none | Only if the client is served from a different origin |
 
+## Hosting
+
+The game is one Node process: it keeps live connections to every player,
+runs the clock, and keeps rooms in memory. So host it somewhere that runs a
+long-lived server, run **a single instance**, and expect rooms to be lost on
+restart (restart between games, not during one). Serverless platforms such as
+Vercel or Netlify won't work.
+
+### On a spare machine with Tailscale (the plan for this project)
+
+**1. Install and build** (Node 20 or later):
+
+```bash
+git clone https://github.com/harshramani00/IPL_Auction.git
+cd IPL_Auction
+npm ci
+npm run build
+```
+
+**2. Set a fixed cookie secret,** so players stay signed in across restarts:
+
+```bash
+echo "COOKIE_SECRET=$(node -e "console.log(require('crypto').randomBytes(32).toString('hex'))")" > .env
+```
+
+**3. Keep it running** with pm2. It restarts the game after a crash or a
+reboot. `pm2 startup` prints one more command to run.
+
+```bash
+npm install -g pm2
+pm2 start npm --name auction -- start
+pm2 save
+pm2 startup
+```
+
+The game now listens on port 3001. Turn off sleep on the machine, or the game
+goes offline when it sleeps.
+
+**4. Make it reachable.** Pick one:
+
+| Who can play | How | Address |
+|---|---|---|
+| Anyone with the link | `tailscale funnel --bg 3001` (the first time, Tailscale asks you to enable HTTPS and Funnel in its admin console) | `https://<machine>.<tailnet>.ts.net` |
+| Only people on your tailnet | `tailscale serve --bg 3001` | same address, private |
+| Anyone, on your own domain | Cloudflare Tunnel (below) | `https://auction.yourdomain.com` |
+
+Funnel only serves its own `*.ts.net` address. Pointing your domain at it
+fails, because the HTTPS certificate won't match your domain. For your own
+domain, either add a URL redirect at your registrar from
+`auction.yourdomain.com` to the `ts.net` link, or move the domain's DNS to
+Cloudflare (free) and run a Cloudflare Tunnel on the machine instead of
+Funnel:
+
+```bash
+cloudflared tunnel login
+cloudflared tunnel create auction
+cloudflared tunnel route dns auction auction.yourdomain.com
+cloudflared tunnel run --url http://localhost:3001 auction
+```
+
+To keep the tunnel running too, start it with pm2 as well:
+`pm2 start cloudflared --name tunnel -- tunnel run --url http://localhost:3001 auction`.
+
+**5. Update** to the latest version (between games):
+
+```bash
+git pull && npm ci && npm run build && pm2 restart auction
+```
+
+### Other options
+
+- **Same Wi-Fi, no setup:** run `npm run build && npm start` and share
+  `http://<your-computer's-IP>:3001`.
+- **One-off from your laptop:** run
+  `cloudflared tunnel --url http://localhost:3001` for a temporary public
+  `trycloudflare.com` link.
+- **Cloud:** on Render, Railway or Fly.io, use build command
+  `npm ci && npm run build` and start command `npm start`, set `COOKIE_SECRET`,
+  and keep it to one instance. The platform sets `PORT`. Free tiers that sleep
+  when idle lose any rooms in progress.
+
+The game shows official IPL and team logos. Keep public links to games with
+friends, and don't make money from it.
+
 ## How a game works
 
 1. **Lobby.** Players join (seats P1–P10, lowest free seat) and claim
