@@ -43,6 +43,7 @@ export function createRoom(id: string): RoomState {
     bidSeq: 0,
     aiTeams: [],
     aiValues: {},
+    market: {},
   };
 }
 
@@ -172,6 +173,7 @@ export function start(s: RoomState, userId: string, data: GameData, now: number,
   const lotsById = new Map(data.lots.map((l) => [l.id, l]));
   s.queue = data.presets[s.settings.preset].lots.map((id) => lotsById.get(id)!).filter(Boolean);
   s.aiTeams = TEAM_IDS.filter((t) => s.owners[t] === null);
+  s.market = data.market ?? {};
   s.results = [];
   s.lotIndex = 0;
   openLot(s, now, rng);
@@ -193,7 +195,7 @@ function openLot(s: RoomState, now: number, rng: Rng): void {
   s.pausedLeft = null;
   s.windowMs = OPEN_MS;
   s.deadline = now + OPEN_MS;
-  s.aiValues = drawValuations(lot, s.aiTeams, rng);
+  s.aiValues = drawValuations(lot, s.market[lot.id], s.aiTeams, s.teams, rng);
 }
 
 export function validateBid(s: RoomState, userId: string, teamId: TeamId, amount: number): Check {

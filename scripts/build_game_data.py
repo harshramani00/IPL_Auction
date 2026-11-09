@@ -10,6 +10,7 @@ writes shared/data/:
                 retained squad
   stats.json    last IPL season, IPL career and T20 career per player
   credits.json  photo credits and the Cricsheet data notice
+  market.json   each lot's real auction price (server-only: anchors the AI)
 
 Money is in integer lakhs (1 crore = 100 lakhs). Image paths are site paths
 served from static/ (e.g. /players/ms-dhoni.jpg, /logos/MI.svg).
@@ -191,10 +192,16 @@ def main():
                    for r in images if r["image"]],
     }
 
+    # ---- market: what each lot really went for (null = unsold). Server-only:
+    # it anchors the AI's valuations and must never reach the client bundle.
+    sold_path = data_dir / "results" / "sold_players.csv"
+    sold = {r["lot_no"]: lakhs(r["sold_price_cr"]) for r in read_csv(sold_path)} if sold_path.exists() else {}
+    market = {str(l["id"]): sold.get(str(l["id"])) for l in lots} if sold else {}
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for name, payload in [("lots", {"season": args.season, "presets": presets, "lots": lots}),
                           ("teams", {"freshPurse": 12000, "teams": teams}),
-                          ("stats", stats), ("credits", credits)]:
+                          ("stats", stats), ("credits", credits), ("market", market)]:
         (OUT_DIR / f"{name}.json").write_text(json.dumps(payload, indent=1, ensure_ascii=False) + "\n")
 
     sizes = ", ".join(f"{k}: {len(v['lots'])}" for k, v in presets.items())

@@ -75,9 +75,15 @@ Copy `.env.example` to `.env`. None of it is needed for local play.
    teams can bid against it. Squads cap at 25 players and 8 overseas,
    retained players included. Any player can pause.
 3. **Hammer.** At zero the player is SOLD to the top bid, or UNSOLD if there
-   was no bid. The next lot opens 3.2 s later. Unclaimed franchises are run by
-   AI that values each lot privately and bids every 0.7–2.7 s while the price
-   is under its valuation.
+   was no bid. The next lot opens 3.2 s later.
+4. **AI franchises.** Unclaimed teams are run by AI that bids every
+   0.7–2.7 s while the price is under its private valuation. Valuations are
+   anchored on what each player really went for (varied ±15% each game). Two
+   or three AI teams, mostly ones that can afford him, want a player who
+   really sold. A player who went unsold for real draws an AI bid near base
+   only about 30% of the time. Each AI team keeps ₹30 L back for every squad
+   slot it still has to fill. In simulated Quick games 73% of lots sell
+   (69% for real), at a median of 1.0× the real price.
 
 ## Architecture
 
@@ -154,7 +160,7 @@ python3 scripts/fetch_auction_data.py    # auction list, retentions, purses, sol
 python3 scripts/fetch_player_images.py   # static/players + image column (Wikimedia, free licences)
 python3 scripts/fetch_player_stats.py    # stats from Cricsheet ball-by-ball data (~130 MB, cached in .cache/)
 python3 scripts/fetch_player_roles.py    # roles for retained players
-python3 scripts/build_game_data.py       # shared/data/{lots,teams,stats,credits}.json
+python3 scripts/build_game_data.py       # shared/data/{lots,teams,stats,credits,market}.json
 ```
 
 `fetch_auction_data.py` rewrites the CSVs, so after it, rerun every later
@@ -174,8 +180,11 @@ script to restore the image and role columns.
   `server/src/schemas.ts`.
 - **Lots:** any lot in `lots.json` needs `id`, `name`, `cc`, `country`,
   `overseas`, `cat` (`BAT`/`WK`/`AR`/`BOWL`), `role`, `capped`, `set`, `setCode`,
-  `base` (lakhs), `tier` (`A`/`B`, which drives AI valuations) and `photo` (a
-  path or `null`). Lots for a different auction season come from
+  `base` (lakhs), `tier` (`A`/`B`) and `photo` (a path or `null`). The AI
+  reads each lot's real price from `market.json`. For a lot that isn't listed
+  there, it falls back to the spec's tier formula (tier A base × 3–9, tier B
+  base × 0.9–4). `market.json` is server-only (`@auction/shared/server-data`).
+  Never import it in the client, or every real price ends up in the browser. Lots for a different auction season come from
   `fetch_auction_data.py --season`.
 - **Stats** are looked up by player name in `stats.json`. A player without
   stats shows a "no T20 record" row.

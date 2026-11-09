@@ -1,5 +1,5 @@
 import { BID_MS, OPEN_MS, RESULT_MS, type Request, type Snapshot } from "@auction/shared";
-import { gameData } from "@auction/shared/data";
+import { serverGameData as gameData } from "@auction/shared/server-data";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { Room } from "../src/room.js";
 

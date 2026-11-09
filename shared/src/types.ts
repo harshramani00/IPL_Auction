@@ -21,6 +21,14 @@ export interface Lot {
   photo: string | null;
 }
 
+/**
+ * What each lot really went for at the auction (lakhs), or null if he went
+ * unsold. Anchors the AI's hidden valuations, so it is server-only: it lives
+ * in shared/data/market.json, which the client never imports, and never
+ * appears in a snapshot.
+ */
+export type MarketPrices = Record<number, number | null>;
+
 export interface SquadPlayer {
   name: string;
   price: number | null;
@@ -61,6 +69,8 @@ export interface GameData {
   presets: Record<PresetId, { label: string; lots: number[] }>;
   teams: TeamInfo[];
   freshPurse: number;
+  /** Server-only (see MarketPrices). Without it the AI falls back to the tier formula. */
+  market?: MarketPrices;
 }
 
 export type Phase = "lobby" | "live" | "paused" | "sold" | "done";
@@ -124,6 +134,8 @@ export interface RoomState {
   aiTeams: TeamId[];
   /** Hidden AI valuations for the current lot. Never sent to clients. */
   aiValues: Partial<Record<TeamId, number>>;
+  /** Real auction prices for this game's lots (server-only, see MarketPrices). */
+  market: MarketPrices;
 }
 
 /** Public view of the room, broadcast after every change. */

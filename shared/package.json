@@ -6,6 +6,7 @@
   "exports": {
     ".": "./src/index.ts",
     "./data": "./src/data.ts",
+    "./server-data": "./src/serverData.ts",
     "./data/*": "./data/*"
   },
   "scripts": {
