@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Download the current official logo for every IPL team.
+"""Download the current official IPL logo and the logo of every IPL team.
 
-Source: the logo in each team's English Wikipedia infobox, which is kept up
+Source: the logo in each English Wikipedia infobox, which is kept up
 to date and is almost always a vector SVG. For each team we save:
 
   <CODE>.svg   original vector file (best quality, scales to any size)
@@ -13,7 +13,7 @@ Uses only the Python standard library.
 
     python3 scripts/fetch_team_logos.py                  # -> static/logos/
     python3 scripts/fetch_team_logos.py --out assets --width 1024
-    python3 scripts/fetch_team_logos.py --teams MI CSK   # just some teams
+    python3 scripts/fetch_team_logos.py --teams IPL MI   # just some logos
 """
 
 import argparse
@@ -30,6 +30,10 @@ API = "https://en.wikipedia.org/w/api.php"
 USER_AGENT = "IPL-Auction-LogoFetcher/1.0 (https://github.com/; personal project)"
 
 # code -> (display name, Wikipedia article title)
+LEAGUE = {
+    "IPL": ("Indian Premier League", "Indian Premier League"),
+}
+
 TEAMS = {
     "CSK": ("Chennai Super Kings", "Chennai Super Kings"),
     "DC": ("Delhi Capitals", "Delhi Capitals"),
@@ -42,6 +46,8 @@ TEAMS = {
     "RCB": ("Royal Challengers Bengaluru", "Royal Challengers Bengaluru"),
     "SRH": ("Sunrisers Hyderabad", "Sunrisers Hyderabad"),
 }
+
+LOGOS = {**LEAGUE, **TEAMS}
 
 INFOBOX_FIELDS = ("logo", "image")
 IMAGE_EXT = re.compile(r"\.(svg|png|jpe?g|webp)$", re.I)
@@ -132,11 +138,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--out", default="static/logos", help="output folder (default: static/logos)")
     parser.add_argument("--width", type=int, default=512, help="minimum PNG width in px; Wikimedia rounds up to its standard sizes (default: 512)")
-    parser.add_argument("--teams", nargs="*", metavar="CODE", help=f"subset of: {' '.join(TEAMS)}")
+    parser.add_argument("--teams", nargs="*", metavar="CODE", help=f"subset of: {' '.join(LOGOS)}")
     args = parser.parse_args()
 
-    codes = [c.upper() for c in args.teams] if args.teams else list(TEAMS)
-    unknown = [c for c in codes if c not in TEAMS]
+    codes = [c.upper() for c in args.teams] if args.teams else list(LOGOS)
+    unknown = [c for c in codes if c not in LOGOS]
     if unknown:
         parser.error(f"unknown team code(s): {', '.join(unknown)}")
 
@@ -145,7 +151,7 @@ def main():
 
     manifest, failed = [], []
     for code in codes:
-        name, article = TEAMS[code]
+        name, article = LOGOS[code]
         print(f"{code:5} {name} ... ", end="", flush=True)
         try:
             entry = fetch_team(code, name, article, out_dir, args.width)

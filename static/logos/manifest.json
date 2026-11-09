@@ -1,5 +1,12 @@
 [
   {
+    "code": "IPL",
+    "name": "Indian Premier League",
+    "source": "https://en.wikipedia.org/wiki/File:Indian_Premier_League_Official_Logo.svg",
+    "original": "IPL.svg",
+    "png": "IPL.png"
+  },
+  {
     "code": "CSK",
     "name": "Chennai Super Kings",
     "source": "https://en.wikipedia.org/wiki/File:Chennai_Super_Kings_Logo.svg",
