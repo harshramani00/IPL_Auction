@@ -1,3 +1,4 @@
 .DS_Store
 __pycache__/
 .wikipedia_search_cache.json
+.cache/
