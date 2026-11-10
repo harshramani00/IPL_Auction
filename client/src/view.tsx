@@ -1,6 +1,6 @@
 // Small view helpers shared by the room components.
 import {
-  SEAT_COLORS, TEAM_IDS, formatAmount, type Snapshot, type TeamId, type TeamInfo,
+  SEAT_COLORS, TEAM_IDS, formatAmount, type Lot, type Snapshot, type TeamId, type TeamInfo,
 } from "@auction/shared";
 import { gameData, teamInfo } from "@auction/shared/data";
 import { useState, type CSSProperties } from "react";
@@ -55,4 +55,21 @@ export function Crest({ id, className = "crest" }: { id: TeamId; className?: str
       {logo ? <img src={t.logo!} alt={t.city} draggable={false} onError={() => setFailed(true)} /> : id}
     </span>
   );
+}
+
+export type StatRow = [label: string, key: "m" | "runs" | "avg" | "sr" | "wk" | "econ", decimals?: number];
+
+/** The stat rows shown for a player, by role. */
+export function statRows(cat: Lot["cat"]): StatRow[] {
+  return cat === "BOWL"
+    ? [["Matches", "m"], ["Wickets", "wk"], ["Economy", "econ", 2], ["Runs", "runs"]]
+    : cat === "AR"
+      ? [["Matches", "m"], ["Runs", "runs"], ["Strike rate", "sr", 1], ["Wickets", "wk"], ["Economy", "econ", 2]]
+      : [["Matches", "m"], ["Runs", "runs"], ["Average", "avg", 1], ["Strike rate", "sr", 1]];
+}
+
+/** One stat formatted for display, or null when there's no figure. */
+export function statValue(blk: object | null | undefined, [, k, d]: StatRow): string | null {
+  const v = blk ? (blk as Record<string, unknown>)[k] : null;
+  return typeof v === "number" ? (d === undefined ? String(v) : v.toFixed(d)) : null;
 }

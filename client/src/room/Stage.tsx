@@ -1,10 +1,12 @@
 // The stage: set banner, player on the block, live bid with the stump clock,
-// the lobby checklist, the SOLD banner and the player's stats.
+// the lobby checklist, the SOLD banner and the player's stats (on the hall's screen in 3D).
 import { callFor, startProblems, type Lot } from "@auction/shared";
 import { gameData, stats, statsByName } from "@auction/shared/data";
 import { Component, Suspense, lazy, useEffect, useRef, type ReactNode } from "react";
 import { useTicker } from "../useRoom";
-import { Crest, Img, fmt, initials, lotsById, ownerLabel, seatName, team, teamVars } from "../view";
+import {
+  Crest, Img, fmt, initials, lotsById, ownerLabel, seatName, statRows, statValue, team, teamVars, type StatRow,
+} from "../view";
 import { prefersReducedMotion, setViewMode, useViewMode } from "../viewMode";
 import { useRoomCtx } from "./context";
 
@@ -42,7 +44,8 @@ export function Stage() {
         <div className="bidpanel">{lobby ? <LobbyBox /> : <LiveBox lot={lot} />}</div>
       </div>
       <SoldBanner confetti={!threeD} />
-      <StatsTable lot={shown} />
+      {/* In 3D the stats are on the hall's screen. */}
+      {!threeD && <StatsTable lot={shown} />}
     </section>
   );
 }
@@ -290,19 +293,11 @@ function confetti(cv: HTMLCanvasElement, colors: string[]): () => void {
   return () => { cancelAnimationFrame(raf); ctx.clearRect(0, 0, box.width, box.height); };
 }
 
-type Row = [label: string, key: "m" | "runs" | "avg" | "sr" | "wk" | "econ", decimals?: number];
-
 function StatsTable({ lot }: { lot: Lot }) {
   const st = statsByName.get(lot.name);
-  const rows: Row[] = lot.cat === "BOWL"
-    ? [["Matches", "m"], ["Wickets", "wk"], ["Economy", "econ", 2], ["Runs", "runs"]]
-    : lot.cat === "AR"
-      ? [["Matches", "m"], ["Runs", "runs"], ["Strike rate", "sr", 1], ["Wickets", "wk"], ["Economy", "econ", 2]]
-      : [["Matches", "m"], ["Runs", "runs"], ["Average", "avg", 1], ["Strike rate", "sr", 1]];
-
-  const cell = (blk: Record<string, unknown> | null | undefined, [, k, d]: Row, cls: string) => {
-    const v = blk ? blk[k] : null;
-    const shown = typeof v === "number" ? (d === undefined ? String(v) : v.toFixed(d)) : null;
+  const rows = statRows(lot.cat);
+  const cell = (blk: object | null | undefined, r: StatRow, cls: string) => {
+    const shown = statValue(blk, r);
     return <td className={`${cls}${shown === null ? " na" : ""}`}>{shown ?? "—"}</td>;
   };
 
@@ -336,9 +331,9 @@ function StatsTable({ lot }: { lot: Lot }) {
             {st ? rows.map((r) => (
               <tr key={r[0]}>
                 <td className="k">{r[0]}</td>
-                {cell(st.last as Record<string, unknown> | null, r, "last")}
-                {cell(st.ipl as Record<string, unknown> | null, r, "")}
-                {cell(st.t20 as Record<string, unknown> | null, r, "")}
+                {cell(st.last, r, "last")}
+                {cell(st.ipl, r, "")}
+                {cell(st.t20, r, "")}
               </tr>
             )) : (
               <tr><td className="k" colSpan={4}>No T20 record on file for this player</td></tr>

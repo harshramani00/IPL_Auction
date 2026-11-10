@@ -133,7 +133,7 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
 
   // The LED screen is a canvas texture redrawn whenever the lot or price changes.
   const lot = s.lot ?? (s.phase === "lobby" ? lotsById.get(gameData.presets[s.settings.preset].lots[0]!) ?? null : null);
-  const screen = useMemo(() => canvasTexture(1280, 720, () => {}), []);
+  const screen = useMemo(() => canvasTexture(1920, 1080, () => {}), []);
   useEffect(() => {
     const g = (screen.image as HTMLCanvasElement).getContext("2d")!;
     const redraw = () => {
