@@ -45,7 +45,7 @@ export interface Shot {
 export const SHOTS = {
   wide: (): Shot => ({ position: new Vector3(0, 4.4, 11), target: new Vector3(0, 1.7, -3.4) }),
   /** Mid shot on the auctioneer: close enough to feel tense, not so close a real-time face looks uncanny. */
-  auctioneer: (): Shot => ({ position: new Vector3(0.6, 2.25, -0.2), target: new Vector3(0, 1.75, -4.25) }),
+  auctioneer: (): Shot => ({ position: new Vector3(0.45, 2.1, -1.5), target: new Vector3(0, 1.82, -4.25) }),
   table: (id: TeamId): Shot => {
     const t = tableOf(id);
     return {

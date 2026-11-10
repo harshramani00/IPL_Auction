@@ -1,6 +1,10 @@
 # 3D models
 
-`auctioneer.glb` here replaces the stand-in auctioneer in the 3D hall.
+The hall's auctioneer is `rocketbox/Business_Male_01.fbx` from Microsoft's
+Rocketbox avatar library (MIT, see `rocketbox/LICENSE.md`). The textures were
+converted from the original TGA files to JPG and PNG.
+
+An `auctioneer.glb` here replaces him, for example a MetaHuman you've exported.
 
 It should be one binary glTF with a humanoid rig and these animation clips
 (names are matched loosely, Mixamo's defaults work):

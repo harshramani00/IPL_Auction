@@ -224,10 +224,25 @@ static/   team logos and player photos, served at /logos and /players
   - a push-in on the auctioneer, with warmer light, at "going twice"
   - on SOLD, the gavel strikes, then the camera swings to the winning table
     as confetti falls
-- **The auctioneer:** `static/models/auctioneer.glb`, if present, is a rigged
-  realistic character with Mixamo clips (see `static/models/README.md`).
-  Without it, a neutral stand-in mannequin acts out the same poses. The model
-  is git-ignored, because most models can't be redistributed.
+- **The auctioneer:** "Business_Male_01", a realistic businessman from
+  Microsoft's open-source Rocketbox avatars (MIT licence,
+  `static/models/rocketbox/`).
+  - **Animation:** his arms are posed in code (aimed at targets each frame).
+    He gestures while announcing, points at each bidding table, raises the
+    gavel and strikes it, with his fingers curled round the gavel.
+  - **Your own character:** a `static/models/auctioneer.glb` with Mixamo clips
+    (for example an exported MetaHuman) takes over if present. It's
+    git-ignored, since most such models can't be redistributed. See
+    `static/models/README.md`.
+  - **Fallback:** a stand-in mannequin covers the moment while he loads.
+- **Rendering:**
+  - Image-based lighting from a CC0 studio HDRI (`static/hdri/`, from Poly Haven).
+  - Soft shadows, with a sharper key light on the auctioneer.
+  - Skin and wool-suit sheen.
+  - Post-processing: ambient occlusion (N8AO), bloom, depth of field that
+    follows the shot, a vignette and filmic tone mapping.
+  - Phones and modest machines get bloom only. To override, set
+    `localStorage["ar-quality"]` to `high`, `low` or `off`.
 - **3D or Classic:** the header switch flips between the 3D hall and the
   classic layout, and each browser remembers its choice. Browsers without
   WebGL2, with "reduce motion" on, or with little memory start in Classic. If

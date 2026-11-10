@@ -1,6 +1,8 @@
-// The auctioneer. If static/models/auctioneer.glb exists (a realistic rigged
-// character with Mixamo clips), it is loaded and animated; until then a
-// neutral stand-in mannequin acts out the same poses.
+// The auctioneer, in order of preference:
+// 1. static/models/auctioneer.glb, your own rigged character with Mixamo clips
+//    (e.g. an exported MetaHuman), if present;
+// 2. the Rocketbox businessman (MIT, static/models/rocketbox/), posed in code;
+// 3. a neutral stand-in mannequin while either loads, or if both fail.
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -10,6 +12,7 @@ import {
 } from "three";
 import { GLTFLoader, type GLTF } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { AUCTIONEER } from "./layout";
+import { RocketboxAuctioneer, loadRocketbox } from "./Rocketbox";
 
 export type Pose = "idle" | "talk" | "point" | "raise" | "strike";
 
@@ -33,25 +36,34 @@ const CLIP_PATTERNS: Record<Pose, RegExp> = {
   strike: /hammer|strike|pound|knock/i,
 };
 
+type Loaded = { kind: "glb"; gltf: GLTF } | { kind: "rocketbox"; model: Object3D };
+
+async function loadAuctioneer(): Promise<Loaded | null> {
+  // A missing file comes back as the app's HTML page, so check the type first.
+  const head = await fetch(MODEL_URL, { method: "HEAD" }).catch(() => null);
+  const type = head?.headers.get("content-type") ?? "";
+  if (head?.ok && !type.includes("html")) {
+    const gltf = await new GLTFLoader().loadAsync(MODEL_URL).catch(() => null);
+    if (gltf) return { kind: "glb", gltf };
+  }
+  const model = await loadRocketbox().catch(() => null);
+  return model ? { kind: "rocketbox", model } : null;
+}
+
 export function Auctioneer(props: Props) {
-  const [model, setModel] = useState<GLTF | null>(null);
+  const [loaded, setLoaded] = useState<Loaded | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    // A missing file comes back as the app's HTML page, so check the type first.
-    fetch(MODEL_URL, { method: "HEAD" })
-      .then((res) => {
-        const type = res.headers.get("content-type") ?? "";
-        if (!res.ok || type.includes("html")) return;
-        new GLTFLoader().load(MODEL_URL, (gltf) => !cancelled && setModel(gltf), undefined, () => {});
-      })
-      .catch(() => {});
+    void loadAuctioneer().then((l) => !cancelled && setLoaded(l));
     return () => { cancelled = true; };
   }, []);
 
   return (
     <group position={AUCTIONEER}>
-      {model ? <ModelAuctioneer gltf={model} {...props} /> : <StandIn {...props} />}
+      {loaded?.kind === "glb" ? <ModelAuctioneer gltf={loaded.gltf} {...props} />
+        : loaded?.kind === "rocketbox" ? <RocketboxAuctioneer model={loaded.model} {...props} />
+        : <StandIn {...props} />}
     </group>
   );
 }

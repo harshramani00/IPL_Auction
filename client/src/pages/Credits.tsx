@@ -16,6 +16,12 @@ export function Credits() {
         <p>Auction lists, retentions and purses: Wikipedia and the BCCI's published auction list.</p>
         <p>{credits.logos}</p>
         <p>Sound effects are generated in your browser, and the auctioneer's voice is your device's speech synthesizer.</p>
+        <p>
+          The 3D auctioneer is "Business_Male_01" from the{" "}
+          <a href="https://github.com/microsoft/Microsoft-Rocketbox" target="_blank" rel="noreferrer">Microsoft Rocketbox</a>{" "}
+          avatar library (MIT licence). Studio lighting: "Studio Small 08" by Sergej Majboroda,{" "}
+          <a href="https://polyhaven.com/a/studio_small_08" target="_blank" rel="noreferrer">Poly Haven</a> (CC0).
+        </p>
       </section>
       <section className="room">
         <h3 className="credits-h">Player photos</h3>

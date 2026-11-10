@@ -10,6 +10,8 @@ import {
   type PerspectiveCamera, type SpotLight, Vector3,
 } from "three";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
+import { HDRLoader } from "three/examples/jsm/loaders/HDRLoader.js";
+import { Effects } from "./Effects";
 import { lotsById, team } from "../view";
 import type { AuctionEvent } from "../room/events";
 import { useAuctionEvents } from "../room/useAuctionEvents";
@@ -42,8 +44,13 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
   const clearLater = () => { timers.current.forEach(clearTimeout); timers.current = []; };
   useEffect(() => clearLater, []);
 
+  // Depth of field follows the shot: closer framings get a softer background.
+  const [focus, setFocus] = useState(() => ({ target: SHOTS.wide().target, bokeh: 0 }));
   const go = (next: Shot, cut = false) => {
-    shot.current = reducedMotion ? { ...SHOTS.wide(), cut: false } : { ...next, cut };
+    const sh = reducedMotion ? SHOTS.wide() : next;
+    shot.current = { ...sh, cut: reducedMotion ? false : cut };
+    const dist = sh.position.distanceTo(sh.target);
+    setFocus({ target: sh.target, bokeh: dist < 5 ? 2.4 : dist < 7.5 ? 1.2 : 0 });
   };
 
   useAuctionEvents(s, mySeat, serverNow, (e: AuctionEvent) => {
@@ -105,6 +112,18 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
     }
   });
 
+  // Development only: window.__hall.shot("auctioneer") / .pose("raise") for tuning shots and poses.
+  useEffect(() => {
+    if (!import.meta.env.DEV) return;
+    (window as unknown as { __hall: unknown }).__hall = {
+      shot: (name: "wide" | "auctioneer") => go(SHOTS[name]()),
+      view: (p: [number, number, number], t: [number, number, number]) =>
+        go({ position: new Vector3(...p), target: new Vector3(...t) }, true),
+      pose: (p: Pose) => { setPose(p); if (p === "strike") setStrikeKey((k) => k + 1); },
+      point: (id: TeamId) => { setPointAt(tableOf(id).position); setPose("point"); },
+    };
+  });
+
   // Captions fade after a few seconds.
   useEffect(() => {
     if (!caption) return;
@@ -130,7 +149,7 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
   return (
     <div className="hall">
       <Canvas
-        shadows
+        shadows="soft"
         dpr={[1, 1.75]}
         // near 0.3 m (nothing comes closer) keeps depth precision fine enough that thin layers don't flicker.
         camera={{ fov: 38, near: 0.3, far: 80, position: SHOTS.wide().position.toArray() }}
@@ -149,6 +168,7 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
         <Auctioneer pose={pose} strikeKey={strikeKey} pointAt={pointAt} />
         {burst && <Confetti key={burst.key} team={burst.team} />}
         <CameraRig shot={shot} drift={!reducedMotion} />
+        <Effects focus={focus.target} bokeh={focus.bokeh} />
       </Canvas>
       {caption && (
         <div className="hall-caption" aria-live="polite">
@@ -160,15 +180,29 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
   );
 }
 
-/** Image-based lighting from three's procedural studio room: realistic reflections, nothing downloaded. */
+/**
+ * Image-based lighting for realistic skin and fabric: a CC0 studio HDRI from
+ * Poly Haven (static/hdri), with three's procedural studio room as a fallback.
+ */
 function Environment() {
   const { gl, scene } = useThree();
   useLayoutEffect(() => {
     const pmrem = new PMREMGenerator(gl);
-    const env = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+    let env = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
     scene.environment = env;
     scene.environmentIntensity = 0.32;
+    let disposed = false;
+    new HDRLoader().load("/hdri/studio_small_08_1k.hdr", (hdr) => {
+      if (disposed) return;
+      const studio = pmrem.fromEquirectangular(hdr).texture;
+      hdr.dispose();
+      env.dispose();
+      env = studio;
+      scene.environment = studio;
+      scene.environmentIntensity = 0.42;
+    }, undefined, () => { /* keep the procedural room */ });
     return () => {
+      disposed = true;
       scene.environment = null;
       env.dispose();
       pmrem.dispose();
@@ -215,8 +249,11 @@ function Lights({ mood, lead }: { mood: Mood; lead: TeamId | null }) {
       <directionalLight position={[-6, 9, 8]} intensity={0.55} color="#c9c4ff" castShadow
         shadow-mapSize={[1024, 1024]} shadow-camera-left={-12} shadow-camera-right={12}
         shadow-camera-top={12} shadow-camera-bottom={-12} />
+      {/* Key light on the auctioneer: sharper shadows here, where faces are seen up close. */}
       <spotLight ref={key} position={[0.4, 7.8, 1.2]} angle={0.33} penumbra={0.55} intensity={260}
-        castShadow shadow-mapSize={[1024, 1024]} />
+        castShadow shadow-mapSize={[2048, 2048]} shadow-bias={-0.0004} shadow-normalBias={0.02} />
+      {/* Soft fill from the front so the face isn't lit only from above. */}
+      <pointLight position={[0.8, 2.6, -1.6]} color="#ffe7cf" intensity={6} distance={6} />
       <spotLight ref={leadSpot} angle={0.28} penumbra={0.6} intensity={0} />
       {/* Glow off the LED screen and the gold stage ring */}
       <pointLight position={[0, 3.6, -5.6]} color="#7d70ff" intensity={14} distance={10} />
