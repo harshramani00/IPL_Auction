@@ -19,6 +19,8 @@ export interface RoomCtx {
   setActiveTeam: (t: TeamId) => void;
   /** Bid as `team` (default: the active team) at the next amount. */
   bid: (team?: TeamId) => void;
+  /** Skip the current player as `team` (default: the active team). */
+  skip: (team?: TeamId) => void;
   setName: (name: string) => Promise<void>;
 }
 
@@ -43,7 +45,16 @@ export function bidBlock(s: Snapshot, seat: number | null, team: TeamId | null, 
   }
   if (!team) return "You have no teams in this game";
   if (s.lead?.teamId === team) return `${team} holds the bid`;
+  if (s.skipped.includes(team)) return `${team} skipped this player`;
   return teamBlock(s.teams[team], s.lot, s.nextAmount);
+}
+
+/** Why `team` can't skip right now, or null. */
+export function skipBlock(s: Snapshot, seat: number | null, team: TeamId | null): string | null {
+  if (!seat || s.phase !== "live" || !s.lot || !team) return "Nothing to skip right now";
+  if (s.lead?.teamId === team) return `${team} holds the bid`;
+  if (s.skipped.includes(team)) return `${team} skipped this player`;
+  return null;
 }
 
 export const bidLabel = (s: Snapshot, team: TeamId | null) =>

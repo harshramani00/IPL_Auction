@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 import {
   BID_MS, OPEN_MS, RESULT_MS,
-  advance, bid, capFor, claim, createRoom, incrementFor, join, leave, nextAmount, nextWake,
-  pause, release, reset, start, startProblems, teamsOf, updateSettings,
+  advance, aiTurn, bid, capFor, claim, createRoom, incrementFor, join, leave, nextAmount, nextWake,
+  pause, release, reset, skip, start, startProblems, teamsOf, updateSettings,
   type RoomState,
 } from "../src/index.js";
 import { T0, lot, player, seq, testData, users } from "./helpers.js";
@@ -196,6 +196,69 @@ describe("clock and hammer", () => {
     expect(pause(s, u2.id, T0 + 100_000).ok).toBe(true);
     expect(s.deadline).toBe(T0 + 100_000 + BID_MS - 3000);
     expect(s.phase).toBe("live");
+  });
+});
+
+describe("skip", () => {
+  /** MI (P1) and CSK (P2) in a room without AI, so only the two players decide. */
+  const noAi = () => {
+    const s = liveRoom();
+    s.aiEnabled = false;
+    return s;
+  };
+
+  it("only your own teams, never the leader, and only once; a skipped team can't bid", () => {
+    const s = noAi();
+    expect(skip(s, u1.id, "CSK", T0)).toEqual({ ok: false, reason: "You can only skip for your own teams" });
+    bid(s, u1.id, "MI", 200, T0);
+    expect(skip(s, u1.id, "MI", T0)).toEqual({ ok: false, reason: "MI holds the bid" });
+    pause(s, u1.id, T0);
+    expect(skip(s, u2.id, "CSK", T0)).toEqual({ ok: false, reason: "The auction is paused" });
+  });
+
+  it("a skipped team is out of that lot", () => {
+    const s = liveRoom(); // AI teams still in, so the lot stays open
+    expect(skip(s, u2.id, "CSK", T0).ok).toBe(true);
+    expect(skip(s, u2.id, "CSK", T0)).toEqual({ ok: false, reason: "CSK already skipped this player" });
+    expect(bid(s, u2.id, "CSK", 200, T0)).toEqual({ ok: false, reason: "CSK skipped this player" });
+    expect(s.phase).toBe("live");
+  });
+
+  it("when everyone else skips, the top bid wins straight away", () => {
+    const s = noAi();
+    bid(s, u1.id, "MI", 200, T0 + 1000);
+    expect(skip(s, u2.id, "CSK", T0 + 2000).ok).toBe(true);
+    expect(s.phase).toBe("sold");
+    expect(s.outcome).toMatchObject({ status: "sold", teamId: "MI", amount: 200 });
+    expect(s.resultUntil).toBe(T0 + 2000 + RESULT_MS);
+    advance(s, T0 + 2000 + RESULT_MS, rng);
+    expect(s.lotIndex).toBe(1);
+    expect(s.skipped).toEqual([]); // a fresh lot starts with nobody out
+  });
+
+  it("when everyone skips with no bid, the player goes unsold", () => {
+    const s = noAi();
+    skip(s, u1.id, "MI", T0);
+    expect(s.phase).toBe("live");
+    skip(s, u2.id, "CSK", T0);
+    expect(s.outcome).toMatchObject({ status: "unsold", lotId: 1 });
+  });
+
+  it("teams that can't afford the next bid count as out", () => {
+    const s = noAi();
+    s.teams.CSK.purse = 210; // can't pay the next 220 L
+    bid(s, u1.id, "MI", 200, T0);
+    expect(s.outcome).toMatchObject({ status: "sold", teamId: "MI", amount: 200 });
+  });
+
+  it("AI teams priced out of a lot skip it, which can bring the hammer down", () => {
+    const s = liveRoom();
+    bid(s, u1.id, "MI", 200, T0);
+    skip(s, u2.id, "CSK", T0);
+    expect(s.phase).toBe("live"); // the AI hasn't decided yet
+    s.aiValues = {}; // nobody values him
+    expect(aiTurn(s, T0 + 500, rng)).toBe(true);
+    expect(s.outcome).toMatchObject({ status: "sold", teamId: "MI", amount: 200 });
   });
 });
 

@@ -2,7 +2,7 @@
 // (and a random source where needed), changes the state in place and says
 // whether the request was allowed. No I/O, no timers: the server owns the
 // clock and calls `advance` when `nextWake` comes due.
-import { drawValuations, pickAiBid } from "./ai.js";
+import { aiWilling, drawValuations, pickAiBid } from "./ai.js";
 import { BID_MS, DEFAULT_SETTINGS, MAX_SEATS, OPEN_MS, RESULT_MS } from "./constants.js";
 import { teamBlock } from "./limits.js";
 import { nextAmount } from "./money.js";
@@ -34,6 +34,7 @@ export function createRoom(id: string): RoomState {
     lotIndex: 0,
     lead: null,
     bids: [],
+    skipped: [],
     deadline: null,
     windowMs: OPEN_MS,
     pausedLeft: null,
@@ -42,6 +43,7 @@ export function createRoom(id: string): RoomState {
     results: [],
     bidSeq: 0,
     aiTeams: [],
+    aiEnabled: true,
     aiValues: {},
     market: {},
   };
@@ -190,6 +192,7 @@ function openLot(s: RoomState, now: number, rng: Rng): void {
   s.phase = "live";
   s.lead = null;
   s.bids = [];
+  s.skipped = [];
   s.outcome = null;
   s.resultUntil = null;
   s.pausedLeft = null;
@@ -207,6 +210,7 @@ export function validateBid(s: RoomState, userId: string, teamId: TeamId, amount
   if (s.owners[teamId] !== seat) return no("You can only bid for your own teams");
   // A team can't raise its own top bid; a player's other teams may still bid.
   if (s.lead?.teamId === teamId) return no(`${teamId} already has the top bid`);
+  if (s.skipped.includes(teamId)) return no(`${teamId} skipped this player`);
   if (amount !== nextAmount(lot, s.lead)) return no("Someone got in first at that price. Bid again");
   const block = teamBlock(s.teams[teamId], lot, amount);
   return block ? no(block) : OK;
@@ -222,17 +226,56 @@ function applyBid(s: RoomState, teamId: TeamId, amount: number, bySeat: number |
 
 export function bid(s: RoomState, userId: string, teamId: TeamId, amount: number, now: number): Check {
   const check = validateBid(s, userId, teamId, amount);
-  if (check.ok) applyBid(s, teamId, amount, seatOf(s, userId), now);
+  if (check.ok) {
+    applyBid(s, teamId, amount, seatOf(s, userId), now);
+    // The new price may have put every other team out of reach.
+    if (everyonePassed(s)) resolveLot(s, now);
+  }
   return check;
 }
 
-/** One AI decision; the server calls this every 0.7–2.7 s while live. */
+/** Drop out of the current lot. Once every team but the leader is out, the hammer falls. */
+export function skip(s: RoomState, userId: string, teamId: TeamId, now: number): Check {
+  const seat = seatOf(s, userId);
+  if (seat === null) return no("Join the auction to play");
+  if (s.phase === "paused") return no("The auction is paused");
+  if (s.phase !== "live" || !currentLot(s)) return no("Nothing to skip right now");
+  if (s.owners[teamId] !== seat) return no("You can only skip for your own teams");
+  if (s.lead?.teamId === teamId) return no(`${teamId} holds the bid`);
+  if (s.skipped.includes(teamId)) return no(`${teamId} already skipped this player`);
+  s.skipped.push(teamId);
+  if (everyonePassed(s)) resolveLot(s, now);
+  return OK;
+}
+
+/** True when no team but the leader can still bid: each has skipped, or can't afford or fit the player. */
+export function everyonePassed(s: RoomState): boolean {
+  const lot = currentLot(s);
+  if (!lot) return false;
+  const amount = nextAmount(lot, s.lead);
+  return TEAM_IDS.every((t) =>
+    t === s.lead?.teamId ||
+    s.skipped.includes(t) ||
+    (!s.aiEnabled && s.aiTeams.includes(t)) ||
+    teamBlock(s.teams[t], lot, amount) !== null);
+}
+
+/** One AI decision; the server calls this every 0.7–2.7 s while live. AI teams priced out skip. */
 export function aiTurn(s: RoomState, now: number, rng: Rng): boolean {
   const lot = currentLot(s);
   if (s.phase !== "live" || !lot) return false;
+  const amount = nextAmount(lot, s.lead);
+  const priced = s.aiTeams.filter((t) =>
+    t !== s.lead?.teamId && !s.skipped.includes(t) && !aiWilling(s, lot, t, amount));
+  s.skipped.push(...priced);
+  if (everyonePassed(s)) {
+    resolveLot(s, now);
+    return true;
+  }
   const choice = pickAiBid(s, lot, rng);
-  if (!choice) return false;
+  if (!choice) return priced.length > 0;
   applyBid(s, choice.teamId, choice.amount, null, now);
+  if (everyonePassed(s)) resolveLot(s, now);
   return true;
 }
 
@@ -261,6 +304,7 @@ export function reset(s: RoomState, userId: string): Check {
   const fresh = createRoom(s.id);
   Object.assign(s, fresh, {
     seats: s.seats, owners: s.owners, claimedAt: s.claimedAt, claimSeq: s.claimSeq, settings: s.settings,
+    aiEnabled: s.aiEnabled,
   });
   return OK;
 }

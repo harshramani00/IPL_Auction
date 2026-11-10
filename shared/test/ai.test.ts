@@ -114,7 +114,9 @@ describe("AI valuations anchored on the real auction", () => {
     s.teams.GT = { id: "GT", purse: 500, squad: Array(10).fill(player("x")) }; // reserve 14 x 30 L = 420 L
     s.aiTeams = ["GT"];
     s.aiValues = { GT: 10_000 };
-    expect(aiTurn(s, T0, seq(0))).toBe(false); // 200 L would leave less than the reserve
+    expect(aiTurn(s, T0, seq(0))).toBe(true); // 200 L would leave less than the reserve, so GT skips
+    expect(s.lead).toBeNull();
+    expect(s.skipped).toEqual(["GT"]);
   });
 
   it("plays the real Quick auction about as the real one went", () => {

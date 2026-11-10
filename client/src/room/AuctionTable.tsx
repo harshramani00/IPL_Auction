@@ -37,8 +37,9 @@ export function AuctionTable() {
           const st = s.teams[t.id];
           const owner = s.owners[t.id];
           const leading = !lobby && s.lead?.teamId === t.id;
-          const out = s.phase === "live" && !leading && !!s.lot && s.nextAmount !== null &&
-            teamBlock(st, s.lot, s.nextAmount) !== null;
+          const skipped = s.phase === "live" && s.skipped.includes(t.id);
+          const out = skipped || (s.phase === "live" && !leading && !!s.lot && s.nextAmount !== null &&
+            teamBlock(st, s.lot, s.nextAmount) !== null);
           const usable = !!mySeat && (lobby ? !owner || owner === mySeat : owner === mySeat);
           const cls = ["seat",
             leading && "lead", leading && "bump",
@@ -54,7 +55,7 @@ export function AuctionTable() {
                 <Crest id={t.id} className="ph" /><span className="ps" />
               </button>
               <div className="sname">{t.city}</div>
-              <div className="spurse">{lobby ? "" : fmt(st.purse)}</div>
+              <div className="spurse">{lobby ? "" : skipped ? "Skipped" : fmt(st.purse)}</div>
               <span className="otag">{owner ? ownerLabel(s, owner) : lobby ? "Free" : "AI"}</span>
             </div>
           );

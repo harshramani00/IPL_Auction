@@ -16,9 +16,9 @@ test("the 3D hall renders, captions each moment and falls back to classic on req
   await p.page.getByRole("button", { name: "Start the auction" }).click();
   await expect(p.page.locator(".hall-caption")).toContainText("Welcome to the auction");
 
+  // Alone and with the AI off, nobody else is left in, so the bid wins at once.
   await p.page.locator(".bidbtn").click();
-  await expect(p.page.locator(".hall-caption")).toContainText("2 crore, Kolkata.");
-  await expect(p.page.locator(".bp-team")).toContainText("Kolkata Knight Riders");
+  await expect(p.page.locator(".hall-caption")).toContainText("Sold! Devon Conway, to Kolkata Knight Riders");
 
   // The view toggle swaps to the classic layout and remembers it.
   await p.page.getByRole("button", { name: "Classic" }).click();

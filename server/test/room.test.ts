@@ -45,6 +45,25 @@ describe("Room", () => {
     expect(r.last()).toMatchObject({ phase: "live", lotIndex: 1, lead: null });
   });
 
+  it("sells as soon as everyone else skips, then opens the next lot on schedule", () => {
+    const r = startTwoPlayer();
+    const lot = r.last().lot!;
+    r.send(p1, { type: "bid", teamId: "KKR", amount: lot.base });
+    vi.advanceTimersByTime(2000);
+    expect(r.send(p2, { type: "skip", teamId: "CSK" })).toEqual({ ok: true });
+    expect(r.last()).toMatchObject({ phase: "sold", outcome: { status: "sold", teamId: "KKR", amount: lot.base } });
+    vi.advanceTimersByTime(RESULT_MS);
+    expect(r.last()).toMatchObject({ phase: "live", lotIndex: 1, skipped: [] });
+  });
+
+  it("marks a lot unsold when every team skips it", () => {
+    const r = startTwoPlayer();
+    r.send(p1, { type: "skip", teamId: "KKR" });
+    expect(r.last()).toMatchObject({ phase: "live", skipped: ["KKR"] });
+    r.send(p2, { type: "skip", teamId: "CSK" });
+    expect(r.last().outcome).toMatchObject({ status: "unsold" });
+  });
+
   it("marks an unbid lot unsold after the 45 s opening window", () => {
     const r = startTwoPlayer();
     vi.advanceTimersByTime(OPEN_MS);

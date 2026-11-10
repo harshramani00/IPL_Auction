@@ -2,7 +2,7 @@ import type { Request, TeamId, User } from "@auction/shared";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AuctionTable } from "../room/AuctionTable";
 import { Console } from "../room/Console";
-import { RoomContext, bidBlock, teamsOf, type RoomCtx } from "../room/context";
+import { RoomContext, bidBlock, skipBlock, teamsOf, type RoomCtx } from "../room/context";
 import { Header, Strip } from "../room/Header";
 import { PlayersPanel } from "../room/PlayersPanel";
 import { ResultsTicker, Rules } from "../room/Results";
@@ -51,12 +51,21 @@ export function RoomPage({ roomId, sessionKey, onName }: Props) {
     void act({ type: "bid", teamId: t!, amount: s.nextAmount! });
   }, [s, active, mySeat, pending, act, toast]);
 
-  // Keyboard: B bids with the active team, P pauses or resumes.
+  const skip = useCallback((teamId?: TeamId) => {
+    if (!s || pending) return;
+    const t = teamId ?? active;
+    const block = skipBlock(s, mySeat, t);
+    if (block) { toast(block); return; }
+    void act({ type: "skip", teamId: t! });
+  }, [s, active, mySeat, pending, act, toast]);
+
+  // Keyboard: B bids with the active team, S skips, P pauses or resumes.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const el = e.target as HTMLElement;
       if (e.metaKey || e.ctrlKey || e.altKey || el.closest("input, textarea, select")) return;
       if (e.key === "b" || e.key === "B") { e.preventDefault(); bid(); }
+      if ((e.key === "s" || e.key === "S") && mySeat && s?.phase === "live") { e.preventDefault(); skip(); }
       if ((e.key === "p" || e.key === "P") && mySeat && s && (s.phase === "live" || s.phase === "paused")) {
         e.preventDefault();
         void act({ type: "pause" });
@@ -64,7 +73,7 @@ export function RoomPage({ roomId, sessionKey, onName }: Props) {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [bid, act, mySeat, s]);
+  }, [bid, skip, act, mySeat, s]);
 
   if (conn.error && !s) {
     return (
@@ -78,7 +87,7 @@ export function RoomPage({ roomId, sessionKey, onName }: Props) {
 
   const ctx: RoomCtx = {
     s, me: user, mySeat, myTeams, pending, serverNow, act, toast,
-    activeTeam: active, setActiveTeam, bid,
+    activeTeam: active, setActiveTeam, bid, skip,
     setName: async (name) => { await onName(name); },
   };
 

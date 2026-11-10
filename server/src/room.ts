@@ -1,7 +1,7 @@
 // One auction room: the authoritative state plus the timers that drive it
 // (the hammer clock and the AI franchises). Every change ends in a broadcast.
 import {
-  advance, aiDelay, aiTurn, bid, claim, createRoom, join, leave, nextWake, pause, release,
+  advance, aiDelay, aiTurn, bid, skip, claim, createRoom, join, leave, nextWake, pause, release,
   reset, setConnected, snapshot, start, updateSettings,
   type Check, type GameData, type Request, type RoomState, type Rng, type Snapshot, type User,
 } from "@auction/shared";
@@ -38,6 +38,7 @@ export class Room {
 
   constructor(readonly id: string, private readonly opts: RoomOptions) {
     this.state = createRoom(id);
+    this.state.aiEnabled = opts.aiEnabled;
     this.clock = opts.clock ?? realClock;
     this.rng = opts.rng ?? Math.random;
     this.lastActive = this.clock.now();
@@ -61,6 +62,7 @@ export class Room {
       case "settings": result = updateSettings(s, user.id, req.settings); break;
       case "start": result = start(s, user.id, this.opts.data, now, this.rng); break;
       case "bid": result = bid(s, user.id, req.teamId, req.amount, now); break;
+      case "skip": result = skip(s, user.id, req.teamId, now); break;
       case "pause": result = pause(s, user.id, now); break;
       case "reset": result = reset(s, user.id); break;
     }

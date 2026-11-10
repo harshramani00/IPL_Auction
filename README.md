@@ -158,6 +158,10 @@ friends, and don't make money from it.
    them at a time; a team can't raise its own top bid, but the player's other
    teams can bid against it. Squads cap at 25 players and 8 overseas,
    retained players included. Any player can pause.
+   A team can also **skip** a player, which takes it out of that lot. As
+   soon as every team except the top bidder has skipped (or can't afford or
+   fit him), the hammer falls: sold to the top bid, or unsold if nobody bid.
+   AI teams skip once the price passes their valuation.
 3. **Hammer.** At zero the player is SOLD to the top bid, or UNSOLD if there
    was no bid. The next lot opens 3.2 s later.
 4. **AI franchises.** Unclaimed teams are run by AI that bids every
@@ -264,7 +268,7 @@ session cookie; without one you're a spectator.
 
 | Direction | Event | Payload |
 |---|---|---|
-| client → server | `request` | `{ requestId, type, ... }`, where `type` is `join`, `leave`, `claim {teamId}`, `release {teamId}`, `settings {settings}`, `start`, `bid {teamId, amount}`, `pause` (toggles), or `reset` |
+| client → server | `request` | `{ requestId, type, ... }`, where `type` is `join`, `leave`, `claim {teamId}`, `release {teamId}`, `settings {settings}`, `start`, `bid {teamId, amount}`, `skip {teamId}`, `pause` (toggles), or `reset` |
 | server → client | `hello` | `{ user }`, once on connect |
 | server → client | `state` | the full public `Snapshot` (`shared/src/types.ts`) after every change |
 | server → client | `ack` | `{ requestId, ok, reason? }`, exactly one per request |

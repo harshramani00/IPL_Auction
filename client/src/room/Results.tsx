@@ -39,6 +39,7 @@ export function Rules() {
       <li><b>Real auction, your way.</b> The lots are the {gameData.lots.length} players from the December 2025 IPL auction, in the official set order. The lead picks a short or full list, and whether teams start with their real retained squads and purses or a fresh {fmt(gameData.freshPurse)} each.</li>
       <li><b>One team per bid.</b> Each bid is placed by one of your teams; pick it in your console or tap its paddle. A team can't raise its own top bid, but your other teams can bid against it.</li>
       <li><b>The hammer is automatic.</b> Every bid restarts a 45-second clock: "going once" at 10 seconds, "going twice" at 5, then the bails come off and the player is sold. No opening bid inside 45 seconds means unsold.</li>
+      <li><b>Skip to move on.</b> Not interested? Press Skip (or S) and that team is out of this player. Once every team except the top bidder has skipped, or can't afford or fit him, he's sold to the top bid at once, or goes unsold if nobody bid. AI teams skip once the price passes what they'd pay.</li>
       <li><b>Increments.</b> ₹5 L below ₹1 Cr, ₹10 L up to ₹2 Cr, ₹20 L up to ₹5 Cr, then ₹25 L. Squads max out at 25 players with 8 overseas, retained players included.</li>
     </ol>
   );

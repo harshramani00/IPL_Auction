@@ -71,15 +71,18 @@ export function aiReserve(team: TeamState): number {
 export const aiDelay = (rng: Rng) => uniform(rng, AI_MIN_DELAY_MS, AI_MAX_DELAY_MS);
 
 /** Pick an AI team to bid now, or null: not the leader, still values the lot, and can afford it with its reserve. */
+/** Whether AI team `t` would pay `amount` for this lot. Once false it stays false: prices only go up. */
+export function aiWilling(s: RoomState, lot: Lot, t: TeamId, amount: number): boolean {
+  const team = s.teams[t];
+  return (s.aiValues[t] ?? 0) >= amount &&
+    amount <= team.purse - aiReserve(team) &&
+    teamBlock(team, lot, amount) === null;
+}
+
 export function pickAiBid(s: RoomState, lot: Lot, rng: Rng): { teamId: TeamId; amount: number } | null {
   const amount = nextAmount(lot, s.lead);
-  const willing = s.aiTeams.filter((t) => {
-    const team = s.teams[t];
-    return s.lead?.teamId !== t &&
-      (s.aiValues[t] ?? 0) >= amount &&
-      amount <= team.purse - aiReserve(team) &&
-      teamBlock(team, lot, amount) === null;
-  });
+  const willing = s.aiTeams.filter((t) =>
+    s.lead?.teamId !== t && !s.skipped.includes(t) && aiWilling(s, lot, t, amount));
   if (!willing.length || rng() >= AI_BID_CHANCE) return null;
   return { teamId: willing[Math.floor(rng() * willing.length)]!, amount };
 }

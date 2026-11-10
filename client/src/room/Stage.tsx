@@ -162,6 +162,9 @@ function LiveBox({ lot }: { lot: Lot }) {
           </li>
         )) : <li className="empty">Waiting for a paddle to go up</li>}
       </ol>
+      {s.phase === "live" && s.skipped.length > 0 && (
+        <div className="skipped-line">Skipped: {s.skipped.join(", ")}</div>
+      )}
       {done && mySeat !== null && mySeat === s.leadSeat && (
         <button className="gold-btn" style={{ alignSelf: "flex-start" }} onClick={() => act({ type: "reset" })}>
           Run it again

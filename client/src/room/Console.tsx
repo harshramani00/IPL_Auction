@@ -1,14 +1,15 @@
 // Your console: only ever rendered for the viewer's own seat.
 import { OVERSEAS_MAX, SQUAD_MAX, overseasCount } from "@auction/shared";
 import { Crest, fmt, seatColor, teamVars } from "../view";
-import { bidBlock, bidLabel, useRoomCtx } from "./context";
+import { bidBlock, bidLabel, skipBlock, useRoomCtx } from "./context";
 
 export function Console() {
-  const { s, mySeat, myTeams, activeTeam, setActiveTeam, bid, pending } = useRoomCtx();
+  const { s, mySeat, myTeams, activeTeam, setActiveTeam, bid, skip, pending } = useRoomCtx();
   if (!mySeat) return null;
   const lobby = s.phase === "lobby";
   const active = activeTeam && myTeams.includes(activeTeam) ? activeTeam : myTeams[0] ?? null;
   const block = bidBlock(s, mySeat, active, pending === "bid");
+  const canSkip = !pending && skipBlock(s, mySeat, active) === null;
   const st = active ? s.teams[active] : null;
 
   return (
@@ -17,7 +18,7 @@ export function Console() {
         <span className="pbadge">P{mySeat}</span>
         <b>Your console</b>
         <span className="con-lbl" style={{ marginLeft: 6 }}>{myTeams.length} / {s.cap} teams</span>
-        {!lobby && <kbd title="Keyboard shortcuts: B to bid, P to pause">B · P</kbd>}
+        {!lobby && <kbd title="Keyboard shortcuts: B to bid, S to skip, P to pause">B · S · P</kbd>}
       </div>
       <div className="con-lbl">{lobby ? "Your teams · tap a paddle again to give it back" : "Bidding as"}</div>
       {myTeams.length ? (
@@ -26,6 +27,7 @@ export function Console() {
             <button key={id} className="tchip" style={teamVars(id)} aria-pressed={!lobby && id === active}
               onClick={() => !lobby && setActiveTeam(id)}>
               <Crest id={id} className="dot" />{id}
+              {s.phase === "live" && s.skipped.includes(id) && <span className="tskip">skipped</span>}
             </button>
           ))}
         </div>
@@ -45,14 +47,20 @@ export function Console() {
               <span>✈ <b>{overseasCount(st)}/{OVERSEAS_MAX}</b></span>
             </div>
           )}
-          <button className="bidbtn" style={active ? teamVars(active) : undefined} disabled={!!block}
-            onClick={() => bid(active ?? undefined)}>
-            {pending === "bid" ? "Sending…" : bidLabel(s, active)}
-          </button>
+          <div className="con-actions">
+            <button className="bidbtn" style={active ? teamVars(active) : undefined} disabled={!!block}
+              onClick={() => bid(active ?? undefined)}>
+              {pending === "bid" ? "Sending…" : bidLabel(s, active)}
+            </button>
+            <button className="skipbtn" disabled={!canSkip} onClick={() => skip(active ?? undefined)}
+              title={active ? `${active} sits this player out` : undefined}>
+              {pending === "skip" ? "…" : "Skip"}
+            </button>
+          </div>
         </>
       )}
       <div className="con-note">
-        {lobby ? (myTeams.length ? "Waiting for the auction to start." : "") : block ?? "Press B or tap your paddle to bid"}
+        {lobby ? (myTeams.length ? "Waiting for the auction to start." : "") : block ?? "Press B or tap your paddle to bid, S to skip"}
       </div>
     </section>
   );

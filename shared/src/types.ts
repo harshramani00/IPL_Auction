@@ -124,6 +124,8 @@ export interface RoomState {
   lotIndex: number;
   lead: Lead | null;
   bids: BidEntry[];
+  /** Teams that skipped the current lot; they can't bid on it again. */
+  skipped: TeamId[];
   deadline: number | null; // epoch ms
   windowMs: number;
   pausedLeft: number | null;
@@ -132,6 +134,8 @@ export interface RoomState {
   results: Outcome[];
   bidSeq: number;
   aiTeams: TeamId[];
+  /** False when the server runs without AI (tests): AI teams then count as skipping. */
+  aiEnabled: boolean;
   /** Hidden AI valuations for the current lot. Never sent to clients. */
   aiValues: Partial<Record<TeamId, number>>;
   /** Real auction prices for this game's lots (server-only, see MarketPrices). */
@@ -155,6 +159,7 @@ export interface Snapshot {
   lotCount: number;
   lead: Lead | null;
   bids: BidEntry[]; // last 5, newest first
+  skipped: TeamId[];
   nextAmount: number | null;
   deadline: number | null;
   windowMs: number;
@@ -181,6 +186,7 @@ export type Request =
   | { type: "settings"; settings: Partial<Settings> }
   | { type: "start" }
   | { type: "bid"; teamId: TeamId; amount: number }
+  | { type: "skip"; teamId: TeamId }
   | { type: "pause" }
   | { type: "reset" };
 

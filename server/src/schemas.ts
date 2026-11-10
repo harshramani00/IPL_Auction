@@ -20,6 +20,7 @@ export const requestSchema = z.discriminatedUnion("type", [
   }),
   z.object({ requestId, type: z.literal("start") }),
   z.object({ requestId, type: z.literal("bid"), teamId, amount: z.number().int().positive().max(1_000_000) }),
+  z.object({ requestId, type: z.literal("skip"), teamId }),
   z.object({ requestId, type: z.literal("pause") }),
   z.object({ requestId, type: z.literal("reset") }),
 ]);
