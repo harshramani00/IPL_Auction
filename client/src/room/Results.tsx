@@ -5,10 +5,19 @@ import { useRoomCtx } from "./context";
 export function ResultsTicker() {
   const { s } = useRoomCtx();
   const sold = s.results.filter((r) => r.status === "sold").length;
-  const newest = s.results.slice().reverse();
   return (
     <aside className="ticker" aria-label="Results">
       <div className="sec-h"><h3>Results</h3><span className="tally">{sold} sold · {s.results.length - sold} unsold</span></div>
+      <ResultsList />
+    </aside>
+  );
+}
+
+/** Every lot so far, newest first. */
+export function ResultsList() {
+  const { s } = useRoomCtx();
+  const newest = s.results.slice().reverse();
+  return (
       <ol className="results">
         {newest.length ? newest.map((r) => r.status === "sold" ? (
           <li key={r.lotId} className="res">
@@ -27,7 +36,6 @@ export function ResultsTicker() {
           </li>
         )) : <li className="res-empty">Sold and unsold players land here as the hammer falls.</li>}
       </ol>
-    </aside>
   );
 }
 

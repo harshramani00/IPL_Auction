@@ -3,8 +3,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AuctionTable } from "../room/AuctionTable";
 import { Console } from "../room/Console";
 import { RoomContext, bidBlock, skipBlock, teamsOf, type RoomCtx } from "../room/context";
-import { Header, Strip } from "../room/Header";
+import { GameBar, Header, Strip } from "../room/Header";
 import { PlayersPanel } from "../room/PlayersPanel";
+import { SidePanel } from "../room/SidePanel";
 import { ResultsTicker, Rules } from "../room/Results";
 import { Stage } from "../room/Stage";
 import { TeamsPanel } from "../room/TeamsPanel";
@@ -91,28 +92,38 @@ export function RoomPage({ roomId, sessionKey, onName }: Props) {
     setName: async (name) => { await onName(name); },
   };
 
+  const notice = (conn.error || !conn.connected) && (
+    <div className="notice">{conn.error ?? "Reconnecting to the room…"}</div>
+  );
+
+  // Once the hammer is live, everything fits one screen: no page scrolling while
+  // you play. The Stage keeps the same place in the tree in both layouts, so
+  // the 3D hall isn't torn down and rebuilt when the auction starts.
+  const game = s.phase !== "lobby";
   return (
     <RoomContext.Provider value={ctx}>
-      <div className="wrap">
-        <Header />
-        <Strip />
-        {(conn.error || !conn.connected) && (
-          <div className="notice">{conn.error ?? "Reconnecting to the room…"}</div>
-        )}
-        <PlayersPanel />
-        <div className="main">
-          <div className="col">
+      <div className={`wrap${game ? " game" : ""}`}>
+        {game ? <GameBar /> : <><Header /><Strip /></>}
+        {notice}
+        {!game && <PlayersPanel />}
+        <div className={game ? "game-body" : "main"}>
+          <div className={game ? "game-stage" : "col"}>
             <Stage />
-            <Console />
-            <AuctionTable />
-            <TeamsPanel />
-            <Rules />
-            <p className="hint footer-links">
-              Share this room: <b>{location.origin}/r/{s.roomId}</b> · <Link to="/credits">Photo &amp; data credits</Link>
-            </p>
+            {!game && (
+              <>
+                <Console />
+                <AuctionTable />
+                <TeamsPanel />
+                <Rules />
+                <p className="hint footer-links">
+                  Share this room: <b>{location.origin}/r/{s.roomId}</b> · <Link to="/credits">Photo &amp; data credits</Link>
+                </p>
+              </>
+            )}
           </div>
-          <ResultsTicker />
+          {game ? <SidePanel /> : <ResultsTicker />}
         </div>
+        {game && <Console dock />}
       </div>
       {toastMsg && <div className="toast" role="status">{toastMsg}</div>}
     </RoomContext.Provider>

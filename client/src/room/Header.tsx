@@ -1,9 +1,12 @@
 import { gameData } from "@auction/shared/data";
-import { cloneElement, useSyncExternalStore } from "react";
+import { MAX_SEATS } from "@auction/shared";
+import { cloneElement, useEffect, useState, useSyncExternalStore } from "react";
+import { Link } from "../router";
 import { sound } from "../sound";
 import { setViewMode, useViewMode } from "../viewMode";
-import { useRoomCtx } from "./context";
-import { fmt, lotsById } from "../view";
+import { teamsOf, useRoomCtx } from "./context";
+import { Rules } from "./Results";
+import { fmt, lotsById, seatColor } from "../view";
 
 export function Header() {
   const { s, mySeat, me } = useRoomCtx();
@@ -37,6 +40,89 @@ export function Header() {
   );
 }
 
+/**
+ * The game's one-line top bar while the auction runs: brand and lot, the
+ * players, and the controls. Replaces the header, ticker and players panel.
+ */
+export function GameBar() {
+  const { s, mySeat, me, act } = useRoomCtx();
+  const [rules, setRules] = useState(false);
+  const [armed, setArmed] = useState(false);
+  const ph = s.phase;
+  const isLead = mySeat !== null && mySeat === s.leadSeat;
+  const seated = s.seats.filter((p) => p !== null);
+  useEffect(() => {
+    if (!armed) return;
+    const t = setTimeout(() => setArmed(false), 3000);
+    return () => clearTimeout(t);
+  }, [armed]);
+  return (
+    <header className="bar game-bar">
+      <div className="brand">
+        <span className="mark has-img"><img src="/logos/IPL.svg" alt="IPL" /></span>
+        <div>
+          <h1>Auction Room</h1>
+          <div className="sub">
+            <span className={`live${ph === "done" ? " off" : ""}`}>
+              <i />{ph === "done" ? "Finished" : ph === "paused" ? "Paused" : "Live"}
+            </span>
+            <span className="gb-room">Room {s.roomId} · </span><b>Lot {Math.min(s.lotIndex + 1, s.lotCount)} / {s.lotCount}</b>
+          </div>
+        </div>
+      </div>
+      <div className="gb-players" aria-label={`Players ${seated.length} of ${MAX_SEATS}`}>
+        {seated.map((p) => (
+          <span key={p.seat} className={`pchip mini${p.userId === me?.id ? " me" : ""}${p.connected ? "" : " away"}`}
+            style={{ "--pc": seatColor(p.seat) } as React.CSSProperties}
+            title={`${p.name}: ${teamsOf(s, p.seat).join(", ") || "no teams"}${p.connected ? "" : " (away)"}`}>
+            <span className="pbadge">P{p.seat}</span>{p.name}{p.userId === me?.id ? " (you)" : ""}
+          </span>
+        ))}
+      </div>
+      <div className="bar-r">
+        {mySeat && (ph === "live" || ph === "paused") && (
+          <button className="ghost" onClick={() => act({ type: "pause" })}>{ph === "paused" ? "Resume" : "Pause"}</button>
+        )}
+        {isLead && (
+          <button className={`ghost${armed ? " danger" : ""}`}
+            onClick={() => { if (armed) { setArmed(false); void act({ type: "reset" }); } else setArmed(true); }}>
+            {armed ? "Tap again" : "Reset"}
+          </button>
+        )}
+        <ViewToggle />
+        <SoundToggle compact />
+        <button className="ghost icon-btn" aria-label="Rules and room link" title="Rules" onClick={() => setRules(true)}>?</button>
+        <span className="conn">{mySeat ? <>P{mySeat} · {me?.name}</> : me ? <>Watching · join next game</> : <>Watching</>}</span>
+      </div>
+      {rules && <RulesDialog onClose={() => setRules(false)} />}
+    </header>
+  );
+}
+
+function RulesDialog({ onClose }: { onClose: () => void }) {
+  const { s } = useRoomCtx();
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+  return (
+    <div className="modal-back" onClick={onClose}>
+      <div className="modal" role="dialog" aria-modal="true" aria-label="Rules" onClick={(e) => e.stopPropagation()}>
+        <div className="sec-h">
+          <h3>How it works</h3>
+          <button className="ghost icon-btn" aria-label="Close" onClick={onClose}>✕</button>
+        </div>
+        <Rules />
+        <p className="hint">
+          Keys: <b>B</b> bid · <b>S</b> skip · <b>P</b> pause. Share this room: <b>{location.origin}/r/{s.roomId}</b> ·{" "}
+          <Link to="/credits">Photo &amp; data credits</Link>
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function ViewToggle() {
   const view = useViewMode();
   return (
@@ -47,12 +133,13 @@ function ViewToggle() {
   );
 }
 
-function SoundToggle() {
+function SoundToggle({ compact = false }: { compact?: boolean }) {
   const on = useSyncExternalStore((fn) => sound.subscribe(fn), () => sound.enabled);
   return (
-    <button className="ghost sound-toggle" aria-pressed={on} title="Auctioneer voice and sound effects"
+    <button className={`ghost sound-toggle${compact ? " icon-btn" : ""}`} aria-pressed={on}
+      title="Auctioneer voice and sound effects" aria-label={on ? "Sound on" : "Sound off"}
       onClick={() => sound.setEnabled(!on)}>
-      {on ? "🔊 Sound on" : "🔇 Sound off"}
+      {compact ? (on ? "🔊" : "🔇") : on ? "🔊 Sound on" : "🔇 Sound off"}
     </button>
   );
 }

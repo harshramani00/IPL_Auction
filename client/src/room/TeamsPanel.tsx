@@ -76,7 +76,7 @@ export function TeamsPanel() {
   );
 }
 
-function SquadCard({ id, big = false }: { id: TeamId; big?: boolean }) {
+export function SquadCard({ id, big = false }: { id: TeamId; big?: boolean }) {
   const { s, mySeat } = useRoomCtx();
   const t = team(id);
   const st = s.teams[id];

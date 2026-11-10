@@ -25,27 +25,37 @@ export function Stage() {
   const sold = s.results.filter((r) => r.status === "sold").length;
   const threeD = view === "3d";
 
+  // Once the auction runs, the stage fills the game screen: in 3D the bid
+  // details sit over the hall as a lower third instead of below it.
+  const game = !lobby;
   return (
-    <section className="stage" aria-label="Player on the block">
+    <section className={`stage${game ? " in-game" : ""}`} aria-label="Player on the block">
       <div className="set-banner">
         <span>{lobby ? `Lobby · ${lot.set}` : done ? "Auction complete" : lot.set}</span>
         <span>{lobby ? "Up first" : done ? `${sold} sold` : "On the block"}</span>
       </div>
       {threeD && (
-        <HallBoundary>
-          <Suspense fallback={<div className="hall hall-loading">Setting up the auction hall…</div>}>
-            <Hall3D s={s} mySeat={mySeat} serverNow={serverNow} reducedMotion={prefersReducedMotion()} />
-          </Suspense>
-        </HallBoundary>
+        <div className="stage-view">
+          <HallBoundary>
+            <Suspense fallback={<div className="hall hall-loading">Setting up the auction hall…</div>}>
+              <Hall3D s={s} mySeat={mySeat} serverNow={serverNow} reducedMotion={prefersReducedMotion()} />
+            </Suspense>
+          </HallBoundary>
+          {game && <div className="lower-third"><LiveBox lot={lot} /></div>}
+        </div>
       )}
-      {/* In 3D the hall's big screen shows the player, so the card steps aside. */}
-      <div className={`stage-grid${threeD ? " is-3d" : ""}`}>
-        {!threeD && <PlayerCard lot={shown} />}
-        <div className="bidpanel">{lobby ? <LobbyBox /> : <LiveBox lot={lot} />}</div>
-      </div>
+      {!(threeD && game) && (
+        <div className="stage-scroll">
+          {/* In 3D the hall's big screen shows the player, so the card steps aside. */}
+          <div className={`stage-grid${threeD ? " is-3d" : ""}`}>
+            {!threeD && <PlayerCard lot={shown} />}
+            <div className="bidpanel">{lobby ? <LobbyBox /> : <LiveBox lot={lot} />}</div>
+          </div>
+          {/* In 3D the stats are on the hall's screen. */}
+          {!threeD && <StatsTable lot={shown} />}
+        </div>
+      )}
       <SoldBanner confetti={!threeD} />
-      {/* In 3D the stats are on the hall's screen. */}
-      {!threeD && <StatsTable lot={shown} />}
     </section>
   );
 }

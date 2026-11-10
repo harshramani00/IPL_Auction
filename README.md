@@ -172,6 +172,18 @@ friends, and don't make money from it.
    only about 30% of the time. Each AI team keeps ₹30 L back for every squad
    slot it still has to fill. In simulated Quick games 73% of lots sell
    (69% for real), at a median of 1.0× the real price.
+5. **One screen while you play.** The lobby scrolls like a normal page, but
+   once the auction starts the room fits the window with no page scrolling:
+   - a slim top bar (lot, players, Pause, Reset, view, sound, and **?** for
+     the rules and the room link)
+   - the stage filling the middle; in 3D the price, leading team and clock
+     sit over the hall as a TV-style lower third
+   - a side panel with **Teams** (purse, squad and overseas per team; tap a
+     row for the squad), **Results** and **Bids** tabs, each scrolling inside
+   - your console pinned at the bottom with your teams, purse, **Bid** and
+     **Skip**
+   On phones the hall sits on top, the tabs take the middle and the console
+   stays at the bottom.
 
 ## Architecture
 
