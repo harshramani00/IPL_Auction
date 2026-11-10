@@ -36,8 +36,9 @@ export function Room({ screen }: { screen: CanvasTexture }) {
         <meshStandardMaterial color="#f3c34f" emissive="#f3c34f" emissiveIntensity={0.9} side={DoubleSide} />
       </mesh>
 
-      {/* LED screen */}
-      <mesh position={[SCREEN.center.x, SCREEN.center.y, SCREEN.center.z - 0.06]}>
+      {/* LED screen. The frame sits fully behind the picture: if its front face
+          shares the picture's depth the two flicker against each other (z-fighting). */}
+      <mesh position={[SCREEN.center.x, SCREEN.center.y, SCREEN.center.z - 0.08]}>
         <boxGeometry args={[SCREEN.width + 0.3, SCREEN.height + 0.3, 0.12]} />
         <meshStandardMaterial color="#07061a" roughness={0.4} metalness={0.4} />
       </mesh>

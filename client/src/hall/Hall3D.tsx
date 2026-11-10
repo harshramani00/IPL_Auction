@@ -132,7 +132,8 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
       <Canvas
         shadows
         dpr={[1, 1.75]}
-        camera={{ fov: 38, near: 0.1, far: 80, position: SHOTS.wide().position.toArray() }}
+        // near 0.3 m (nothing comes closer) keeps depth precision fine enough that thin layers don't flicker.
+        camera={{ fov: 38, near: 0.3, far: 80, position: SHOTS.wide().position.toArray() }}
         gl={{ antialias: true, powerPreference: "high-performance" }}
         onCreated={({ gl }) => {
           gl.toneMapping = ACESFilmicToneMapping;
