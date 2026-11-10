@@ -39,11 +39,26 @@ export const tableOf = (id: TeamId) => TABLES.find((t) => t.id === id)!;
 export interface Shot {
   position: Vector3;
   target: Vector3;
+  /** Horizontal field of view (degrees) the shot must always show, whatever the canvas shape. */
+  hfov?: number;
+}
+
+/** The lens on a 16:9 canvas. Narrower canvases widen it so a shot keeps its sides. */
+export const BASE_VFOV = 38;
+const rad = Math.PI / 180;
+/** ~63°: what BASE_VFOV covers across at 16:9, the default each shot keeps. */
+export const DEFAULT_HFOV = (2 * Math.atan(Math.tan((BASE_VFOV / 2) * rad) * (16 / 9))) / rad;
+
+/** The vertical field of view that shows at least `hfov` across at this aspect ratio. */
+export function vfovFor(aspect: number, hfov = DEFAULT_HFOV): number {
+  const fit = (2 * Math.atan(Math.tan((hfov / 2) * rad) / aspect)) / rad;
+  return Math.max(BASE_VFOV, fit);
 }
 
 /** Camera framings the director cuts between. */
 export const SHOTS = {
-  wide: (): Shot => ({ position: new Vector3(0, 4.4, 11), target: new Vector3(0, 1.7, -3.4) }),
+  /** The whole room: wide enough for the end tables of the arc (about ±7.3 m) on any screen. */
+  wide: (): Shot => ({ position: new Vector3(0, 4.4, 11), target: new Vector3(0, 1.7, -3.4), hfov: 74 }),
   /** Mid shot on the auctioneer: close enough to feel tense, not so close a real-time face looks uncanny. */
   auctioneer: (): Shot => ({ position: new Vector3(0.45, 2.1, -1.5), target: new Vector3(0, 1.82, -4.25) }),
   table: (id: TeamId): Shot => {

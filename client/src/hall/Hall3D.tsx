@@ -16,7 +16,7 @@ import { lotsById, team } from "../view";
 import type { AuctionEvent } from "../room/events";
 import { useAuctionEvents } from "../room/useAuctionEvents";
 import { Auctioneer, type Pose } from "./Auctioneer";
-import { AUCTIONEER, SHOTS, tableOf, type Shot } from "./layout";
+import { AUCTIONEER, BASE_VFOV, SHOTS, tableOf, vfovFor, type Shot } from "./layout";
 import { Room } from "./Room";
 import { Tables } from "./Tables";
 import { canvasTexture, drawScreen } from "./textures";
@@ -152,7 +152,7 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
         shadows="soft"
         dpr={[1, 1.75]}
         // near 0.3 m (nothing comes closer) keeps depth precision fine enough that thin layers don't flicker.
-        camera={{ fov: 38, near: 0.3, far: 80, position: SHOTS.wide().position.toArray() }}
+        camera={{ fov: BASE_VFOV, near: 0.3, far: 80, position: SHOTS.wide().position.toArray() }}
         gl={{ antialias: true, powerPreference: "high-performance" }}
         onCreated={({ gl }) => {
           gl.toneMapping = ACESFilmicToneMapping;
@@ -269,15 +269,19 @@ function CameraRig({ shot, drift }: { shot: React.MutableRefObject<Shot & { cut:
   const offset = useMemo(() => new Vector3(), []);
   useFrame((state, dt) => {
     const sh = shot.current;
+    const fov = vfovFor(camera.aspect, sh.hfov);
     if (sh.cut) {
       camera.position.copy(sh.position);
       look.current.copy(sh.target);
+      camera.fov = fov;
       sh.cut = false;
     } else {
       const k = 1 - Math.exp(-dt * 1.8);
       camera.position.lerp(sh.position, k);
       look.current.lerp(sh.target, k);
+      camera.fov += (fov - camera.fov) * k;
     }
+    camera.updateProjectionMatrix();
     // A slow handheld drift keeps the room alive between moments.
     const t = state.clock.elapsedTime;
     offset.set(drift ? Math.sin(t * 0.21) * 0.12 : 0, drift ? Math.sin(t * 0.17) * 0.06 : 0, 0);
