@@ -152,9 +152,9 @@ friends, and don't make money from it.
    ₹120 Cr each.
 2. **Live.** Lots come up in order at their base price. The next bid must be
    exactly the current bid plus the increment: +₹5 L below ₹1 Cr, +₹10 L
-   below ₹2 Cr, +₹20 L below ₹5 Cr, then +₹25 L. A lot gets 10 s for an
-   opening bid and each bid resets the clock to 8 s, with "going once" at 5 s
-   and "going twice" at 2.5 s. A player running several teams bids as one of
+   below ₹2 Cr, +₹20 L below ₹5 Cr, then +₹25 L. A lot gets 45 s for an
+   opening bid and each bid resets the clock to 45 s, with "going once" at
+   10 s and "going twice" at 5 s. A player running several teams bids as one of
    them at a time; a team can't raise its own top bid, but the player's other
    teams can bid against it. Squads cap at 25 players and 8 overseas,
    retained players included. Any player can pause.

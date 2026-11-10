@@ -107,7 +107,7 @@ describe("bidding", () => {
     expect(s.lead).toBeNull();
   });
 
-  it("4. a stale amount is rejected; the right one is accepted and resets the clock to 8 s", () => {
+  it("4. a stale amount is rejected; the right one is accepted and resets the clock to 45 s", () => {
     const s = liveRoom();
     expect(s.deadline).toBe(T0 + OPEN_MS);
     expect(bid(s, u1.id, "MI", 200, T0 + 1000).ok).toBe(true);
@@ -151,7 +151,7 @@ describe("bidding", () => {
     s.teams.RCB.purse = 150;
     expect(bid(s, u3.id, "RCB", 200, T0)).toEqual({ ok: false, reason: "RCB can't afford ₹ 2.00 Cr" });
     expect(bid(s, u1.id, "MI", 200, T0).ok).toBe(true); // lot 1 is Indian: fine
-    advance(s, T0 + 20_000, rng); // sold to MI, lot 2 (overseas) opens
+    advance(s, T0 + BID_MS + RESULT_MS, rng); // sold to MI, lot 2 (overseas) opens
     expect(s.lotIndex).toBe(1);
     expect(bid(s, u1.id, "MI", 200, s.deadline! - 1))
       .toEqual({ ok: false, reason: "MI already has 8 overseas players" });
@@ -182,19 +182,19 @@ describe("clock and hammer", () => {
     expect(s.phase).toBe("live");
     expect(s.lotIndex).toBe(1);
     expect(s.deadline).toBe(T0 + OPEN_MS + RESULT_MS + OPEN_MS);
-    advance(s, T0 + 60_000, rng);
+    advance(s, T0 + 2 * (OPEN_MS + RESULT_MS), rng);
     expect(s.phase).toBe("done");
     expect(s.results.map((r) => r.status)).toEqual(["unsold", "unsold"]);
   });
 
   it("pause keeps exactly the time that was left", () => {
     const s = liveRoom();
-    bid(s, u1.id, "MI", 200, T0); // deadline T0 + 8000
+    bid(s, u1.id, "MI", 200, T0); // deadline T0 + BID_MS
     expect(pause(s, u2.id, T0 + 3000).ok).toBe(true);
-    expect(s.pausedLeft).toBe(5000);
+    expect(s.pausedLeft).toBe(BID_MS - 3000);
     expect(advance(s, T0 + 100_000, rng)).toBe(false); // nothing resolves while paused
     expect(pause(s, u2.id, T0 + 100_000).ok).toBe(true);
-    expect(s.deadline).toBe(T0 + 105_000);
+    expect(s.deadline).toBe(T0 + 100_000 + BID_MS - 3000);
     expect(s.phase).toBe("live");
   });
 });

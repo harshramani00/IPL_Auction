@@ -92,9 +92,10 @@ test("9. a hand-crafted bid for someone else's team is rejected and changes noth
 });
 
 test("10. when the clock runs out: SOLD, bails off, next lot ~3 s later", async () => {
-  // Nobody bids again; the 8-second clock runs down.
+  // Nobody bids again; the 45-second clock runs down.
+  test.setTimeout(90_000);
   await Promise.all(everyone().map(async (p) => {
-    await expect(p.page.locator(".sold-banner .sb-big")).toHaveText("Sold", { timeout: 12_000 });
+    await expect(p.page.locator(".sold-banner .sb-big")).toHaveText("Sold", { timeout: 50_000 });
     await expect(p.page.locator(".stumps")).toHaveClass(/\bdown\b/);
   }));
   const soldAt = Date.now();

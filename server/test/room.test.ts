@@ -32,7 +32,7 @@ beforeEach(() => {
 afterEach(() => vi.useRealTimers());
 
 describe("Room", () => {
-  it("runs the clock: bid, 8 s to SOLD, 3.2 s to the next lot", () => {
+  it("runs the clock: bid, 45 s to SOLD, 3.2 s to the next lot", () => {
     const r = startTwoPlayer();
     const lot = r.last().lot!;
     expect(r.send(p1, { type: "bid", teamId: "KKR", amount: lot.base })).toEqual({ ok: true });
@@ -45,7 +45,7 @@ describe("Room", () => {
     expect(r.last()).toMatchObject({ phase: "live", lotIndex: 1, lead: null });
   });
 
-  it("marks an unbid lot unsold after the 10 s opening window", () => {
+  it("marks an unbid lot unsold after the 45 s opening window", () => {
     const r = startTwoPlayer();
     vi.advanceTimersByTime(OPEN_MS);
     expect(r.last().outcome).toMatchObject({ status: "unsold" });

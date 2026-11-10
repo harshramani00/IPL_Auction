@@ -1,4 +1,4 @@
-import { claim, createRoom, join, snapshot, start, bid, advance, type RoomState } from "@auction/shared";
+import { BID_MS, RESULT_MS, claim, createRoom, join, snapshot, start, bid, advance, type RoomState } from "@auction/shared";
 import { gameData } from "@auction/shared/data";
 import { describe, expect, it } from "vitest";
 import { auctionEvents, clockEvent } from "../src/room/events";
@@ -43,13 +43,14 @@ describe("auction events", () => {
     start(s, "a", gameData, 0, seq);
     bid(s, "a", "KKR", 200, 10);
     const live = snapshot(s, 10);
-    advance(s, 10 + 8000, seq); // the 8 s clock runs out
-    const sold = snapshot(s, 8010);
+    const soldAt = 10 + BID_MS;
+    advance(s, soldAt, seq); // the bid clock runs out
+    const sold = snapshot(s, soldAt);
     expect(auctionEvents(live, sold, 1)).toEqual([expect.objectContaining({
       type: "sold", teamId: "KKR", amount: 200, line: "Sold! Devon Conway, to Kolkata Knight Riders, for 2 crore.",
     })]);
-    advance(s, 8010 + 3200, seq); // after the result pause
-    expect(auctionEvents(sold, snapshot(s, 11_210), 1)[0]).toMatchObject({ type: "lot", lot: { name: "Cameron Green" } });
+    advance(s, soldAt + RESULT_MS, seq); // after the result pause
+    expect(auctionEvents(sold, snapshot(s, soldAt + RESULT_MS), 1)[0]).toMatchObject({ type: "lot", lot: { name: "Cameron Green" } });
   });
 
   it("turns clock calls into going once / twice", () => {

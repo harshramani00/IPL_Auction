@@ -3,10 +3,10 @@ export const SQUAD_MAX = 25;
 export const OVERSEAS_MAX = 8;
 
 /** Clock, in milliseconds. */
-export const OPEN_MS = 10_000; // window for the opening bid
-export const BID_MS = 8_000; // clock after every accepted bid
-export const GOING_ONCE_MS = 5_000;
-export const GOING_TWICE_MS = 2_500;
+export const OPEN_MS = 45_000; // window for the opening bid
+export const BID_MS = 45_000; // clock after every accepted bid
+export const GOING_ONCE_MS = 10_000;
+export const GOING_TWICE_MS = 5_000;
 export const RESULT_MS = 3_200; // pause on SOLD / UNSOLD before the next lot
 
 /** AI franchises act every 0.7–2.7 s and bid 75% of the time they can. */
