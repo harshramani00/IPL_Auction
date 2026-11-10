@@ -1,7 +1,9 @@
 // The hall itself: floor, back wall, stage, podium, LED screen and crowd.
-import { useLayoutEffect, useRef } from "react";
-import { Color, DoubleSide, Matrix4, Object3D, type CanvasTexture, type InstancedMesh } from "three";
+import { useLayoutEffect, useMemo, useRef } from "react";
+import { Color, DoubleSide, Matrix4, Object3D, Vector3, type CanvasTexture, type InstancedMesh } from "three";
+import { renderQuality } from "./Effects";
 import { PODIUM, SCREEN, STAGE } from "./layout";
+import { CrowdPeople, SEAT_Y, usePeople, type CrowdSeat } from "./People";
 import { imageTexture } from "./textures";
 
 const CROWD = 140;
@@ -87,42 +89,108 @@ export function Room({ screen }: { screen: CanvasTexture }) {
   );
 }
 
-/** Seated audience behind the tables, as dark silhouettes (one draw call). */
+/** Audience seats: four tiered rows behind the tables, each turned towards the stage. */
+function crowdSeats(rows: number): CrowdSeat[] {
+  const seats: CrowdSeat[] = [];
+  for (let row = 0; row < rows; row++) {
+    for (let i = 0; i < 35 && seats.length < CROWD; i++) {
+      const x = -13 + i * 0.76 + (row % 2) * 0.38;
+      const z = 5.6 + row * 1.15;
+      seats.push({ position: new Vector3(x, TIER * row, z), yaw: Math.atan2(-x, STAGE.z - z) });
+    }
+  }
+  return seats;
+}
+
+/** Seated audience behind the tables: real people once loaded, dark stand-ins until then. */
 function Crowd() {
+  const people = usePeople();
+  // Phones and modest machines get the front two rows.
+  const seats = useMemo(() => crowdSeats(renderQuality() === "high" ? 4 : 2), []);
+  return (
+    <group>
+      {seats.length > 0 && <Risers rows={Math.round(seats[seats.length - 1]!.position.y / TIER) + 1} />}
+      <CrowdChairs seats={seats} />
+      {people ? <CrowdPeople people={people} seats={seats} /> : <CrowdStandIns seats={seats} />}
+    </group>
+  );
+}
+
+const TIER = 0.2;
+
+/** Stepped platforms under the back rows. */
+function Risers({ rows }: { rows: number }) {
+  return (
+    <group>
+      {Array.from({ length: rows - 1 }, (_, i) => i + 1).map((row) => (
+        <mesh key={row} position={[0, (TIER * row) / 2, 5.6 + row * 1.15]} receiveShadow>
+          <boxGeometry args={[28, TIER * row, 1.15]} />
+          <meshStandardMaterial color="#141130" roughness={0.9} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+/** Seat and back for every audience place, instanced. */
+function CrowdChairs({ seats }: { seats: CrowdSeat[] }) {
+  const seat = useRef<InstancedMesh>(null);
+  const back = useRef<InstancedMesh>(null);
+  useLayoutEffect(() => {
+    const o = new Object3D();
+    seats.forEach((s, n) => {
+      o.position.copy(s.position);
+      o.rotation.set(0, s.yaw, 0);
+      o.updateMatrix();
+      seat.current!.setMatrixAt(n, o.matrix.clone().multiply(new Matrix4().makeTranslation(0, SEAT_Y - 0.03, 0.12)));
+      back.current!.setMatrixAt(n, o.matrix.clone().multiply(new Matrix4().makeTranslation(0, SEAT_Y + 0.25, -0.16)));
+    });
+    seat.current!.instanceMatrix.needsUpdate = true;
+    back.current!.instanceMatrix.needsUpdate = true;
+  }, [seats]);
+  return (
+    <group>
+      <instancedMesh ref={seat} args={[undefined, undefined, seats.length]} receiveShadow>
+        <boxGeometry args={[0.5, 0.06, 0.5]} />
+        <meshStandardMaterial color="#1a1730" roughness={0.6} />
+      </instancedMesh>
+      <instancedMesh ref={back} args={[undefined, undefined, seats.length]} receiveShadow>
+        <boxGeometry args={[0.48, 0.48, 0.05]} />
+        <meshStandardMaterial color="#1a1730" roughness={0.6} />
+      </instancedMesh>
+    </group>
+  );
+}
+
+/** Dark seated figures while the real people load (one draw call each for bodies and heads). */
+function CrowdStandIns({ seats }: { seats: CrowdSeat[] }) {
   const bodies = useRef<InstancedMesh>(null);
   const heads = useRef<InstancedMesh>(null);
   useLayoutEffect(() => {
     const o = new Object3D();
     const m = new Matrix4();
-    let n = 0;
-    for (let row = 0; row < 4 && n < CROWD; row++) {
-      for (let i = 0; i < 35 && n < CROWD; i++, n++) {
-        const x = -13 + i * 0.76 + (row % 2) * 0.38;
-        const z = 5.6 + row * 1.15;
-        const y = 0.2 * row; // tiered seating
-        o.position.set(x, 0.62 + y, z);
-        o.scale.setScalar(0.9 + ((i * 7 + row * 3) % 5) * 0.04);
-        o.updateMatrix();
-        bodies.current!.setMatrixAt(n, o.matrix);
-        m.copy(o.matrix).multiply(new Matrix4().makeTranslation(0, 0.55, 0));
-        heads.current!.setMatrixAt(n, m);
-        const shade = new Color().setHSL(0.68, 0.35, 0.09 + ((i + row) % 4) * 0.012);
-        bodies.current!.setColorAt(n, shade);
-        heads.current!.setColorAt(n, shade);
-      }
-    }
+    seats.forEach((s, n) => {
+      o.position.copy(s.position).setY(s.position.y + 0.72);
+      o.updateMatrix();
+      bodies.current!.setMatrixAt(n, o.matrix);
+      m.copy(o.matrix).multiply(new Matrix4().makeTranslation(0, 0.55, 0));
+      heads.current!.setMatrixAt(n, m);
+      const shade = new Color().setHSL(0.68, 0.35, 0.09 + (n % 4) * 0.012);
+      bodies.current!.setColorAt(n, shade);
+      heads.current!.setColorAt(n, shade);
+    });
     for (const mesh of [bodies.current!, heads.current!]) {
       mesh.instanceMatrix.needsUpdate = true;
       if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
     }
-  }, []);
+  }, [seats]);
   return (
     <group>
-      <instancedMesh ref={bodies} args={[undefined, undefined, CROWD]}>
+      <instancedMesh ref={bodies} args={[undefined, undefined, seats.length]}>
         <capsuleGeometry args={[0.22, 0.45, 4, 10]} />
         <meshStandardMaterial roughness={0.9} />
       </instancedMesh>
-      <instancedMesh ref={heads} args={[undefined, undefined, CROWD]}>
+      <instancedMesh ref={heads} args={[undefined, undefined, seats.length]}>
         <sphereGeometry args={[0.14, 16, 12]} />
         <meshStandardMaterial roughness={0.9} />
       </instancedMesh>

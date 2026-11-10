@@ -19,7 +19,8 @@ export function Credits() {
         <p>
           The 3D auctioneer is "Business_Male_01" from the{" "}
           <a href="https://github.com/microsoft/Microsoft-Rocketbox" target="_blank" rel="noreferrer">Microsoft Rocketbox</a>{" "}
-          avatar library (MIT licence). Studio lighting: "Studio Small 08" by Sergej Majboroda,{" "}
+          avatar library (MIT licence), as are the team owners and audience (Business_Male_02–04 and
+          Business_Female_01–03). Studio lighting: "Studio Small 08" by Sergej Majboroda,{" "}
           <a href="https://polyhaven.com/a/studio_small_08" target="_blank" rel="noreferrer">Poly Haven</a> (CC0).
         </p>
       </section>

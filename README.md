@@ -239,6 +239,15 @@ static/   team logos and player photos, served at /logos and /players
     git-ignored, since most such models can't be redistributed. See
     `static/models/README.md`.
   - **Fallback:** a stand-in mannequin covers the moment while he loads.
+- **The people in the room:** six more Rocketbox business avatars
+  (`static/models/rocketbox/people/`, about 7.6 MB) fill the hall.
+  - **Team owners:** two per table, seated on chairs with their forearms on
+    the table. The owner beside the paddle holds it, and their arm follows
+    it up when the team bids (a two-bone arm solve each frame).
+  - **Audience:** 140 seated people on tiered risers. Each avatar is posed
+    once and frozen into static geometry drawn with instancing, so the whole
+    crowd costs a few draw calls. Phones and modest machines get the front
+    two rows.
 - **Rendering:**
   - Image-based lighting from a CC0 studio HDRI (`static/hdri/`, from Poly Haven).
   - Soft shadows, with a sharper key light on the auctioneer.

@@ -4,6 +4,10 @@ The hall's auctioneer is `rocketbox/Business_Male_01.fbx` from Microsoft's
 Rocketbox avatar library (MIT, see `rocketbox/LICENSE.md`). The textures were
 converted from the original TGA files to JPG and PNG.
 
+The team owners and audience are six more Rocketbox avatars in `rocketbox/people/`
+(Business_Male_02–04, Business_Female_01–03), with textures downsized to 1024 px
+(colour) and 512 px (normal maps) since they're seen from further away.
+
 An `auctioneer.glb` here replaces him, for example a MetaHuman you've exported.
 
 It should be one binary glTF with a humanoid rig and these animation clips

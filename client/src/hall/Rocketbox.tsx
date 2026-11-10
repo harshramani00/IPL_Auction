@@ -8,7 +8,7 @@ import { useMemo, useRef } from "react";
 import {
   Box3, CylinderGeometry, DoubleSide, Group, LoadingManager, Mesh, MeshPhysicalMaterial,
   MeshStandardMaterial, Quaternion,
-  SRGBColorSpace, Texture, TextureLoader, Vector3, type Bone, type Material, type Object3D,
+  SRGBColorSpace, Texture, TextureLoader, Vector3, type Bone, type Light, type Material, type Object3D,
   type SkinnedMesh,
 } from "three";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
@@ -17,8 +17,18 @@ import type { Pose } from "./Auctioneer";
 const DIR = "/models/rocketbox/";
 const HEIGHT = 1.82;
 
-/** Loads the FBX and gives it proper PBR materials from our web textures. */
-export async function loadRocketbox(): Promise<Object3D> {
+export interface AvatarSource {
+  /** Folder with the .fbx and its web textures (body_color.jpg, head_color.jpg, ...). */
+  dir: string;
+  file: string;
+  /** Standing height in metres. */
+  height: number;
+  /** Physical materials with sheen for close-ups; plain PBR is cheaper for crowds. */
+  physical?: boolean;
+}
+
+/** Loads a Rocketbox FBX and gives it proper PBR materials from our web textures. */
+export async function loadAvatar({ dir, file, height, physical = false }: AvatarSource): Promise<Object3D> {
   const manager = new LoadingManager();
   // The FBX names .tga textures we don't ship; hand back blanks instead of 404s.
   manager.addHandler(/\.tga$/i, {
@@ -27,49 +37,73 @@ export async function loadRocketbox(): Promise<Object3D> {
     setCrossOrigin() { return this; },
     setResourcePath() { return this; },
   } as unknown as TextureLoader);
-  const obj = await new FBXLoader(manager).loadAsync(`${DIR}Business_Male_01.fbx`);
+  const obj = await new FBXLoader(manager).loadAsync(dir + file);
+  // Each file carries a grey ambient light from its 3ds Max scene; the hall does its own lighting.
+  const lights: Object3D[] = [];
+  obj.traverse((o) => { if ((o as Light).isLight) lights.push(o); });
+  for (const l of lights) l.removeFromParent();
 
   const tex = new TextureLoader();
-  const load = (file: string, color = false) => {
-    const t = tex.load(DIR + file);
+  const load = (name: string, color = false) => {
+    const t = tex.load(dir + name);
     if (color) t.colorSpace = SRGBColorSpace;
-    t.anisotropy = 8;
+    t.anisotropy = physical ? 8 : 4;
     return t;
   };
   // Wool suit: a soft sheen at grazing angles, like real fabric.
-  const body = new MeshPhysicalMaterial({
-    name: "body", map: load("body_color.jpg", true), normalMap: load("body_normal.jpg"),
-    roughness: 0.8, metalness: 0, sheen: 0.45, sheenRoughness: 0.7, sheenColor: "#8a8aa0",
-  });
+  const body = physical
+    ? new MeshPhysicalMaterial({
+      name: "body", map: load("body_color.jpg", true), normalMap: load("body_normal.jpg"),
+      roughness: 0.8, metalness: 0, sheen: 0.45, sheenRoughness: 0.7, sheenColor: "#8a8aa0",
+    })
+    : new MeshStandardMaterial({
+      name: "body", map: load("body_color.jpg", true), normalMap: load("body_normal.jpg"), roughness: 0.8,
+    });
   // Skin: a warm sheen fakes the light that scatters under real skin, so it doesn't look plastic.
-  const head = new MeshPhysicalMaterial({
-    name: "head", map: load("head_color.jpg", true), normalMap: load("head_normal.jpg"),
-    roughness: 0.5, metalness: 0, sheen: 0.35, sheenRoughness: 0.6, sheenColor: "#ffb39a",
-  });
+  const head = physical
+    ? new MeshPhysicalMaterial({
+      name: "head", map: load("head_color.jpg", true), normalMap: load("head_normal.jpg"),
+      roughness: 0.5, metalness: 0, sheen: 0.35, sheenRoughness: 0.6, sheenColor: "#ffb39a",
+    })
+    : new MeshStandardMaterial({
+      name: "head", map: load("head_color.jpg", true), normalMap: load("head_normal.jpg"), roughness: 0.55,
+    });
   // Hair edges and eyelashes: alpha-tested cards.
   const opacity = new MeshStandardMaterial({
     name: "opacity", map: load("opacity.png", true), alphaTest: 0.45, transparent: false,
     roughness: 0.6, side: DoubleSide,
   });
+  let glasses: MeshStandardMaterial | null = null;
   obj.traverse((o) => {
     const mesh = o as SkinnedMesh;
     if (!mesh.isMesh) return;
     mesh.castShadow = true;
     mesh.receiveShadow = true;
-    mesh.frustumCulled = false; // skinned bounds don't follow posed arms
-    const swap = (m: Material) => (/head/i.test(m.name) ? head : /opacity/i.test(m.name) ? opacity : body);
+    mesh.frustumCulled = false; // skinned bounds don't follow posed limbs
+    const swap = (m: Material) => {
+      if (/glasses/i.test(m.name)) {
+        glasses ??= new MeshStandardMaterial({
+          name: "glasses", map: load("glasses.png", true), transparent: true, depthWrite: false, roughness: 0.2,
+        });
+        return glasses;
+      }
+      return /head/i.test(m.name) ? head : /opacity/i.test(m.name) ? opacity : body;
+    };
     mesh.material = Array.isArray(mesh.material) ? mesh.material.map(swap) : swap(mesh.material);
   });
 
-  // Centimetres to metres, feet on the stage.
+  // Centimetres to metres, feet on the floor.
   const size = new Box3().setFromObject(obj).getSize(new Vector3());
-  obj.scale.setScalar(HEIGHT / size.y);
+  obj.scale.setScalar(height / size.y);
   obj.updateMatrixWorld(true);
   obj.position.y -= new Box3().setFromObject(obj).min.y;
   return obj;
 }
 
-function bone(root: Object3D, name: string): Bone {
+/** The auctioneer. */
+export const loadRocketbox = () => loadAvatar({ dir: DIR, file: "Business_Male_01.fbx", height: HEIGHT, physical: true });
+
+export function bone(root: Object3D, name: string): Bone {
   const b = root.getObjectByName(name) as Bone | undefined;
   if (!b) throw new Error(`Rocketbox rig is missing ${name}`);
   return b;
@@ -83,7 +117,7 @@ const _world = new Quaternion();
 const _parent = new Quaternion();
 
 /** Rotate `b` so the direction from it to `child` points along `dir` (world space), easing by `alpha`. */
-function aim(b: Bone, child: Object3D, dir: Vector3, alpha: number): void {
+export function aim(b: Bone, child: Object3D, dir: Vector3, alpha: number): void {
   b.updateWorldMatrix(true, true);
   _from.copy(child.getWorldPosition(_a)).sub(b.getWorldPosition(_b)).normalize();
   _delta.setFromUnitVectors(_from, _a.copy(dir).normalize());

@@ -3,21 +3,41 @@
 import type { Snapshot } from "@auction/shared";
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useMemo, useRef } from "react";
-import { DoubleSide, MathUtils, type Group, type MeshStandardMaterial } from "three";
+import { DoubleSide, MathUtils, type Group, type MeshStandardMaterial, type Object3D } from "three";
 import { seatColor, seatName, team } from "../view";
+import { renderQuality } from "./Effects";
 import { TABLES, type TableSpot } from "./layout";
+import { Chair, seated, usePaddleHold, usePeople } from "./People";
 import { imageTexture, labelTexture } from "./textures";
+
+/** Owners sit back from the table so their knees clear it; the right-hand one holds the paddle. */
+const SEATS = [-0.42, 0.36];
+const SEAT_Z = -0.95;
+/** The paddle rests on the table and goes up this far while its team leads. */
+const PADDLE_REST = 0.86;
+const PADDLE_RAISE = 0.62;
 
 export function Tables({ s }: { s: Snapshot }) {
   const lobby = s.phase === "lobby";
+  const people = usePeople();
+  // Two owners per table, never the same pair at neighbouring tables.
+  const owners = useMemo(() => {
+    if (!people) return null;
+    const shadows = renderQuality() === "high";
+    return TABLES.map((_, i) => SEATS.map((_, j) => {
+      const m = seated(people[(i * 2 + j + (i % 3)) % people.length]!, "table");
+      m.traverse((o) => { o.castShadow = shadows; });
+      return m;
+    }) as [Object3D, Object3D]);
+  }, [people]);
   return (
     <group>
-      {TABLES.map((spot) => {
+      {TABLES.map((spot, i) => {
         const owner = s.owners[spot.id];
         const label = owner ? `P${owner} · ${seatName(s, owner)}` : lobby ? "Free" : "AI";
         const leading = !lobby && s.lead?.teamId === spot.id;
         return (
-          <Table key={spot.id} spot={spot} label={label}
+          <Table key={spot.id} spot={spot} label={label} owners={owners?.[i] ?? null}
             labelColor={owner ? seatColor(owner) : lobby ? "#f3c34f" : "#8c89b8"}
             leading={leading} bump={leading ? s.bidSeq : 0} />
         );
@@ -33,9 +53,11 @@ interface TableProps {
   leading: boolean;
   /** Changes on every bid by this team: replays the paddle raise. */
   bump: number;
+  /** The seated owners, or null while they load (stand-ins show instead). */
+  owners: [Object3D, Object3D] | null;
 }
 
-function Table({ spot, label, labelColor, leading, bump }: TableProps) {
+function Table({ spot, label, labelColor, leading, bump, owners }: TableProps) {
   const t = team(spot.id);
   const logo = imageTexture(`/logos/${spot.id}.png`);
   const tag = useMemo(() => labelTexture(label, labelColor), [label, labelColor]);
@@ -43,6 +65,7 @@ function Table({ spot, label, labelColor, leading, bump }: TableProps) {
   const paddle = useRef<Group>(null);
   const disc = useRef<MeshStandardMaterial>(null);
   const bumpAt = useRef(-10);
+  const grip = useRef<Object3D>(null);
 
   useEffect(() => {
     if (bump) bumpAt.current = performance.now() / 1000;
@@ -55,9 +78,9 @@ function Table({ spot, label, labelColor, leading, bump }: TableProps) {
     const sinceBump = now - bumpAt.current;
     // A sharp jab up on each bid, then held high while leading.
     const jab = sinceBump < 0.5 ? Math.sin((sinceBump / 0.5) * Math.PI) * 0.25 : 0;
-    const targetY = (leading ? 0.55 : 0) + jab;
+    const targetY = (leading ? PADDLE_RAISE : 0) + jab;
     const k = 1 - Math.exp(-dt * 12);
-    g.position.y = MathUtils.lerp(g.position.y, 1.02 + targetY, k);
+    g.position.y = MathUtils.lerp(g.position.y, PADDLE_REST + targetY, k);
     g.rotation.z = MathUtils.lerp(g.rotation.z, leading ? -0.18 : 0, k);
     if (disc.current) {
       const glow = leading ? 0.35 + Math.sin(state.clock.elapsedTime * 4) * 0.08 : 0;
@@ -88,20 +111,16 @@ function Table({ spot, label, labelColor, leading, bump }: TableProps) {
         </mesh>
       </group>
       {/* Two owners seated behind the table */}
-      {[-0.42, 0.38].map((x) => (
-        <group key={x} position={[x, 0, -0.78]}>
-          <mesh position={[0, 0.98, 0]} castShadow>
-            <capsuleGeometry args={[0.19, 0.42, 4, 12]} />
-            <meshStandardMaterial color="#25214a" roughness={0.8} />
-          </mesh>
-          <mesh position={[0, 1.47, 0]} castShadow>
-            <sphereGeometry args={[0.125, 20, 16]} />
-            <meshStandardMaterial color="#2e2a58" roughness={0.8} />
-          </mesh>
-        </group>
-      ))}
-      {/* Paddle, held by the owner on the right */}
-      <group ref={paddle} position={[0.62, 1.02, -0.7]}>
+      {SEATS.map((x) => <Chair key={x} position={[x, 0, SEAT_Z]} />)}
+      {owners ? (
+        <>
+          <group position={[SEATS[0]!, 0, SEAT_Z]}><primitive object={owners[0]} /></group>
+          <PaddleHolder model={owners[1]} grip={grip} />
+        </>
+      ) : SEATS.map((x) => <StandIn key={x} x={x} />)}
+      {/* Paddle, held in the right-hand owner's left hand */}
+      <group ref={paddle} position={[0.62, PADDLE_REST, -0.62]}>
+        <object3D ref={grip} position={[0, 0.07, -0.02]} />
         <mesh position={[0, 0.2, 0]} castShadow>
           <cylinderGeometry args={[0.016, 0.016, 0.42, 10]} />
           <meshStandardMaterial color="#c9a86a" roughness={0.6} />
@@ -131,6 +150,27 @@ function Table({ spot, label, labelColor, leading, bump }: TableProps) {
       <mesh position={[0, 2.15, -0.2]} rotation-y={Math.PI}>
         <planeGeometry args={[1, 0.25]} />
         <meshBasicMaterial map={tag} transparent toneMapped={false} />
+      </mesh>
+    </group>
+  );
+}
+
+function PaddleHolder({ model, grip }: { model: Object3D; grip: React.RefObject<Object3D | null> }) {
+  usePaddleHold(model, grip);
+  return <group position={[SEATS[1]!, 0, SEAT_Z]}><primitive object={model} /></group>;
+}
+
+/** A plain seated figure while the real people load. */
+function StandIn({ x }: { x: number }) {
+  return (
+    <group position={[x, 0, SEAT_Z]}>
+      <mesh position={[0, 0.98, 0]} castShadow>
+        <capsuleGeometry args={[0.19, 0.42, 4, 12]} />
+        <meshStandardMaterial color="#25214a" roughness={0.8} />
+      </mesh>
+      <mesh position={[0, 1.47, 0]} castShadow>
+        <sphereGeometry args={[0.125, 20, 16]} />
+        <meshStandardMaterial color="#2e2a58" roughness={0.8} />
       </mesh>
     </group>
   );

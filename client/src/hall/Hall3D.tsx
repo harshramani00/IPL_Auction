@@ -246,6 +246,8 @@ function Lights({ mood, lead }: { mood: Mood; lead: TeamId | null }) {
       <primitive object={keyTarget} />
       <primitive object={leadTarget} />
       <hemisphereLight args={["#8f86ff", "#0a0920", 0.5]} />
+      {/* The fill the auctioneer's model used to bring with it */}
+      <ambientLight color="#808080" intensity={1} />
       <directionalLight position={[-6, 9, 8]} intensity={0.55} color="#c9c4ff" castShadow
         shadow-mapSize={[1024, 1024]} shadow-camera-left={-12} shadow-camera-right={12}
         shadow-camera-top={12} shadow-camera-bottom={-12} />
