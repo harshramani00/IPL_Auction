@@ -10,3 +10,7 @@ playwright-report/
 
 # Your own theme music (copyrighted tracks must not be published)
 static/sounds/theme.mp3
+
+# Auctioneer source files (large, licensed per user)
+static/models/auctioneer-src/
+static/models/auctioneer.glb

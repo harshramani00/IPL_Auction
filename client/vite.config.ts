@@ -8,6 +8,8 @@ export default defineConfig({
   plugins: [react()],
   // Team logos and player photos live in the repo's static/ folder.
   publicDir: "../static",
+  // The 3D hall chunk (three.js) is ~940 kB (~250 kB gzipped) and only loads in the 3D view.
+  build: { chunkSizeWarningLimit: 1000 },
   server: {
     port: 5173,
     proxy: {

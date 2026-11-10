@@ -2,13 +2,18 @@
 // the lobby checklist, the SOLD banner and the player's stats.
 import { callFor, startProblems, type Lot } from "@auction/shared";
 import { gameData, stats, statsByName } from "@auction/shared/data";
-import { useEffect, useRef } from "react";
+import { Component, Suspense, lazy, useEffect, useRef, type ReactNode } from "react";
 import { useTicker } from "../useRoom";
 import { Crest, Img, fmt, initials, lotsById, ownerLabel, seatName, team, teamVars } from "../view";
-import { teamsOf, useRoomCtx } from "./context";
+import { prefersReducedMotion, setViewMode, useViewMode } from "../viewMode";
+import { useRoomCtx } from "./context";
+
+// three.js only loads for people who see the 3D hall.
+const Hall3D = lazy(() => import("../hall/Hall3D"));
 
 export function Stage() {
-  const { s } = useRoomCtx();
+  const { s, mySeat, serverNow } = useRoomCtx();
+  const view = useViewMode();
   const lobby = s.phase === "lobby";
   const done = s.phase === "done";
   // In the lobby, preview the first lot of the chosen preset.
@@ -16,6 +21,7 @@ export function Stage() {
   const lastLot = s.results.length ? lotsById.get(s.results[s.results.length - 1]!.lotId) : null;
   const shown = done && lastLot ? lastLot : lot;
   const sold = s.results.filter((r) => r.status === "sold").length;
+  const threeD = view === "3d";
 
   return (
     <section className="stage" aria-label="Player on the block">
@@ -23,14 +29,36 @@ export function Stage() {
         <span>{lobby ? `Lobby · ${lot.set}` : done ? "Auction complete" : lot.set}</span>
         <span>{lobby ? "Up first" : done ? `${sold} sold` : "On the block"}</span>
       </div>
-      <div className="stage-grid">
-        <PlayerCard lot={shown} />
+      {threeD && (
+        <HallBoundary>
+          <Suspense fallback={<div className="hall hall-loading">Setting up the auction hall…</div>}>
+            <Hall3D s={s} mySeat={mySeat} serverNow={serverNow} reducedMotion={prefersReducedMotion()} />
+          </Suspense>
+        </HallBoundary>
+      )}
+      {/* In 3D the hall's big screen shows the player, so the card steps aside. */}
+      <div className={`stage-grid${threeD ? " is-3d" : ""}`}>
+        {!threeD && <PlayerCard lot={shown} />}
         <div className="bidpanel">{lobby ? <LobbyBox /> : <LiveBox lot={lot} />}</div>
       </div>
-      <SoldBanner />
+      <SoldBanner confetti={!threeD} />
       <StatsTable lot={shown} />
     </section>
   );
+}
+
+/** If WebGL fails (old GPU, lost context), drop back to the classic view for this visit. */
+class HallBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  override state = { failed: false };
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+  override componentDidCatch() {
+    setViewMode("classic", false);
+  }
+  override render() {
+    return this.state.failed ? null : this.props.children;
+  }
 }
 
 function PlayerCard({ lot }: { lot: Lot }) {
@@ -185,14 +213,15 @@ function Clock() {
   );
 }
 
-function SoldBanner() {
+/** `confetti`: the classic view's 2D burst (the 3D hall has its own). */
+function SoldBanner({ confetti: withConfetti }: { confetti: boolean }) {
   const { s } = useRoomCtx();
   const canvas = useRef<HTMLCanvasElement>(null);
   const o = s.phase === "sold" ? s.outcome : null;
   const key = o ? `${o.lotId}-${o.status}` : "";
 
   useEffect(() => {
-    if (!o || o.status !== "sold" || !canvas.current) return;
+    if (!withConfetti || !o || o.status !== "sold" || !canvas.current) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t = team(o.teamId!);
     return confetti(canvas.current, [t.color, t.ring, "#f3c34f", "#ffffff"]);

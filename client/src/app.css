@@ -48,3 +48,21 @@ a.gold-btn { text-decoration: none; }
 .bar-r { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .sound-toggle { padding: 6px 12px; font-size: .8rem; }
 .sound-toggle[aria-pressed="false"] { color: var(--muted); }
+
+/* 3D hall */
+.hall { position: relative; width: 100%; aspect-ratio: 16 / 9; max-height: 64vh; background: #0a0920; border-bottom: 1px solid var(--line); }
+.hall canvas { display: block; }
+.hall-loading { display: grid; place-items: center; color: var(--muted); font-family: var(--font-label); letter-spacing: .14em; text-transform: uppercase; font-size: .85rem; }
+.hall-caption {
+  position: absolute; left: 14px; bottom: 14px; max-width: min(460px, calc(100% - 28px));
+  background: rgba(10, 9, 32, .82); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px;
+  font-family: var(--font-display); font-size: 1.45rem; line-height: 1.05; animation: caption-in .25s ease-out;
+}
+.hall-caption span { display: block; font-family: var(--font-label); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+@keyframes caption-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.stage-grid.is-3d { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 720px) {
+  .hall { aspect-ratio: 16 / 11; }
+  .hall-caption { font-size: 1.1rem; padding: 8px 10px; left: 8px; bottom: 8px; }
+}
+.view-toggle button { padding: 6px 12px; font-size: .8rem; }

@@ -9,9 +9,20 @@ export interface Player {
   cookie: string;
 }
 
-/** A browser context with a named session, opened on the room. */
-export async function player(browser: Browser, baseURL: string, roomId: string, name: string): Promise<Player> {
+/**
+ * A fresh browser context in the given view. The protocol tests use the
+ * classic view: four headless browsers rendering the 3D hall in software
+ * would mostly test the CPU. The hall has its own test.
+ */
+export async function newContext(browser: Browser, baseURL: string, view: "classic" | "3d" = "classic") {
   const context = await browser.newContext({ baseURL });
+  await context.addInitScript((v) => localStorage.setItem("ar-view", v), view);
+  return context;
+}
+
+/** A browser context with a named session, opened on the room. */
+export async function player(browser: Browser, baseURL: string, roomId: string, name: string, view: "classic" | "3d" = "classic"): Promise<Player> {
+  const context = await newContext(browser, baseURL, view);
   const res = await context.request.post("/api/session", { data: { name } });
   expect(res.ok()).toBe(true);
   const session = (await context.cookies()).find((c) => c.name === "ar_session")!;
@@ -23,7 +34,7 @@ export async function player(browser: Browser, baseURL: string, roomId: string, 
 
 /** A visitor with no session at all. */
 export async function spectator(browser: Browser, baseURL: string, roomId: string) {
-  const context = await browser.newContext({ baseURL });
+  const context = await newContext(browser, baseURL);
   const page = await context.newPage();
   await page.goto(`/r/${roomId}`);
   await expect(page.locator(".stage")).toBeVisible();

@@ -205,6 +205,34 @@ static/   team logos and player photos, served at /logos and /players
   unsold round can append to it), and all bids go through
   `bid()`/`applyBid()` in the engine (the place to add RTM cards).
 
+### The 3D hall and sound
+
+- **The moments of an auction:** `client/src/room/events.ts` works out each
+  moment (a new player, a bid, going once or twice, sold, unsold) from
+  consecutive snapshots, together with the auctioneer's line. The sounds
+  (`useAuctionSounds`) and the 3D hall both react to these, so the voice,
+  captions, animation and camera stay in step.
+- **What's in the hall** (`client/src/hall/`):
+  - React Three Fiber and three.js, in a chunk that only loads in the 3D view.
+  - The stage, podium and a big LED screen drawn live from the current lot.
+  - The ten team tables with logos, owners and paddles that rise on each bid.
+  - A crowd, spotlights and three.js's built-in studio lighting (nothing is
+    fetched from a CDN).
+- **The director** (`Hall3D.tsx`) chooses the shots:
+  - wide for a new player
+  - a hard cut to the bidding table on each bid
+  - a push-in on the auctioneer, with warmer light, at "going twice"
+  - on SOLD, the gavel strikes, then the camera swings to the winning table
+    as confetti falls
+- **The auctioneer:** `static/models/auctioneer.glb`, if present, is a rigged
+  realistic character with Mixamo clips (see `static/models/README.md`).
+  Without it, a neutral stand-in mannequin acts out the same poses. The model
+  is git-ignored, because most models can't be redistributed.
+- **3D or Classic:** the header switch flips between the 3D hall and the
+  classic layout, and each browser remembers its choice. Browsers without
+  WebGL2, with "reduce motion" on, or with little memory start in Classic. If
+  WebGL fails, the page falls back to Classic.
+
 ## Protocol
 
 HTTP:

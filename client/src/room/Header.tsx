@@ -1,6 +1,7 @@
 import { gameData } from "@auction/shared/data";
 import { cloneElement, useSyncExternalStore } from "react";
 import { sound } from "../sound";
+import { setViewMode, useViewMode } from "../viewMode";
 import { useRoomCtx } from "./context";
 import { fmt, lotsById } from "../view";
 
@@ -28,10 +29,21 @@ export function Header() {
         </div>
       </div>
       <div className="bar-r">
+        <ViewToggle />
         <SoundToggle />
         <span className="conn">{status}</span>
       </div>
     </header>
+  );
+}
+
+function ViewToggle() {
+  const view = useViewMode();
+  return (
+    <div className="seg view-toggle" role="group" aria-label="View">
+      <button aria-pressed={view === "3d"} onClick={() => setViewMode("3d")}>3D hall</button>
+      <button aria-pressed={view === "classic"} onClick={() => setViewMode("classic")}>Classic</button>
+    </div>
   );
 }
 
