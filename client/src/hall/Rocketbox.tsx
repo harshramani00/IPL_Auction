@@ -1,4 +1,5 @@
-// The default auctioneer: "Business_Male_01" from Microsoft's Rocketbox
+// The default auctioneer: "Male_Adult_03" (an older, silver-haired man in a
+// tweed jacket) from Microsoft's Rocketbox
 // avatar library (MIT licence, static/models/rocketbox/). It has no clips for
 // an auctioneer, so its arm bones are posed procedurally: each frame the upper
 // arm and forearm are aimed at target directions, which works whatever the
@@ -15,7 +16,7 @@ import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
 import type { Pose } from "./Auctioneer";
 import { GAVEL_BLOCK } from "./layout";
 
-const DIR = "/models/rocketbox/";
+const DIR = "/models/rocketbox/auctioneer/";
 const HEIGHT = 1.82;
 
 export interface AvatarSource {
@@ -98,7 +99,7 @@ export async function loadAvatar({ dir, file, height, physical = false }: Avatar
 }
 
 /** The auctioneer. */
-export const loadRocketbox = () => loadAvatar({ dir: DIR, file: "Business_Male_01.fbx", height: HEIGHT, physical: true });
+export const loadRocketbox = () => loadAvatar({ dir: DIR, file: "Male_Adult_03.fbx", height: HEIGHT, physical: true });
 
 export function bone(root: Object3D, name: string): Bone {
   const b = root.getObjectByName(name) as Bone | undefined;

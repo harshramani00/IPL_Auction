@@ -17,7 +17,7 @@ export function Credits() {
         <p>{credits.logos}</p>
         <p>Sound effects are generated in your browser, and the auctioneer's voice is your device's speech synthesizer.</p>
         <p>
-          The 3D auctioneer is "Business_Male_01" from the{" "}
+          The 3D auctioneer is "Male_Adult_03" from the{" "}
           <a href="https://github.com/microsoft/Microsoft-Rocketbox" target="_blank" rel="noreferrer">Microsoft Rocketbox</a>{" "}
           avatar library (MIT licence), as are the team owners and audience (Business_Male_02–04 and
           Business_Female_01–03). Studio lighting: "Studio Small 08" by Sergej Majboroda,{" "}

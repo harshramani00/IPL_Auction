@@ -1,6 +1,7 @@
 # 3D models
 
-The hall's auctioneer is `rocketbox/Business_Male_01.fbx` from Microsoft's
+The hall's auctioneer is `rocketbox/auctioneer/Male_Adult_03.fbx` (an older,
+silver-haired man in a tweed jacket) from Microsoft's
 Rocketbox avatar library (MIT, see `rocketbox/LICENSE.md`). The textures were
 converted from the original TGA files to JPG and PNG.
 

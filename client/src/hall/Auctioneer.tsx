@@ -1,7 +1,7 @@
 // The auctioneer, in order of preference:
 // 1. static/models/auctioneer.glb, your own rigged character with Mixamo clips
 //    (e.g. an exported MetaHuman), if present;
-// 2. the Rocketbox businessman (MIT, static/models/rocketbox/), posed in code;
+// 2. the Rocketbox auctioneer (MIT, static/models/rocketbox/auctioneer/), posed in code;
 // 3. a neutral stand-in mannequin while either loads, or if both fail.
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useMemo, useRef, useState } from "react";

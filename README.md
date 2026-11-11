@@ -242,9 +242,10 @@ static/   team logos and player photos, served at /logos and /players
     "going twice"
   - on SOLD, the gavel raps the block twice in that shot, then the camera
     cuts to the winning table as confetti falls
-- **The auctioneer:** "Business_Male_01", a realistic businessman from
-  Microsoft's open-source Rocketbox avatars (MIT licence,
-  `static/models/rocketbox/`).
+- **The auctioneer:** "Male_Adult_03", an older, silver-haired gentleman in
+  a tweed jacket from Microsoft's open-source Rocketbox avatars (MIT
+  licence, `static/models/rocketbox/auctioneer/`). He's a veteran-auctioneer
+  type, not a likeness of any real person.
   - **Animation:** his arms are posed in code each frame. His left hand
     gestures while he announces and points at each bidding table. His right
     holds a turned wooden gavel: two-bone IK puts the fist where the swing
