@@ -38,7 +38,8 @@ export function Stage() {
         <div className="stage-view">
           <HallBoundary>
             <Suspense fallback={<div className="hall hall-loading">Setting up the auction hall…</div>}>
-              <Hall3D s={s} mySeat={mySeat} serverNow={serverNow} reducedMotion={prefersReducedMotion()} />
+              <Hall3D s={s} mySeat={mySeat} serverNow={serverNow} reducedMotion={prefersReducedMotion()}
+                overlay={game && !matchMedia("(max-width: 900px)").matches} />
             </Suspense>
           </HallBoundary>
           {game && <div className="lower-third"><LiveBox lot={lot} /></div>}

@@ -26,11 +26,13 @@ interface Props {
   mySeat: number | null;
   serverNow: () => number;
   reducedMotion: boolean;
+  /** The bid panel covers the picture's bottom-left corner: frame subjects up and to the right of it. */
+  overlay?: boolean;
 }
 
 type Mood = "normal" | "tense";
 
-export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
+export default function Hall3D({ s, mySeat, serverNow, reducedMotion, overlay = false }: Props) {
   const shot = useRef<Shot & { cut: boolean }>({ ...SHOTS.wide(), cut: true });
   const [pose, setPose] = useState<Pose>("idle");
   const [strikeKey, setStrikeKey] = useState(0);
@@ -78,15 +80,16 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
       case "twice":
         setPose("raise");
         setMood("tense");
-        go(SHOTS.auctioneer());
+        go(SHOTS.gavel()); // push in on the raised gavel; SOLD then plays out in the same shot
         break;
       case "sold":
         clearLater();
         setMood("normal");
         setPose("strike");
         setStrikeKey((k) => k + 1);
-        later(650, () => {
-          go(SHOTS.winner(e.teamId));
+        go(SHOTS.gavel(), true); // watch the hammer fall...
+        later(900, () => {
+          go(SHOTS.winner(e.teamId), true); // ...then cut to the winners
           if (!reducedMotion) setBurst({ team: e.teamId, key: Date.now() });
         });
         later(1400, () => setPose("idle"));
@@ -96,8 +99,8 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
         setMood("normal");
         setPose("strike");
         setStrikeKey((k) => k + 1);
-        go(SHOTS.wide());
-        later(1200, () => setPose("idle"));
+        go(SHOTS.gavel(), true);
+        later(1100, () => { setPose("idle"); go(SHOTS.wide()); });
         break;
       case "pause":
         setPose("idle");
@@ -116,7 +119,7 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
   useEffect(() => {
     if (!import.meta.env.DEV) return;
     (window as unknown as { __hall: unknown }).__hall = {
-      shot: (name: "wide" | "auctioneer") => go(SHOTS[name]()),
+      shot: (name: "wide" | "auctioneer" | "gavel") => go(SHOTS[name](), true),
       table: (id: TeamId, winner = false) => go(winner ? SHOTS.winner(id) : SHOTS.table(id), true),
       view: (p: [number, number, number], t: [number, number, number]) =>
         go({ position: new Vector3(...p), target: new Vector3(...t) }, true),
@@ -168,7 +171,7 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
         <Tables s={s} />
         <Auctioneer pose={pose} strikeKey={strikeKey} pointAt={pointAt} />
         {burst && <Confetti key={burst.key} team={burst.team} />}
-        <CameraRig shot={shot} drift={!reducedMotion} />
+        <CameraRig shot={shot} drift={!reducedMotion} overlay={overlay} />
         <Effects focus={focus.target} bokeh={focus.bokeh} />
       </Canvas>
       {caption && (
@@ -291,14 +294,17 @@ function Wash({ from, to }: (typeof WASH)[number]) {
 }
 
 /** Eases the camera towards the director's shot, or cuts straight to it. */
-function CameraRig({ shot, drift }: { shot: React.MutableRefObject<Shot & { cut: boolean }>; drift: boolean }) {
+function CameraRig({ shot, drift, overlay }: { shot: React.MutableRefObject<Shot & { cut: boolean }>; drift: boolean; overlay: boolean }) {
   const camera = useThree((st) => st.camera) as PerspectiveCamera;
+  const size = useThree((st) => st.size);
+  const shift = useRef({ x: 0, y: 0 });
   const look = useRef(SHOTS.wide().target.clone());
   const offset = useMemo(() => new Vector3(), []);
   useFrame((state, dt) => {
     const sh = shot.current;
     const fov = vfovFor(camera.aspect, sh.hfov);
-    if (sh.cut) {
+    const cut = sh.cut;
+    if (cut) {
       camera.position.copy(sh.position);
       look.current.copy(sh.target);
       camera.fov = fov;
@@ -309,6 +315,12 @@ function CameraRig({ shot, drift }: { shot: React.MutableRefObject<Shot & { cut:
       look.current.lerp(sh.target, k);
       camera.fov += (fov - camera.fov) * k;
     }
+    // Slide the picture up and right of the bid panel: more on close shots, where the subject is centred.
+    const wide = sh.hfov !== undefined;
+    const ks = cut ? 1 : 1 - Math.exp(-dt * 1.8);
+    shift.current.x += ((overlay && !wide ? 0.11 : 0) - shift.current.x) * ks;
+    shift.current.y += ((overlay ? (wide ? 0.05 : 0.1) : 0) - shift.current.y) * ks;
+    camera.setViewOffset(size.width, size.height, -shift.current.x * size.width, shift.current.y * size.height, size.width, size.height);
     camera.updateProjectionMatrix();
     // A slow handheld drift keeps the room alive between moments.
     const t = state.clock.elapsedTime;

@@ -128,8 +128,8 @@ class Sound {
       case "tick": // clock warning
         this.tone(1900, t, 0.03, 0.25, "square");
         break;
-      case "gavel": // two strikes on the block
-        for (const at of [t, t + 0.18]) {
+      case "gavel": // two strikes on the block, timed to the 3D auctioneer's swing (hall/Rocketbox.tsx STRIKE_AT)
+        for (const at of [t + 0.2, t + 0.4]) {
           this.tone(150, at, 0.22, 0.9, "sine", 55);
           this.noise(at, 0.06, 0.5, 900);
         }
@@ -138,8 +138,8 @@ class Sound {
         this.noise(t + 0.25, 2.2, 0.35, 1400, 0.6);
         this.noise(t + 0.35, 1.9, 0.2, 3000, 0.5);
         break;
-      case "thud":
-        this.tone(95, t, 0.3, 0.6, "sine", 60);
+      case "thud": // one dull knock for UNSOLD, on the swing's first impact
+        this.tone(95, t + 0.2, 0.3, 0.6, "sine", 60);
         break;
       case "ping": // you've been outbid
         this.tone(880, t, 0.12, 0.35, "sine");

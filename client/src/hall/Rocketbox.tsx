@@ -6,13 +6,14 @@
 import { useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import {
-  Box3, CylinderGeometry, DoubleSide, Group, LoadingManager, Mesh, MeshPhysicalMaterial,
-  MeshStandardMaterial, Quaternion,
+  Box3, CanvasTexture, CylinderGeometry, DoubleSide, Group, LatheGeometry, LoadingManager, Matrix4, Mesh,
+  MeshPhysicalMaterial, MeshStandardMaterial, Quaternion, RepeatWrapping, Vector2,
   SRGBColorSpace, Texture, TextureLoader, Vector3, type Bone, type Light, type Material, type Object3D,
   type SkinnedMesh,
 } from "three";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
 import type { Pose } from "./Auctioneer";
+import { GAVEL_BLOCK } from "./layout";
 
 const DIR = "/models/rocketbox/";
 const HEIGHT = 1.82;
@@ -175,27 +176,202 @@ export function restFace(model: Object3D): void {
   setLids(faceOf(model, 0), LID_RELAXED);
 }
 
-/** A gavel to put in his right hand. */
+/**
+ * An arm that holds something: shoulder to wrist by two-bone IK, with the
+ * fist wrapped round a handle. Hand-space axes on this rig: x runs out along
+ * the fingers, the palm faces -y, and z runs across the knuckles (towards the
+ * index finger on a right hand, the little finger on a left).
+ */
+export interface Grip {
+  upper: Bone; fore: Bone; hand: Bone;
+  upperRest: Quaternion; foreRest: Quaternion; handRest: Quaternion;
+  /** Bone lengths in metres. */
+  a: number; b: number;
+  /** +1 for a right hand, -1 for a left. */
+  side: number;
+  /** Rig units per metre (the avatars are modelled in centimetres). */
+  units: number;
+}
+
+/** A handle doesn't cross the palm square: it lies diagonally, tipped towards the fingers. */
+const GRIP_TILT = 0.44;
+const GRIP_S = Math.sin(GRIP_TILT);
+const GRIP_C = Math.cos(GRIP_TILT);
+/** The middle of a closed fist, from the wrist, in centimetres (z flips for a left hand). */
+const FIST = new Vector3(8, -1.5, -1);
+
+/** Captures the arm as it is now; `holdAt` solves from this pose every frame. */
+export function makeGrip(model: Object3D, side: "L" | "R"): Grip {
+  const upper = bone(model, `Bip01_${side}_UpperArm`);
+  const fore = bone(model, `Bip01_${side}_Forearm`);
+  const hand = bone(model, `Bip01_${side}_Hand`);
+  model.updateMatrixWorld(true);
+  const p = [upper, fore, hand].map((x) => x.getWorldPosition(new Vector3()));
+  return {
+    upper, fore, hand,
+    upperRest: upper.quaternion.clone(), foreRest: fore.quaternion.clone(), handRest: hand.quaternion.clone(),
+    a: p[0]!.distanceTo(p[1]!), b: p[1]!.distanceTo(p[2]!),
+    side: side === "R" ? 1 : -1,
+    units: 1 / hand.getWorldScale(new Vector3()).x,
+  };
+}
+
+/** How a held object sits in the hand: its +y runs up the handle from the fist. */
+export function seatInHand(object: Object3D, grip: Grip): void {
+  object.scale.setScalar(grip.units);
+  object.position.set(FIST.x, FIST.y, FIST.z * grip.side);
+  // Object y -> hand z (across the knuckles), then tipped towards the fingers.
+  object.quaternion.setFromAxisAngle(_a.set(0, 1, 0), GRIP_TILT * grip.side)
+    .multiply(_delta.setFromAxisAngle(_b.set(1, 0, 0), (Math.PI / 2) * grip.side));
+  grip.hand.add(object);
+}
+
+const _x = new Vector3();
+const _y = new Vector3();
+const _z = new Vector3();
+const _perp = new Vector3();
+const _wrist = new Vector3();
+const _elbow = new Vector3();
+const _shoulder = new Vector3();
+const _pole = new Vector3();
+const _basis = new Matrix4();
+const _handQ = new Quaternion();
+const _foreQ = new Quaternion();
+const _twist = new Quaternion();
+const _identity = new Quaternion();
+
+/**
+ * Puts the fist at `point` with the handle running along `axis` (towards the
+ * index-finger side) and the palm facing `palm`, bending the elbow towards
+ * `pole`. All in world space. The forearm takes most of the roll, like a real
+ * one, so the wrist only has to bend.
+ */
+export function holdAt(g: Grip, point: Vector3, axis: Vector3, palm: Vector3, pole: Vector3): void {
+  // The hand's world orientation: palm = -y, handle = the tipped knuckle line in the x-z plane.
+  _z.copy(axis).normalize();
+  _y.copy(palm).multiplyScalar(-1).addScaledVector(_z, palm.dot(_z)).normalize();
+  _perp.crossVectors(_y, _z);
+  const cs = GRIP_C * g.side;
+  _x.copy(_z).multiplyScalar(GRIP_S).addScaledVector(_perp, cs);
+  _z.multiplyScalar(cs).addScaledVector(_perp, -GRIP_S);
+  _handQ.setFromRotationMatrix(_basis.makeBasis(_x, _y, _z));
+
+  // Wrist: back from the fist's centre.
+  _wrist.set(FIST.x, FIST.y, FIST.z * g.side).divideScalar(g.units).applyQuaternion(_handQ).multiplyScalar(-1).add(point);
+
+  // Shoulder to wrist with the elbow on the pole side.
+  g.upper.quaternion.copy(g.upperRest);
+  g.fore.quaternion.copy(g.foreRest);
+  g.upper.updateWorldMatrix(true, true);
+  g.upper.getWorldPosition(_shoulder);
+  _b.copy(_wrist).sub(_shoulder);
+  const d = Math.min(Math.max(_b.length(), Math.abs(g.a - g.b) + 1e-3), g.a + g.b - 1e-3);
+  _b.normalize();
+  _pole.copy(pole).addScaledVector(_b, -pole.dot(_b)).normalize();
+  const along = (g.a * g.a - g.b * g.b + d * d) / (2 * d);
+  const out = Math.sqrt(Math.max(0, g.a * g.a - along * along));
+  _elbow.copy(_shoulder).addScaledVector(_b, along).addScaledVector(_pole, out);
+  aim(g.upper, g.fore, _pole.copy(_elbow).sub(_shoulder), 1);
+  aim(g.fore, g.hand, _pole.copy(_wrist).sub(g.fore.getWorldPosition(_elbow)), 1);
+
+  // Roll the forearm towards the hand's twist about its own length...
+  g.fore.updateWorldMatrix(true, false);
+  g.fore.getWorldQuaternion(_foreQ);
+  _b.copy(_wrist).sub(_elbow).normalize();
+  _twist.copy(_foreQ).multiply(g.handRest).invert().premultiply(_handQ); // hand target relative to its rest
+  const proj = _twist.x * _b.x + _twist.y * _b.y + _twist.z * _b.z;
+  _twist.set(_b.x * proj, _b.y * proj, _b.z * proj, _twist.w).normalize();
+  _twist.slerp(_identity, 0.3);
+  _foreQ.premultiply(_twist);
+  g.fore.parent!.getWorldQuaternion(_parent).invert();
+  g.fore.quaternion.copy(_parent.multiply(_foreQ));
+  // ...and the wrist takes what's left.
+  g.hand.quaternion.copy(_foreQ.invert().multiply(_handQ));
+}
+
+/** Varnished wood with a little grain along the length of a turned piece. */
+let woodMaterial: MeshPhysicalMaterial | null = null;
+export function wood(): MeshPhysicalMaterial {
+  if (woodMaterial) return woodMaterial;
+  const canvas = document.createElement("canvas");
+  canvas.width = canvas.height = 256;
+  const c = canvas.getContext("2d")!;
+  c.fillStyle = "#7b4a27";
+  c.fillRect(0, 0, 256, 256);
+  for (let i = 0; i < 140; i++) {
+    const x = Math.random() * 256;
+    c.strokeStyle = Math.random() < 0.6 ? `rgba(48, 24, 10, ${0.08 + Math.random() * 0.22})` : `rgba(190, 130, 80, ${0.06 + Math.random() * 0.12})`;
+    c.lineWidth = 0.6 + Math.random() * 2.2;
+    c.beginPath();
+    c.moveTo(x, 0);
+    c.bezierCurveTo(x + (Math.random() - 0.5) * 14, 85, x + (Math.random() - 0.5) * 14, 170, x + (Math.random() - 0.5) * 8, 256);
+    c.stroke();
+  }
+  const map = new CanvasTexture(canvas);
+  map.colorSpace = SRGBColorSpace;
+  map.wrapS = map.wrapT = RepeatWrapping;
+  woodMaterial = new MeshPhysicalMaterial({ map, roughness: 0.42, clearcoat: 0.55, clearcoatRoughness: 0.22 });
+  return woodMaterial;
+}
+
+const turned = (profile: [radius: number, y: number][], segments = 28) =>
+  new LatheGeometry(profile.map(([r, y]) => new Vector2(r, y)), segments);
+
+/** Where the gavel's head sits up the handle from the fist, and how thick it is. */
+export const GAVEL_REACH = 0.17;
+export const GAVEL_HEAD_RADIUS = 0.032;
+
+/** A turned wooden gavel. Origin in the fist, handle up +y, the head's two faces along x. */
 function gavel(): Group {
   const g = new Group();
-  const wood = new MeshStandardMaterial({ color: "#4a2e17", roughness: 0.4 });
-  const handle = new Mesh(new CylinderGeometry(0.011, 0.013, 0.27, 12), wood);
-  handle.position.y = 0.06;
-  const head = new Mesh(new CylinderGeometry(0.034, 0.034, 0.12, 24), wood);
+  const handle = new Mesh(turned([
+    [0, -0.1], [0.012, -0.1], [0.0152, -0.092], [0.0152, -0.08], [0.011, -0.068], [0.0125, -0.03],
+    [0.0135, 0], [0.012, 0.04], [0.0095, 0.09], [0.009, 0.135], [0.011, 0.142], [0, 0.142],
+  ]), wood());
+  const head = new Mesh(turned([
+    [0, -0.058], [0.024, -0.058], [0.028, -0.054], [0.028, -0.04], [0.0255, -0.036], [0.0255, -0.032],
+    [0.031, -0.02], [GAVEL_HEAD_RADIUS, 0], [0.031, 0.02], [0.0255, 0.032], [0.0255, 0.036], [0.028, 0.04],
+    [0.028, 0.054], [0.024, 0.058], [0, 0.058],
+  ], 36), wood());
   head.rotation.z = Math.PI / 2;
-  head.position.y = 0.19;
-  const band = new Mesh(new CylinderGeometry(0.036, 0.036, 0.02, 24), new MeshStandardMaterial({ color: "#c9a86a", metalness: 0.8, roughness: 0.3 }));
+  head.position.y = GAVEL_REACH;
+  const band = new Mesh(
+    new CylinderGeometry(GAVEL_HEAD_RADIUS + 0.0008, GAVEL_HEAD_RADIUS + 0.0008, 0.012, 36),
+    new MeshStandardMaterial({ color: "#d9b25a", metalness: 0.9, roughness: 0.25 }),
+  );
   band.rotation.z = Math.PI / 2;
-  band.position.y = 0.19;
+  band.position.y = GAVEL_REACH;
+  for (const m of [handle, head, band]) m.castShadow = true;
   g.add(handle, head, band);
   return g;
 }
+
+/** The sound block's shape: a turned disc, 4 cm tall. */
+export const soundBlockGeometry = () => turned([
+  [0, 0], [0.086, 0], [0.09, 0.006], [0.09, 0.024], [0.083, 0.034], [0.06, SOUND_BLOCK_HEIGHT], [0, SOUND_BLOCK_HEIGHT],
+], 40);
+export const SOUND_BLOCK_HEIGHT = 0.04;
 
 interface Props {
   model: Object3D;
   pose: Pose;
   strikeKey: number;
   pointAt: Vector3 | null;
+}
+
+/**
+ * The gavel's height through a SOLD: up, down hard, a short bounce, a second
+ * rap, and settle. Seconds since the call -> 0 (on the block) .. 1 (cocked).
+ * The two impacts (0.2 s and 0.4 s) are where the sound puts its two knocks.
+ */
+export const STRIKE_AT = [0.2, 0.4] as const;
+function strikeLift(s: number): number {
+  if (s < 0.11) return 1;
+  if (s < 0.2) return 1 - ((s - 0.11) / 0.09) ** 2;
+  if (s < 0.31) return 0.42 * Math.sin(((s - 0.2) / 0.11) * (Math.PI / 2));
+  if (s < 0.4) return 0.42 * (1 - ((s - 0.31) / 0.09) ** 2);
+  if (s < 0.54) return 0.07 * Math.sin(((s - 0.4) / 0.14) * Math.PI);
+  return 0;
 }
 
 export function RocketboxAuctioneer({ model, pose, strikeKey, pointAt }: Props) {
@@ -208,6 +384,7 @@ export function RocketboxAuctioneer({ model, pose, strikeKey, pointAt }: Props) 
       headRest: new Quaternion(),
       face: faceOf(model, 0.37),
       gavel: gavel(),
+      grip: makeGrip(model, "R"),
     };
     r.headRest.copy(r.head.quaternion);
     // The rig rests with flat open hands. Biped finger bones run along +x and
@@ -220,14 +397,13 @@ export function RocketboxAuctioneer({ model, pose, strikeKey, pointAt }: Props) 
         }
       }
     };
-    curl("R", 1.2);
+    curl("R", 1.25);
     curl("L", 0.5);
-    // Gavel in metres (undoing the model's centimetre scale), handle across
-    // the palm through the fist, head out past the thumb.
-    r.gavel.scale.setScalar(1 / model.scale.x);
-    r.gavel.position.set(8, -1.5, -3);
-    r.gavel.rotation.set(Math.PI / 2, 0, 0);
-    r.rHand.add(r.gavel);
+    // The thumb wraps over the fingers.
+    for (const joint of ["", "1", "2"]) {
+      model.getObjectByName(`Bip01_R_Finger0${joint}`)?.quaternion.multiply(_delta.setFromAxisAngle(_a.set(0, 0, 1), 0.35));
+    }
+    seatInHand(r.gavel, r.grip);
     if (import.meta.env.DEV) (window as unknown as { __rig: unknown }).__rig = r;
     return r;
   }, [model]);
@@ -238,7 +414,12 @@ export function RocketboxAuctioneer({ model, pose, strikeKey, pointAt }: Props) 
     lastStrike.current = strikeKey;
     strikeAt.current = performance.now() / 1000;
   }
-  const dirs = useMemo(() => ({ ru: new Vector3(), rf: new Vector3(), lu: new Vector3(), lf: new Vector3(), tmp: new Vector3() }), []);
+  const dirs = useMemo(() => ({ lu: new Vector3(), lf: new Vector3(), tmp: new Vector3() }), []);
+  const hammer = useRef({
+    lift: 0, head: new Vector3(), axis: new Vector3(), fist: new Vector3(),
+    palm: new Vector3(1, 0, 0), // faces in towards his chest
+    pole: new Vector3(-0.75, -1, -0.3), // elbow down and out to his right
+  });
   // When the pose last changed (he speaks for a moment at each), and his smoothed head turn and mouth.
   const voice = useRef({ pose, at: -10, yaw: 0, open: 0 });
   if (voice.current.pose !== pose) {
@@ -249,42 +430,49 @@ export function RocketboxAuctioneer({ model, pose, strikeKey, pointAt }: Props) 
   useFrame((state, dt) => {
     const t = state.clock.elapsedTime;
     const since = performance.now() / 1000 - strikeAt.current;
-    const { ru, rf, lu, lf } = dirs;
-    // He faces +z; his right side is -x.
-    ru.set(-0.22, -1, 0.42); rf.set(-0.05, -0.12, 1);
+    const { lu, lf } = dirs;
+    // He faces +z; his right side is -x. The left arm rests, gestures and points.
     lu.set(0.22, -1, 0.42); lf.set(0.05, -0.12, 1);
-    let speed = 7;
-
+    let left = 6;
     if (pose === "talk") {
       const s = Math.sin(t * 3.1);
       lu.set(0.6, -0.55 + s * 0.12, 0.62);
       lf.set(0.35, 0.3 + s * 0.2, 1);
     } else if (pose === "point" && pointAt) {
-      const shoulder = rig.rUpper.getWorldPosition(dirs.tmp);
-      ru.copy(pointAt).setY(pointAt.y + 1.1).sub(shoulder).normalize();
-      ru.y = Math.max(ru.y, -0.35);
-      rf.copy(ru);
-      speed = 10;
-    } else if (pose === "raise") {
-      ru.set(-0.4, 0.75, 0.45);
-      rf.set(-0.05, 0.85, 0.5);
-      speed = 8;
-    } else if (pose === "strike") {
-      if (since < 0.14) {
-        ru.set(-0.4, 0.8, 0.45); rf.set(-0.05, 0.9, 0.45);
-        speed = 30;
-      } else {
-        ru.set(-0.3, -0.45, 0.85); rf.set(-0.08, -0.9, 0.45);
-        speed = since < 0.35 ? 40 : 8;
-      }
+      const shoulder = rig.lUpper.getWorldPosition(dirs.tmp);
+      lu.copy(pointAt).setY(pointAt.y + 1.1).sub(shoulder).normalize();
+      lu.y = Math.max(lu.y, -0.35);
+      lf.copy(lu);
+      left = 10;
     }
-
-    const k = 1 - Math.exp(-dt * speed);
-    const kl = 1 - Math.exp(-dt * 6);
-    aim(rig.rUpper, rig.rFore, ru, k);
-    aim(rig.rFore, rig.rHand, rf, k);
+    const kl = 1 - Math.exp(-dt * left);
     aim(rig.lUpper, rig.lFore, lu, kl);
     aim(rig.lFore, rig.lHand, lf, kl);
+
+    // The right hand holds the gavel. `lift` is how far the head is off the
+    // block: 0 resting on it, 1 cocked back beside his ear.
+    const h = hammer.current;
+    let lift = 0;
+    let speed = 9;
+    if (pose === "raise") {
+      lift = 0.82 + Math.sin(t * 2.3) * 0.02;
+    } else if (pose === "strike" && since < 0.6) {
+      lift = strikeLift(since);
+      speed = 70;
+    }
+    h.lift += (lift - h.lift) * (1 - Math.exp(-dt * speed));
+    // The head swings on an arc from the block up and back; the handle leads with the wrist cocked.
+    const u = h.lift;
+    const ease = u * u * (3 - 2 * u);
+    h.head.copy(GAVEL_BLOCK).setY(GAVEL_BLOCK.y + GAVEL_HEAD_RADIUS + 0.002);
+    h.head.x -= 0.1 * ease;
+    h.head.y += 0.62 * ease + 0.06 * Math.sin(u * Math.PI);
+    h.head.z -= 0.2 * ease + 0.1 * Math.sin(u * Math.PI);
+    // Handle: sloping down to the block at rest, upright and tipped back when raised.
+    const tip = -0.36 + 2.05 * Math.pow(u, 0.85); // radians from "forward", towards "up and back"
+    h.axis.set(0.06 * ease, Math.sin(tip), Math.cos(tip));
+    h.fist.copy(h.head).addScaledVector(h.axis, -GAVEL_REACH);
+    holdAt(rig.grip, h.fist, h.axis, h.palm, h.pole);
 
     // Head: nods while talking, turns to the table he's pointing at, a slight tilt otherwise.
     const v = voice.current;

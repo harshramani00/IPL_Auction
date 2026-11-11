@@ -13,7 +13,7 @@ import {
 import { clone as cloneSkinned } from "three/examples/jsm/utils/SkeletonUtils.js";
 import { renderQuality } from "./Effects";
 import { AUCTIONEER, SCREEN } from "./layout";
-import { aim, animateFace, bone, faceOf, loadAvatar, restFace } from "./Rocketbox";
+import { aim, animateFace, bone, faceOf, holdAt, loadAvatar, makeGrip, restFace } from "./Rocketbox";
 
 const PEOPLE = [
   { name: "Business_Male_02", height: 1.8 },
@@ -211,46 +211,37 @@ export function Chair({ position }: { position: [number, number, number] }) {
   );
 }
 
-const _s = new Vector3();
-const _g = new Vector3();
-const _u = new Vector3();
-const _p = new Vector3();
-const _e = new Vector3();
-const _dir = new Vector3();
+const _point = new Vector3();
+const _axis2 = new Vector3();
+const _palm = new Vector3();
+const _pole = new Vector3();
+const _frame2 = new Quaternion();
 
 /**
- * Keeps an owner's left hand on the paddle handle (`grip`), wherever the
- * paddle is: a two-bone arm solve with the elbow dropping down and out.
+ * Keeps an owner's left fist wrapped round the paddle's handle wherever the
+ * paddle goes. `paddle` is an object whose origin is the grip point and whose
+ * +y runs up the handle to the disc.
  */
-export function usePaddleHold(model: Object3D, grip: RefObject<Object3D | null>): void {
-  const arm = useMemo(() => {
-    const upper = bone(model, "Bip01_L_UpperArm");
-    const fore = bone(model, "Bip01_L_Forearm");
-    const hand = bone(model, "Bip01_L_Hand");
-    model.updateMatrixWorld(true);
-    const a = upper.getWorldPosition(new Vector3()).distanceTo(fore.getWorldPosition(new Vector3()));
-    const b = fore.getWorldPosition(new Vector3()).distanceTo(hand.getWorldPosition(new Vector3()));
+export function usePaddleHold(model: Object3D, paddle: RefObject<Object3D | null>): void {
+  const grip = useMemo(() => {
     curl(model, "L", 0.8); // closes round the handle on top of the seated relax
-    return { upper, fore, hand, a, b };
+    for (const joint of ["", "1", "2"]) {
+      model.getObjectByName(`Bip01_L_Finger0${joint}`)?.quaternion.multiply(_q.setFromAxisAngle(Z, 0.35));
+    }
+    return makeGrip(model, "L");
   }, [model]);
 
   useFrame(() => {
-    const g = grip.current;
-    if (!g) return;
-    const { upper, fore, hand, a, b } = arm;
-    upper.getWorldPosition(_s);
-    g.getWorldPosition(_g);
-    _u.copy(_g).sub(_s);
-    const d = Math.min(Math.max(_u.length(), Math.abs(a - b) + 1e-3), a + b - 1e-3);
-    _u.normalize();
-    // Pole: down and out to their left, so the elbow bends naturally.
-    _p.set(1, 0, 0).applyQuaternion(model.getWorldQuaternion(_q)).multiplyScalar(0.6).add(_axis.set(0, -1, 0));
-    _p.addScaledVector(_u, -_p.dot(_u)).normalize();
-    const x = (a * a - b * b + d * d) / (2 * d);
-    const h = Math.sqrt(Math.max(0, a * a - x * x));
-    _e.copy(_s).addScaledVector(_u, x).addScaledVector(_p, h);
-    aim(upper, fore, _dir.copy(_e).sub(_s), 1);
-    aim(fore, hand, _dir.copy(_g).sub(fore.getWorldPosition(_e)), 1);
+    const p = paddle.current;
+    if (!p) return;
+    p.updateWorldMatrix(true, false);
+    p.getWorldPosition(_point);
+    _axis2.set(0, 1, 0).applyQuaternion(p.getWorldQuaternion(_frame2));
+    // In the owner's own frame: palm towards their right, elbow down, out to the left and a little back.
+    model.parent!.getWorldQuaternion(_frame2);
+    _palm.set(-1, 0, 0.25).applyQuaternion(_frame2);
+    _pole.set(0.7, -1, -0.35).applyQuaternion(_frame2);
+    holdAt(grip, _point, _axis2, _palm, _pole);
   });
 }
 

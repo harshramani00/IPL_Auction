@@ -2,7 +2,8 @@
 import { useLayoutEffect, useMemo, useRef } from "react";
 import { Color, DoubleSide, Matrix4, Object3D, Vector3, type CanvasTexture, type InstancedMesh } from "three";
 import { renderQuality } from "./Effects";
-import { PODIUM, SCREEN, STAGE } from "./layout";
+import { GAVEL_BLOCK, PODIUM, SCREEN, STAGE } from "./layout";
+import { SOUND_BLOCK_HEIGHT, soundBlockGeometry, wood } from "./Rocketbox";
 import { CrowdPeople, SEAT_Y, usePeople, type CrowdSeat } from "./People";
 import { imageTexture } from "./textures";
 
@@ -10,6 +11,7 @@ const CROWD = 140;
 
 export function Room({ screen }: { screen: CanvasTexture }) {
   const ipl = imageTexture("/logos/IPL.png");
+  const block = useMemo(soundBlockGeometry, []);
   return (
     <group>
       <mesh rotation-x={-Math.PI / 2} receiveShadow>
@@ -49,34 +51,31 @@ export function Room({ screen }: { screen: CanvasTexture }) {
         <meshBasicMaterial map={screen} toneMapped={false} />
       </mesh>
 
-      {/* Podium */}
+      {/* Podium: a lectern at chest height, so his gavel hand can work on top of it */}
       <group position={PODIUM}>
-        <mesh position={[0, 0.575, 0]} castShadow receiveShadow>
-          <boxGeometry args={[1.4, 1.15, 0.7]} />
+        <mesh position={[0, 0.51, 0]} castShadow receiveShadow>
+          <boxGeometry args={[1.4, 1.02, 0.7]} />
           <meshStandardMaterial color="#241f5c" roughness={0.45} metalness={0.25} />
         </mesh>
-        <mesh position={[0, 1.18, 0]} castShadow receiveShadow>
+        <mesh position={[0, 1.05, 0]} castShadow receiveShadow>
           <boxGeometry args={[1.56, 0.07, 0.82]} />
           <meshStandardMaterial color="#3b2414" roughness={0.5} />
         </mesh>
-        <mesh position={[0, 1.142, 0.412]}>
+        <mesh position={[0, 1.012, 0.412]}>
           <boxGeometry args={[1.56, 0.012, 0.012]} />
           <meshStandardMaterial color="#f3c34f" emissive="#f3c34f" emissiveIntensity={0.6} metalness={0.8} />
         </mesh>
-        <mesh position={[0, 0.66, 0.352]}>
+        <mesh position={[0, 0.58, 0.352]}>
           <planeGeometry args={[0.66, 0.42]} />
           <meshStandardMaterial color="#ffffff" roughness={0.6} />
         </mesh>
-        <mesh position={[0, 0.66, 0.354]}>
+        <mesh position={[0, 0.58, 0.354]}>
           <planeGeometry args={[0.58, 0.36]} />
           <meshStandardMaterial map={ipl} transparent roughness={0.6} />
         </mesh>
-        {/* Sound block for the gavel */}
-        <mesh position={[0.48, 1.235, 0.1]} castShadow>
-          <cylinderGeometry args={[0.09, 0.1, 0.04, 32]} />
-          <meshStandardMaterial color="#2a1a0e" roughness={0.4} />
-        </mesh>
       </group>
+      {/* Sound block for the gavel */}
+      <mesh position={[GAVEL_BLOCK.x, GAVEL_BLOCK.y - SOUND_BLOCK_HEIGHT, GAVEL_BLOCK.z]} geometry={block} material={wood()} castShadow receiveShadow />
 
       {/* Lighting truss */}
       <mesh position={[0, 7.2, -2.5]}>

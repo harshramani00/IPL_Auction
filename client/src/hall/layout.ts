@@ -5,6 +5,9 @@ import { Vector3 } from "three";
 
 export const STAGE = { x: 0, z: -4.2, radius: 3.6, height: 0.4 };
 export const PODIUM = new Vector3(0, STAGE.height, -3.55);
+/** The podium's top surface, and the gavel's sound block on it by his right hand (top centre). */
+export const PODIUM_TOP = STAGE.height + 1.085;
+export const GAVEL_BLOCK = new Vector3(-0.3, PODIUM_TOP + 0.04, -3.8);
 /** Where the auctioneer stands (his feet). */
 export const AUCTIONEER = new Vector3(0, STAGE.height, -4.25);
 export const SCREEN = { center: new Vector3(0, 3.7, -6.9), width: 6.4, height: 3.6 };
@@ -61,6 +64,8 @@ export const SHOTS = {
   wide: (): Shot => ({ position: new Vector3(0, 4.4, 11), target: new Vector3(0, 1.7, -3.4), hfov: 74 }),
   /** Head and shoulders on the auctioneer, over the podium, for "going twice". */
   auctioneer: (): Shot => ({ position: new Vector3(0.75, 2.2, -2.15), target: new Vector3(0, 2.02, -4.2) }),
+  /** From his gavel side: the whole swing, from beside his ear down to the block. */
+  gavel: (): Shot => ({ position: new Vector3(-1.45, 2.05, -2.2), target: new Vector3(-0.5, 1.66, -4) }),
   /** The bidding table from the stage side: the owners' faces and the paddle going up, the audience behind. */
   table: (id: TeamId): Shot => {
     const t = tableOf(id);

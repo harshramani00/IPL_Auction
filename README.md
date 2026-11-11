@@ -238,15 +238,19 @@ static/   team logos and player photos, served at /logos and /players
   - wide for a new player
   - a hard cut to the bidding table on each bid, shot from the stage so you
     see the owners' faces and the paddle going up
-  - a push-in on the auctioneer, with warmer light, at "going twice"
-  - on SOLD, the gavel strikes, then the camera swings to the winning table
-    as confetti falls
+  - a push-in on the auctioneer's raised gavel, with warmer light, at
+    "going twice"
+  - on SOLD, the gavel raps the block twice in that shot, then the camera
+    cuts to the winning table as confetti falls
 - **The auctioneer:** "Business_Male_01", a realistic businessman from
   Microsoft's open-source Rocketbox avatars (MIT licence,
   `static/models/rocketbox/`).
-  - **Animation:** his arms are posed in code (aimed at targets each frame).
-    He gestures while announcing, points at each bidding table, raises the
-    gavel and strikes it, with his fingers curled round the gavel.
+  - **Animation:** his arms are posed in code each frame. His left hand
+    gestures while he announces and points at each bidding table. His right
+    holds a turned wooden gavel: two-bone IK puts the fist where the swing
+    needs it, the forearm rolls and the wrist cocks. It rests on the sound
+    block, lifts beside his ear for "going once / twice", and on SOLD comes
+    down, bounces and raps again, in time with the two knocks in the sound.
   - **Your own character:** a `static/models/auctioneer.glb` with Mixamo clips
     (for example an exported MetaHuman) takes over if present. It's
     git-ignored, since most such models can't be redistributed. See
@@ -257,8 +261,9 @@ static/   team logos and player photos, served at /logos and /players
 - **The people in the room:** six more Rocketbox business avatars
   (`static/models/rocketbox/people/`, about 13 MB) fill the hall.
   - **Team owners:** two per table, seated on chairs with their forearms on
-    the table. The owner beside the paddle holds it, and their arm follows
-    it up when the team bids (a two-bone arm solve each frame). They
+    the table. The owner beside the paddle holds it in a closed fist: it
+    lies on the table, is thrust up on a spring with a shake of the wrist
+    when the team bids, then stands upright on the table while they lead. They
     breathe, blink, watch the auctioneer, glance at the screen or their
     notes, and turn to look at whichever table has just bid.
   - **Audience:** 140 seated people on tiered risers. Each avatar is frozen
