@@ -56,6 +56,19 @@ describe("Room", () => {
     expect(r.last()).toMatchObject({ phase: "live", lotIndex: 1, skipped: [] });
   });
 
+  it("draws each set in a random order when asked, and tells clients so", () => {
+    const snaps: Snapshot[] = [];
+    const room = new Room("ROOM02", { data: gameData, aiEnabled: false, shuffleSets: true, rng: () => 0.37, onChange: (s) => snaps.push(s) });
+    room.connect(p1);
+    room.handle(p1, { type: "join" });
+    room.handle(p1, { type: "claim", teamId: "KKR" });
+    expect(snaps[snaps.length - 1]!.shuffleSets).toBe(true);
+    room.handle(p1, { type: "start" });
+    // The quick preset opens with Devon Conway in the official order.
+    expect(snaps[snaps.length - 1]!.lot!.name).not.toBe("Devon Conway");
+    room.dispose();
+  });
+
   it("marks a lot unsold when every team skips it", () => {
     const r = startTwoPlayer();
     r.send(p1, { type: "skip", teamId: "KKR" });

@@ -22,6 +22,7 @@ export function snapshot(s: RoomState, now: number): Snapshot {
     lead: s.lead,
     bids: s.bids.slice(-5).reverse(),
     skipped: s.skipped,
+    shuffleSets: s.shuffleSets,
     nextAmount: lot && (s.phase === "live" || s.phase === "paused") ? nextAmount(lot, s.lead) : null,
     deadline: s.deadline,
     windowMs: s.windowMs,

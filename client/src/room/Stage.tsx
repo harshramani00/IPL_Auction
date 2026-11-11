@@ -32,7 +32,7 @@ export function Stage() {
     <section className={`stage${game ? " in-game" : ""}`} aria-label="Player on the block">
       <div className="set-banner">
         <span>{lobby ? `Lobby · ${lot.set}` : done ? "Auction complete" : lot.set}</span>
-        <span>{lobby ? "Up first" : done ? `${sold} sold` : "On the block"}</span>
+        <span>{lobby ? (s.shuffleSets ? "First set · order drawn at the start" : "Up first") : done ? `${sold} sold` : "On the block"}</span>
       </div>
       {threeD && (
         <div className="stage-view">

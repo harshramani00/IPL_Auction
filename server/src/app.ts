@@ -66,6 +66,7 @@ export function createApp(config: Config, deps: AppDeps): App {
     const room = new Room(id, {
       data: deps.data,
       aiEnabled: config.aiEnabled,
+      shuffleSets: config.shuffleSets,
       clock: deps.clock,
       rng: deps.rng,
       onChange: (snap) => io.to(id).emit("state", snap),

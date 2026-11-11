@@ -21,6 +21,8 @@ export const realClock: Clock = {
 export interface RoomOptions {
   data: GameData;
   aiEnabled: boolean;
+  /** Draw each set's players in a random order. Default: the official order. */
+  shuffleSets?: boolean;
   onChange: (snap: Snapshot) => void;
   clock?: Clock;
   rng?: Rng;
@@ -39,6 +41,7 @@ export class Room {
   constructor(readonly id: string, private readonly opts: RoomOptions) {
     this.state = createRoom(id);
     this.state.aiEnabled = opts.aiEnabled;
+    this.state.shuffleSets = opts.shuffleSets ?? false;
     this.clock = opts.clock ?? realClock;
     this.rng = opts.rng ?? Math.random;
     this.lastActive = this.clock.now();

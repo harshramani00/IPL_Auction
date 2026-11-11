@@ -2,9 +2,10 @@ import { describe, expect, it } from "vitest";
 import {
   BID_MS, OPEN_MS, RESULT_MS,
   advance, aiTurn, bid, capFor, claim, createRoom, incrementFor, join, leave, nextAmount, nextWake,
-  pause, release, reset, skip, start, startProblems, teamsOf, updateSettings,
+  pause, release, reset, shuffledWithinSets, skip, start, startProblems, teamsOf, updateSettings,
   type RoomState,
 } from "../src/index.js";
+import { gameData } from "../src/data.js";
 import { T0, lot, player, seq, testData, users } from "./helpers.js";
 
 const [u1, u2, u3, u4] = users as [typeof users[0], typeof users[0], typeof users[0], typeof users[0]];
@@ -259,6 +260,47 @@ describe("skip", () => {
     s.aiValues = {}; // nobody values him
     expect(aiTurn(s, T0 + 500, rng)).toBe(true);
     expect(s.outcome).toMatchObject({ status: "sold", teamId: "MI", amount: 200 });
+  });
+});
+
+describe("shuffled sets", () => {
+  const real = gameData.presets.capped.lots.map((id) => gameData.lots.find((l) => l.id === id)!);
+  /** A small seeded generator, so the shuffle is random-looking but repeatable. */
+  const seeded = (seed: number) => () => {
+    seed = (seed * 1664525 + 1013904223) % 4294967296;
+    return seed / 4294967296;
+  };
+
+  it("keeps the sets in order and every player in their own set", () => {
+    const out = shuffledWithinSets(real, seeded(7));
+    expect(out).toHaveLength(real.length);
+    expect(out.map((l) => l.setCode)).toEqual(real.map((l) => l.setCode));
+    expect(out.map((l) => l.id).sort((a, b) => a - b)).toEqual(real.map((l) => l.id).sort((a, b) => a - b));
+  });
+
+  it("changes the order inside the sets, differently each game", () => {
+    const a = shuffledWithinSets(real, seeded(7)).map((l) => l.id);
+    const b = shuffledWithinSets(real, seeded(99)).map((l) => l.id);
+    expect(a).not.toEqual(real.map((l) => l.id));
+    expect(a).not.toEqual(b);
+  });
+
+  it("only applies when the room asks for it", () => {
+    const official = gameData.presets.quick.lots;
+    const plain = createRoom("r1");
+    join(plain, u1); claim(plain, u1.id, "MI");
+    start(plain, u1.id, gameData, T0, seeded(3));
+    expect(plain.queue.map((l) => l.id)).toEqual(official);
+
+    const mixed = createRoom("r2");
+    mixed.shuffleSets = true;
+    join(mixed, u1); claim(mixed, u1.id, "MI");
+    start(mixed, u1.id, gameData, T0, seeded(3));
+    expect(mixed.queue.map((l) => l.id)).not.toEqual(official);
+    expect(mixed.queue.map((l) => l.setCode)).toEqual(plain.queue.map((l) => l.setCode));
+    // Play it again: the setting survives a reset.
+    reset(mixed, u1.id);
+    expect(mixed.shuffleSets).toBe(true);
   });
 });
 

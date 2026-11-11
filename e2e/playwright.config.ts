@@ -23,6 +23,6 @@ export default defineConfig({
     url: `http://localhost:${PORT}/api/session`,
     reuseExistingServer: false,
     timeout: 120_000,
-    env: { PORT: String(PORT), AI_ENABLED: "false", COOKIE_SECRET: "e2e-secret" },
+    env: { PORT: String(PORT), AI_ENABLED: "false", SHUFFLE_SETS: "false", COOKIE_SECRET: "e2e-secret" },
   },
 });

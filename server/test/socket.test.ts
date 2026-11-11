@@ -14,7 +14,7 @@ let app: App;
 let base: string;
 
 beforeAll(async () => {
-  app = createApp({ port: 0, cookieSecret: SECRET, aiEnabled: false, clientOrigin: null }, { data: gameData });
+  app = createApp({ port: 0, cookieSecret: SECRET, aiEnabled: false, shuffleSets: false, clientOrigin: null }, { data: gameData });
   await new Promise<void>((done) => app.httpServer.listen(0, done));
   base = `http://localhost:${(app.httpServer.address() as AddressInfo).port}`;
 });

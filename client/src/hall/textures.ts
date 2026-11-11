@@ -100,7 +100,7 @@ export function drawScreen(g: CanvasRenderingContext2D, s: Snapshot, lot: Lot | 
   g.textAlign = "left";
   g.fillStyle = "#f3c34f";
   g.font = "600 30px 'Barlow Condensed', sans-serif";
-  const lotNo = s.phase === "lobby" ? "UP FIRST" : `LOT ${s.lotIndex + 1} / ${s.lotCount}`;
+  const lotNo = s.phase === "lobby" ? (s.shuffleSets ? "IN THE FIRST SET" : "UP FIRST") : `LOT ${s.lotIndex + 1} / ${s.lotCount}`;
   g.fillText(`${lotNo} · ${lot.set.toUpperCase()}`, x, 80, w);
   g.fillStyle = "#ffffff";
   g.font = "600 100px Teko, 'Arial Narrow', sans-serif";

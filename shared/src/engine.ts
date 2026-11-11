@@ -44,6 +44,7 @@ export function createRoom(id: string): RoomState {
     bidSeq: 0,
     aiTeams: [],
     aiEnabled: true,
+    shuffleSets: false,
     aiValues: {},
     market: {},
   };
@@ -174,12 +175,31 @@ export function start(s: RoomState, userId: string, data: GameData, now: number,
   }
   const lotsById = new Map(data.lots.map((l) => [l.id, l]));
   s.queue = data.presets[s.settings.preset].lots.map((id) => lotsById.get(id)!).filter(Boolean);
+  if (s.shuffleSets) s.queue = shuffledWithinSets(s.queue, rng);
   s.aiTeams = TEAM_IDS.filter((t) => s.owners[t] === null);
   s.market = data.market ?? {};
   s.results = [];
   s.lotIndex = 0;
   openLot(s, now, rng);
   return OK;
+}
+
+/** The same sets in the same order, with the players inside each one drawn at random. */
+export function shuffledWithinSets(lots: Lot[], rng: Rng): Lot[] {
+  const out: Lot[] = [];
+  for (let from = 0; from < lots.length;) {
+    let to = from;
+    while (to < lots.length && lots[to]!.setCode === lots[from]!.setCode) to++;
+    const set = lots.slice(from, to);
+    // Fisher–Yates
+    for (let i = set.length - 1; i > 0; i--) {
+      const j = Math.floor(rng() * (i + 1));
+      [set[i], set[j]] = [set[j]!, set[i]!];
+    }
+    out.push(...set);
+    from = to;
+  }
+  return out;
 }
 
 function openLot(s: RoomState, now: number, rng: Rng): void {
@@ -304,7 +324,7 @@ export function reset(s: RoomState, userId: string): Check {
   const fresh = createRoom(s.id);
   Object.assign(s, fresh, {
     seats: s.seats, owners: s.owners, claimedAt: s.claimedAt, claimSeq: s.claimSeq, settings: s.settings,
-    aiEnabled: s.aiEnabled,
+    aiEnabled: s.aiEnabled, shuffleSets: s.shuffleSets,
   });
   return OK;
 }

@@ -136,6 +136,8 @@ export interface RoomState {
   aiTeams: TeamId[];
   /** False when the server runs without AI (tests): AI teams then count as skipping. */
   aiEnabled: boolean;
+  /** Draw each set's players in a random order at the start (the sets themselves stay in order). */
+  shuffleSets: boolean;
   /** Hidden AI valuations for the current lot. Never sent to clients. */
   aiValues: Partial<Record<TeamId, number>>;
   /** Real auction prices for this game's lots (server-only, see MarketPrices). */
@@ -160,6 +162,8 @@ export interface Snapshot {
   lead: Lead | null;
   bids: BidEntry[]; // last 5, newest first
   skipped: TeamId[];
+  /** Whether each set comes up in a random order (so the lobby can't say who's first). */
+  shuffleSets: boolean;
   nextAmount: number | null;
   deadline: number | null;
   windowMs: number;

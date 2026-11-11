@@ -150,7 +150,10 @@ friends, and don't make money from it.
    picks the lot list (Quick 16, Capped 117, or Full 369) and whether teams
    start with their real retained squads and purses or empty squads and
    ₹120 Cr each.
-2. **Live.** Lots come up in order at their base price. The next bid must be
+2. **Live.** The sets come up in the official order, but the players inside
+   each set are drawn at random, so no two games run the same way
+   (`SHUFFLE_SETS=false` keeps the official order). Each lot opens at its
+   base price. The next bid must be
    exactly the current bid plus the increment: +₹5 L below ₹1 Cr, +₹10 L
    below ₹2 Cr, +₹20 L below ₹5 Cr, then +₹25 L. A lot gets 45 s for an
    opening bid and each bid resets the clock to 45 s, with "going once" at
