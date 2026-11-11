@@ -15,7 +15,11 @@ export function Credits() {
         <p>{credits.stats}</p>
         <p>Auction lists, retentions and purses: Wikipedia and the BCCI's published auction list.</p>
         <p>{credits.logos}</p>
-        <p>Sound effects are generated in your browser, and the auctioneer's voice is your device's speech synthesizer.</p>
+        <p>
+          Sound effects are generated in your browser. The auctioneer's voice is a synthetic text-to-speech voice
+          (pre-recorded with ElevenLabs where the host has set it up, otherwise your device's own speech synthesizer).
+          It is not a recording or imitation of any real person.
+        </p>
         <p>
           The 3D auctioneer is "Male_Adult_03" from the{" "}
           <a href="https://github.com/microsoft/Microsoft-Rocketbox" target="_blank" rel="noreferrer">Microsoft Rocketbox</a>{" "}

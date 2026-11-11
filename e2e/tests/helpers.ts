@@ -16,7 +16,11 @@ export interface Player {
  */
 export async function newContext(browser: Browser, baseURL: string, view: "classic" | "3d" = "classic") {
   const context = await browser.newContext({ baseURL });
-  await context.addInitScript((v) => localStorage.setItem("ar-view", v), view);
+  await context.addInitScript((v) => {
+    localStorage.setItem("ar-view", v);
+    // Headless Chrome renders in software: skip the post-processing and half the crowd.
+    localStorage.setItem("ar-quality", "low");
+  }, view);
   return context;
 }
 

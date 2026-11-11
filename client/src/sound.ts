@@ -1,10 +1,30 @@
 // Auction sounds, generated in the browser (Web Audio) so there are no audio
-// files to license, plus the auctioneer's voice (Web Speech). If you drop your
-// own static/sounds/theme.mp3 in (it's git-ignored), it plays at the start
-// instead of the built-in fanfare.
+// files to license, plus the auctioneer's voice. His voice is the recorded
+// clips in static/voice/ when they exist (the same for every player: see
+// scripts/build_voice.ts), and otherwise the device's own speech synthesizer.
+// If you drop your own static/sounds/theme.mp3 in (it's git-ignored), it
+// plays at the start instead of the built-in fanfare.
 
 const STORAGE_KEY = "ar-sound";
 const THEME_URL = "/sounds/theme.mp3";
+const VOICE_DIR = "/voice/";
+/** A breath between two clips of one line (seconds). */
+const CLIP_GAP = 0.05;
+
+/** What scripts/build_voice.ts writes next to the clips. */
+interface VoiceManifest {
+  /** File extension of every clip, e.g. "mp3". */
+  ext: string;
+  /** Keys of the clips that exist. */
+  clips: string[];
+}
+
+/** A decoded clip and the part of it that isn't silence. */
+interface Clip {
+  buffer: AudioBuffer;
+  start: number;
+  length: number;
+}
 
 type Effect = "fanfare" | "sting" | "tock" | "tick" | "gavel" | "cheer" | "thud" | "ping";
 
@@ -13,6 +33,12 @@ class Sound {
   private master: GainNode | null = null;
   private theme: HTMLAudioElement | null = null;
   private voice: SpeechSynthesisVoice | null = null;
+  /** The recorded voice: which clips exist, the ones decoded so far, and what's playing. */
+  private recorded: { ext: string; keys: Set<string> } | null = null;
+  private clips = new Map<string, Promise<Clip | null>>();
+  private speaking: AudioBufferSourceNode[] = [];
+  private speakingUntil = 0;
+  private line = 0;
   enabled = readEnabled();
   /** Recent effects and lines, for debugging in the console (sound.log). */
   readonly log: string[] = [];
@@ -25,6 +51,7 @@ class Sound {
     window.addEventListener("pointerdown", unlock);
     window.addEventListener("keydown", unlock);
     this.loadTheme();
+    void this.loadVoice();
     if ("speechSynthesis" in window) {
       const pick = () => {
         const voices = speechSynthesis.getVoices();
@@ -53,6 +80,7 @@ class Sound {
   /** Stop the theme and any speech (e.g. when the hammer falls mid-sentence). */
   hush(): void {
     this.theme?.pause();
+    this.stopClips();
     if ("speechSynthesis" in window) speechSynthesis.cancel();
   }
 
@@ -67,16 +95,105 @@ class Sound {
     this.synth(effect);
   }
 
-  /** Auctioneer's line. `interrupt` drops whatever he was still saying. */
-  say(text: string, interrupt = true): void {
+  /**
+   * Auctioneer's line. `interrupt` drops whatever he was still saying. With
+   * `clips` and a recording of every one of them, he says it in his recorded
+   * voice; otherwise the device reads `text` out.
+   */
+  say(text: string, interrupt = true, clips: string[] = []): void {
     this.record(`say: ${text}`);
-    if (!this.enabled || !("speechSynthesis" in window)) return;
-    if (interrupt) speechSynthesis.cancel();
+    if (!this.enabled) return;
+    const line = ++this.line;
+    if (interrupt) {
+      this.stopClips();
+      if ("speechSynthesis" in window) speechSynthesis.cancel();
+    }
+    const voiced = this.recorded;
+    if (voiced && clips.length && clips.every((k) => voiced.keys.has(k)) && this.audio()) {
+      // Load the whole line first so it plays without gaps; a newer line wins.
+      void Promise.all(clips.map((k) => this.clip(k))).then((loaded) => {
+        if (line !== this.line || !this.enabled) return;
+        if (loaded.every((c): c is Clip => c !== null)) this.playClips(loaded);
+        else this.speak(text);
+      });
+      return;
+    }
+    this.speak(text);
+  }
+
+  /** The device's own voice: used when there are no recordings (or not for this line). */
+  private speak(text: string): void {
+    if (!("speechSynthesis" in window)) return;
     const u = new SpeechSynthesisUtterance(text);
     if (this.voice) u.voice = this.voice;
     u.rate = 1.08;
     u.pitch = 0.95;
     speechSynthesis.speak(u);
+  }
+
+  private playClips(clips: Clip[]): void {
+    const ctx = this.ctx!;
+    // After whatever he's still saying (when it wasn't interrupted), else now.
+    let at = Math.max(ctx.currentTime + 0.02, this.speakingUntil);
+    for (const c of clips) {
+      const src = ctx.createBufferSource();
+      src.buffer = c.buffer;
+      src.connect(this.voiceGain());
+      src.start(at, c.start, c.length);
+      src.onended = () => { this.speaking = this.speaking.filter((x) => x !== src); };
+      this.speaking.push(src);
+      at += c.length + CLIP_GAP;
+    }
+    this.speakingUntil = at;
+  }
+
+  private stopClips(): void {
+    for (const src of this.speaking) {
+      src.onended = null;
+      try { src.stop(); } catch { /* not started yet */ }
+    }
+    this.speaking = [];
+    this.speakingUntil = 0;
+  }
+
+  private voiceOut: GainNode | null = null;
+  /** His voice sits a little above the effects. */
+  private voiceGain(): GainNode {
+    if (!this.voiceOut) {
+      this.voiceOut = this.ctx!.createGain();
+      this.voiceOut.gain.value = 1.5;
+      this.voiceOut.connect(this.master!);
+    }
+    return this.voiceOut;
+  }
+
+  /** Fetches and decodes one clip (once), trimming the silence at both ends. */
+  private clip(key: string): Promise<Clip | null> {
+    let loading = this.clips.get(key);
+    if (!loading) {
+      loading = (async () => {
+        try {
+          const res = await fetch(`${VOICE_DIR}${key}.${this.recorded!.ext}`);
+          if (!res.ok) return null;
+          const buffer = await this.audio()!.decodeAudioData(await res.arrayBuffer());
+          return { buffer, ...soundingPart(buffer) };
+        } catch {
+          return null;
+        }
+      })();
+      this.clips.set(key, loading);
+    }
+    return loading;
+  }
+
+  private async loadVoice() {
+    try {
+      const res = await fetch(`${VOICE_DIR}manifest.json`);
+      // A missing file comes back as the app's HTML page.
+      if (!res.ok || !res.headers.get("content-type")?.includes("json")) return;
+      const manifest = await res.json() as VoiceManifest;
+      this.recorded = { ext: manifest.ext, keys: new Set(manifest.clips) };
+    } catch { /* no recordings: the device's voice */ }
   }
 
   private record(entry: string) {
@@ -217,3 +334,18 @@ function readEnabled(): boolean {
 
 export const sound = new Sound();
 if (import.meta.env.DEV) (window as unknown as { sound: Sound }).sound = sound;
+
+/** Where a clip's sound starts and how long it lasts, without the silence text-to-speech pads it with. */
+function soundingPart(buffer: AudioBuffer): { start: number; length: number } {
+  const data = buffer.getChannelData(0);
+  const quiet = 0.012;
+  let first = 0;
+  while (first < data.length && Math.abs(data[first]!) < quiet) first++;
+  let last = data.length - 1;
+  while (last > first && Math.abs(data[last]!) < quiet) last--;
+  // Keep a few milliseconds either side so consonants aren't clipped.
+  const pad = Math.round(buffer.sampleRate * 0.015);
+  first = Math.max(0, first - pad);
+  last = Math.min(data.length - 1, last + pad * 2);
+  return { start: first / buffer.sampleRate, length: Math.max(0.01, (last - first) / buffer.sampleRate) };
+}

@@ -287,6 +287,38 @@ static/   team logos and player photos, served at /logos and /players
   WebGL2, with "reduce motion" on, or with little memory start in Classic. If
   WebGL fails, the page falls back to Classic.
 
+### The auctioneer's voice
+
+Out of the box each browser reads the auctioneer's lines with its own
+built-in voice, so players hear different auctioneers. To give everyone the
+same one, record his lines once with a text-to-speech voice:
+
+1. Get an API key from [ElevenLabs](https://elevenlabs.io) (profile → API
+   keys) and put it in `.env` as `ELEVENLABS_API_KEY=...`.
+2. Run `npm run voice`. It records 671 short clips (about 10,000 characters)
+   into `static/voice/` and writes `manifest.json` beside them.
+3. Commit `static/voice/` (or copy it to the host), then rebuild.
+
+- **How it works:** every line is a few clips played back to back: a name,
+  a price, a team, a stock phrase (`client/src/voice/clips.ts`). "2 crore
+  40 lakh, Delhi" is `amount-240` then `city-dc`. The player trims the
+  silence off each clip so the joins are tight.
+- **Fallback:** a line with any clip missing (no recordings at all, or a
+  price above ₹30 Cr) is read by the browser's voice as before. The lot
+  number is caption-only, to keep the recording small.
+- **The voice:** the default is ElevenLabs' stock "George" (a mature
+  British man). Set `ELEVENLABS_VOICE_ID` to use another of their stock
+  voices; delete `static/voice/` before switching. Use a stock voice or your
+  own: cloning a real auctioneer's voice needs that person's permission.
+- **Cost and licence:** the whole set just fits ElevenLabs' free monthly
+  allowance, which is for non-commercial use with attribution; a paid plan
+  lifts both. A rerun only records clips that are missing.
+- **Trying it for free:** `npm run voice -- --provider say` uses macOS's
+  built-in British voice. Apple licenses those voices for personal use, so
+  don't commit or publish clips made that way.
+- `npm run voice -- --dry-run` counts the clips and characters without
+  recording anything.
+
 ## Protocol
 
 HTTP:

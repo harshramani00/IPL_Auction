@@ -3,6 +3,7 @@ import { expect, test } from "@playwright/test";
 import { player } from "./helpers";
 
 test("the 3D hall renders, captions each moment and falls back to classic on request", async ({ browser, baseURL, request }) => {
+  test.setTimeout(150_000); // a full hall of people, drawn without a GPU
   const roomId = (await (await request.post("/api/rooms")).json()).id;
   const p = await player(browser, baseURL!, roomId, "Hall", "3d");
   const errors: string[] = [];

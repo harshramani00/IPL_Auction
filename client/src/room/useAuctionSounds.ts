@@ -18,7 +18,8 @@ function play(e: AuctionEvent): void {
     case "done": sound.play("fanfare"); break;
     case "pause": case "resume": break;
   }
-  sound.say(e.line, e.type !== "done");
+  // A new player or the sign-off waits for him to finish the last result; anything else cuts in.
+  sound.say(e.line, e.type !== "done" && e.type !== "lot", e.clips);
 }
 
 export function useAuctionSounds(s: Snapshot | null, mySeat: number | null, serverNow: () => number): void {

@@ -22,6 +22,7 @@ describe("auction events", () => {
     const [e] = auctionEvents(before, snapshot(s, 0), 1);
     expect(e).toMatchObject({ type: "start", lot: { name: "Devon Conway" } });
     expect(e!.line).toBe("Welcome to the auction. Lot 1. Devon Conway, Batter, overseas. Base price, 2 crore.");
+    expect(e!.clips).toEqual(["welcome", "name-1", "role-batter-overseas", "base-price", "amount-200"]);
   });
 
   it("calls each bid and flags when you've been outbid", () => {
@@ -35,7 +36,9 @@ describe("auction events", () => {
     ]);
     bid(s, "b", "CSK", 220, 20);
     const [e] = auctionEvents(s1, snapshot(s, 20), 1);
-    expect(e).toMatchObject({ type: "bid", teamId: "CSK", outbidMe: true, line: "2 crore 20 lakh, Chennai." });
+    expect(e).toMatchObject({
+      type: "bid", teamId: "CSK", outbidMe: true, line: "2 crore 20 lakh, Chennai.", clips: ["amount-220", "city-csk"],
+    });
   });
 
   it("sells, then announces the next lot", () => {
@@ -48,6 +51,7 @@ describe("auction events", () => {
     const sold = snapshot(s, soldAt);
     expect(auctionEvents(live, sold, 1)).toEqual([expect.objectContaining({
       type: "sold", teamId: "KKR", amount: 200, line: "Sold! Devon Conway, to Kolkata Knight Riders, for 2 crore.",
+      clips: ["sold", "name-1", "to-kkr", "amount-200"],
     })]);
     advance(s, soldAt + RESULT_MS, seq); // after the result pause
     expect(auctionEvents(sold, snapshot(s, soldAt + RESULT_MS), 1)[0]).toMatchObject({ type: "lot", lot: { name: "Cameron Green" } });
@@ -55,7 +59,7 @@ describe("auction events", () => {
 
   it("turns clock calls into going once / twice", () => {
     expect(clockEvent("open")).toBeNull();
-    expect(clockEvent("once")).toEqual({ type: "once", line: "Going once." });
-    expect(clockEvent("twice")).toEqual({ type: "twice", line: "Going twice." });
+    expect(clockEvent("once")).toEqual({ type: "once", line: "Going once.", clips: ["going-once"] });
+    expect(clockEvent("twice")).toEqual({ type: "twice", line: "Going twice.", clips: ["going-twice"] });
   });
 });

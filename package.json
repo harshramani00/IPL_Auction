@@ -16,6 +16,7 @@
     "build": "npm run build -w client",
     "start": "npm run start -w server",
     "typecheck": "npm run typecheck --workspaces --if-present",
+    "voice": "tsx scripts/build_voice.ts",
     "test": "npm run test --workspaces --if-present"
   },
   "devDependencies": {
