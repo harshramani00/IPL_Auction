@@ -7,6 +7,7 @@
 //   npm run voice -- --dry-run          # just count the clips and characters
 //   npm run voice -- --provider say     # macOS's built-in voice, to try it out for free
 //   npm run voice -- --only fixed       # one group: fixed | amounts | names
+//   npm run voice -- --slow             # one clip at a time with a pause, if the provider objects to bursts
 //
 // Clips that already exist are kept, so a rerun only records what's missing.
 // Delete static/voice/ to start again with another voice.
@@ -128,22 +129,28 @@ async function main() {
     const worker = async () => {
       for (let c: ClipText | undefined; (c = queue.shift());) {
         await p.record(c.text, join(outDir, `${c.key}.${ext}`));
+        if (flag("slow")) await new Promise((r) => setTimeout(r, 700));
         if (++done % 25 === 0 || done === missing.length) console.log(`  ${done} / ${missing.length}`);
       }
     };
     // If the provider stops us part-way (quota, a blocked account), keep what was recorded.
-    await Promise.all(Array.from({ length: p.parallel }, worker)).catch((err: Error) => { failure = err; });
+    await Promise.all(Array.from({ length: flag("slow") ? 1 : p.parallel }, worker)).catch((err: Error) => { failure = err; });
   }
 
   // The manifest lists what's really there. The game only uses the recordings
-  // once the set is complete: half his lines in one voice and half in the
-  // browser's would be worse than either.
+  // once the set is usable: every phrase, team and price, and nearly every
+  // name. (Half his lines in one voice and half in the browser's would be
+  // worse than either; a rare player announced by the browser is fine.)
   const files = new Set(readdirSync(outDir));
-  const clips = all.map((c) => c.key).filter((k) => files.has(`${k}.${ext}`));
-  const complete = clips.length === all.length;
+  const has = (k: string) => files.has(`${k}.${ext}`);
+  const clips = all.map((c) => c.key).filter(has);
+  const names = all.filter((c) => GROUPS.names!(c.key));
+  const namesMissing = names.filter((c) => !has(c.key));
+  const complete = all.every((c) => GROUPS.names!(c.key) || has(c.key)) && namesMissing.length <= names.length * 0.05;
   writeFileSync(join(outDir, "manifest.json"), `${JSON.stringify({ ext, complete, clips })}\n`);
   console.log(`static/voice/ now has ${clips.length} of ${all.length} clips.`);
-  if (!complete) console.log("The game keeps using the browser's voice until the set is complete. Run this again to record the rest.");
+  if (!complete) console.log("The game keeps using the browser's voice until the set is usable. Run this again to record the rest.");
+  else if (namesMissing.length) console.log(`Still to record: ${namesMissing.map((c) => c.text).join(" ")} (the browser's voice covers them).`);
   if (failure) throw failure;
 }
 

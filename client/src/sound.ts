@@ -15,7 +15,7 @@ const CLIP_GAP = 0.05;
 interface VoiceManifest {
   /** File extension of every clip, e.g. "mp3". */
   ext: string;
-  /** False while a recording run is unfinished: the game waits for the full set. */
+  /** False while too much is unrecorded to use: the game waits rather than mix two voices. */
   complete: boolean;
   /** Keys of the clips that exist. */
   clips: string[];

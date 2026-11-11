@@ -315,7 +315,8 @@ same one, record his lines once with a text-to-speech voice:
   attribution), but in practice their abuse filter cut a free account off
   after about 170 clips, so plan on the cheapest paid plan. A rerun only
   records clips that are missing, and the game ignores the recordings until
-  the set is complete, so nobody hears a mix of two voices.
+  every phrase, team and price and at least 95% of the names are there, so
+  nobody hears a constant mix of two voices.
 - **Trying it for free:** `npm run voice -- --provider say` uses macOS's
   built-in British voice. Apple licenses those voices for personal use, so
   don't commit or publish clips made that way.
