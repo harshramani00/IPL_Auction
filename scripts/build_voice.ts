@@ -118,6 +118,7 @@ async function main() {
   console.log(`${all.length} clips in all; ${missing.length} to record (${chars} characters).`);
   if (flag("dry-run")) return;
 
+  let failure: Error | null = null;
   if (missing.length) {
     const p = provider();
     console.log(`Recording with ${p.label}...`);
@@ -130,14 +131,20 @@ async function main() {
         if (++done % 25 === 0 || done === missing.length) console.log(`  ${done} / ${missing.length}`);
       }
     };
-    await Promise.all(Array.from({ length: p.parallel }, worker));
+    // If the provider stops us part-way (quota, a blocked account), keep what was recorded.
+    await Promise.all(Array.from({ length: p.parallel }, worker)).catch((err: Error) => { failure = err; });
   }
 
-  // The manifest lists what's really there, so a half-finished run still works for the lines it covers.
+  // The manifest lists what's really there. The game only uses the recordings
+  // once the set is complete: half his lines in one voice and half in the
+  // browser's would be worse than either.
   const files = new Set(readdirSync(outDir));
   const clips = all.map((c) => c.key).filter((k) => files.has(`${k}.${ext}`));
-  writeFileSync(join(outDir, "manifest.json"), `${JSON.stringify({ ext, clips })}\n`);
+  const complete = clips.length === all.length;
+  writeFileSync(join(outDir, "manifest.json"), `${JSON.stringify({ ext, complete, clips })}\n`);
   console.log(`static/voice/ now has ${clips.length} of ${all.length} clips.`);
+  if (!complete) console.log("The game keeps using the browser's voice until the set is complete. Run this again to record the rest.");
+  if (failure) throw failure;
 }
 
 main().catch((err: Error) => {

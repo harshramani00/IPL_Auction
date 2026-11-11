@@ -15,6 +15,8 @@ const CLIP_GAP = 0.05;
 interface VoiceManifest {
   /** File extension of every clip, e.g. "mp3". */
   ext: string;
+  /** False while a recording run is unfinished: the game waits for the full set. */
+  complete: boolean;
   /** Keys of the clips that exist. */
   clips: string[];
 }
@@ -192,6 +194,7 @@ class Sound {
       // A missing file comes back as the app's HTML page.
       if (!res.ok || !res.headers.get("content-type")?.includes("json")) return;
       const manifest = await res.json() as VoiceManifest;
+      if (!manifest.complete) return;
       this.recorded = { ext: manifest.ext, keys: new Set(manifest.clips) };
     } catch { /* no recordings: the device's voice */ }
   }

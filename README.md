@@ -310,9 +310,12 @@ same one, record his lines once with a text-to-speech voice:
   British man). Set `ELEVENLABS_VOICE_ID` to use another of their stock
   voices; delete `static/voice/` before switching. Use a stock voice or your
   own: cloning a real auctioneer's voice needs that person's permission.
-- **Cost and licence:** the whole set just fits ElevenLabs' free monthly
-  allowance, which is for non-commercial use with attribution; a paid plan
-  lifts both. A rerun only records clips that are missing.
+- **Cost and licence:** the whole set is about 10,000 characters. On paper
+  that fits ElevenLabs' free monthly allowance (non-commercial, with
+  attribution), but in practice their abuse filter cut a free account off
+  after about 170 clips, so plan on the cheapest paid plan. A rerun only
+  records clips that are missing, and the game ignores the recordings until
+  the set is complete, so nobody hears a mix of two voices.
 - **Trying it for free:** `npm run voice -- --provider say` uses macOS's
   built-in British voice. Apple licenses those voices for personal use, so
   don't commit or publish clips made that way.
