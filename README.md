@@ -236,7 +236,8 @@ static/   team logos and player photos, served at /logos and /players
     fetched from a CDN).
 - **The director** (`Hall3D.tsx`) chooses the shots:
   - wide for a new player
-  - a hard cut to the bidding table on each bid
+  - a hard cut to the bidding table on each bid, shot from the stage so you
+    see the owners' faces and the paddle going up
   - a push-in on the auctioneer, with warmer light, at "going twice"
   - on SOLD, the gavel strikes, then the camera swings to the winning table
     as confetti falls
@@ -250,22 +251,29 @@ static/   team logos and player photos, served at /logos and /players
     (for example an exported MetaHuman) takes over if present. It's
     git-ignored, since most such models can't be redistributed. See
     `static/models/README.md`.
+  - **Face:** he blinks, his jaw moves while he speaks, and his head turns
+    to the table he's pointing at (the rig's eyelid and jaw bones).
   - **Fallback:** a stand-in mannequin covers the moment while he loads.
 - **The people in the room:** six more Rocketbox business avatars
-  (`static/models/rocketbox/people/`, about 7.6 MB) fill the hall.
+  (`static/models/rocketbox/people/`, about 13 MB) fill the hall.
   - **Team owners:** two per table, seated on chairs with their forearms on
     the table. The owner beside the paddle holds it, and their arm follows
-    it up when the team bids (a two-bone arm solve each frame).
-  - **Audience:** 140 seated people on tiered risers. Each avatar is posed
-    once and frozen into static geometry drawn with instancing, so the whole
-    crowd costs a few draw calls. Phones and modest machines get the front
+    it up when the team bids (a two-bone arm solve each frame). They
+    breathe, blink, watch the auctioneer, glance at the screen or their
+    notes, and turn to look at whichever table has just bid.
+  - **Audience:** 140 seated people on tiered risers. Each avatar is frozen
+    in three poses into static geometry drawn with instancing, and every
+    person gets their own height, shade and turn of the head, so the whole
+    crowd stays cheap without reading as clones. Phones and modest machines get the front
     two rows.
 - **Rendering:**
   - Image-based lighting from a CC0 studio HDRI (`static/hdri/`, from Poly Haven).
   - Soft shadows, with a sharper key light on the auctioneer.
-  - Skin and wool-suit sheen.
+  - Wool-suit sheen. (Skin has none: hair is painted on the same material,
+    and a skin sheen gives every head a pink halo.)
   - Post-processing: ambient occlusion (N8AO), bloom, depth of field that
-    follows the shot, a vignette and filmic tone mapping.
+    keeps the shot's subject sharp and softens the far room, a vignette and
+    filmic tone mapping.
   - Phones and modest machines get bloom only. To override, set
     `localStorage["ar-quality"]` to `high`, `low` or `off`.
 - **3D or Classic:** the header switch flips between the 3D hall and the

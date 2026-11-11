@@ -51,7 +51,8 @@ export function Effects({ focus, bokeh }: Props) {
   return (
     <EffectComposer multisampling={4}>
       <N8AO aoRadius={0.55} distanceFalloff={0.6} intensity={2.2} quality="medium" halfRes />
-      <DepthOfField target={focus} focalLength={0.04} bokehScale={bokeh} height={480} />
+      {/* focusRange is in metres: the subject and a few metres around it stay sharp, the far room softens. */}
+      <DepthOfField target={focus} focusRange={5} bokehScale={bokeh} height={480} />
       <Bloom luminanceThreshold={0.82} luminanceSmoothing={0.2} intensity={0.65} mipmapBlur />
       <Vignette offset={0.28} darkness={0.55} />
       <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />

@@ -50,7 +50,7 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
     const sh = reducedMotion ? SHOTS.wide() : next;
     shot.current = { ...sh, cut: reducedMotion ? false : cut };
     const dist = sh.position.distanceTo(sh.target);
-    setFocus({ target: sh.target, bokeh: dist < 5 ? 2.4 : dist < 7.5 ? 1.2 : 0 });
+    setFocus({ target: sh.target, bokeh: dist < 5 ? 2 : dist < 7.5 ? 1.2 : 0 });
   };
 
   useAuctionEvents(s, mySeat, serverNow, (e: AuctionEvent) => {
@@ -117,6 +117,7 @@ export default function Hall3D({ s, mySeat, serverNow, reducedMotion }: Props) {
     if (!import.meta.env.DEV) return;
     (window as unknown as { __hall: unknown }).__hall = {
       shot: (name: "wide" | "auctioneer") => go(SHOTS[name]()),
+      table: (id: TeamId, winner = false) => go(winner ? SHOTS.winner(id) : SHOTS.table(id), true),
       view: (p: [number, number, number], t: [number, number, number]) =>
         go({ position: new Vector3(...p), target: new Vector3(...t) }, true),
       pose: (p: Pose) => { setPose(p); if (p === "strike") setStrikeKey((k) => k + 1); },
@@ -257,9 +258,34 @@ function Lights({ mood, lead }: { mood: Mood; lead: TeamId | null }) {
       {/* Soft fill from the front so the face isn't lit only from above. */}
       <pointLight position={[0.8, 2.6, -1.6]} color="#ffe7cf" intensity={6} distance={6} />
       <spotLight ref={leadSpot} angle={0.28} penumbra={0.6} intensity={0} />
+      {/* House wash from above the stage, so the owners' faces read when the camera turns to them. */}
+      {WASH.map((w) => <Wash key={w.from[0]} {...w} />)}
       {/* Glow off the LED screen and the gold stage ring */}
       <pointLight position={[0, 3.6, -5.6]} color="#7d70ff" intensity={14} distance={10} />
       <pointLight position={[0, 0.8, -1]} color="#f3c34f" intensity={4} distance={6} />
+    </>
+  );
+}
+
+const WASH: { from: [number, number, number]; to: [number, number, number] }[] = [
+  { from: [-3.2, 6.2, -3.4], to: [-5.4, 1.1, 1.6] },
+  { from: [0, 6.6, -2.6], to: [0, 1.1, 4] },
+  { from: [3.2, 6.2, -3.4], to: [5.4, 1.1, 1.6] },
+];
+
+/** One soft, warm, shadowless spot aimed at a stretch of the table arc. */
+function Wash({ from, to }: (typeof WASH)[number]) {
+  const light = useRef<SpotLight>(null);
+  const target = useMemo(() => {
+    const o = new Object3D();
+    o.position.set(...to);
+    return o;
+  }, [to]);
+  useEffect(() => { light.current!.target = target; }, [target]);
+  return (
+    <>
+      <primitive object={target} />
+      <spotLight ref={light} position={from} angle={0.62} penumbra={0.9} intensity={95} color="#ffe9cf" />
     </>
   );
 }

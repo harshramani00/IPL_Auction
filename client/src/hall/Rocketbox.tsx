@@ -54,20 +54,16 @@ export async function loadAvatar({ dir, file, height, physical = false }: Avatar
   const body = physical
     ? new MeshPhysicalMaterial({
       name: "body", map: load("body_color.jpg", true), normalMap: load("body_normal.jpg"),
-      roughness: 0.8, metalness: 0, sheen: 0.45, sheenRoughness: 0.7, sheenColor: "#8a8aa0",
+      roughness: 0.8, metalness: 0, sheen: 0.25, sheenRoughness: 0.7, sheenColor: "#8a8aa0",
     })
     : new MeshStandardMaterial({
       name: "body", map: load("body_color.jpg", true), normalMap: load("body_normal.jpg"), roughness: 0.8,
     });
-  // Skin: a warm sheen fakes the light that scatters under real skin, so it doesn't look plastic.
-  const head = physical
-    ? new MeshPhysicalMaterial({
-      name: "head", map: load("head_color.jpg", true), normalMap: load("head_normal.jpg"),
-      roughness: 0.5, metalness: 0, sheen: 0.35, sheenRoughness: 0.6, sheenColor: "#ffb39a",
-    })
-    : new MeshStandardMaterial({
-      name: "head", map: load("head_color.jpg", true), normalMap: load("head_normal.jpg"), roughness: 0.55,
-    });
+  // Skin and painted hair share this material, so no sheen here: a skin-toned
+  // sheen lights up the hair's edges and gives every head a pink halo.
+  const head = new MeshStandardMaterial({
+    name: "head", map: load("head_color.jpg", true), normalMap: load("head_normal.jpg"), roughness: 0.62,
+  });
   // Hair edges and eyelashes: alpha-tested cards.
   const opacity = new MeshStandardMaterial({
     name: "opacity", map: load("opacity.png", true), alphaTest: 0.45, transparent: false,
@@ -127,6 +123,58 @@ export function aim(b: Bone, child: Object3D, dir: Vector3, alpha: number): void
   b.quaternion.slerp(target, alpha);
 }
 
+/**
+ * The face bones every Rocketbox head has. Head-space axes: x runs up the
+ * head and y out through the face. Eyelids slide down along x and forward
+ * along y (over the eyeball, not through it); the jaw opens about +z.
+ */
+export interface Face {
+  jaw: Bone | null;
+  jawRest: Quaternion;
+  lids: { bone: Bone; rest: Vector3; top: boolean }[];
+  /** 0..1, different per person so a room never blinks in step. */
+  seed: number;
+}
+
+export function faceOf(model: Object3D, seed: number): Face {
+  const get = (name: string) => (model.getObjectByName(`Bip01_${name}`) as Bone | undefined) ?? null;
+  const jaw = get("MJaw");
+  const lids: Face["lids"] = [];
+  for (const [name, top] of [["LEyeBlinkTop", true], ["REyeBlinkTop", true], ["LEyeBlinkBottom", false], ["REyeBlinkBottom", false]] as const) {
+    const b = get(name);
+    if (b) lids.push({ bone: b, rest: b.position.clone(), top });
+  }
+  return { jaw, jawRest: jaw ? jaw.quaternion.clone() : new Quaternion(), lids, seed };
+}
+
+/** How far the lids close: the rig rests wide-eyed, so "open" sits a little lower. */
+const LID_RELAXED = 0.28;
+
+function setLids(face: Face, shut: number): void {
+  for (const lid of face.lids) {
+    if (lid.top) {
+      lid.bone.position.x = lid.rest.x - 1.12 * shut;
+      lid.bone.position.y = lid.rest.y + 0.42 * shut;
+    } else {
+      lid.bone.position.x = lid.rest.x + 0.28 * shut;
+    }
+  }
+}
+
+/** Blinks every few seconds and opens the jaw by `open` (0 shut, 1 wide: speech stays under ~0.5). */
+export function animateFace(face: Face, t: number, open: number): void {
+  const period = 2.6 + face.seed * 3.4;
+  const phase = (t + face.seed * 11) % period;
+  const blink = phase < 0.15 ? Math.sin((phase / 0.15) * Math.PI) : 0;
+  setLids(face, LID_RELAXED + (1 - LID_RELAXED) * blink);
+  face.jaw?.quaternion.copy(face.jawRest).multiply(_delta.setFromAxisAngle(_a.set(0, 0, 1), open * 0.32));
+}
+
+/** A still face with relaxed eyes, for people who are never animated. */
+export function restFace(model: Object3D): void {
+  setLids(faceOf(model, 0), LID_RELAXED);
+}
+
 /** A gavel to put in his right hand. */
 function gavel(): Group {
   const g = new Group();
@@ -158,6 +206,7 @@ export function RocketboxAuctioneer({ model, pose, strikeKey, pointAt }: Props) 
       lUpper: bone(model, "Bip01_L_UpperArm"), lFore: bone(model, "Bip01_L_Forearm"), lHand: bone(model, "Bip01_L_Hand"),
       head: bone(model, "Bip01_Head"),
       headRest: new Quaternion(),
+      face: faceOf(model, 0.37),
       gavel: gavel(),
     };
     r.headRest.copy(r.head.quaternion);
@@ -190,6 +239,12 @@ export function RocketboxAuctioneer({ model, pose, strikeKey, pointAt }: Props) 
     strikeAt.current = performance.now() / 1000;
   }
   const dirs = useMemo(() => ({ ru: new Vector3(), rf: new Vector3(), lu: new Vector3(), lf: new Vector3(), tmp: new Vector3() }), []);
+  // When the pose last changed (he speaks for a moment at each), and his smoothed head turn and mouth.
+  const voice = useRef({ pose, at: -10, yaw: 0, open: 0 });
+  if (voice.current.pose !== pose) {
+    voice.current.pose = pose;
+    voice.current.at = performance.now() / 1000;
+  }
 
   useFrame((state, dt) => {
     const t = state.clock.elapsedTime;
@@ -231,9 +286,25 @@ export function RocketboxAuctioneer({ model, pose, strikeKey, pointAt }: Props) 
     aim(rig.lUpper, rig.lFore, lu, kl);
     aim(rig.lFore, rig.lHand, lf, kl);
 
-    // Small head motion: nods while talking, a slight tilt otherwise.
+    // Head: nods while talking, turns to the table he's pointing at, a slight tilt otherwise.
+    const v = voice.current;
     const nod = pose === "talk" ? Math.sin(t * 5) * 0.05 : Math.sin(t * 1.2) * 0.015;
-    rig.head.quaternion.copy(rig.headRest).multiply(_delta.setFromAxisAngle(_a.set(0, 0, 1), nod));
+    let yaw = Math.sin(t * 0.31) * 0.12; // idly scanning the room
+    if (pose === "point" && pointAt) {
+      const head = rig.head.getWorldPosition(dirs.tmp);
+      yaw = Math.max(-0.9, Math.min(0.9, Math.atan2(pointAt.x - head.x, pointAt.z - head.z)));
+    }
+    v.yaw += (yaw - v.yaw) * (1 - Math.exp(-dt * 6));
+    rig.head.quaternion.copy(rig.headRest)
+      .multiply(_delta.setFromAxisAngle(_a.set(1, 0, 0), v.yaw * 0.8))
+      .multiply(_delta.setFromAxisAngle(_a.set(0, 0, 1), nod));
+
+    // Mouth: he speaks through an announcement, and for a moment at each call.
+    const sincePose = performance.now() / 1000 - v.at;
+    const speaking = pose === "talk" || ((pose === "point" || pose === "raise" || pose === "strike") && sincePose < 1.5);
+    const syllable = (0.5 + 0.5 * Math.sin(t * 13)) * (0.45 + 0.55 * Math.abs(Math.sin(t * 4.1 + 1)));
+    v.open += ((speaking ? syllable * 0.5 : 0) - v.open) * (1 - Math.exp(-dt * 22));
+    animateFace(rig.face, t, v.open);
   });
 
   return <primitive object={model} />;

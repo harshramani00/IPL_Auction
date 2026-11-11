@@ -59,20 +59,24 @@ export function vfovFor(aspect: number, hfov = DEFAULT_HFOV): number {
 export const SHOTS = {
   /** The whole room: wide enough for the end tables of the arc (about ±7.3 m) on any screen. */
   wide: (): Shot => ({ position: new Vector3(0, 4.4, 11), target: new Vector3(0, 1.7, -3.4), hfov: 74 }),
-  /** Mid shot on the auctioneer: close enough to feel tense, not so close a real-time face looks uncanny. */
-  auctioneer: (): Shot => ({ position: new Vector3(0.45, 2.1, -1.5), target: new Vector3(0, 1.82, -4.25) }),
+  /** Head and shoulders on the auctioneer, over the podium, for "going twice". */
+  auctioneer: (): Shot => ({ position: new Vector3(0.75, 2.2, -2.15), target: new Vector3(0, 2.02, -4.2) }),
+  /** The bidding table from the stage side: the owners' faces and the paddle going up, the audience behind. */
   table: (id: TeamId): Shot => {
     const t = tableOf(id);
+    const side = new Vector3(-t.outward.z, 0, t.outward.x);
     return {
-      position: t.position.clone().addScaledVector(t.outward, 3.6).add(new Vector3(0.4, 1.9, 0)),
-      target: t.position.clone().add(new Vector3(0, 1.3, 0)),
+      position: t.position.clone().addScaledVector(t.outward, -2.7).addScaledVector(side, 0.5).setY(1.55),
+      target: t.position.clone().addScaledVector(t.outward, 0.85).setY(1.3),
     };
   },
+  /** The winners, a little wider, with room above for the confetti. */
   winner: (id: TeamId): Shot => {
     const t = tableOf(id);
+    const side = new Vector3(-t.outward.z, 0, t.outward.x);
     return {
-      position: t.position.clone().addScaledVector(t.outward, 5).add(new Vector3(0, 3, 0)),
-      target: t.position.clone().lerp(PODIUM, 0.25).add(new Vector3(0, 1, 0)),
+      position: t.position.clone().addScaledVector(t.outward, -3.9).addScaledVector(side, -0.9).setY(1.9),
+      target: t.position.clone().addScaledVector(t.outward, 0.7).setY(1.55),
     };
   },
 };

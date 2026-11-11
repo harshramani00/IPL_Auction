@@ -5,8 +5,9 @@ Rocketbox avatar library (MIT, see `rocketbox/LICENSE.md`). The textures were
 converted from the original TGA files to JPG and PNG.
 
 The team owners and audience are six more Rocketbox avatars in `rocketbox/people/`
-(Business_Male_02–04, Business_Female_01–03), with textures downsized to 1024 px
-(colour) and 512 px (normal maps) since they're seen from further away.
+(Business_Male_02–04, Business_Female_01–03). Their faces keep the full 2048 px
+colour map (the camera cuts to the bidding table); bodies are downsized to
+1024 px (colour) and 512 px (normal maps).
 
 An `auctioneer.glb` here replaces him, for example a MetaHuman you've exported.
 

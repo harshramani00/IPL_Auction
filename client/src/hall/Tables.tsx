@@ -2,12 +2,12 @@
 // when the team bids and stays raised while it leads.
 import type { Snapshot } from "@auction/shared";
 import { useFrame } from "@react-three/fiber";
-import { useEffect, useMemo, useRef } from "react";
-import { DoubleSide, MathUtils, type Group, type MeshStandardMaterial, type Object3D } from "three";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { DoubleSide, MathUtils, type Group, type MeshStandardMaterial, type Object3D, type Vector3 } from "three";
 import { seatColor, seatName, team } from "../view";
 import { renderQuality } from "./Effects";
-import { TABLES, type TableSpot } from "./layout";
-import { Chair, seated, usePaddleHold, usePeople } from "./People";
+import { TABLES, tableOf, type TableSpot } from "./layout";
+import { Chair, seated, usePaddleHold, usePeople, useSeatedLife, type Sitting } from "./People";
 import { imageTexture, labelTexture } from "./textures";
 
 /** Owners sit back from the table so their knees clear it; the right-hand one holds the paddle. */
@@ -17,6 +17,13 @@ const SEAT_Z = -0.95;
 const PADDLE_REST = 0.86;
 const PADDLE_RAISE = 0.62;
 
+const PARTNER_POSES: Sitting[] = [
+  { hands: "table", lean: 0.24, inward: 0.45 }, // hands together, leaning in
+  { hands: "table", lean: 0.1, inward: 0.1, lapSide: "L" }, // one arm on the table
+  { hands: "thighs", lean: 0.02 }, // sitting back
+  { hands: "table", lean: 0.16, inward: 0.25, lapSide: "R" },
+];
+
 export function Tables({ s }: { s: Snapshot }) {
   const lobby = s.phase === "lobby";
   const people = usePeople();
@@ -25,11 +32,21 @@ export function Tables({ s }: { s: Snapshot }) {
     if (!people) return null;
     const shadows = renderQuality() === "high";
     return TABLES.map((_, i) => SEATS.map((_, j) => {
-      const m = seated(people[(i * 2 + j + (i % 3)) % people.length]!, "table");
+      // The paddle holder keeps both arms forward; their partner sits one of a few ways.
+      const m = seated(people[(i * 2 + j + (i % 3)) % people.length]!, j === 1 ? { hands: "table", lean: 0.2 } : PARTNER_POSES[i % PARTNER_POSES.length]!);
       m.traverse((o) => { o.castShadow = shadows; });
       return m;
     }) as [Object3D, Object3D]);
   }, [people]);
+  // For a moment after each bid, the other tables turn to see who it was.
+  const [bidder, setBidder] = useState<Vector3 | null>(null);
+  const leadId = lobby ? null : s.lead?.teamId ?? null;
+  useEffect(() => {
+    if (!leadId) return;
+    setBidder(tableOf(leadId).position);
+    const t = setTimeout(() => setBidder(null), 2200);
+    return () => clearTimeout(t);
+  }, [leadId, s.bidSeq]);
   return (
     <group>
       {TABLES.map((spot, i) => {
@@ -37,7 +54,8 @@ export function Tables({ s }: { s: Snapshot }) {
         const label = owner ? `P${owner} · ${seatName(s, owner)}` : lobby ? "Free" : "AI";
         const leading = !lobby && s.lead?.teamId === spot.id;
         return (
-          <Table key={spot.id} spot={spot} label={label} owners={owners?.[i] ?? null}
+          <Table key={spot.id} spot={spot} label={label} owners={owners?.[i] ?? null} index={i}
+            focus={leading ? null : bidder}
             labelColor={owner ? seatColor(owner) : lobby ? "#f3c34f" : "#8c89b8"}
             leading={leading} bump={leading ? s.bidSeq : 0} />
         );
@@ -55,9 +73,12 @@ interface TableProps {
   bump: number;
   /** The seated owners, or null while they load (stand-ins show instead). */
   owners: [Object3D, Object3D] | null;
+  index: number;
+  /** A table that has just bid, for the owners to look at. */
+  focus: Vector3 | null;
 }
 
-function Table({ spot, label, labelColor, leading, bump, owners }: TableProps) {
+function Table({ spot, label, labelColor, leading, bump, owners, index, focus }: TableProps) {
   const t = team(spot.id);
   const logo = imageTexture(`/logos/${spot.id}.png`);
   const tag = useMemo(() => labelTexture(label, labelColor), [label, labelColor]);
@@ -114,8 +135,8 @@ function Table({ spot, label, labelColor, leading, bump, owners }: TableProps) {
       {SEATS.map((x) => <Chair key={x} position={[x, 0, SEAT_Z]} />)}
       {owners ? (
         <>
-          <group position={[SEATS[0]!, 0, SEAT_Z]}><primitive object={owners[0]} /></group>
-          <PaddleHolder model={owners[1]} grip={grip} />
+          <Owner model={owners[0]} seed={(index * 0.37 + 0.11) % 1} focus={focus} />
+          <PaddleHolder model={owners[1]} seed={(index * 0.61 + 0.53) % 1} focus={focus} grip={grip} />
         </>
       ) : SEATS.map((x) => <StandIn key={x} x={x} />)}
       {/* Paddle, held in the right-hand owner's left hand */}
@@ -155,7 +176,21 @@ function Table({ spot, label, labelColor, leading, bump, owners }: TableProps) {
   );
 }
 
-function PaddleHolder({ model, grip }: { model: Object3D; grip: React.RefObject<Object3D | null> }) {
+interface OwnerProps {
+  model: Object3D;
+  /** 0..1: keeps each owner's blinking and glances out of step with the rest. */
+  seed: number;
+  focus: Vector3 | null;
+}
+
+function Owner({ model, seed, focus }: OwnerProps) {
+  useSeatedLife(model, seed, focus);
+  return <group position={[SEATS[0]!, 0, SEAT_Z]}><primitive object={model} /></group>;
+}
+
+function PaddleHolder({ model, seed, focus, grip }: OwnerProps & { grip: React.RefObject<Object3D | null> }) {
+  // Life first: breathing moves the shoulder the arm is then solved from.
+  useSeatedLife(model, seed, focus);
   usePaddleHold(model, grip);
   return <group position={[SEATS[1]!, 0, SEAT_Z]}><primitive object={model} /></group>;
 }
